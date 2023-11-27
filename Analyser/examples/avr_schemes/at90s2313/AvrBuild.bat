@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\mps-2.1.12-r219\schemes\avr\at90s2313\labels.tmp" -fI -W+ie -o "C:\mps-2.1.12-r219\schemes\avr\at90s2313\uart_1.hex" -d "C:\mps-2.1.12-r219\schemes\avr\at90s2313\uart_1.obj" -e "C:\mps-2.1.12-r219\schemes\avr\at90s2313\uart_1.eep" -m "C:\mps-2.1.12-r219\schemes\avr\at90s2313\uart_1.map" "C:\mps-2.1.12-r219\schemes\avr\at90s2313\uart_1.asm"

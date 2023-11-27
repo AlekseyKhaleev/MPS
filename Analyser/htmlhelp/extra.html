@@ -1,0 +1,1194 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="VAN">
+  <meta name="generator" content="Quanta Plus">
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:35.95pt 42.5pt 2.0cm 45.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body>	
+
+<a name="top"></a>
+
+<a name="extra"><div style="text-align: center"><h1>3.9. Другие элементы</h1></div></a>
+
+<a name="arbiter"></a>
+<h4>3.9.1. Арбитр шины</h4>
+
+<img src="images/elements/image157.png" width="119" height="159" alt="" border="0">
+
+<p style="text-align: justify">Арбитр шины служит для распределения времени доступа 
+к шине в том случае, если к ней подключено несколько активных устройств, 
+например, процессоров. 
+</p>
+
+<p style="text-align: justify">74F786 – это асинхронный арбитр, поддерживающий распределение 
+доступа между активными устройствами числом до четырех. </p>
+
+<p style="text-align: justify">Имеет четыре входа запроса доступа (<b>BR0-BR3</b>), 
+линию разрешения выходов (<b>EN</b>), четыре выхода разрешения доступа (<b>BG0-BG3</b>),
+а также имеет встроенную схему логического «И» на четыре входа (<b>A,B,C,D</b>) с выходом <b>Y</b>, 
+независимую от схемы арбитража (т.е. ее можно использовать отдельно, однако она предусмотрена 
+в основном для объединения всех сигналов разрешения доступа в один). </p>
+
+<p style="text-align: justify">Активные уровни на входах <b>BR</b>, <b>BG</b>, <b>EN</b> – низкие (L). 
+При отсутствии активных уровней на входах запроса доступа на выходах разрешения 
+также будут неактивные уровни. Такая же ситуация будет наблюдаться в том случае, 
+когда неактивен вход <b>EN</b>.</p>
+
+<p style="text-align: justify">Входы запроса <b>BR0-BR3</b> не имеют явного приоритета. Вместо этого арбитр назначает 
+приоритеты запросам в соответствии с порядком их прихода, т.е. запросы будут обрабатываться 
+в порядке очереди (First In, First Out - FIFO). При этом на соответствующих выходах BG будут
+появляться активные уровни сигнала. В том случае, если запросы были сгенерированы 
+одновременно, один из них выбирается случайно. </p>
+
+<p style="text-align: justify">Когда первый запрос перестает быть активным, выбирается запрос с наивысшим 
+приоритетом (т.е. следующий пришедший) и т.д.</p>
+
+<a name="addrsel8"></a>
+<h4>3.9.2. Адресный селектор</h4>
+
+<img src="images/elements/image159.png" width="118" height="173" alt="" border="0">
+
+<p style="text-align: justify">Адресный селектор позволяет формировать управляющие сигналы на основе входного адреса. 
+Адрес (с входов <b>A7-A0</b>) проверяется на попадание в четыре определенных диапазона. 
+По результатам сравнения вырабатываются управляющие сигналы в каждой из пар выходов <strong>D</strong> и <strong>ND</strong>. 
+(<b>D<sub>i</sub></b>=H в том случае, когда адрес попал в i-й диапазон. 
+При этом сигналы <b>D<sub>i</sub></b> и <b>ND<sub>i</sub></b> всегда противоположны). 
+Диапазоны можно задать в окне настроек компонента, вызываемом нажатием правой кнопки мыши на его УГО.
+</p>
+
+<p style="text-align: justify">
+Вход <strong>EN</strong> (активный уровень L) служит для запрещения выбора любого из диапазонов, даже 
+если адрес попадает в один из них. Если <strong>EN</strong> активен, на всех выходах D<sub>i</sub>
+будут уровни L, а на выходах <strong>ND<sub>i</sub></strong> - уровни H
+</p>
+
+<p style="text-align: justify">
+Каждый диапазон задается верхней и нижней границей. Адрес попадает в диапазон, 
+если он находится между его границами (нестрого), т.е.:
+</p>
+
+<p><em>нижняя-граница &le; адрес &le; верхняя граница</em></p>
+
+<p style="text-align: justify">
+Страница свойств выглядит так:
+</p>
+
+<p>
+<IMG src="images/elements-new/addr-sel-wnd.png" width="472" height="315" border="0">
+</p>
+
+<p style="text-align: justify">
+Границы диапазонов могут быть заданы в десятичной, шестнадцатеричной 
+или восьмеричной системе. Система счисления задается первыми символами
+записи числа, как принято в языке C, т.е.:
+</p>
+
+<table border="2">
+  <tbody>
+    <tr>
+      <td><strong>Система счисления</strong></td>
+      <td><strong>Первые символы</strong></td>
+      <td><strong>Пример</strong></td>
+    </tr>
+    <tr>
+      <td>Десятичная</td>
+      <td>Запись числа начинается с любой цифры, кроме 0</td>
+      <td>1234</td>
+    </tr>
+    <tr>
+      <td>Шестнадцатеричная</td>
+      <td>Запись числа начинается с 0x</td>
+      <td>0x12FF</td>
+    </tr>
+    <tr>
+      <td>Восьмеричная</td>
+      <td>Запись числа начинается с 0</td>
+      <td>01234</td>
+    </tr>
+  </tbody>
+</table>
+
+<a name="addrsel16"></a>
+<h4>3.9.3. Адресный селектор (16-разрядный)</h4>
+
+<IMG src="images/elements-new/address-selector16.gif" width="132" height="259" align="left" border="0">
+
+<p style="text-align: justify">
+Этот адресный селектор аналогичен <a href="#addrsel8">предыдущему</a>, за исключением того, 
+что использует 16-разрядные адреса и поддерживает шесть диапазонов. 
+</p>
+
+<p style="text-align: justify">Адресный селектор позволяет формировать управляющие сигналы на основе входного адреса. 
+Адрес (с входов <b>A15-A0</b>) проверяется на попадание в шесть определенных диапазонов. 
+По результатам сравнения вырабатываются управляющие сигналы в каждой из пар выходов D и ND. 
+(<b>D<sub>i</sub></b>=H в том случае, когда адрес попал в i-й диапазон. 
+При этом сигналы <b>D<sub>i</sub></b> и <b>ND<sub>i</sub></b> всегда противоположны). 
+Диапазоны можно задать в окне настроек компонента, вызываемом нажатием правой кнопки мыши на его УГО.
+</p>
+
+<p style="text-align: justify">
+Вход <strong>EN</strong> (активный уровень L) служит для запрещения выбора любого из диапазонов, даже 
+если адрес попадает в один из них. Если <strong>EN</strong> активен, на всех выходах D<sub>i</sub>
+будут уровни L, а на выходах <strong>ND<sub>i</sub></strong> - уровни H
+</p>
+
+<p style="text-align: justify">
+Каждый диапазон задается верхней и нижней границей. Адрес попадает в диапазон, 
+если он находится между его границами (нестрого), т.е.:
+</p>
+
+<p><em>нижняя-граница &le; адрес &le; верхняя граница</em></p>
+
+<p style="text-align: justify">
+Страница свойств выглядит так:
+</p>
+
+<p>
+<IMG src="images/elements-new/addr-sel-wnd16.png" width="474" height="417" align="middle" border="0">
+</p>
+
+<p style="text-align: justify">
+Границы диапазонов могут быть заданы в десятичной, шестнадцатеричной 
+или восьмеричной системе. Система счисления задается первыми символами
+записи числа, как принято в языке C, т.е.:
+</p>
+
+<table border="2">
+  <tbody>
+    <tr>
+      <td><strong>Система счисления</strong></td>
+      <td><strong>Первые символы</strong></td>
+      <td><strong>Пример</strong></td>
+    </tr>
+    <tr>
+      <td>Десятичная</td>
+      <td>Запись числа начинается с любой цифры, кроме 0</td>
+      <td>1234</td>
+    </tr>
+    <tr>
+      <td>Шестнадцатеричная</td>
+      <td>Запись числа начинается с 0x</td>
+      <td>0x12FF</td>
+    </tr>
+    <tr>
+      <td>Восьмеричная</td>
+      <td>Запись числа начинается с 0</td>
+      <td>01234</td>
+    </tr>
+  </tbody>
+</table>
+
+<a name="extalu"></a>
+<h4>3.9.4. Внешнее АЛУ</h4>
+
+<IMG src="images/elements-new/extalu.gif" width="134" height="168" align="middle" border="0">
+
+<p style="text-align: justify">
+АЛУ работает как внешнее устройство и может управляться
+через порты ввода/вывода или отображаться на адреса памяти
+(последнее намного удобнее)
+</p>
+<p style="text-align: justify">
+Имеет входы адреса (3 разряда), данных (8 разрядов, двунаправленные), RD, WR, CS, CLK,
+выход готовности RDY. Может осуществлять параллельно вычисления и ввод/вывод.
+</p>
+
+<p style="text-align: justify">
+Адреса и соответствующие им регистры:
+</p>
+
+<table border="2">
+<tr><td>Адрес</td><td>Регистр вывода</td><td>Регистр ввода (если отличается)</td></tr>
+<tr><td>000</td><td>Младший байт ACC</td><td></td></tr>
+<tr><td>001</td><td>Старший байт ACC</td><td></td></tr>
+<tr><td>010</td><td>Младший байт RG1</td><td></td></tr>
+<tr><td>011</td><td>Старший байт RG1</td><td></td></tr>
+<tr><td>100</td><td>Младший байт RG2</td><td></td></tr>
+<tr><td>101</td><td>Старший байт RG2</td><td></td></tr>
+<tr><td>110</td><td>Выполняемая команда</td><td>Регистр состояния</td></tr>
+<tr><td>111</td><td>Дополнительные команды</td><td>При чтении выводится ноль</td></tr>
+</tbody></table>
+
+<p>
+ACC - аккумулятор. Результаты помещаются сюда
+</p>
+
+<p style="text-align: justify">
+Для выполнения команды нужно вывести ее код в регистр CMD (адрес 100) в формате (битовое поле):
+</p>
+
+<p>
+cmd (4 бита) r1 (2 бита) r2 (2 бита)
+</p>
+
+<p style="text-align: justify">
+cmd кодирует операцию, (кроме mov и xchg), r1 и r2 - операнды:
+</p>
+
+
+<TABLE border="2">
+<tr><td>00</td><td>ACC</td></tr>
+<tr><td>01</td><td>RG1</td></tr>
+<tr><td>10</td><td>RG2</td></tr>
+<tr><td>11</td><td>Ноль</td></tr>
+</TABLE>
+
+<p>
+Результат может быть помещен в ACC
+</p>
+
+<p>
+В следующей таблице r1 и r2 означают первый и второй операнды
+</p>
+
+<table border="2">
+ <tr><td>Коды команд (bin, hex)</td><td>Мнемоника</td><td>Время</td><td>Описание</td></tr>
+ <tr><td>0000, 0x0</td><td>cmp</td><td>2</td><td>Вычесть r2 из r1 и установить флаги</td></tr>
+ <tr><td>0001, 0x1</td><td>add</td><td>2</td><td>acc = r1 + r2</td></tr>
+ <tr><td>0010, 0x2</td><td>sub</td><td>2</td><td>acc = r1 - r2</td></tr>
+ <tr><td>0011, 0x3</td><td>mul</td><td>8</td><td>rg1:acc = r1 * r2 - беззнаковое умножение</td></tr>
+ <tr><td>0100, 0x4</td><td>div</td><td>16</td><td>acc = r1 / r2, rg1 = r1 mod r2 - беззнаковое деление</td></tr>
+ <tr><td>0101, 0x5</td><td>imul</td><td>8</td><td>rg1:acc = r1 * r2 - знаковое умножение</td></tr>
+ <tr><td>0110, 0x6</td><td>idiv</td><td>16</td><td>acc = r1 / r2, rg1 = r1 mod r2 - знаковое деление</td></tr>
+ <tr><td>0111, 0x7</td><td>adc</td><td>2</td><td>acc = r1 + r2 + флаг переноса</td></tr>
+ <tr><td>1000, 0x8</td><td>sbb</td><td>2</td><td>acc = r1 - r2 - флаг переноса</td></tr>
+ <tr><td>1001, 0x9</td><td>mov</td><td>2</td><td>r1 = r2</td></tr>
+ <tr><td>1010, 0xA</td><td>neg</td><td>2</td><td>r1 = -r2</td></tr> 
+ <tr><td>1011, 0xB</td><td>xch</td><td>4</td><td>обмен r1 и r2</td></tr>
+ <tr><td>1100, 0xC</td><td>and</td><td>2</td><td>acc = r1 AND r2</td></tr> 
+ <tr><td>1101, 0xD</td><td>or</td><td>2</td><td>acc = r1 OR r2</td></tr>
+ <tr><td>1110, 0xE</td><td>xor</td><td>2</td><td>acc = r1 XOR r2</td></tr> 
+ <tr><td>1111, 0xF</td><td>not</td><td>2</td><td>r1 = NOT r2</td></tr>
+</table>
+
+
+<p>Дополнительные команды (в регистре 111b)</p>
+
+<table border="2">
+  <tbody>
+    <tr>
+      <td>Коды команд (bin, hex)</td>
+      <td>Мнемоника</td>
+      <td>Время</td>
+      <td>Описание</td>
+    </tr>
+    <tr>
+      <td>0000, 0x0</td>
+      <td>cbw</td>
+      <td>2</td>
+      <td>расширить младший байт r1 до слова знаковым битом</td>
+    </tr>
+    <tr>
+      <td>0001, 0x1</td>
+      <td>zbw</td>
+      <td>2</td>
+      <td>очистить старший байт r1</td>
+    </tr>
+    <tr>
+      <td>0010, 0x2</td>
+      <td>clr</td>
+      <td>2</td>
+      <td>обнулить r1</td>
+    </tr>
+    <tr>
+      <td>1111, 0xF</td>
+      <td>nop</td>
+      <td>0</td>
+      <td>никаких действий</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Регистр состояния содержит следующие флаги:</p>
+
+<table border="2">
+ <tr><td>D0</td><td>Перенос</td></tr>
+ <tr><td>D1</td><td>Переполнение (в т.ч. при делении на ноль)</td></tr>
+ <tr><td>D2</td><td>Результат отрицательный (знаковый бит установлен)</td></tr>
+ <tr><td>D3</td><td>Результат равен нулю</td></tr> 
+ <tr><td>D4</td><td>Последняя команда была некорректной</td></tr>
+</table>
+
+<p style="text-align: justify">Соответствующие флаги устанавливаются всеми командами (даже mov), 
+кроме xchg, которая флаги не меняет</p>
+
+<div class=Section1>
+
+<a name="comparer4"></a>
+<p class=MsoNormal><h4>3.9.5. Компаратор четырехразрядный</h4></p>
+
+<p class=MsoNormal><img width=129 height=144 src="images/elements-new2/image003.gif"
+align=left hspace=12></p>
+
+<p class=MsoNormal>Назначение данного элемента – сравнение чисел в двоичном
+коде.</p>
+
+<p class=MsoNormal>Компаратор имеет 11 входов. Две группы по четыре входа
+(А0-А3 и В0-В3) принимают для сравнения два четырехразрядных слова. Три входа <span
+lang=EN-US>I</span>(<span lang=EN-US>A</span>&lt;<span lang=EN-US>B</span>), <span
+lang=EN-US>I</span>(<span lang=EN-US>A</span>=<span lang=EN-US>B</span>), <span
+lang=EN-US>I</span>(<span lang=EN-US>A</span>&gt;<span lang=EN-US>B</span>)
+предназначены для создания схемы наращивания, т.е. увеличения емкости
+компаратора при необходимости сравнения слов с большей разрядностью.</p>
+
+<p class=MsoNormal>Компаратор имеет три выхода результатов сравнения: <span
+lang=EN-US>A</span>&lt;<span lang=EN-US>B</span>, <span lang=EN-US>A</span>=<span
+lang=EN-US>B</span>, <span lang=EN-US>A</span>&gt;<span lang=EN-US>B</span>.
+Все возможные комбинации поразрядных соотношений входных кодов, а также уровней
+на входах каскадирования сведены в таблицу, где показаны соответствующие
+результирующие уровни на выходах:</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=277 colspan=4 valign=top style='width:207.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход сравнения
+  данных</p>
+  </td>
+  <td width=207 colspan=3 valign=top style='width:155.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход наращивания
+  каскадов</p>
+  </td>
+  <td width=208 colspan=3 valign=top style='width:155.65pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Выход</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3,
+  B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2,
+  B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1,
+  B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0,
+  B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>I
+  (A&gt;B)</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>I
+  (A&lt;B)</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>I
+  (A=B)</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A&lt;B</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A=B</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A&gt;B</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3&gt;B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3&lt;B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2&gt;B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2&lt;B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1&gt;B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1&lt;B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1=B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0&gt;B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1=B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0&lt;B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1=B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0=B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1=B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0=B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1=B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0=B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1=B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0=B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1=B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0=B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A3=B3</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A2=B2</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A1=B1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>A0=B0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=69 valign=top style='width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<p class=MsoNormal>Шесть последних строк таблицы отображают режим наращивания
+каскадов. При этом выходы <span lang=EN-US>A</span>&lt;<span lang=EN-US>B</span>,
+<span lang=EN-US>A</span>=<span lang=EN-US>B</span>, <span lang=EN-US>A</span>&gt;<span
+lang=EN-US>B</span> от схемы, анализирующей младшие разряды, следует
+присоединить к соответствующим входам <span lang=EN-US>I</span>(<span
+lang=EN-US>A</span>&lt;<span lang=EN-US>B</span>), <span lang=EN-US>I</span>(<span
+lang=EN-US>A</span>=<span lang=EN-US>B</span>), <span lang=EN-US>I</span>(<span
+lang=EN-US>A</span>&gt;<span lang=EN-US>B</span>) последующего каскада. Например,
+этим способом, используя два четырехразрядных компаратора можно сравнивать два
+восьмиразрядных слова. Для правильной работы многокаскадного компаратора на
+входы первого компаратора <span lang=EN-US>I</span>(<span lang=EN-US>A</span>&lt;<span
+lang=EN-US>B</span>) и <span lang=EN-US>I</span>(<span lang=EN-US>A</span>&gt;<span
+lang=EN-US>B</span>) следует подать напряжение высокого уровня, а на вход <span
+lang=EN-US>I</span>(<span lang=EN-US>A</span>=<span lang=EN-US>B</span>) –
+низкого.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<a name="comparer8"></a>
+<p class=MsoNormal><h4>3.9.6. Компаратор восьмиразрядный</h4></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><img width=124 height=176 src="images/elements-new2/image004.gif"
+align=left hspace=12>Принцип работы такой же, как у четырехразрядного
+компаратора. Отличие заключается в большей длине сравниваемых слов (8 разрядов
+без каскадирования), что достигается за счет большего числа входов для
+сравнения (две группы по 8 входов: А0-А7 и В0-В7).</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+<a href="#top">К началу</a>
+
+</body>
+</html>

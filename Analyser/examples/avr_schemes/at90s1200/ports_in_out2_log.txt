@@ -1,0 +1,6472 @@
+Start
+--------------------------------------------------
+
+0						PC:0x0000
+				LDI 0x10,0xFF
+				result LDI: R16=0xFF
+
+2000				PC:0x0001
+				OUT 0x17,0x10
+				result OUT: P[0x17]=0xFF
+
+4000				PC:0x0002
+				LDI 0x11,0x00
+				result LDI: R17=0x00
+
+6000				PC:0x0003
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+8000				PC:0x0004
+				OUT 0x11,0x11
+				result OUT: P[0x11]=0x00
+
+10000				PC:0x0005
+				LDI 0x13,0x00
+				result LDI: R19=0x00
+
+12000				PC:0x0006
+				SBIC 0x10,0x04
+
+14000				PC:0x0007
+				RJMP 0x0006
+15000				next command clock cycle
+
+17000				PC:0x0006
+				SBIC 0x10,0x04
+
+19000				PC:0x0007
+				RJMP 0x0006
+20000				next command clock cycle
+
+22000				PC:0x0006
+				SBIC 0x10,0x04
+
+24000				PC:0x0007
+				RJMP 0x0006
+25000				next command clock cycle
+
+27000				PC:0x0006
+				SBIC 0x10,0x04
+
+29000				PC:0x0007
+				RJMP 0x0006
+30000				next command clock cycle
+
+32000				PC:0x0006
+				SBIC 0x10,0x04
+
+34000				PC:0x0007
+				RJMP 0x0006
+35000				next command clock cycle
+
+37000				PC:0x0006
+				SBIC 0x10,0x04
+
+39000				PC:0x0007
+				RJMP 0x0006
+40000				next command clock cycle
+
+42000				PC:0x0006
+				SBIC 0x10,0x04
+
+44000				PC:0x0007
+				RJMP 0x0006
+45000				next command clock cycle
+
+47000				PC:0x0006
+				SBIC 0x10,0x04
+
+49000				PC:0x0007
+				RJMP 0x0006
+50000				next command clock cycle
+
+52000				PC:0x0006
+				SBIC 0x10,0x04
+
+54000				PC:0x0007
+				RJMP 0x0006
+55000				next command clock cycle
+
+57000				PC:0x0006
+				SBIC 0x10,0x04
+
+59000				PC:0x0007
+				RJMP 0x0006
+60000				next command clock cycle
+
+62000				PC:0x0006
+				SBIC 0x10,0x04
+
+64000				PC:0x0007
+				RJMP 0x0006
+65000				next command clock cycle
+
+67000				PC:0x0006
+				SBIC 0x10,0x04
+
+69000				PC:0x0007
+				RJMP 0x0006
+70000				next command clock cycle
+
+72000				PC:0x0006
+				SBIC 0x10,0x04
+
+74000				PC:0x0007
+				RJMP 0x0006
+75000				next command clock cycle
+
+77000				PC:0x0006
+				SBIC 0x10,0x04
+
+79000				PC:0x0007
+				RJMP 0x0006
+80000				next command clock cycle
+
+82000				PC:0x0006
+				SBIC 0x10,0x04
+
+84000				PC:0x0007
+				RJMP 0x0006
+85000				next command clock cycle
+
+87000				PC:0x0006
+				SBIC 0x10,0x04
+
+89000				PC:0x0007
+				RJMP 0x0006
+90000				next command clock cycle
+
+92000				PC:0x0006
+				SBIC 0x10,0x04
+
+94000				PC:0x0007
+				RJMP 0x0006
+95000				next command clock cycle
+
+97000				PC:0x0006
+				SBIC 0x10,0x04
+
+99000				PC:0x0007
+				RJMP 0x0006
+100000			next command clock cycle
+
+102000			PC:0x0006
+				SBIC 0x10,0x04
+
+104000			PC:0x0007
+				RJMP 0x0006
+105000			next command clock cycle
+
+107000			PC:0x0006
+				SBIC 0x10,0x04
+
+109000			PC:0x0007
+				RJMP 0x0006
+110000			next command clock cycle
+
+112000			PC:0x0006
+				SBIC 0x10,0x04
+
+114000			PC:0x0007
+				RJMP 0x0006
+115000			next command clock cycle
+
+117000			PC:0x0006
+				SBIC 0x10,0x04
+
+119000			PC:0x0007
+				RJMP 0x0006
+120000			next command clock cycle
+
+122000			PC:0x0006
+				SBIC 0x10,0x04
+
+124000			PC:0x0007
+				RJMP 0x0006
+125000			next command clock cycle
+
+127000			PC:0x0006
+				SBIC 0x10,0x04
+
+129000			PC:0x0007
+				RJMP 0x0006
+130000			next command clock cycle
+
+132000			PC:0x0006
+				SBIC 0x10,0x04
+
+134000			PC:0x0007
+				RJMP 0x0006
+135000			next command clock cycle
+
+137000			PC:0x0006
+				SBIC 0x10,0x04
+
+139000			PC:0x0007
+				RJMP 0x0006
+140000			next command clock cycle
+
+142000			PC:0x0006
+				SBIC 0x10,0x04
+
+144000			PC:0x0007
+				RJMP 0x0006
+145000			next command clock cycle
+
+147000			PC:0x0006
+				SBIC 0x10,0x04
+
+149000			PC:0x0007
+				RJMP 0x0006
+150000			next command clock cycle
+
+152000			PC:0x0006
+				SBIC 0x10,0x04
+
+154000			PC:0x0007
+				RJMP 0x0006
+155000			next command clock cycle
+
+157000			PC:0x0006
+				SBIC 0x10,0x04
+
+159000			PC:0x0007
+				RJMP 0x0006
+160000			next command clock cycle
+
+162000			PC:0x0006
+				SBIC 0x10,0x04
+
+164000			PC:0x0007
+				RJMP 0x0006
+165000			next command clock cycle
+
+167000			PC:0x0006
+				SBIC 0x10,0x04
+
+169000			PC:0x0007
+				RJMP 0x0006
+170000			next command clock cycle
+
+172000			PC:0x0006
+				SBIC 0x10,0x04
+
+174000			PC:0x0007
+				RJMP 0x0006
+175000			next command clock cycle
+
+177000			PC:0x0006
+				SBIC 0x10,0x04
+
+179000			PC:0x0007
+				RJMP 0x0006
+180000			next command clock cycle
+
+182000			PC:0x0006
+				SBIC 0x10,0x04
+
+184000			PC:0x0007
+				RJMP 0x0006
+185000			next command clock cycle
+
+187000			PC:0x0006
+				SBIC 0x10,0x04
+
+189000			PC:0x0007
+				RJMP 0x0006
+190000			next command clock cycle
+
+192000			PC:0x0006
+				SBIC 0x10,0x04
+
+194000			PC:0x0007
+				RJMP 0x0006
+195000			next command clock cycle
+
+197000			PC:0x0006
+				SBIC 0x10,0x04
+
+199000			PC:0x0007
+				RJMP 0x0006
+200000			next command clock cycle
+
+202000			PC:0x0006
+				SBIC 0x10,0x04
+
+204000			PC:0x0007
+				RJMP 0x0006
+205000			next command clock cycle
+
+207000			PC:0x0006
+				SBIC 0x10,0x04
+
+209000			PC:0x0007
+				RJMP 0x0006
+210000			next command clock cycle
+
+212000			PC:0x0006
+				SBIC 0x10,0x04
+
+214000			PC:0x0007
+				RJMP 0x0006
+215000			next command clock cycle
+
+217000			PC:0x0006
+				SBIC 0x10,0x04
+
+219000			PC:0x0007
+				RJMP 0x0006
+220000			next command clock cycle
+
+222000			PC:0x0006
+				SBIC 0x10,0x04
+
+224000			PC:0x0007
+				RJMP 0x0006
+225000			next command clock cycle
+
+227000			PC:0x0006
+				SBIC 0x10,0x04
+
+229000			PC:0x0007
+				RJMP 0x0006
+230000			next command clock cycle
+
+232000			PC:0x0006
+				SBIC 0x10,0x04
+
+234000			PC:0x0007
+				RJMP 0x0006
+235000			next command clock cycle
+
+237000			PC:0x0006
+				SBIC 0x10,0x04
+
+239000			PC:0x0007
+				RJMP 0x0006
+240000			next command clock cycle
+
+242000			PC:0x0006
+				SBIC 0x10,0x04
+
+244000			PC:0x0007
+				RJMP 0x0006
+245000			next command clock cycle
+
+247000			PC:0x0006
+				SBIC 0x10,0x04
+
+249000			PC:0x0007
+				RJMP 0x0006
+250000			next command clock cycle
+
+252000			PC:0x0006
+				SBIC 0x10,0x04
+
+254000			PC:0x0007
+				RJMP 0x0006
+255000			next command clock cycle
+
+257000			PC:0x0006
+				SBIC 0x10,0x04
+
+259000			PC:0x0007
+				RJMP 0x0006
+260000			next command clock cycle
+
+262000			PC:0x0006
+				SBIC 0x10,0x04
+
+264000			PC:0x0007
+				RJMP 0x0006
+265000			next command clock cycle
+
+267000			PC:0x0006
+				SBIC 0x10,0x04
+
+269000			PC:0x0007
+				RJMP 0x0006
+270000			next command clock cycle
+
+272000			PC:0x0006
+				SBIC 0x10,0x04
+
+274000			PC:0x0007
+				RJMP 0x0006
+275000			next command clock cycle
+
+277000			PC:0x0006
+				SBIC 0x10,0x04
+
+279000			PC:0x0007
+				RJMP 0x0006
+280000			next command clock cycle
+
+282000			PC:0x0006
+				SBIC 0x10,0x04
+
+284000			PC:0x0007
+				RJMP 0x0006
+285000			next command clock cycle
+
+287000			PC:0x0006
+				SBIC 0x10,0x04
+
+289000			PC:0x0007
+				RJMP 0x0006
+290000			next command clock cycle
+
+292000			PC:0x0006
+				SBIC 0x10,0x04
+
+294000			PC:0x0007
+				RJMP 0x0006
+295000			next command clock cycle
+
+297000			PC:0x0006
+				SBIC 0x10,0x04
+
+299000			PC:0x0007
+				RJMP 0x0006
+300000			next command clock cycle
+
+302000			PC:0x0006
+				SBIC 0x10,0x04
+
+304000			PC:0x0007
+				RJMP 0x0006
+305000			next command clock cycle
+
+307000			PC:0x0006
+				SBIC 0x10,0x04
+
+309000			PC:0x0007
+				RJMP 0x0006
+310000			next command clock cycle
+
+312000			PC:0x0006
+				SBIC 0x10,0x04
+
+314000			PC:0x0007
+				RJMP 0x0006
+315000			next command clock cycle
+
+317000			PC:0x0006
+				SBIC 0x10,0x04
+
+319000			PC:0x0007
+				RJMP 0x0006
+320000			next command clock cycle
+
+322000			PC:0x0006
+				SBIC 0x10,0x04
+
+324000			PC:0x0007
+				RJMP 0x0006
+325000			next command clock cycle
+
+327000			PC:0x0006
+				SBIC 0x10,0x04
+
+329000			PC:0x0007
+				RJMP 0x0006
+330000			next command clock cycle
+
+332000			PC:0x0006
+				SBIC 0x10,0x04
+
+334000			PC:0x0007
+				RJMP 0x0006
+335000			next command clock cycle
+
+337000			PC:0x0006
+				SBIC 0x10,0x04
+
+339000			PC:0x0007
+				RJMP 0x0006
+340000			next command clock cycle
+
+342000			PC:0x0006
+				SBIC 0x10,0x04
+
+344000			PC:0x0007
+				RJMP 0x0006
+345000			next command clock cycle
+
+347000			PC:0x0006
+				SBIC 0x10,0x04
+
+349000			PC:0x0007
+				RJMP 0x0006
+350000			next command clock cycle
+
+352000			PC:0x0006
+				SBIC 0x10,0x04
+
+354000			PC:0x0007
+				RJMP 0x0006
+355000			next command clock cycle
+
+357000			PC:0x0006
+				SBIC 0x10,0x04
+
+359000			PC:0x0007
+				RJMP 0x0006
+360000			next command clock cycle
+
+362000			PC:0x0006
+				SBIC 0x10,0x04
+
+364000			PC:0x0007
+				RJMP 0x0006
+365000			next command clock cycle
+
+367000			PC:0x0006
+				SBIC 0x10,0x04
+
+369000			PC:0x0007
+				RJMP 0x0006
+370000			next command clock cycle
+
+372000			PC:0x0006
+				SBIC 0x10,0x04
+
+374000			PC:0x0007
+				RJMP 0x0006
+375000			next command clock cycle
+
+377000			PC:0x0006
+				SBIC 0x10,0x04
+
+379000			PC:0x0007
+				RJMP 0x0006
+380000			next command clock cycle
+
+382000			PC:0x0006
+				SBIC 0x10,0x04
+
+384000			PC:0x0007
+				RJMP 0x0006
+385000			next command clock cycle
+
+387000			PC:0x0006
+				SBIC 0x10,0x04
+
+389000			PC:0x0007
+				RJMP 0x0006
+390000			next command clock cycle
+
+392000			PC:0x0006
+				SBIC 0x10,0x04
+
+394000			PC:0x0007
+				RJMP 0x0006
+395000			next command clock cycle
+
+397000			PC:0x0006
+				SBIC 0x10,0x04
+
+399000			PC:0x0007
+				RJMP 0x0006
+400000			next command clock cycle
+
+402000			PC:0x0006
+				SBIC 0x10,0x04
+
+404000			PC:0x0007
+				RJMP 0x0006
+405000			next command clock cycle
+
+407000			PC:0x0006
+				SBIC 0x10,0x04
+
+409000			PC:0x0007
+				RJMP 0x0006
+410000			next command clock cycle
+
+412000			PC:0x0006
+				SBIC 0x10,0x04
+
+414000			PC:0x0007
+				RJMP 0x0006
+415000			next command clock cycle
+
+417000			PC:0x0006
+				SBIC 0x10,0x04
+
+419000			PC:0x0007
+				RJMP 0x0006
+420000			next command clock cycle
+
+422000			PC:0x0006
+				SBIC 0x10,0x04
+
+424000			PC:0x0007
+				RJMP 0x0006
+425000			next command clock cycle
+
+427000			PC:0x0006
+				SBIC 0x10,0x04
+
+429000			PC:0x0007
+				RJMP 0x0006
+430000			next command clock cycle
+
+432000			PC:0x0006
+				SBIC 0x10,0x04
+
+434000			PC:0x0007
+				RJMP 0x0006
+435000			next command clock cycle
+
+437000			PC:0x0006
+				SBIC 0x10,0x04
+
+439000			PC:0x0007
+				RJMP 0x0006
+440000			next command clock cycle
+
+442000			PC:0x0006
+				SBIC 0x10,0x04
+
+444000			PC:0x0007
+				RJMP 0x0006
+445000			next command clock cycle
+
+447000			PC:0x0006
+				SBIC 0x10,0x04
+
+449000			PC:0x0007
+				RJMP 0x0006
+450000			next command clock cycle
+
+452000			PC:0x0006
+				SBIC 0x10,0x04
+
+454000			PC:0x0007
+				RJMP 0x0006
+455000			next command clock cycle
+
+457000			PC:0x0006
+				SBIC 0x10,0x04
+
+459000			PC:0x0007
+				RJMP 0x0006
+460000			next command clock cycle
+
+462000			PC:0x0006
+				SBIC 0x10,0x04
+
+464000			PC:0x0007
+				RJMP 0x0006
+465000			next command clock cycle
+
+467000			PC:0x0006
+				SBIC 0x10,0x04
+
+469000			PC:0x0007
+				RJMP 0x0006
+470000			next command clock cycle
+
+472000			PC:0x0006
+				SBIC 0x10,0x04
+
+474000			PC:0x0007
+				RJMP 0x0006
+475000			next command clock cycle
+
+477000			PC:0x0006
+				SBIC 0x10,0x04
+
+479000			PC:0x0007
+				RJMP 0x0006
+480000			next command clock cycle
+
+482000			PC:0x0006
+				SBIC 0x10,0x04
+
+484000			PC:0x0007
+				RJMP 0x0006
+485000			next command clock cycle
+
+487000			PC:0x0006
+				SBIC 0x10,0x04
+
+489000			PC:0x0007
+				RJMP 0x0006
+490000			next command clock cycle
+
+492000			PC:0x0006
+				SBIC 0x10,0x04
+
+494000			PC:0x0007
+				RJMP 0x0006
+495000			next command clock cycle
+
+497000			PC:0x0006
+				SBIC 0x10,0x04
+
+499000			PC:0x0007
+				RJMP 0x0006
+500000			next command clock cycle
+
+502000			PC:0x0006
+				SBIC 0x10,0x04
+
+504000			PC:0x0007
+				RJMP 0x0006
+505000			next command clock cycle
+
+507000			PC:0x0006
+				SBIC 0x10,0x04
+
+509000			PC:0x0007
+				RJMP 0x0006
+510000			next command clock cycle
+
+512000			PC:0x0006
+				SBIC 0x10,0x04
+
+514000			PC:0x0007
+				RJMP 0x0006
+515000			next command clock cycle
+
+517000			PC:0x0006
+				SBIC 0x10,0x04
+
+519000			PC:0x0007
+				RJMP 0x0006
+520000			next command clock cycle
+
+522000			PC:0x0006
+				SBIC 0x10,0x04
+
+524000			PC:0x0007
+				RJMP 0x0006
+525000			next command clock cycle
+
+527000			PC:0x0006
+				SBIC 0x10,0x04
+
+529000			PC:0x0007
+				RJMP 0x0006
+530000			next command clock cycle
+
+532000			PC:0x0006
+				SBIC 0x10,0x04
+
+534000			PC:0x0007
+				RJMP 0x0006
+535000			next command clock cycle
+
+537000			PC:0x0006
+				SBIC 0x10,0x04
+
+539000			PC:0x0007
+				RJMP 0x0006
+540000			next command clock cycle
+
+542000			PC:0x0006
+				SBIC 0x10,0x04
+
+544000			PC:0x0007
+				RJMP 0x0006
+545000			next command clock cycle
+
+547000			PC:0x0006
+				SBIC 0x10,0x04
+
+549000			PC:0x0007
+				RJMP 0x0006
+550000			next command clock cycle
+
+552000			PC:0x0006
+				SBIC 0x10,0x04
+
+554000			PC:0x0007
+				RJMP 0x0006
+555000			next command clock cycle
+
+557000			PC:0x0006
+				SBIC 0x10,0x04
+
+559000			PC:0x0007
+				RJMP 0x0006
+560000			next command clock cycle
+
+562000			PC:0x0006
+				SBIC 0x10,0x04
+
+564000			PC:0x0007
+				RJMP 0x0006
+565000			next command clock cycle
+
+567000			PC:0x0006
+				SBIC 0x10,0x04
+568000			next command clock cycle
+
+570000			PC:0x0008
+				before INC: SREG=0x00
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+572000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+574000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+576000			PC:0x000B
+				SBRC 0x13,0x01
+577000			next command clock cycle
+
+579000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+581000			PC:0x000E
+				SBRS 0x13,0x01
+
+583000			PC:0x000F
+				RJMP 0x0013
+584000			next command clock cycle
+
+586000			PC:0x0013
+				SBIC 0x10,0x04
+587000			next command clock cycle
+
+589000			PC:0x0015
+				RJMP 0x0006
+590000			next command clock cycle
+
+592000			PC:0x0006
+				SBIC 0x10,0x04
+
+594000			PC:0x0007
+				RJMP 0x0006
+595000			next command clock cycle
+
+597000			PC:0x0006
+				SBIC 0x10,0x04
+
+599000			PC:0x0007
+				RJMP 0x0006
+600000			next command clock cycle
+
+602000			PC:0x0006
+				SBIC 0x10,0x04
+
+604000			PC:0x0007
+				RJMP 0x0006
+605000			next command clock cycle
+
+607000			PC:0x0006
+				SBIC 0x10,0x04
+608000			next command clock cycle
+
+610000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+612000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+614000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+616000			PC:0x000B
+				SBRC 0x13,0x01
+
+618000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+620000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+622000			PC:0x000E
+				SBRS 0x13,0x01
+623000			next command clock cycle
+
+625000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+631000			PC:0x0013
+				SBIC 0x10,0x04
+632000			next command clock cycle
+
+634000			PC:0x0015
+				RJMP 0x0006
+635000			next command clock cycle
+
+637000			PC:0x0006
+				SBIC 0x10,0x04
+
+639000			PC:0x0007
+				RJMP 0x0006
+640000			next command clock cycle
+
+642000			PC:0x0006
+				SBIC 0x10,0x04
+
+644000			PC:0x0007
+				RJMP 0x0006
+645000			next command clock cycle
+
+647000			PC:0x0006
+				SBIC 0x10,0x04
+
+649000			PC:0x0007
+				RJMP 0x0006
+650000			next command clock cycle
+
+652000			PC:0x0006
+				SBIC 0x10,0x04
+
+654000			PC:0x0007
+				RJMP 0x0006
+655000			next command clock cycle
+
+657000			PC:0x0006
+				SBIC 0x10,0x04
+
+659000			PC:0x0007
+				RJMP 0x0006
+660000			next command clock cycle
+
+662000			PC:0x0006
+				SBIC 0x10,0x04
+
+664000			PC:0x0007
+				RJMP 0x0006
+665000			next command clock cycle
+
+667000			PC:0x0006
+				SBIC 0x10,0x04
+
+669000			PC:0x0007
+				RJMP 0x0006
+670000			next command clock cycle
+
+672000			PC:0x0006
+				SBIC 0x10,0x04
+
+674000			PC:0x0007
+				RJMP 0x0006
+675000			next command clock cycle
+
+677000			PC:0x0006
+				SBIC 0x10,0x04
+
+679000			PC:0x0007
+				RJMP 0x0006
+680000			next command clock cycle
+
+682000			PC:0x0006
+				SBIC 0x10,0x04
+
+684000			PC:0x0007
+				RJMP 0x0006
+685000			next command clock cycle
+
+687000			PC:0x0006
+				SBIC 0x10,0x04
+
+689000			PC:0x0007
+				RJMP 0x0006
+690000			next command clock cycle
+
+692000			PC:0x0006
+				SBIC 0x10,0x04
+
+694000			PC:0x0007
+				RJMP 0x0006
+695000			next command clock cycle
+
+697000			PC:0x0006
+				SBIC 0x10,0x04
+
+699000			PC:0x0007
+				RJMP 0x0006
+700000			next command clock cycle
+
+702000			PC:0x0006
+				SBIC 0x10,0x04
+
+704000			PC:0x0007
+				RJMP 0x0006
+705000			next command clock cycle
+
+707000			PC:0x0006
+				SBIC 0x10,0x04
+
+709000			PC:0x0007
+				RJMP 0x0006
+710000			next command clock cycle
+
+712000			PC:0x0006
+				SBIC 0x10,0x04
+
+714000			PC:0x0007
+				RJMP 0x0006
+715000			next command clock cycle
+
+717000			PC:0x0006
+				SBIC 0x10,0x04
+
+719000			PC:0x0007
+				RJMP 0x0006
+720000			next command clock cycle
+
+722000			PC:0x0006
+				SBIC 0x10,0x04
+
+724000			PC:0x0007
+				RJMP 0x0006
+725000			next command clock cycle
+
+727000			PC:0x0006
+				SBIC 0x10,0x04
+
+729000			PC:0x0007
+				RJMP 0x0006
+730000			next command clock cycle
+
+732000			PC:0x0006
+				SBIC 0x10,0x04
+
+734000			PC:0x0007
+				RJMP 0x0006
+735000			next command clock cycle
+
+737000			PC:0x0006
+				SBIC 0x10,0x04
+
+739000			PC:0x0007
+				RJMP 0x0006
+740000			next command clock cycle
+
+742000			PC:0x0006
+				SBIC 0x10,0x04
+
+744000			PC:0x0007
+				RJMP 0x0006
+745000			next command clock cycle
+
+747000			PC:0x0006
+				SBIC 0x10,0x04
+
+749000			PC:0x0007
+				RJMP 0x0006
+750000			next command clock cycle
+
+752000			PC:0x0006
+				SBIC 0x10,0x04
+
+754000			PC:0x0007
+				RJMP 0x0006
+755000			next command clock cycle
+
+757000			PC:0x0006
+				SBIC 0x10,0x04
+
+759000			PC:0x0007
+				RJMP 0x0006
+760000			next command clock cycle
+
+762000			PC:0x0006
+				SBIC 0x10,0x04
+
+764000			PC:0x0007
+				RJMP 0x0006
+765000			next command clock cycle
+
+767000			PC:0x0006
+				SBIC 0x10,0x04
+
+769000			PC:0x0007
+				RJMP 0x0006
+770000			next command clock cycle
+
+772000			PC:0x0006
+				SBIC 0x10,0x04
+
+774000			PC:0x0007
+				RJMP 0x0006
+775000			next command clock cycle
+
+777000			PC:0x0006
+				SBIC 0x10,0x04
+
+779000			PC:0x0007
+				RJMP 0x0006
+780000			next command clock cycle
+
+782000			PC:0x0006
+				SBIC 0x10,0x04
+
+784000			PC:0x0007
+				RJMP 0x0006
+785000			next command clock cycle
+
+787000			PC:0x0006
+				SBIC 0x10,0x04
+
+789000			PC:0x0007
+				RJMP 0x0006
+790000			next command clock cycle
+
+792000			PC:0x0006
+				SBIC 0x10,0x04
+
+794000			PC:0x0007
+				RJMP 0x0006
+795000			next command clock cycle
+
+797000			PC:0x0006
+				SBIC 0x10,0x04
+
+799000			PC:0x0007
+				RJMP 0x0006
+800000			next command clock cycle
+
+802000			PC:0x0006
+				SBIC 0x10,0x04
+
+804000			PC:0x0007
+				RJMP 0x0006
+805000			next command clock cycle
+
+807000			PC:0x0006
+				SBIC 0x10,0x04
+
+809000			PC:0x0007
+				RJMP 0x0006
+810000			next command clock cycle
+
+812000			PC:0x0006
+				SBIC 0x10,0x04
+
+814000			PC:0x0007
+				RJMP 0x0006
+815000			next command clock cycle
+
+817000			PC:0x0006
+				SBIC 0x10,0x04
+
+819000			PC:0x0007
+				RJMP 0x0006
+820000			next command clock cycle
+
+822000			PC:0x0006
+				SBIC 0x10,0x04
+
+824000			PC:0x0007
+				RJMP 0x0006
+825000			next command clock cycle
+
+827000			PC:0x0006
+				SBIC 0x10,0x04
+828000			next command clock cycle
+
+830000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+832000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+834000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+836000			PC:0x000B
+				SBRC 0x13,0x01
+837000			next command clock cycle
+
+839000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+841000			PC:0x000E
+				SBRS 0x13,0x01
+
+843000			PC:0x000F
+				RJMP 0x0013
+844000			next command clock cycle
+
+846000			PC:0x0013
+				SBIC 0x10,0x04
+847000			next command clock cycle
+
+849000			PC:0x0015
+				RJMP 0x0006
+850000			next command clock cycle
+
+852000			PC:0x0006
+				SBIC 0x10,0x04
+
+854000			PC:0x0007
+				RJMP 0x0006
+855000			next command clock cycle
+
+857000			PC:0x0006
+				SBIC 0x10,0x04
+
+859000			PC:0x0007
+				RJMP 0x0006
+860000			next command clock cycle
+
+862000			PC:0x0006
+				SBIC 0x10,0x04
+
+864000			PC:0x0007
+				RJMP 0x0006
+865000			next command clock cycle
+
+867000			PC:0x0006
+				SBIC 0x10,0x04
+868000			next command clock cycle
+
+870000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+872000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+874000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+876000			PC:0x000B
+				SBRC 0x13,0x01
+
+878000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+880000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+882000			PC:0x000E
+				SBRS 0x13,0x01
+883000			next command clock cycle
+
+885000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+891000			PC:0x0013
+				SBIC 0x10,0x04
+892000			next command clock cycle
+
+894000			PC:0x0015
+				RJMP 0x0006
+895000			next command clock cycle
+
+897000			PC:0x0006
+				SBIC 0x10,0x04
+
+899000			PC:0x0007
+				RJMP 0x0006
+900000			next command clock cycle
+
+902000			PC:0x0006
+				SBIC 0x10,0x04
+
+904000			PC:0x0007
+				RJMP 0x0006
+905000			next command clock cycle
+
+907000			PC:0x0006
+				SBIC 0x10,0x04
+
+909000			PC:0x0007
+				RJMP 0x0006
+910000			next command clock cycle
+
+912000			PC:0x0006
+				SBIC 0x10,0x04
+
+914000			PC:0x0007
+				RJMP 0x0006
+915000			next command clock cycle
+
+917000			PC:0x0006
+				SBIC 0x10,0x04
+
+919000			PC:0x0007
+				RJMP 0x0006
+920000			next command clock cycle
+
+922000			PC:0x0006
+				SBIC 0x10,0x04
+
+924000			PC:0x0007
+				RJMP 0x0006
+925000			next command clock cycle
+
+927000			PC:0x0006
+				SBIC 0x10,0x04
+
+929000			PC:0x0007
+				RJMP 0x0006
+930000			next command clock cycle
+
+932000			PC:0x0006
+				SBIC 0x10,0x04
+
+934000			PC:0x0007
+				RJMP 0x0006
+935000			next command clock cycle
+
+937000			PC:0x0006
+				SBIC 0x10,0x04
+
+939000			PC:0x0007
+				RJMP 0x0006
+940000			next command clock cycle
+
+942000			PC:0x0006
+				SBIC 0x10,0x04
+
+944000			PC:0x0007
+				RJMP 0x0006
+945000			next command clock cycle
+
+947000			PC:0x0006
+				SBIC 0x10,0x04
+
+949000			PC:0x0007
+				RJMP 0x0006
+950000			next command clock cycle
+
+952000			PC:0x0006
+				SBIC 0x10,0x04
+
+954000			PC:0x0007
+				RJMP 0x0006
+955000			next command clock cycle
+
+957000			PC:0x0006
+				SBIC 0x10,0x04
+
+959000			PC:0x0007
+				RJMP 0x0006
+960000			next command clock cycle
+
+962000			PC:0x0006
+				SBIC 0x10,0x04
+
+964000			PC:0x0007
+				RJMP 0x0006
+965000			next command clock cycle
+
+967000			PC:0x0006
+				SBIC 0x10,0x04
+
+969000			PC:0x0007
+				RJMP 0x0006
+970000			next command clock cycle
+
+972000			PC:0x0006
+				SBIC 0x10,0x04
+
+974000			PC:0x0007
+				RJMP 0x0006
+975000			next command clock cycle
+
+977000			PC:0x0006
+				SBIC 0x10,0x04
+
+979000			PC:0x0007
+				RJMP 0x0006
+980000			next command clock cycle
+
+982000			PC:0x0006
+				SBIC 0x10,0x04
+
+984000			PC:0x0007
+				RJMP 0x0006
+985000			next command clock cycle
+
+987000			PC:0x0006
+				SBIC 0x10,0x04
+
+989000			PC:0x0007
+				RJMP 0x0006
+990000			next command clock cycle
+
+992000			PC:0x0006
+				SBIC 0x10,0x04
+
+994000			PC:0x0007
+				RJMP 0x0006
+995000			next command clock cycle
+
+997000			PC:0x0006
+				SBIC 0x10,0x04
+
+999000			PC:0x0007
+				RJMP 0x0006
+1000000			next command clock cycle
+
+1002000			PC:0x0006
+				SBIC 0x10,0x04
+
+1004000			PC:0x0007
+				RJMP 0x0006
+1005000			next command clock cycle
+
+1007000			PC:0x0006
+				SBIC 0x10,0x04
+
+1009000			PC:0x0007
+				RJMP 0x0006
+1010000			next command clock cycle
+
+1012000			PC:0x0006
+				SBIC 0x10,0x04
+
+1014000			PC:0x0007
+				RJMP 0x0006
+1015000			next command clock cycle
+
+1017000			PC:0x0006
+				SBIC 0x10,0x04
+1018000			next command clock cycle
+
+1020000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+1022000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+1024000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+1026000			PC:0x000B
+				SBRC 0x13,0x01
+1027000			next command clock cycle
+
+1029000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+1031000			PC:0x000E
+				SBRS 0x13,0x01
+
+1033000			PC:0x000F
+				RJMP 0x0013
+1034000			next command clock cycle
+
+1036000			PC:0x0013
+				SBIC 0x10,0x04
+1037000			next command clock cycle
+
+1039000			PC:0x0015
+				RJMP 0x0006
+1040000			next command clock cycle
+
+1042000			PC:0x0006
+				SBIC 0x10,0x04
+
+1044000			PC:0x0007
+				RJMP 0x0006
+1045000			next command clock cycle
+
+1047000			PC:0x0006
+				SBIC 0x10,0x04
+
+1049000			PC:0x0007
+				RJMP 0x0006
+1050000			next command clock cycle
+
+1052000			PC:0x0006
+				SBIC 0x10,0x04
+
+1054000			PC:0x0007
+				RJMP 0x0006
+1055000			next command clock cycle
+
+1057000			PC:0x0006
+				SBIC 0x10,0x04
+1058000			next command clock cycle
+
+1060000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+1062000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+1064000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+1066000			PC:0x000B
+				SBRC 0x13,0x01
+
+1068000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+1070000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+1072000			PC:0x000E
+				SBRS 0x13,0x01
+1073000			next command clock cycle
+
+1075000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+1081000			PC:0x0013
+				SBIC 0x10,0x04
+1082000			next command clock cycle
+
+1084000			PC:0x0015
+				RJMP 0x0006
+1085000			next command clock cycle
+
+1087000			PC:0x0006
+				SBIC 0x10,0x04
+
+1089000			PC:0x0007
+				RJMP 0x0006
+1090000			next command clock cycle
+
+1092000			PC:0x0006
+				SBIC 0x10,0x04
+
+1094000			PC:0x0007
+				RJMP 0x0006
+1095000			next command clock cycle
+
+1097000			PC:0x0006
+				SBIC 0x10,0x04
+
+1099000			PC:0x0007
+				RJMP 0x0006
+1100000			next command clock cycle
+
+1102000			PC:0x0006
+				SBIC 0x10,0x04
+
+1104000			PC:0x0007
+				RJMP 0x0006
+1105000			next command clock cycle
+
+1107000			PC:0x0006
+				SBIC 0x10,0x04
+
+1109000			PC:0x0007
+				RJMP 0x0006
+1110000			next command clock cycle
+
+1112000			PC:0x0006
+				SBIC 0x10,0x04
+
+1114000			PC:0x0007
+				RJMP 0x0006
+1115000			next command clock cycle
+
+1117000			PC:0x0006
+				SBIC 0x10,0x04
+
+1119000			PC:0x0007
+				RJMP 0x0006
+1120000			next command clock cycle
+
+1122000			PC:0x0006
+				SBIC 0x10,0x04
+
+1124000			PC:0x0007
+				RJMP 0x0006
+1125000			next command clock cycle
+
+1127000			PC:0x0006
+				SBIC 0x10,0x04
+
+1129000			PC:0x0007
+				RJMP 0x0006
+1130000			next command clock cycle
+
+1132000			PC:0x0006
+				SBIC 0x10,0x04
+
+1134000			PC:0x0007
+				RJMP 0x0006
+1135000			next command clock cycle
+
+1137000			PC:0x0006
+				SBIC 0x10,0x04
+
+1139000			PC:0x0007
+				RJMP 0x0006
+1140000			next command clock cycle
+
+1142000			PC:0x0006
+				SBIC 0x10,0x04
+
+1144000			PC:0x0007
+				RJMP 0x0006
+1145000			next command clock cycle
+
+1147000			PC:0x0006
+				SBIC 0x10,0x04
+
+1149000			PC:0x0007
+				RJMP 0x0006
+1150000			next command clock cycle
+
+1152000			PC:0x0006
+				SBIC 0x10,0x04
+
+1154000			PC:0x0007
+				RJMP 0x0006
+1155000			next command clock cycle
+
+1157000			PC:0x0006
+				SBIC 0x10,0x04
+
+1159000			PC:0x0007
+				RJMP 0x0006
+1160000			next command clock cycle
+
+1162000			PC:0x0006
+				SBIC 0x10,0x04
+
+1164000			PC:0x0007
+				RJMP 0x0006
+1165000			next command clock cycle
+
+1167000			PC:0x0006
+				SBIC 0x10,0x04
+
+1169000			PC:0x0007
+				RJMP 0x0006
+1170000			next command clock cycle
+
+1172000			PC:0x0006
+				SBIC 0x10,0x04
+
+1174000			PC:0x0007
+				RJMP 0x0006
+1175000			next command clock cycle
+
+1177000			PC:0x0006
+				SBIC 0x10,0x04
+
+1179000			PC:0x0007
+				RJMP 0x0006
+1180000			next command clock cycle
+
+1182000			PC:0x0006
+				SBIC 0x10,0x04
+
+1184000			PC:0x0007
+				RJMP 0x0006
+1185000			next command clock cycle
+
+1187000			PC:0x0006
+				SBIC 0x10,0x04
+
+1189000			PC:0x0007
+				RJMP 0x0006
+1190000			next command clock cycle
+
+1192000			PC:0x0006
+				SBIC 0x10,0x04
+
+1194000			PC:0x0007
+				RJMP 0x0006
+1195000			next command clock cycle
+
+1197000			PC:0x0006
+				SBIC 0x10,0x04
+
+1199000			PC:0x0007
+				RJMP 0x0006
+1200000			next command clock cycle
+
+1202000			PC:0x0006
+				SBIC 0x10,0x04
+
+1204000			PC:0x0007
+				RJMP 0x0006
+1205000			next command clock cycle
+
+1207000			PC:0x0006
+				SBIC 0x10,0x04
+
+1209000			PC:0x0007
+				RJMP 0x0006
+1210000			next command clock cycle
+
+1212000			PC:0x0006
+				SBIC 0x10,0x04
+
+1214000			PC:0x0007
+				RJMP 0x0006
+1215000			next command clock cycle
+
+1217000			PC:0x0006
+				SBIC 0x10,0x04
+
+1219000			PC:0x0007
+				RJMP 0x0006
+1220000			next command clock cycle
+
+1222000			PC:0x0006
+				SBIC 0x10,0x04
+
+1224000			PC:0x0007
+				RJMP 0x0006
+1225000			next command clock cycle
+
+1227000			PC:0x0006
+				SBIC 0x10,0x04
+1228000			next command clock cycle
+
+1230000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+1232000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+1234000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+1236000			PC:0x000B
+				SBRC 0x13,0x01
+1237000			next command clock cycle
+
+1239000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+1241000			PC:0x000E
+				SBRS 0x13,0x01
+
+1243000			PC:0x000F
+				RJMP 0x0013
+1244000			next command clock cycle
+
+1246000			PC:0x0013
+				SBIC 0x10,0x04
+1247000			next command clock cycle
+
+1249000			PC:0x0015
+				RJMP 0x0006
+1250000			next command clock cycle
+
+1252000			PC:0x0006
+				SBIC 0x10,0x04
+
+1254000			PC:0x0007
+				RJMP 0x0006
+1255000			next command clock cycle
+
+1257000			PC:0x0006
+				SBIC 0x10,0x04
+
+1259000			PC:0x0007
+				RJMP 0x0006
+1260000			next command clock cycle
+
+1262000			PC:0x0006
+				SBIC 0x10,0x04
+
+1264000			PC:0x0007
+				RJMP 0x0006
+1265000			next command clock cycle
+
+1267000			PC:0x0006
+				SBIC 0x10,0x04
+1268000			next command clock cycle
+
+1270000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+1272000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+1274000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+1276000			PC:0x000B
+				SBRC 0x13,0x01
+
+1278000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+1280000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+1282000			PC:0x000E
+				SBRS 0x13,0x01
+1283000			next command clock cycle
+
+1285000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+1291000			PC:0x0013
+				SBIC 0x10,0x04
+1292000			next command clock cycle
+
+1294000			PC:0x0015
+				RJMP 0x0006
+1295000			next command clock cycle
+
+1297000			PC:0x0006
+				SBIC 0x10,0x04
+
+1299000			PC:0x0007
+				RJMP 0x0006
+1300000			next command clock cycle
+
+1302000			PC:0x0006
+				SBIC 0x10,0x04
+
+1304000			PC:0x0007
+				RJMP 0x0006
+1305000			next command clock cycle
+
+1307000			PC:0x0006
+				SBIC 0x10,0x04
+
+1309000			PC:0x0007
+				RJMP 0x0006
+1310000			next command clock cycle
+
+1312000			PC:0x0006
+				SBIC 0x10,0x04
+
+1314000			PC:0x0007
+				RJMP 0x0006
+1315000			next command clock cycle
+
+1317000			PC:0x0006
+				SBIC 0x10,0x04
+
+1319000			PC:0x0007
+				RJMP 0x0006
+1320000			next command clock cycle
+
+1322000			PC:0x0006
+				SBIC 0x10,0x04
+
+1324000			PC:0x0007
+				RJMP 0x0006
+1325000			next command clock cycle
+
+1327000			PC:0x0006
+				SBIC 0x10,0x04
+
+1329000			PC:0x0007
+				RJMP 0x0006
+1330000			next command clock cycle
+
+1332000			PC:0x0006
+				SBIC 0x10,0x04
+
+1334000			PC:0x0007
+				RJMP 0x0006
+1335000			next command clock cycle
+
+1337000			PC:0x0006
+				SBIC 0x10,0x04
+
+1339000			PC:0x0007
+				RJMP 0x0006
+1340000			next command clock cycle
+
+1342000			PC:0x0006
+				SBIC 0x10,0x04
+
+1344000			PC:0x0007
+				RJMP 0x0006
+1345000			next command clock cycle
+
+1347000			PC:0x0006
+				SBIC 0x10,0x04
+
+1349000			PC:0x0007
+				RJMP 0x0006
+1350000			next command clock cycle
+
+1352000			PC:0x0006
+				SBIC 0x10,0x04
+
+1354000			PC:0x0007
+				RJMP 0x0006
+1355000			next command clock cycle
+
+1357000			PC:0x0006
+				SBIC 0x10,0x04
+
+1359000			PC:0x0007
+				RJMP 0x0006
+1360000			next command clock cycle
+
+1362000			PC:0x0006
+				SBIC 0x10,0x04
+
+1364000			PC:0x0007
+				RJMP 0x0006
+1365000			next command clock cycle
+
+1367000			PC:0x0006
+				SBIC 0x10,0x04
+
+1369000			PC:0x0007
+				RJMP 0x0006
+1370000			next command clock cycle
+
+1372000			PC:0x0006
+				SBIC 0x10,0x04
+
+1374000			PC:0x0007
+				RJMP 0x0006
+1375000			next command clock cycle
+
+1377000			PC:0x0006
+				SBIC 0x10,0x04
+1378000			next command clock cycle
+
+1380000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+1382000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+1384000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+1386000			PC:0x000B
+				SBRC 0x13,0x01
+1387000			next command clock cycle
+
+1389000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+1391000			PC:0x000E
+				SBRS 0x13,0x01
+
+1393000			PC:0x000F
+				RJMP 0x0013
+1394000			next command clock cycle
+
+1396000			PC:0x0013
+				SBIC 0x10,0x04
+1397000			next command clock cycle
+
+1399000			PC:0x0015
+				RJMP 0x0006
+1400000			next command clock cycle
+
+1402000			PC:0x0006
+				SBIC 0x10,0x04
+
+1404000			PC:0x0007
+				RJMP 0x0006
+1405000			next command clock cycle
+
+1407000			PC:0x0006
+				SBIC 0x10,0x04
+
+1409000			PC:0x0007
+				RJMP 0x0006
+1410000			next command clock cycle
+
+1412000			PC:0x0006
+				SBIC 0x10,0x04
+
+1414000			PC:0x0007
+				RJMP 0x0006
+1415000			next command clock cycle
+
+1417000			PC:0x0006
+				SBIC 0x10,0x04
+1418000			next command clock cycle
+
+1420000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+1422000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+1424000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+1426000			PC:0x000B
+				SBRC 0x13,0x01
+
+1428000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+1430000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+1432000			PC:0x000E
+				SBRS 0x13,0x01
+1433000			next command clock cycle
+
+1435000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+1441000			PC:0x0013
+				SBIC 0x10,0x04
+1442000			next command clock cycle
+
+1444000			PC:0x0015
+				RJMP 0x0006
+1445000			next command clock cycle
+
+1447000			PC:0x0006
+				SBIC 0x10,0x04
+
+1449000			PC:0x0007
+				RJMP 0x0006
+1450000			next command clock cycle
+
+1452000			PC:0x0006
+				SBIC 0x10,0x04
+
+1454000			PC:0x0007
+				RJMP 0x0006
+1455000			next command clock cycle
+
+1457000			PC:0x0006
+				SBIC 0x10,0x04
+
+1459000			PC:0x0007
+				RJMP 0x0006
+1460000			next command clock cycle
+
+1462000			PC:0x0006
+				SBIC 0x10,0x04
+
+1464000			PC:0x0007
+				RJMP 0x0006
+1465000			next command clock cycle
+
+1467000			PC:0x0006
+				SBIC 0x10,0x04
+
+1469000			PC:0x0007
+				RJMP 0x0006
+1470000			next command clock cycle
+
+1472000			PC:0x0006
+				SBIC 0x10,0x04
+
+1474000			PC:0x0007
+				RJMP 0x0006
+1475000			next command clock cycle
+
+1477000			PC:0x0006
+				SBIC 0x10,0x04
+
+1479000			PC:0x0007
+				RJMP 0x0006
+1480000			next command clock cycle
+
+1482000			PC:0x0006
+				SBIC 0x10,0x04
+
+1484000			PC:0x0007
+				RJMP 0x0006
+1485000			next command clock cycle
+
+1487000			PC:0x0006
+				SBIC 0x10,0x04
+
+1489000			PC:0x0007
+				RJMP 0x0006
+1490000			next command clock cycle
+
+1492000			PC:0x0006
+				SBIC 0x10,0x04
+
+1494000			PC:0x0007
+				RJMP 0x0006
+1495000			next command clock cycle
+
+1497000			PC:0x0006
+				SBIC 0x10,0x04
+
+1499000			PC:0x0007
+				RJMP 0x0006
+1500000			next command clock cycle
+
+1502000			PC:0x0006
+				SBIC 0x10,0x04
+
+1504000			PC:0x0007
+				RJMP 0x0006
+1505000			next command clock cycle
+
+1507000			PC:0x0006
+				SBIC 0x10,0x04
+
+1509000			PC:0x0007
+				RJMP 0x0006
+1510000			next command clock cycle
+
+1512000			PC:0x0006
+				SBIC 0x10,0x04
+
+1514000			PC:0x0007
+				RJMP 0x0006
+1515000			next command clock cycle
+
+1517000			PC:0x0006
+				SBIC 0x10,0x04
+
+1519000			PC:0x0007
+				RJMP 0x0006
+1520000			next command clock cycle
+
+1522000			PC:0x0006
+				SBIC 0x10,0x04
+
+1524000			PC:0x0007
+				RJMP 0x0006
+1525000			next command clock cycle
+
+1527000			PC:0x0006
+				SBIC 0x10,0x04
+
+1529000			PC:0x0007
+				RJMP 0x0006
+1530000			next command clock cycle
+
+1532000			PC:0x0006
+				SBIC 0x10,0x04
+
+1534000			PC:0x0007
+				RJMP 0x0006
+1535000			next command clock cycle
+
+1537000			PC:0x0006
+				SBIC 0x10,0x04
+1538000			next command clock cycle
+
+1540000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+1542000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+1544000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+1546000			PC:0x000B
+				SBRC 0x13,0x01
+1547000			next command clock cycle
+
+1549000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+1551000			PC:0x000E
+				SBRS 0x13,0x01
+
+1553000			PC:0x000F
+				RJMP 0x0013
+1554000			next command clock cycle
+
+1556000			PC:0x0013
+				SBIC 0x10,0x04
+1557000			next command clock cycle
+
+1559000			PC:0x0015
+				RJMP 0x0006
+1560000			next command clock cycle
+
+1562000			PC:0x0006
+				SBIC 0x10,0x04
+
+1564000			PC:0x0007
+				RJMP 0x0006
+1565000			next command clock cycle
+
+1567000			PC:0x0006
+				SBIC 0x10,0x04
+
+1569000			PC:0x0007
+				RJMP 0x0006
+1570000			next command clock cycle
+
+1572000			PC:0x0006
+				SBIC 0x10,0x04
+
+1574000			PC:0x0007
+				RJMP 0x0006
+1575000			next command clock cycle
+
+1577000			PC:0x0006
+				SBIC 0x10,0x04
+1578000			next command clock cycle
+
+1580000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+1582000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+1584000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+1586000			PC:0x000B
+				SBRC 0x13,0x01
+
+1588000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+1590000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+1592000			PC:0x000E
+				SBRS 0x13,0x01
+1593000			next command clock cycle
+
+1595000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+1601000			PC:0x0013
+				SBIC 0x10,0x04
+1602000			next command clock cycle
+
+1604000			PC:0x0015
+				RJMP 0x0006
+1605000			next command clock cycle
+
+1607000			PC:0x0006
+				SBIC 0x10,0x04
+
+1609000			PC:0x0007
+				RJMP 0x0006
+1610000			next command clock cycle
+
+1612000			PC:0x0006
+				SBIC 0x10,0x04
+
+1614000			PC:0x0007
+				RJMP 0x0006
+1615000			next command clock cycle
+
+1617000			PC:0x0006
+				SBIC 0x10,0x04
+
+1619000			PC:0x0007
+				RJMP 0x0006
+1620000			next command clock cycle
+
+1622000			PC:0x0006
+				SBIC 0x10,0x04
+
+1624000			PC:0x0007
+				RJMP 0x0006
+1625000			next command clock cycle
+
+1627000			PC:0x0006
+				SBIC 0x10,0x04
+
+1629000			PC:0x0007
+				RJMP 0x0006
+1630000			next command clock cycle
+
+1632000			PC:0x0006
+				SBIC 0x10,0x04
+
+1634000			PC:0x0007
+				RJMP 0x0006
+1635000			next command clock cycle
+
+1637000			PC:0x0006
+				SBIC 0x10,0x04
+
+1639000			PC:0x0007
+				RJMP 0x0006
+1640000			next command clock cycle
+
+1642000			PC:0x0006
+				SBIC 0x10,0x04
+
+1644000			PC:0x0007
+				RJMP 0x0006
+1645000			next command clock cycle
+
+1647000			PC:0x0006
+				SBIC 0x10,0x04
+
+1649000			PC:0x0007
+				RJMP 0x0006
+1650000			next command clock cycle
+
+1652000			PC:0x0006
+				SBIC 0x10,0x04
+
+1654000			PC:0x0007
+				RJMP 0x0006
+1655000			next command clock cycle
+
+1657000			PC:0x0006
+				SBIC 0x10,0x04
+
+1659000			PC:0x0007
+				RJMP 0x0006
+1660000			next command clock cycle
+
+1662000			PC:0x0006
+				SBIC 0x10,0x04
+
+1664000			PC:0x0007
+				RJMP 0x0006
+1665000			next command clock cycle
+
+1667000			PC:0x0006
+				SBIC 0x10,0x04
+
+1669000			PC:0x0007
+				RJMP 0x0006
+1670000			next command clock cycle
+
+1672000			PC:0x0006
+				SBIC 0x10,0x04
+
+1674000			PC:0x0007
+				RJMP 0x0006
+1675000			next command clock cycle
+
+1677000			PC:0x0006
+				SBIC 0x10,0x04
+
+1679000			PC:0x0007
+				RJMP 0x0006
+1680000			next command clock cycle
+
+1682000			PC:0x0006
+				SBIC 0x10,0x04
+
+1684000			PC:0x0007
+				RJMP 0x0006
+1685000			next command clock cycle
+
+1687000			PC:0x0006
+				SBIC 0x10,0x04
+
+1689000			PC:0x0007
+				RJMP 0x0006
+1690000			next command clock cycle
+
+1692000			PC:0x0006
+				SBIC 0x10,0x04
+
+1694000			PC:0x0007
+				RJMP 0x0006
+1695000			next command clock cycle
+
+1697000			PC:0x0006
+				SBIC 0x10,0x04
+
+1699000			PC:0x0007
+				RJMP 0x0006
+1700000			next command clock cycle
+
+1702000			PC:0x0006
+				SBIC 0x10,0x04
+
+1704000			PC:0x0007
+				RJMP 0x0006
+1705000			next command clock cycle
+
+1707000			PC:0x0006
+				SBIC 0x10,0x04
+
+1709000			PC:0x0007
+				RJMP 0x0006
+1710000			next command clock cycle
+
+1712000			PC:0x0006
+				SBIC 0x10,0x04
+
+1714000			PC:0x0007
+				RJMP 0x0006
+1715000			next command clock cycle
+
+1717000			PC:0x0006
+				SBIC 0x10,0x04
+
+1719000			PC:0x0007
+				RJMP 0x0006
+1720000			next command clock cycle
+
+1722000			PC:0x0006
+				SBIC 0x10,0x04
+
+1724000			PC:0x0007
+				RJMP 0x0006
+1725000			next command clock cycle
+
+1727000			PC:0x0006
+				SBIC 0x10,0x04
+
+1729000			PC:0x0007
+				RJMP 0x0006
+1730000			next command clock cycle
+
+1732000			PC:0x0006
+				SBIC 0x10,0x04
+
+1734000			PC:0x0007
+				RJMP 0x0006
+1735000			next command clock cycle
+
+1737000			PC:0x0006
+				SBIC 0x10,0x04
+
+1739000			PC:0x0007
+				RJMP 0x0006
+1740000			next command clock cycle
+
+1742000			PC:0x0006
+				SBIC 0x10,0x04
+
+1744000			PC:0x0007
+				RJMP 0x0006
+1745000			next command clock cycle
+
+1747000			PC:0x0006
+				SBIC 0x10,0x04
+
+1749000			PC:0x0007
+				RJMP 0x0006
+1750000			next command clock cycle
+
+1752000			PC:0x0006
+				SBIC 0x10,0x04
+
+1754000			PC:0x0007
+				RJMP 0x0006
+1755000			next command clock cycle
+
+1757000			PC:0x0006
+				SBIC 0x10,0x04
+1758000			next command clock cycle
+
+1760000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+1762000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+1764000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+1766000			PC:0x000B
+				SBRC 0x13,0x01
+1767000			next command clock cycle
+
+1769000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+1771000			PC:0x000E
+				SBRS 0x13,0x01
+
+1773000			PC:0x000F
+				RJMP 0x0013
+1774000			next command clock cycle
+
+1776000			PC:0x0013
+				SBIC 0x10,0x04
+1777000			next command clock cycle
+
+1779000			PC:0x0015
+				RJMP 0x0006
+1780000			next command clock cycle
+
+1782000			PC:0x0006
+				SBIC 0x10,0x04
+
+1784000			PC:0x0007
+				RJMP 0x0006
+1785000			next command clock cycle
+
+1787000			PC:0x0006
+				SBIC 0x10,0x04
+
+1789000			PC:0x0007
+				RJMP 0x0006
+1790000			next command clock cycle
+
+1792000			PC:0x0006
+				SBIC 0x10,0x04
+
+1794000			PC:0x0007
+				RJMP 0x0006
+1795000			next command clock cycle
+
+1797000			PC:0x0006
+				SBIC 0x10,0x04
+1798000			next command clock cycle
+
+1800000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+1802000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+1804000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+1806000			PC:0x000B
+				SBRC 0x13,0x01
+
+1808000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+1810000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+1812000			PC:0x000E
+				SBRS 0x13,0x01
+1813000			next command clock cycle
+
+1815000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+1821000			PC:0x0013
+				SBIC 0x10,0x04
+1822000			next command clock cycle
+
+1824000			PC:0x0015
+				RJMP 0x0006
+1825000			next command clock cycle
+
+1827000			PC:0x0006
+				SBIC 0x10,0x04
+
+1829000			PC:0x0007
+				RJMP 0x0006
+1830000			next command clock cycle
+
+1832000			PC:0x0006
+				SBIC 0x10,0x04
+
+1834000			PC:0x0007
+				RJMP 0x0006
+1835000			next command clock cycle
+
+1837000			PC:0x0006
+				SBIC 0x10,0x04
+
+1839000			PC:0x0007
+				RJMP 0x0006
+1840000			next command clock cycle
+
+1842000			PC:0x0006
+				SBIC 0x10,0x04
+
+1844000			PC:0x0007
+				RJMP 0x0006
+1845000			next command clock cycle
+
+1847000			PC:0x0006
+				SBIC 0x10,0x04
+
+1849000			PC:0x0007
+				RJMP 0x0006
+1850000			next command clock cycle
+
+1852000			PC:0x0006
+				SBIC 0x10,0x04
+
+1854000			PC:0x0007
+				RJMP 0x0006
+1855000			next command clock cycle
+
+1857000			PC:0x0006
+				SBIC 0x10,0x04
+
+1859000			PC:0x0007
+				RJMP 0x0006
+1860000			next command clock cycle
+
+1862000			PC:0x0006
+				SBIC 0x10,0x04
+
+1864000			PC:0x0007
+				RJMP 0x0006
+1865000			next command clock cycle
+
+1867000			PC:0x0006
+				SBIC 0x10,0x04
+
+1869000			PC:0x0007
+				RJMP 0x0006
+1870000			next command clock cycle
+
+1872000			PC:0x0006
+				SBIC 0x10,0x04
+
+1874000			PC:0x0007
+				RJMP 0x0006
+1875000			next command clock cycle
+
+1877000			PC:0x0006
+				SBIC 0x10,0x04
+
+1879000			PC:0x0007
+				RJMP 0x0006
+1880000			next command clock cycle
+
+1882000			PC:0x0006
+				SBIC 0x10,0x04
+
+1884000			PC:0x0007
+				RJMP 0x0006
+1885000			next command clock cycle
+
+1887000			PC:0x0006
+				SBIC 0x10,0x04
+
+1889000			PC:0x0007
+				RJMP 0x0006
+1890000			next command clock cycle
+
+1892000			PC:0x0006
+				SBIC 0x10,0x04
+
+1894000			PC:0x0007
+				RJMP 0x0006
+1895000			next command clock cycle
+
+1897000			PC:0x0006
+				SBIC 0x10,0x04
+
+1899000			PC:0x0007
+				RJMP 0x0006
+1900000			next command clock cycle
+
+1902000			PC:0x0006
+				SBIC 0x10,0x04
+
+1904000			PC:0x0007
+				RJMP 0x0006
+1905000			next command clock cycle
+
+1907000			PC:0x0006
+				SBIC 0x10,0x04
+
+1909000			PC:0x0007
+				RJMP 0x0006
+1910000			next command clock cycle
+
+1912000			PC:0x0006
+				SBIC 0x10,0x04
+
+1914000			PC:0x0007
+				RJMP 0x0006
+1915000			next command clock cycle
+
+1917000			PC:0x0006
+				SBIC 0x10,0x04
+
+1919000			PC:0x0007
+				RJMP 0x0006
+1920000			next command clock cycle
+
+1922000			PC:0x0006
+				SBIC 0x10,0x04
+
+1924000			PC:0x0007
+				RJMP 0x0006
+1925000			next command clock cycle
+
+1927000			PC:0x0006
+				SBIC 0x10,0x04
+
+1929000			PC:0x0007
+				RJMP 0x0006
+1930000			next command clock cycle
+
+1932000			PC:0x0006
+				SBIC 0x10,0x04
+
+1934000			PC:0x0007
+				RJMP 0x0006
+1935000			next command clock cycle
+
+1937000			PC:0x0006
+				SBIC 0x10,0x04
+
+1939000			PC:0x0007
+				RJMP 0x0006
+1940000			next command clock cycle
+
+1942000			PC:0x0006
+				SBIC 0x10,0x04
+
+1944000			PC:0x0007
+				RJMP 0x0006
+1945000			next command clock cycle
+
+1947000			PC:0x0006
+				SBIC 0x10,0x04
+
+1949000			PC:0x0007
+				RJMP 0x0006
+1950000			next command clock cycle
+
+1952000			PC:0x0006
+				SBIC 0x10,0x04
+
+1954000			PC:0x0007
+				RJMP 0x0006
+1955000			next command clock cycle
+
+1957000			PC:0x0006
+				SBIC 0x10,0x04
+
+1959000			PC:0x0007
+				RJMP 0x0006
+1960000			next command clock cycle
+
+1962000			PC:0x0006
+				SBIC 0x10,0x04
+1963000			next command clock cycle
+
+1965000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+1967000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+1969000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+1971000			PC:0x000B
+				SBRC 0x13,0x01
+1972000			next command clock cycle
+
+1974000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+1976000			PC:0x000E
+				SBRS 0x13,0x01
+
+1978000			PC:0x000F
+				RJMP 0x0013
+1979000			next command clock cycle
+
+1981000			PC:0x0013
+				SBIC 0x10,0x04
+1982000			next command clock cycle
+
+1984000			PC:0x0015
+				RJMP 0x0006
+1985000			next command clock cycle
+
+1987000			PC:0x0006
+				SBIC 0x10,0x04
+
+1989000			PC:0x0007
+				RJMP 0x0006
+1990000			next command clock cycle
+
+1992000			PC:0x0006
+				SBIC 0x10,0x04
+
+1994000			PC:0x0007
+				RJMP 0x0006
+1995000			next command clock cycle
+
+1997000			PC:0x0006
+				SBIC 0x10,0x04
+1998000			next command clock cycle
+
+2000000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+2002000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2004000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2006000			PC:0x000B
+				SBRC 0x13,0x01
+
+2008000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+2010000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2012000			PC:0x000E
+				SBRS 0x13,0x01
+2013000			next command clock cycle
+
+2015000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+2021000			PC:0x0013
+				SBIC 0x10,0x04
+2022000			next command clock cycle
+
+2024000			PC:0x0015
+				RJMP 0x0006
+2025000			next command clock cycle
+
+2027000			PC:0x0006
+				SBIC 0x10,0x04
+
+2029000			PC:0x0007
+				RJMP 0x0006
+2030000			next command clock cycle
+
+2032000			PC:0x0006
+				SBIC 0x10,0x04
+
+2034000			PC:0x0007
+				RJMP 0x0006
+2035000			next command clock cycle
+
+2037000			PC:0x0006
+				SBIC 0x10,0x04
+
+2039000			PC:0x0007
+				RJMP 0x0006
+2040000			next command clock cycle
+
+2042000			PC:0x0006
+				SBIC 0x10,0x04
+
+2044000			PC:0x0007
+				RJMP 0x0006
+2045000			next command clock cycle
+
+2047000			PC:0x0006
+				SBIC 0x10,0x04
+
+2049000			PC:0x0007
+				RJMP 0x0006
+2050000			next command clock cycle
+
+2052000			PC:0x0006
+				SBIC 0x10,0x04
+
+2054000			PC:0x0007
+				RJMP 0x0006
+2055000			next command clock cycle
+
+2057000			PC:0x0006
+				SBIC 0x10,0x04
+
+2059000			PC:0x0007
+				RJMP 0x0006
+2060000			next command clock cycle
+
+2062000			PC:0x0006
+				SBIC 0x10,0x04
+
+2064000			PC:0x0007
+				RJMP 0x0006
+2065000			next command clock cycle
+
+2067000			PC:0x0006
+				SBIC 0x10,0x04
+
+2069000			PC:0x0007
+				RJMP 0x0006
+2070000			next command clock cycle
+
+2072000			PC:0x0006
+				SBIC 0x10,0x04
+
+2074000			PC:0x0007
+				RJMP 0x0006
+2075000			next command clock cycle
+
+2077000			PC:0x0006
+				SBIC 0x10,0x04
+
+2079000			PC:0x0007
+				RJMP 0x0006
+2080000			next command clock cycle
+
+2082000			PC:0x0006
+				SBIC 0x10,0x04
+
+2084000			PC:0x0007
+				RJMP 0x0006
+2085000			next command clock cycle
+
+2087000			PC:0x0006
+				SBIC 0x10,0x04
+
+2089000			PC:0x0007
+				RJMP 0x0006
+2090000			next command clock cycle
+
+2092000			PC:0x0006
+				SBIC 0x10,0x04
+
+2094000			PC:0x0007
+				RJMP 0x0006
+2095000			next command clock cycle
+
+2097000			PC:0x0006
+				SBIC 0x10,0x04
+
+2099000			PC:0x0007
+				RJMP 0x0006
+2100000			next command clock cycle
+
+2102000			PC:0x0006
+				SBIC 0x10,0x04
+
+2104000			PC:0x0007
+				RJMP 0x0006
+2105000			next command clock cycle
+
+2107000			PC:0x0006
+				SBIC 0x10,0x04
+
+2109000			PC:0x0007
+				RJMP 0x0006
+2110000			next command clock cycle
+
+2112000			PC:0x0006
+				SBIC 0x10,0x04
+
+2114000			PC:0x0007
+				RJMP 0x0006
+2115000			next command clock cycle
+
+2117000			PC:0x0006
+				SBIC 0x10,0x04
+
+2119000			PC:0x0007
+				RJMP 0x0006
+2120000			next command clock cycle
+
+2122000			PC:0x0006
+				SBIC 0x10,0x04
+
+2124000			PC:0x0007
+				RJMP 0x0006
+2125000			next command clock cycle
+
+2127000			PC:0x0006
+				SBIC 0x10,0x04
+
+2129000			PC:0x0007
+				RJMP 0x0006
+2130000			next command clock cycle
+
+2132000			PC:0x0006
+				SBIC 0x10,0x04
+
+2134000			PC:0x0007
+				RJMP 0x0006
+2135000			next command clock cycle
+
+2137000			PC:0x0006
+				SBIC 0x10,0x04
+
+2139000			PC:0x0007
+				RJMP 0x0006
+2140000			next command clock cycle
+
+2142000			PC:0x0006
+				SBIC 0x10,0x04
+
+2144000			PC:0x0007
+				RJMP 0x0006
+2145000			next command clock cycle
+
+2147000			PC:0x0006
+				SBIC 0x10,0x04
+
+2149000			PC:0x0007
+				RJMP 0x0006
+2150000			next command clock cycle
+
+2152000			PC:0x0006
+				SBIC 0x10,0x04
+2153000			next command clock cycle
+
+2155000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+2157000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2159000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2161000			PC:0x000B
+				SBRC 0x13,0x01
+2162000			next command clock cycle
+
+2164000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2166000			PC:0x000E
+				SBRS 0x13,0x01
+
+2168000			PC:0x000F
+				RJMP 0x0013
+2169000			next command clock cycle
+
+2171000			PC:0x0013
+				SBIC 0x10,0x04
+2172000			next command clock cycle
+
+2174000			PC:0x0015
+				RJMP 0x0006
+2175000			next command clock cycle
+
+2177000			PC:0x0006
+				SBIC 0x10,0x04
+
+2179000			PC:0x0007
+				RJMP 0x0006
+2180000			next command clock cycle
+
+2182000			PC:0x0006
+				SBIC 0x10,0x04
+
+2184000			PC:0x0007
+				RJMP 0x0006
+2185000			next command clock cycle
+
+2187000			PC:0x0006
+				SBIC 0x10,0x04
+2188000			next command clock cycle
+
+2190000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+2192000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+2194000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+2196000			PC:0x000B
+				SBRC 0x13,0x01
+
+2198000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+2200000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+2202000			PC:0x000E
+				SBRS 0x13,0x01
+2203000			next command clock cycle
+
+2205000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+2211000			PC:0x0013
+				SBIC 0x10,0x04
+2212000			next command clock cycle
+
+2214000			PC:0x0015
+				RJMP 0x0006
+2215000			next command clock cycle
+
+2217000			PC:0x0006
+				SBIC 0x10,0x04
+
+2219000			PC:0x0007
+				RJMP 0x0006
+2220000			next command clock cycle
+
+2222000			PC:0x0006
+				SBIC 0x10,0x04
+
+2224000			PC:0x0007
+				RJMP 0x0006
+2225000			next command clock cycle
+
+2227000			PC:0x0006
+				SBIC 0x10,0x04
+
+2229000			PC:0x0007
+				RJMP 0x0006
+2230000			next command clock cycle
+
+2232000			PC:0x0006
+				SBIC 0x10,0x04
+
+2234000			PC:0x0007
+				RJMP 0x0006
+2235000			next command clock cycle
+
+2237000			PC:0x0006
+				SBIC 0x10,0x04
+
+2239000			PC:0x0007
+				RJMP 0x0006
+2240000			next command clock cycle
+
+2242000			PC:0x0006
+				SBIC 0x10,0x04
+
+2244000			PC:0x0007
+				RJMP 0x0006
+2245000			next command clock cycle
+
+2247000			PC:0x0006
+				SBIC 0x10,0x04
+
+2249000			PC:0x0007
+				RJMP 0x0006
+2250000			next command clock cycle
+
+2252000			PC:0x0006
+				SBIC 0x10,0x04
+
+2254000			PC:0x0007
+				RJMP 0x0006
+2255000			next command clock cycle
+
+2257000			PC:0x0006
+				SBIC 0x10,0x04
+
+2259000			PC:0x0007
+				RJMP 0x0006
+2260000			next command clock cycle
+
+2262000			PC:0x0006
+				SBIC 0x10,0x04
+
+2264000			PC:0x0007
+				RJMP 0x0006
+2265000			next command clock cycle
+
+2267000			PC:0x0006
+				SBIC 0x10,0x04
+
+2269000			PC:0x0007
+				RJMP 0x0006
+2270000			next command clock cycle
+
+2272000			PC:0x0006
+				SBIC 0x10,0x04
+
+2274000			PC:0x0007
+				RJMP 0x0006
+2275000			next command clock cycle
+
+2277000			PC:0x0006
+				SBIC 0x10,0x04
+
+2279000			PC:0x0007
+				RJMP 0x0006
+2280000			next command clock cycle
+
+2282000			PC:0x0006
+				SBIC 0x10,0x04
+
+2284000			PC:0x0007
+				RJMP 0x0006
+2285000			next command clock cycle
+
+2287000			PC:0x0006
+				SBIC 0x10,0x04
+
+2289000			PC:0x0007
+				RJMP 0x0006
+2290000			next command clock cycle
+
+2292000			PC:0x0006
+				SBIC 0x10,0x04
+
+2294000			PC:0x0007
+				RJMP 0x0006
+2295000			next command clock cycle
+
+2297000			PC:0x0006
+				SBIC 0x10,0x04
+
+2299000			PC:0x0007
+				RJMP 0x0006
+2300000			next command clock cycle
+
+2302000			PC:0x0006
+				SBIC 0x10,0x04
+
+2304000			PC:0x0007
+				RJMP 0x0006
+2305000			next command clock cycle
+
+2307000			PC:0x0006
+				SBIC 0x10,0x04
+
+2309000			PC:0x0007
+				RJMP 0x0006
+2310000			next command clock cycle
+
+2312000			PC:0x0006
+				SBIC 0x10,0x04
+
+2314000			PC:0x0007
+				RJMP 0x0006
+2315000			next command clock cycle
+
+2317000			PC:0x0006
+				SBIC 0x10,0x04
+
+2319000			PC:0x0007
+				RJMP 0x0006
+2320000			next command clock cycle
+
+2322000			PC:0x0006
+				SBIC 0x10,0x04
+
+2324000			PC:0x0007
+				RJMP 0x0006
+2325000			next command clock cycle
+
+2327000			PC:0x0006
+				SBIC 0x10,0x04
+2328000			next command clock cycle
+
+2330000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+2332000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2334000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2336000			PC:0x000B
+				SBRC 0x13,0x01
+2337000			next command clock cycle
+
+2339000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2341000			PC:0x000E
+				SBRS 0x13,0x01
+
+2343000			PC:0x000F
+				RJMP 0x0013
+2344000			next command clock cycle
+
+2346000			PC:0x0013
+				SBIC 0x10,0x04
+2347000			next command clock cycle
+
+2349000			PC:0x0015
+				RJMP 0x0006
+2350000			next command clock cycle
+
+2352000			PC:0x0006
+				SBIC 0x10,0x04
+
+2354000			PC:0x0007
+				RJMP 0x0006
+2355000			next command clock cycle
+
+2357000			PC:0x0006
+				SBIC 0x10,0x04
+
+2359000			PC:0x0007
+				RJMP 0x0006
+2360000			next command clock cycle
+
+2362000			PC:0x0006
+				SBIC 0x10,0x04
+
+2364000			PC:0x0007
+				RJMP 0x0006
+2365000			next command clock cycle
+
+2367000			PC:0x0006
+				SBIC 0x10,0x04
+2368000			next command clock cycle
+
+2370000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+2372000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2374000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2376000			PC:0x000B
+				SBRC 0x13,0x01
+
+2378000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+2380000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2382000			PC:0x000E
+				SBRS 0x13,0x01
+2383000			next command clock cycle
+
+2385000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+2391000			PC:0x0013
+				SBIC 0x10,0x04
+2392000			next command clock cycle
+
+2394000			PC:0x0015
+				RJMP 0x0006
+2395000			next command clock cycle
+
+2397000			PC:0x0006
+				SBIC 0x10,0x04
+
+2399000			PC:0x0007
+				RJMP 0x0006
+2400000			next command clock cycle
+
+2402000			PC:0x0006
+				SBIC 0x10,0x04
+
+2404000			PC:0x0007
+				RJMP 0x0006
+2405000			next command clock cycle
+
+2407000			PC:0x0006
+				SBIC 0x10,0x04
+
+2409000			PC:0x0007
+				RJMP 0x0006
+2410000			next command clock cycle
+
+2412000			PC:0x0006
+				SBIC 0x10,0x04
+
+2414000			PC:0x0007
+				RJMP 0x0006
+2415000			next command clock cycle
+
+2417000			PC:0x0006
+				SBIC 0x10,0x04
+
+2419000			PC:0x0007
+				RJMP 0x0006
+2420000			next command clock cycle
+
+2422000			PC:0x0006
+				SBIC 0x10,0x04
+
+2424000			PC:0x0007
+				RJMP 0x0006
+2425000			next command clock cycle
+
+2427000			PC:0x0006
+				SBIC 0x10,0x04
+
+2429000			PC:0x0007
+				RJMP 0x0006
+2430000			next command clock cycle
+
+2432000			PC:0x0006
+				SBIC 0x10,0x04
+
+2434000			PC:0x0007
+				RJMP 0x0006
+2435000			next command clock cycle
+
+2437000			PC:0x0006
+				SBIC 0x10,0x04
+
+2439000			PC:0x0007
+				RJMP 0x0006
+2440000			next command clock cycle
+
+2442000			PC:0x0006
+				SBIC 0x10,0x04
+
+2444000			PC:0x0007
+				RJMP 0x0006
+2445000			next command clock cycle
+
+2447000			PC:0x0006
+				SBIC 0x10,0x04
+
+2449000			PC:0x0007
+				RJMP 0x0006
+2450000			next command clock cycle
+
+2452000			PC:0x0006
+				SBIC 0x10,0x04
+
+2454000			PC:0x0007
+				RJMP 0x0006
+2455000			next command clock cycle
+
+2457000			PC:0x0006
+				SBIC 0x10,0x04
+
+2459000			PC:0x0007
+				RJMP 0x0006
+2460000			next command clock cycle
+
+2462000			PC:0x0006
+				SBIC 0x10,0x04
+
+2464000			PC:0x0007
+				RJMP 0x0006
+2465000			next command clock cycle
+
+2467000			PC:0x0006
+				SBIC 0x10,0x04
+
+2469000			PC:0x0007
+				RJMP 0x0006
+2470000			next command clock cycle
+
+2472000			PC:0x0006
+				SBIC 0x10,0x04
+
+2474000			PC:0x0007
+				RJMP 0x0006
+2475000			next command clock cycle
+
+2477000			PC:0x0006
+				SBIC 0x10,0x04
+
+2479000			PC:0x0007
+				RJMP 0x0006
+2480000			next command clock cycle
+
+2482000			PC:0x0006
+				SBIC 0x10,0x04
+
+2484000			PC:0x0007
+				RJMP 0x0006
+2485000			next command clock cycle
+
+2487000			PC:0x0006
+				SBIC 0x10,0x04
+2488000			next command clock cycle
+
+2490000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+2492000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2494000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2496000			PC:0x000B
+				SBRC 0x13,0x01
+2497000			next command clock cycle
+
+2499000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2501000			PC:0x000E
+				SBRS 0x13,0x01
+
+2503000			PC:0x000F
+				RJMP 0x0013
+2504000			next command clock cycle
+
+2506000			PC:0x0013
+				SBIC 0x10,0x04
+2507000			next command clock cycle
+
+2509000			PC:0x0015
+				RJMP 0x0006
+2510000			next command clock cycle
+
+2512000			PC:0x0006
+				SBIC 0x10,0x04
+
+2514000			PC:0x0007
+				RJMP 0x0006
+2515000			next command clock cycle
+
+2517000			PC:0x0006
+				SBIC 0x10,0x04
+
+2519000			PC:0x0007
+				RJMP 0x0006
+2520000			next command clock cycle
+
+2522000			PC:0x0006
+				SBIC 0x10,0x04
+
+2524000			PC:0x0007
+				RJMP 0x0006
+2525000			next command clock cycle
+
+2527000			PC:0x0006
+				SBIC 0x10,0x04
+2528000			next command clock cycle
+
+2530000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+2532000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+2534000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+2536000			PC:0x000B
+				SBRC 0x13,0x01
+
+2538000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+2540000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+2542000			PC:0x000E
+				SBRS 0x13,0x01
+2543000			next command clock cycle
+
+2545000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+2551000			PC:0x0013
+				SBIC 0x10,0x04
+2552000			next command clock cycle
+
+2554000			PC:0x0015
+				RJMP 0x0006
+2555000			next command clock cycle
+
+2557000			PC:0x0006
+				SBIC 0x10,0x04
+
+2559000			PC:0x0007
+				RJMP 0x0006
+2560000			next command clock cycle
+
+2562000			PC:0x0006
+				SBIC 0x10,0x04
+
+2564000			PC:0x0007
+				RJMP 0x0006
+2565000			next command clock cycle
+
+2567000			PC:0x0006
+				SBIC 0x10,0x04
+
+2569000			PC:0x0007
+				RJMP 0x0006
+2570000			next command clock cycle
+
+2572000			PC:0x0006
+				SBIC 0x10,0x04
+
+2574000			PC:0x0007
+				RJMP 0x0006
+2575000			next command clock cycle
+
+2577000			PC:0x0006
+				SBIC 0x10,0x04
+
+2579000			PC:0x0007
+				RJMP 0x0006
+2580000			next command clock cycle
+
+2582000			PC:0x0006
+				SBIC 0x10,0x04
+
+2584000			PC:0x0007
+				RJMP 0x0006
+2585000			next command clock cycle
+
+2587000			PC:0x0006
+				SBIC 0x10,0x04
+
+2589000			PC:0x0007
+				RJMP 0x0006
+2590000			next command clock cycle
+
+2592000			PC:0x0006
+				SBIC 0x10,0x04
+
+2594000			PC:0x0007
+				RJMP 0x0006
+2595000			next command clock cycle
+
+2597000			PC:0x0006
+				SBIC 0x10,0x04
+
+2599000			PC:0x0007
+				RJMP 0x0006
+2600000			next command clock cycle
+
+2602000			PC:0x0006
+				SBIC 0x10,0x04
+
+2604000			PC:0x0007
+				RJMP 0x0006
+2605000			next command clock cycle
+
+2607000			PC:0x0006
+				SBIC 0x10,0x04
+
+2609000			PC:0x0007
+				RJMP 0x0006
+2610000			next command clock cycle
+
+2612000			PC:0x0006
+				SBIC 0x10,0x04
+
+2614000			PC:0x0007
+				RJMP 0x0006
+2615000			next command clock cycle
+
+2617000			PC:0x0006
+				SBIC 0x10,0x04
+
+2619000			PC:0x0007
+				RJMP 0x0006
+2620000			next command clock cycle
+
+2622000			PC:0x0006
+				SBIC 0x10,0x04
+
+2624000			PC:0x0007
+				RJMP 0x0006
+2625000			next command clock cycle
+
+2627000			PC:0x0006
+				SBIC 0x10,0x04
+
+2629000			PC:0x0007
+				RJMP 0x0006
+2630000			next command clock cycle
+
+2632000			PC:0x0006
+				SBIC 0x10,0x04
+
+2634000			PC:0x0007
+				RJMP 0x0006
+2635000			next command clock cycle
+
+2637000			PC:0x0006
+				SBIC 0x10,0x04
+
+2639000			PC:0x0007
+				RJMP 0x0006
+2640000			next command clock cycle
+
+2642000			PC:0x0006
+				SBIC 0x10,0x04
+
+2644000			PC:0x0007
+				RJMP 0x0006
+2645000			next command clock cycle
+
+2647000			PC:0x0006
+				SBIC 0x10,0x04
+
+2649000			PC:0x0007
+				RJMP 0x0006
+2650000			next command clock cycle
+
+2652000			PC:0x0006
+				SBIC 0x10,0x04
+2653000			next command clock cycle
+
+2655000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+2657000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2659000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2661000			PC:0x000B
+				SBRC 0x13,0x01
+2662000			next command clock cycle
+
+2664000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2666000			PC:0x000E
+				SBRS 0x13,0x01
+
+2668000			PC:0x000F
+				RJMP 0x0013
+2669000			next command clock cycle
+
+2671000			PC:0x0013
+				SBIC 0x10,0x04
+2672000			next command clock cycle
+
+2674000			PC:0x0015
+				RJMP 0x0006
+2675000			next command clock cycle
+
+2677000			PC:0x0006
+				SBIC 0x10,0x04
+
+2679000			PC:0x0007
+				RJMP 0x0006
+2680000			next command clock cycle
+
+2682000			PC:0x0006
+				SBIC 0x10,0x04
+
+2684000			PC:0x0007
+				RJMP 0x0006
+2685000			next command clock cycle
+
+2687000			PC:0x0006
+				SBIC 0x10,0x04
+2688000			next command clock cycle
+
+2690000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+2692000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2694000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2696000			PC:0x000B
+				SBRC 0x13,0x01
+
+2698000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+2700000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2702000			PC:0x000E
+				SBRS 0x13,0x01
+2703000			next command clock cycle
+
+2705000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+2711000			PC:0x0013
+				SBIC 0x10,0x04
+2712000			next command clock cycle
+
+2714000			PC:0x0015
+				RJMP 0x0006
+2715000			next command clock cycle
+
+2717000			PC:0x0006
+				SBIC 0x10,0x04
+
+2719000			PC:0x0007
+				RJMP 0x0006
+2720000			next command clock cycle
+
+2722000			PC:0x0006
+				SBIC 0x10,0x04
+
+2724000			PC:0x0007
+				RJMP 0x0006
+2725000			next command clock cycle
+
+2727000			PC:0x0006
+				SBIC 0x10,0x04
+
+2729000			PC:0x0007
+				RJMP 0x0006
+2730000			next command clock cycle
+
+2732000			PC:0x0006
+				SBIC 0x10,0x04
+
+2734000			PC:0x0007
+				RJMP 0x0006
+2735000			next command clock cycle
+
+2737000			PC:0x0006
+				SBIC 0x10,0x04
+
+2739000			PC:0x0007
+				RJMP 0x0006
+2740000			next command clock cycle
+
+2742000			PC:0x0006
+				SBIC 0x10,0x04
+
+2744000			PC:0x0007
+				RJMP 0x0006
+2745000			next command clock cycle
+
+2747000			PC:0x0006
+				SBIC 0x10,0x04
+
+2749000			PC:0x0007
+				RJMP 0x0006
+2750000			next command clock cycle
+
+2752000			PC:0x0006
+				SBIC 0x10,0x04
+
+2754000			PC:0x0007
+				RJMP 0x0006
+2755000			next command clock cycle
+
+2757000			PC:0x0006
+				SBIC 0x10,0x04
+
+2759000			PC:0x0007
+				RJMP 0x0006
+2760000			next command clock cycle
+
+2762000			PC:0x0006
+				SBIC 0x10,0x04
+
+2764000			PC:0x0007
+				RJMP 0x0006
+2765000			next command clock cycle
+
+2767000			PC:0x0006
+				SBIC 0x10,0x04
+
+2769000			PC:0x0007
+				RJMP 0x0006
+2770000			next command clock cycle
+
+2772000			PC:0x0006
+				SBIC 0x10,0x04
+
+2774000			PC:0x0007
+				RJMP 0x0006
+2775000			next command clock cycle
+
+2777000			PC:0x0006
+				SBIC 0x10,0x04
+
+2779000			PC:0x0007
+				RJMP 0x0006
+2780000			next command clock cycle
+
+2782000			PC:0x0006
+				SBIC 0x10,0x04
+
+2784000			PC:0x0007
+				RJMP 0x0006
+2785000			next command clock cycle
+
+2787000			PC:0x0006
+				SBIC 0x10,0x04
+
+2789000			PC:0x0007
+				RJMP 0x0006
+2790000			next command clock cycle
+
+2792000			PC:0x0006
+				SBIC 0x10,0x04
+
+2794000			PC:0x0007
+				RJMP 0x0006
+2795000			next command clock cycle
+
+2797000			PC:0x0006
+				SBIC 0x10,0x04
+
+2799000			PC:0x0007
+				RJMP 0x0006
+2800000			next command clock cycle
+
+2802000			PC:0x0006
+				SBIC 0x10,0x04
+
+2804000			PC:0x0007
+				RJMP 0x0006
+2805000			next command clock cycle
+
+2807000			PC:0x0006
+				SBIC 0x10,0x04
+
+2809000			PC:0x0007
+				RJMP 0x0006
+2810000			next command clock cycle
+
+2812000			PC:0x0006
+				SBIC 0x10,0x04
+
+2814000			PC:0x0007
+				RJMP 0x0006
+2815000			next command clock cycle
+
+2817000			PC:0x0006
+				SBIC 0x10,0x04
+
+2819000			PC:0x0007
+				RJMP 0x0006
+2820000			next command clock cycle
+
+2822000			PC:0x0006
+				SBIC 0x10,0x04
+2823000			next command clock cycle
+
+2825000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+2827000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2829000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2831000			PC:0x000B
+				SBRC 0x13,0x01
+2832000			next command clock cycle
+
+2834000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2836000			PC:0x000E
+				SBRS 0x13,0x01
+
+2838000			PC:0x000F
+				RJMP 0x0013
+2839000			next command clock cycle
+
+2841000			PC:0x0013
+				SBIC 0x10,0x04
+2842000			next command clock cycle
+
+2844000			PC:0x0015
+				RJMP 0x0006
+2845000			next command clock cycle
+
+2847000			PC:0x0006
+				SBIC 0x10,0x04
+
+2849000			PC:0x0007
+				RJMP 0x0006
+2850000			next command clock cycle
+
+2852000			PC:0x0006
+				SBIC 0x10,0x04
+
+2854000			PC:0x0007
+				RJMP 0x0006
+2855000			next command clock cycle
+
+2857000			PC:0x0006
+				SBIC 0x10,0x04
+2858000			next command clock cycle
+
+2860000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+2862000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+2864000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+2866000			PC:0x000B
+				SBRC 0x13,0x01
+
+2868000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+2870000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+2872000			PC:0x000E
+				SBRS 0x13,0x01
+2873000			next command clock cycle
+
+2875000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+2881000			PC:0x0013
+				SBIC 0x10,0x04
+2882000			next command clock cycle
+
+2884000			PC:0x0015
+				RJMP 0x0006
+2885000			next command clock cycle
+
+2887000			PC:0x0006
+				SBIC 0x10,0x04
+
+2889000			PC:0x0007
+				RJMP 0x0006
+2890000			next command clock cycle
+
+2892000			PC:0x0006
+				SBIC 0x10,0x04
+
+2894000			PC:0x0007
+				RJMP 0x0006
+2895000			next command clock cycle
+
+2897000			PC:0x0006
+				SBIC 0x10,0x04
+
+2899000			PC:0x0007
+				RJMP 0x0006
+2900000			next command clock cycle
+
+2902000			PC:0x0006
+				SBIC 0x10,0x04
+
+2904000			PC:0x0007
+				RJMP 0x0006
+2905000			next command clock cycle
+
+2907000			PC:0x0006
+				SBIC 0x10,0x04
+
+2909000			PC:0x0007
+				RJMP 0x0006
+2910000			next command clock cycle
+
+2912000			PC:0x0006
+				SBIC 0x10,0x04
+
+2914000			PC:0x0007
+				RJMP 0x0006
+2915000			next command clock cycle
+
+2917000			PC:0x0006
+				SBIC 0x10,0x04
+
+2919000			PC:0x0007
+				RJMP 0x0006
+2920000			next command clock cycle
+
+2922000			PC:0x0006
+				SBIC 0x10,0x04
+
+2924000			PC:0x0007
+				RJMP 0x0006
+2925000			next command clock cycle
+
+2927000			PC:0x0006
+				SBIC 0x10,0x04
+
+2929000			PC:0x0007
+				RJMP 0x0006
+2930000			next command clock cycle
+
+2932000			PC:0x0006
+				SBIC 0x10,0x04
+
+2934000			PC:0x0007
+				RJMP 0x0006
+2935000			next command clock cycle
+
+2937000			PC:0x0006
+				SBIC 0x10,0x04
+
+2939000			PC:0x0007
+				RJMP 0x0006
+2940000			next command clock cycle
+
+2942000			PC:0x0006
+				SBIC 0x10,0x04
+
+2944000			PC:0x0007
+				RJMP 0x0006
+2945000			next command clock cycle
+
+2947000			PC:0x0006
+				SBIC 0x10,0x04
+
+2949000			PC:0x0007
+				RJMP 0x0006
+2950000			next command clock cycle
+
+2952000			PC:0x0006
+				SBIC 0x10,0x04
+
+2954000			PC:0x0007
+				RJMP 0x0006
+2955000			next command clock cycle
+
+2957000			PC:0x0006
+				SBIC 0x10,0x04
+
+2959000			PC:0x0007
+				RJMP 0x0006
+2960000			next command clock cycle
+
+2962000			PC:0x0006
+				SBIC 0x10,0x04
+
+2964000			PC:0x0007
+				RJMP 0x0006
+2965000			next command clock cycle
+
+2967000			PC:0x0006
+				SBIC 0x10,0x04
+
+2969000			PC:0x0007
+				RJMP 0x0006
+2970000			next command clock cycle
+
+2972000			PC:0x0006
+				SBIC 0x10,0x04
+
+2974000			PC:0x0007
+				RJMP 0x0006
+2975000			next command clock cycle
+
+2977000			PC:0x0006
+				SBIC 0x10,0x04
+2978000			next command clock cycle
+
+2980000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+2982000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+2984000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+2986000			PC:0x000B
+				SBRC 0x13,0x01
+2987000			next command clock cycle
+
+2989000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+2991000			PC:0x000E
+				SBRS 0x13,0x01
+
+2993000			PC:0x000F
+				RJMP 0x0013
+2994000			next command clock cycle
+
+2996000			PC:0x0013
+				SBIC 0x10,0x04
+2997000			next command clock cycle
+
+2999000			PC:0x0015
+				RJMP 0x0006
+3000000			next command clock cycle
+
+3002000			PC:0x0006
+				SBIC 0x10,0x04
+
+3004000			PC:0x0007
+				RJMP 0x0006
+3005000			next command clock cycle
+
+3007000			PC:0x0006
+				SBIC 0x10,0x04
+
+3009000			PC:0x0007
+				RJMP 0x0006
+3010000			next command clock cycle
+
+3012000			PC:0x0006
+				SBIC 0x10,0x04
+3013000			next command clock cycle
+
+3015000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+3017000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+3019000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+3021000			PC:0x000B
+				SBRC 0x13,0x01
+
+3023000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+3025000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+3027000			PC:0x000E
+				SBRS 0x13,0x01
+3028000			next command clock cycle
+
+3030000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+3036000			PC:0x0013
+				SBIC 0x10,0x04
+3037000			next command clock cycle
+
+3039000			PC:0x0015
+				RJMP 0x0006
+3040000			next command clock cycle
+
+3042000			PC:0x0006
+				SBIC 0x10,0x04
+
+3044000			PC:0x0007
+				RJMP 0x0006
+3045000			next command clock cycle
+
+3047000			PC:0x0006
+				SBIC 0x10,0x04
+
+3049000			PC:0x0007
+				RJMP 0x0006
+3050000			next command clock cycle
+
+3052000			PC:0x0006
+				SBIC 0x10,0x04
+
+3054000			PC:0x0007
+				RJMP 0x0006
+3055000			next command clock cycle
+
+3057000			PC:0x0006
+				SBIC 0x10,0x04
+
+3059000			PC:0x0007
+				RJMP 0x0006
+3060000			next command clock cycle
+
+3062000			PC:0x0006
+				SBIC 0x10,0x04
+
+3064000			PC:0x0007
+				RJMP 0x0006
+3065000			next command clock cycle
+
+3067000			PC:0x0006
+				SBIC 0x10,0x04
+
+3069000			PC:0x0007
+				RJMP 0x0006
+3070000			next command clock cycle
+
+3072000			PC:0x0006
+				SBIC 0x10,0x04
+
+3074000			PC:0x0007
+				RJMP 0x0006
+3075000			next command clock cycle
+
+3077000			PC:0x0006
+				SBIC 0x10,0x04
+
+3079000			PC:0x0007
+				RJMP 0x0006
+3080000			next command clock cycle
+
+3082000			PC:0x0006
+				SBIC 0x10,0x04
+
+3084000			PC:0x0007
+				RJMP 0x0006
+3085000			next command clock cycle
+
+3087000			PC:0x0006
+				SBIC 0x10,0x04
+
+3089000			PC:0x0007
+				RJMP 0x0006
+3090000			next command clock cycle
+
+3092000			PC:0x0006
+				SBIC 0x10,0x04
+
+3094000			PC:0x0007
+				RJMP 0x0006
+3095000			next command clock cycle
+
+3097000			PC:0x0006
+				SBIC 0x10,0x04
+
+3099000			PC:0x0007
+				RJMP 0x0006
+3100000			next command clock cycle
+
+3102000			PC:0x0006
+				SBIC 0x10,0x04
+
+3104000			PC:0x0007
+				RJMP 0x0006
+3105000			next command clock cycle
+
+3107000			PC:0x0006
+				SBIC 0x10,0x04
+
+3109000			PC:0x0007
+				RJMP 0x0006
+3110000			next command clock cycle
+
+3112000			PC:0x0006
+				SBIC 0x10,0x04
+
+3114000			PC:0x0007
+				RJMP 0x0006
+3115000			next command clock cycle
+
+3117000			PC:0x0006
+				SBIC 0x10,0x04
+
+3119000			PC:0x0007
+				RJMP 0x0006
+3120000			next command clock cycle
+
+3122000			PC:0x0006
+				SBIC 0x10,0x04
+
+3124000			PC:0x0007
+				RJMP 0x0006
+3125000			next command clock cycle
+
+3127000			PC:0x0006
+				SBIC 0x10,0x04
+
+3129000			PC:0x0007
+				RJMP 0x0006
+3130000			next command clock cycle
+
+3132000			PC:0x0006
+				SBIC 0x10,0x04
+
+3134000			PC:0x0007
+				RJMP 0x0006
+3135000			next command clock cycle
+
+3137000			PC:0x0006
+				SBIC 0x10,0x04
+
+3139000			PC:0x0007
+				RJMP 0x0006
+3140000			next command clock cycle
+
+3142000			PC:0x0006
+				SBIC 0x10,0x04
+
+3144000			PC:0x0007
+				RJMP 0x0006
+3145000			next command clock cycle
+
+3147000			PC:0x0006
+				SBIC 0x10,0x04
+
+3149000			PC:0x0007
+				RJMP 0x0006
+3150000			next command clock cycle
+
+3152000			PC:0x0006
+				SBIC 0x10,0x04
+
+3154000			PC:0x0007
+				RJMP 0x0006
+3155000			next command clock cycle
+
+3157000			PC:0x0006
+				SBIC 0x10,0x04
+
+3159000			PC:0x0007
+				RJMP 0x0006
+3160000			next command clock cycle
+
+3162000			PC:0x0006
+				SBIC 0x10,0x04
+
+3164000			PC:0x0007
+				RJMP 0x0006
+3165000			next command clock cycle
+
+3167000			PC:0x0006
+				SBIC 0x10,0x04
+3168000			next command clock cycle
+
+3170000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+3172000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+3174000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+3176000			PC:0x000B
+				SBRC 0x13,0x01
+3177000			next command clock cycle
+
+3179000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+3181000			PC:0x000E
+				SBRS 0x13,0x01
+
+3183000			PC:0x000F
+				RJMP 0x0013
+3184000			next command clock cycle
+
+3186000			PC:0x0013
+				SBIC 0x10,0x04
+3187000			next command clock cycle
+
+3189000			PC:0x0015
+				RJMP 0x0006
+3190000			next command clock cycle
+
+3192000			PC:0x0006
+				SBIC 0x10,0x04
+
+3194000			PC:0x0007
+				RJMP 0x0006
+3195000			next command clock cycle
+
+3197000			PC:0x0006
+				SBIC 0x10,0x04
+
+3199000			PC:0x0007
+				RJMP 0x0006
+3200000			next command clock cycle
+
+3202000			PC:0x0006
+				SBIC 0x10,0x04
+3203000			next command clock cycle
+
+3205000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+3207000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+3209000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+3211000			PC:0x000B
+				SBRC 0x13,0x01
+
+3213000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+3215000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+3217000			PC:0x000E
+				SBRS 0x13,0x01
+3218000			next command clock cycle
+
+3220000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+3226000			PC:0x0013
+				SBIC 0x10,0x04
+3227000			next command clock cycle
+
+3229000			PC:0x0015
+				RJMP 0x0006
+3230000			next command clock cycle
+
+3232000			PC:0x0006
+				SBIC 0x10,0x04
+
+3234000			PC:0x0007
+				RJMP 0x0006
+3235000			next command clock cycle
+
+3237000			PC:0x0006
+				SBIC 0x10,0x04
+
+3239000			PC:0x0007
+				RJMP 0x0006
+3240000			next command clock cycle
+
+3242000			PC:0x0006
+				SBIC 0x10,0x04
+
+3244000			PC:0x0007
+				RJMP 0x0006
+3245000			next command clock cycle
+
+3247000			PC:0x0006
+				SBIC 0x10,0x04
+
+3249000			PC:0x0007
+				RJMP 0x0006
+3250000			next command clock cycle
+
+3252000			PC:0x0006
+				SBIC 0x10,0x04
+
+3254000			PC:0x0007
+				RJMP 0x0006
+3255000			next command clock cycle
+
+3257000			PC:0x0006
+				SBIC 0x10,0x04
+
+3259000			PC:0x0007
+				RJMP 0x0006
+3260000			next command clock cycle
+
+3262000			PC:0x0006
+				SBIC 0x10,0x04
+
+3264000			PC:0x0007
+				RJMP 0x0006
+3265000			next command clock cycle
+
+3267000			PC:0x0006
+				SBIC 0x10,0x04
+
+3269000			PC:0x0007
+				RJMP 0x0006
+3270000			next command clock cycle
+
+3272000			PC:0x0006
+				SBIC 0x10,0x04
+
+3274000			PC:0x0007
+				RJMP 0x0006
+3275000			next command clock cycle
+
+3277000			PC:0x0006
+				SBIC 0x10,0x04
+
+3279000			PC:0x0007
+				RJMP 0x0006
+3280000			next command clock cycle
+
+3282000			PC:0x0006
+				SBIC 0x10,0x04
+
+3284000			PC:0x0007
+				RJMP 0x0006
+3285000			next command clock cycle
+
+3287000			PC:0x0006
+				SBIC 0x10,0x04
+
+3289000			PC:0x0007
+				RJMP 0x0006
+3290000			next command clock cycle
+
+3292000			PC:0x0006
+				SBIC 0x10,0x04
+
+3294000			PC:0x0007
+				RJMP 0x0006
+3295000			next command clock cycle
+
+3297000			PC:0x0006
+				SBIC 0x10,0x04
+
+3299000			PC:0x0007
+				RJMP 0x0006
+3300000			next command clock cycle
+
+3302000			PC:0x0006
+				SBIC 0x10,0x04
+
+3304000			PC:0x0007
+				RJMP 0x0006
+3305000			next command clock cycle
+
+3307000			PC:0x0006
+				SBIC 0x10,0x04
+
+3309000			PC:0x0007
+				RJMP 0x0006
+3310000			next command clock cycle
+
+3312000			PC:0x0006
+				SBIC 0x10,0x04
+
+3314000			PC:0x0007
+				RJMP 0x0006
+3315000			next command clock cycle
+
+3317000			PC:0x0006
+				SBIC 0x10,0x04
+
+3319000			PC:0x0007
+				RJMP 0x0006
+3320000			next command clock cycle
+
+3322000			PC:0x0006
+				SBIC 0x10,0x04
+
+3324000			PC:0x0007
+				RJMP 0x0006
+3325000			next command clock cycle
+
+3327000			PC:0x0006
+				SBIC 0x10,0x04
+
+3329000			PC:0x0007
+				RJMP 0x0006
+3330000			next command clock cycle
+
+3332000			PC:0x0006
+				SBIC 0x10,0x04
+
+3334000			PC:0x0007
+				RJMP 0x0006
+3335000			next command clock cycle
+
+3337000			PC:0x0006
+				SBIC 0x10,0x04
+
+3339000			PC:0x0007
+				RJMP 0x0006
+3340000			next command clock cycle
+
+3342000			PC:0x0006
+				SBIC 0x10,0x04
+
+3344000			PC:0x0007
+				RJMP 0x0006
+3345000			next command clock cycle
+
+3347000			PC:0x0006
+				SBIC 0x10,0x04
+
+3349000			PC:0x0007
+				RJMP 0x0006
+3350000			next command clock cycle
+
+3352000			PC:0x0006
+				SBIC 0x10,0x04
+
+3354000			PC:0x0007
+				RJMP 0x0006
+3355000			next command clock cycle
+
+3357000			PC:0x0006
+				SBIC 0x10,0x04
+
+3359000			PC:0x0007
+				RJMP 0x0006
+3360000			next command clock cycle
+
+3362000			PC:0x0006
+				SBIC 0x10,0x04
+3363000			next command clock cycle
+
+3365000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+3367000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+3369000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+3371000			PC:0x000B
+				SBRC 0x13,0x01
+3372000			next command clock cycle
+
+3374000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+3376000			PC:0x000E
+				SBRS 0x13,0x01
+
+3378000			PC:0x000F
+				RJMP 0x0013
+3379000			next command clock cycle
+
+3381000			PC:0x0013
+				SBIC 0x10,0x04
+3382000			next command clock cycle
+
+3384000			PC:0x0015
+				RJMP 0x0006
+3385000			next command clock cycle
+
+3387000			PC:0x0006
+				SBIC 0x10,0x04
+
+3389000			PC:0x0007
+				RJMP 0x0006
+3390000			next command clock cycle
+
+3392000			PC:0x0006
+				SBIC 0x10,0x04
+
+3394000			PC:0x0007
+				RJMP 0x0006
+3395000			next command clock cycle
+
+3397000			PC:0x0006
+				SBIC 0x10,0x04
+
+3399000			PC:0x0007
+				RJMP 0x0006
+3400000			next command clock cycle
+
+3402000			PC:0x0006
+				SBIC 0x10,0x04
+3403000			next command clock cycle
+
+3405000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+3407000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+3409000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+3411000			PC:0x000B
+				SBRC 0x13,0x01
+
+3413000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+3415000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+3417000			PC:0x000E
+				SBRS 0x13,0x01
+3418000			next command clock cycle
+
+3420000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+3426000			PC:0x0013
+				SBIC 0x10,0x04
+3427000			next command clock cycle
+
+3429000			PC:0x0015
+				RJMP 0x0006
+3430000			next command clock cycle
+
+3432000			PC:0x0006
+				SBIC 0x10,0x04
+
+3434000			PC:0x0007
+				RJMP 0x0006
+3435000			next command clock cycle
+
+3437000			PC:0x0006
+				SBIC 0x10,0x04
+
+3439000			PC:0x0007
+				RJMP 0x0006
+3440000			next command clock cycle
+
+3442000			PC:0x0006
+				SBIC 0x10,0x04
+
+3444000			PC:0x0007
+				RJMP 0x0006
+3445000			next command clock cycle
+
+3447000			PC:0x0006
+				SBIC 0x10,0x04
+
+3449000			PC:0x0007
+				RJMP 0x0006
+3450000			next command clock cycle
+
+3452000			PC:0x0006
+				SBIC 0x10,0x04
+
+3454000			PC:0x0007
+				RJMP 0x0006
+3455000			next command clock cycle
+
+3457000			PC:0x0006
+				SBIC 0x10,0x04
+
+3459000			PC:0x0007
+				RJMP 0x0006
+3460000			next command clock cycle
+
+3462000			PC:0x0006
+				SBIC 0x10,0x04
+
+3464000			PC:0x0007
+				RJMP 0x0006
+3465000			next command clock cycle
+
+3467000			PC:0x0006
+				SBIC 0x10,0x04
+
+3469000			PC:0x0007
+				RJMP 0x0006
+3470000			next command clock cycle
+
+3472000			PC:0x0006
+				SBIC 0x10,0x04
+
+3474000			PC:0x0007
+				RJMP 0x0006
+3475000			next command clock cycle
+
+3477000			PC:0x0006
+				SBIC 0x10,0x04
+
+3479000			PC:0x0007
+				RJMP 0x0006
+3480000			next command clock cycle
+
+3482000			PC:0x0006
+				SBIC 0x10,0x04
+
+3484000			PC:0x0007
+				RJMP 0x0006
+3485000			next command clock cycle
+
+3487000			PC:0x0006
+				SBIC 0x10,0x04
+
+3489000			PC:0x0007
+				RJMP 0x0006
+3490000			next command clock cycle
+
+3492000			PC:0x0006
+				SBIC 0x10,0x04
+
+3494000			PC:0x0007
+				RJMP 0x0006
+3495000			next command clock cycle
+
+3497000			PC:0x0006
+				SBIC 0x10,0x04
+
+3499000			PC:0x0007
+				RJMP 0x0006
+3500000			next command clock cycle
+
+3502000			PC:0x0006
+				SBIC 0x10,0x04
+
+3504000			PC:0x0007
+				RJMP 0x0006
+3505000			next command clock cycle
+
+3507000			PC:0x0006
+				SBIC 0x10,0x04
+
+3509000			PC:0x0007
+				RJMP 0x0006
+3510000			next command clock cycle
+
+3512000			PC:0x0006
+				SBIC 0x10,0x04
+
+3514000			PC:0x0007
+				RJMP 0x0006
+3515000			next command clock cycle
+
+3517000			PC:0x0006
+				SBIC 0x10,0x04
+
+3519000			PC:0x0007
+				RJMP 0x0006
+3520000			next command clock cycle
+
+3522000			PC:0x0006
+				SBIC 0x10,0x04
+3523000			next command clock cycle
+
+3525000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+3527000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+3529000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+3531000			PC:0x000B
+				SBRC 0x13,0x01
+3532000			next command clock cycle
+
+3534000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+3536000			PC:0x000E
+				SBRS 0x13,0x01
+
+3538000			PC:0x000F
+				RJMP 0x0013
+3539000			next command clock cycle
+
+3541000			PC:0x0013
+				SBIC 0x10,0x04
+3542000			next command clock cycle
+
+3544000			PC:0x0015
+				RJMP 0x0006
+3545000			next command clock cycle
+
+3547000			PC:0x0006
+				SBIC 0x10,0x04
+
+3549000			PC:0x0007
+				RJMP 0x0006
+3550000			next command clock cycle
+
+3552000			PC:0x0006
+				SBIC 0x10,0x04
+
+3554000			PC:0x0007
+				RJMP 0x0006
+3555000			next command clock cycle
+
+3557000			PC:0x0006
+				SBIC 0x10,0x04
+
+3559000			PC:0x0007
+				RJMP 0x0006
+3560000			next command clock cycle
+
+3562000			PC:0x0006
+				SBIC 0x10,0x04
+3563000			next command clock cycle
+
+3565000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+3567000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+3569000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+3571000			PC:0x000B
+				SBRC 0x13,0x01
+
+3573000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+3575000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+3577000			PC:0x000E
+				SBRS 0x13,0x01
+3578000			next command clock cycle
+
+3580000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+3586000			PC:0x0013
+				SBIC 0x10,0x04
+3587000			next command clock cycle
+
+3589000			PC:0x0015
+				RJMP 0x0006
+3590000			next command clock cycle
+
+3592000			PC:0x0006
+				SBIC 0x10,0x04
+
+3594000			PC:0x0007
+				RJMP 0x0006
+3595000			next command clock cycle
+
+3597000			PC:0x0006
+				SBIC 0x10,0x04
+
+3599000			PC:0x0007
+				RJMP 0x0006
+3600000			next command clock cycle
+
+3602000			PC:0x0006
+				SBIC 0x10,0x04
+
+3604000			PC:0x0007
+				RJMP 0x0006
+3605000			next command clock cycle
+
+3607000			PC:0x0006
+				SBIC 0x10,0x04
+
+3609000			PC:0x0007
+				RJMP 0x0006
+3610000			next command clock cycle
+
+3612000			PC:0x0006
+				SBIC 0x10,0x04
+
+3614000			PC:0x0007
+				RJMP 0x0006
+3615000			next command clock cycle
+
+3617000			PC:0x0006
+				SBIC 0x10,0x04
+
+3619000			PC:0x0007
+				RJMP 0x0006
+3620000			next command clock cycle
+
+3622000			PC:0x0006
+				SBIC 0x10,0x04
+
+3624000			PC:0x0007
+				RJMP 0x0006
+3625000			next command clock cycle
+
+3627000			PC:0x0006
+				SBIC 0x10,0x04
+
+3629000			PC:0x0007
+				RJMP 0x0006
+3630000			next command clock cycle
+
+3632000			PC:0x0006
+				SBIC 0x10,0x04
+
+3634000			PC:0x0007
+				RJMP 0x0006
+3635000			next command clock cycle
+
+3637000			PC:0x0006
+				SBIC 0x10,0x04
+
+3639000			PC:0x0007
+				RJMP 0x0006
+3640000			next command clock cycle
+
+3642000			PC:0x0006
+				SBIC 0x10,0x04
+
+3644000			PC:0x0007
+				RJMP 0x0006
+3645000			next command clock cycle
+
+3647000			PC:0x0006
+				SBIC 0x10,0x04
+
+3649000			PC:0x0007
+				RJMP 0x0006
+3650000			next command clock cycle
+
+3652000			PC:0x0006
+				SBIC 0x10,0x04
+
+3654000			PC:0x0007
+				RJMP 0x0006
+3655000			next command clock cycle
+
+3657000			PC:0x0006
+				SBIC 0x10,0x04
+
+3659000			PC:0x0007
+				RJMP 0x0006
+3660000			next command clock cycle
+
+3662000			PC:0x0006
+				SBIC 0x10,0x04
+
+3664000			PC:0x0007
+				RJMP 0x0006
+3665000			next command clock cycle
+
+3667000			PC:0x0006
+				SBIC 0x10,0x04
+
+3669000			PC:0x0007
+				RJMP 0x0006
+3670000			next command clock cycle
+
+3672000			PC:0x0006
+				SBIC 0x10,0x04
+
+3674000			PC:0x0007
+				RJMP 0x0006
+3675000			next command clock cycle
+
+3677000			PC:0x0006
+				SBIC 0x10,0x04
+
+3679000			PC:0x0007
+				RJMP 0x0006
+3680000			next command clock cycle
+
+3682000			PC:0x0006
+				SBIC 0x10,0x04
+
+3684000			PC:0x0007
+				RJMP 0x0006
+3685000			next command clock cycle
+
+3687000			PC:0x0006
+				SBIC 0x10,0x04
+
+3689000			PC:0x0007
+				RJMP 0x0006
+3690000			next command clock cycle
+
+3692000			PC:0x0006
+				SBIC 0x10,0x04
+3693000			next command clock cycle
+
+3695000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+3697000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+3699000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+3701000			PC:0x000B
+				SBRC 0x13,0x01
+3702000			next command clock cycle
+
+3704000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+3706000			PC:0x000E
+				SBRS 0x13,0x01
+
+3708000			PC:0x000F
+				RJMP 0x0013
+3709000			next command clock cycle
+
+3711000			PC:0x0013
+				SBIC 0x10,0x04
+3712000			next command clock cycle
+
+3714000			PC:0x0015
+				RJMP 0x0006
+3715000			next command clock cycle
+
+3717000			PC:0x0006
+				SBIC 0x10,0x04
+
+3719000			PC:0x0007
+				RJMP 0x0006
+3720000			next command clock cycle
+
+3722000			PC:0x0006
+				SBIC 0x10,0x04
+
+3724000			PC:0x0007
+				RJMP 0x0006
+3725000			next command clock cycle
+
+3727000			PC:0x0006
+				SBIC 0x10,0x04
+
+3729000			PC:0x0007
+				RJMP 0x0006
+3730000			next command clock cycle
+
+3732000			PC:0x0006
+				SBIC 0x10,0x04
+3733000			next command clock cycle
+
+3735000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+3737000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+3739000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+3741000			PC:0x000B
+				SBRC 0x13,0x01
+
+3743000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+3745000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+3747000			PC:0x000E
+				SBRS 0x13,0x01
+3748000			next command clock cycle
+
+3750000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+3756000			PC:0x0013
+				SBIC 0x10,0x04
+3757000			next command clock cycle
+
+3759000			PC:0x0015
+				RJMP 0x0006
+3760000			next command clock cycle
+
+3762000			PC:0x0006
+				SBIC 0x10,0x04
+
+3764000			PC:0x0007
+				RJMP 0x0006
+3765000			next command clock cycle
+
+3767000			PC:0x0006
+				SBIC 0x10,0x04
+
+3769000			PC:0x0007
+				RJMP 0x0006
+3770000			next command clock cycle
+
+3772000			PC:0x0006
+				SBIC 0x10,0x04
+
+3774000			PC:0x0007
+				RJMP 0x0006
+3775000			next command clock cycle
+
+3777000			PC:0x0006
+				SBIC 0x10,0x04
+
+3779000			PC:0x0007
+				RJMP 0x0006
+3780000			next command clock cycle
+
+3782000			PC:0x0006
+				SBIC 0x10,0x04
+
+3784000			PC:0x0007
+				RJMP 0x0006
+3785000			next command clock cycle
+
+3787000			PC:0x0006
+				SBIC 0x10,0x04
+
+3789000			PC:0x0007
+				RJMP 0x0006
+3790000			next command clock cycle
+
+3792000			PC:0x0006
+				SBIC 0x10,0x04
+
+3794000			PC:0x0007
+				RJMP 0x0006
+3795000			next command clock cycle
+
+3797000			PC:0x0006
+				SBIC 0x10,0x04
+
+3799000			PC:0x0007
+				RJMP 0x0006
+3800000			next command clock cycle
+
+3802000			PC:0x0006
+				SBIC 0x10,0x04
+
+3804000			PC:0x0007
+				RJMP 0x0006
+3805000			next command clock cycle
+
+3807000			PC:0x0006
+				SBIC 0x10,0x04
+
+3809000			PC:0x0007
+				RJMP 0x0006
+3810000			next command clock cycle
+
+3812000			PC:0x0006
+				SBIC 0x10,0x04
+
+3814000			PC:0x0007
+				RJMP 0x0006
+3815000			next command clock cycle
+
+3817000			PC:0x0006
+				SBIC 0x10,0x04
+
+3819000			PC:0x0007
+				RJMP 0x0006
+3820000			next command clock cycle
+
+3822000			PC:0x0006
+				SBIC 0x10,0x04
+
+3824000			PC:0x0007
+				RJMP 0x0006
+3825000			next command clock cycle
+
+3827000			PC:0x0006
+				SBIC 0x10,0x04
+
+3829000			PC:0x0007
+				RJMP 0x0006
+3830000			next command clock cycle
+
+3832000			PC:0x0006
+				SBIC 0x10,0x04
+
+3834000			PC:0x0007
+				RJMP 0x0006
+3835000			next command clock cycle
+
+3837000			PC:0x0006
+				SBIC 0x10,0x04
+
+3839000			PC:0x0007
+				RJMP 0x0006
+3840000			next command clock cycle
+
+3842000			PC:0x0006
+				SBIC 0x10,0x04
+
+3844000			PC:0x0007
+				RJMP 0x0006
+3845000			next command clock cycle
+
+3847000			PC:0x0006
+				SBIC 0x10,0x04
+
+3849000			PC:0x0007
+				RJMP 0x0006
+3850000			next command clock cycle
+
+3852000			PC:0x0006
+				SBIC 0x10,0x04
+
+3854000			PC:0x0007
+				RJMP 0x0006
+3855000			next command clock cycle
+
+3857000			PC:0x0006
+				SBIC 0x10,0x04
+3858000			next command clock cycle
+
+3860000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+3862000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+3864000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+3866000			PC:0x000B
+				SBRC 0x13,0x01
+3867000			next command clock cycle
+
+3869000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+3871000			PC:0x000E
+				SBRS 0x13,0x01
+
+3873000			PC:0x000F
+				RJMP 0x0013
+3874000			next command clock cycle
+
+3876000			PC:0x0013
+				SBIC 0x10,0x04
+3877000			next command clock cycle
+
+3879000			PC:0x0015
+				RJMP 0x0006
+3880000			next command clock cycle
+
+3882000			PC:0x0006
+				SBIC 0x10,0x04
+
+3884000			PC:0x0007
+				RJMP 0x0006
+3885000			next command clock cycle
+
+3887000			PC:0x0006
+				SBIC 0x10,0x04
+
+3889000			PC:0x0007
+				RJMP 0x0006
+3890000			next command clock cycle
+
+3892000			PC:0x0006
+				SBIC 0x10,0x04
+3893000			next command clock cycle
+
+3895000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+3897000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x12
+
+3899000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x00
+
+3901000			PC:0x000B
+				SBRC 0x13,0x01
+
+3903000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x20
+
+3905000			PC:0x000D
+				before OR: SREG=0x00
+				OR 0x11,0x10
+				result OR: R17=0x20
+				after OR: SREG=0x00
+
+3907000			PC:0x000E
+				SBRS 0x13,0x01
+3908000			next command clock cycle
+
+3910000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x20
+
+3916000			PC:0x0013
+				SBIC 0x10,0x04
+3917000			next command clock cycle
+
+3919000			PC:0x0015
+				RJMP 0x0006
+3920000			next command clock cycle
+
+3922000			PC:0x0006
+				SBIC 0x10,0x04
+
+3924000			PC:0x0007
+				RJMP 0x0006
+3925000			next command clock cycle
+
+3927000			PC:0x0006
+				SBIC 0x10,0x04
+
+3929000			PC:0x0007
+				RJMP 0x0006
+3930000			next command clock cycle
+
+3932000			PC:0x0006
+				SBIC 0x10,0x04
+
+3934000			PC:0x0007
+				RJMP 0x0006
+3935000			next command clock cycle
+
+3937000			PC:0x0006
+				SBIC 0x10,0x04
+
+3939000			PC:0x0007
+				RJMP 0x0006
+3940000			next command clock cycle
+
+3942000			PC:0x0006
+				SBIC 0x10,0x04
+
+3944000			PC:0x0007
+				RJMP 0x0006
+3945000			next command clock cycle
+
+3947000			PC:0x0006
+				SBIC 0x10,0x04
+
+3949000			PC:0x0007
+				RJMP 0x0006
+3950000			next command clock cycle
+
+3952000			PC:0x0006
+				SBIC 0x10,0x04
+
+3954000			PC:0x0007
+				RJMP 0x0006
+3955000			next command clock cycle
+
+3957000			PC:0x0006
+				SBIC 0x10,0x04
+
+3959000			PC:0x0007
+				RJMP 0x0006
+3960000			next command clock cycle
+
+3962000			PC:0x0006
+				SBIC 0x10,0x04
+
+3964000			PC:0x0007
+				RJMP 0x0006
+3965000			next command clock cycle
+
+3967000			PC:0x0006
+				SBIC 0x10,0x04
+
+3969000			PC:0x0007
+				RJMP 0x0006
+3970000			next command clock cycle
+
+3972000			PC:0x0006
+				SBIC 0x10,0x04
+
+3974000			PC:0x0007
+				RJMP 0x0006
+3975000			next command clock cycle
+
+3977000			PC:0x0006
+				SBIC 0x10,0x04
+
+3979000			PC:0x0007
+				RJMP 0x0006
+3980000			next command clock cycle
+
+3982000			PC:0x0006
+				SBIC 0x10,0x04
+
+3984000			PC:0x0007
+				RJMP 0x0006
+3985000			next command clock cycle
+
+3987000			PC:0x0006
+				SBIC 0x10,0x04
+
+3989000			PC:0x0007
+				RJMP 0x0006
+3990000			next command clock cycle
+
+3992000			PC:0x0006
+				SBIC 0x10,0x04
+
+3994000			PC:0x0007
+				RJMP 0x0006
+3995000			next command clock cycle
+
+3997000			PC:0x0006
+				SBIC 0x10,0x04
+
+3999000			PC:0x0007
+				RJMP 0x0006
+4000000			next command clock cycle
+
+4002000			PC:0x0006
+				SBIC 0x10,0x04
+
+4004000			PC:0x0007
+				RJMP 0x0006
+4005000			next command clock cycle
+
+4007000			PC:0x0006
+				SBIC 0x10,0x04
+
+4009000			PC:0x0007
+				RJMP 0x0006
+4010000			next command clock cycle
+
+4012000			PC:0x0006
+				SBIC 0x10,0x04
+
+4014000			PC:0x0007
+				RJMP 0x0006
+4015000			next command clock cycle
+
+4017000			PC:0x0006
+				SBIC 0x10,0x04
+
+4019000			PC:0x0007
+				RJMP 0x0006
+4020000			next command clock cycle
+
+4022000			PC:0x0006
+				SBIC 0x10,0x04
+
+4024000			PC:0x0007
+				RJMP 0x0006
+4025000			next command clock cycle
+
+4027000			PC:0x0006
+				SBIC 0x10,0x04
+
+4029000			PC:0x0007
+				RJMP 0x0006
+4030000			next command clock cycle
+
+4032000			PC:0x0006
+				SBIC 0x10,0x04
+
+4034000			PC:0x0007
+				RJMP 0x0006
+4035000			next command clock cycle
+
+4037000			PC:0x0006
+				SBIC 0x10,0x04
+4038000			next command clock cycle
+
+4040000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x01
+				after INC: SREG=0x00
+
+4042000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+4044000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+4046000			PC:0x000B
+				SBRC 0x13,0x01
+4047000			next command clock cycle
+
+4049000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+4051000			PC:0x000E
+				SBRS 0x13,0x01
+
+4053000			PC:0x000F
+				RJMP 0x0013
+4054000			next command clock cycle
+
+4056000			PC:0x0013
+				SBIC 0x10,0x04
+4057000			next command clock cycle
+
+4059000			PC:0x0015
+				RJMP 0x0006
+4060000			next command clock cycle
+
+4062000			PC:0x0006
+				SBIC 0x10,0x04
+
+4064000			PC:0x0007
+				RJMP 0x0006
+4065000			next command clock cycle
+
+4067000			PC:0x0006
+				SBIC 0x10,0x04
+
+4069000			PC:0x0007
+				RJMP 0x0006
+4070000			next command clock cycle
+
+4072000			PC:0x0006
+				SBIC 0x10,0x04
+
+4074000			PC:0x0007
+				RJMP 0x0006
+4075000			next command clock cycle
+
+4077000			PC:0x0006
+				SBIC 0x10,0x04
+4078000			next command clock cycle
+
+4080000			PC:0x0008
+				before INC: SREG=0x02
+				INC 0x13
+				result INC: R19=0x02
+				after INC: SREG=0x00
+
+4082000			PC:0x0009
+				IN 0x10,0x10
+				result IN: R16=0x10
+
+4084000			PC:0x000A
+				before ANDI: SREG=0x00
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x00
+				after ANDI: SREG=0x02
+
+4086000			PC:0x000B
+				SBRC 0x13,0x01
+
+4088000			PC:0x000C
+				SWAP 0x10
+				result SWAP: R16=0x00
+
+4090000			PC:0x000D
+				before OR: SREG=0x02
+				OR 0x11,0x10
+				result OR: R17=0x00
+				after OR: SREG=0x02
+
+4092000			PC:0x000E
+				SBRS 0x13,0x01
+4093000			next command clock cycle
+
+4095000			PC:0x0010
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x00
+
+4101000			PC:0x0013
+				SBIC 0x10,0x04
+4102000			next command clock cycle
+
+4104000			PC:0x0015
+				RJMP 0x0006
+4105000			next command clock cycle
+
+4107000			PC:0x0006
+				SBIC 0x10,0x04
+
+4109000			PC:0x0007
+				RJMP 0x0006
+4110000			next command clock cycle
+
+4112000			PC:0x0006
+				SBIC 0x10,0x04
+
+4114000			PC:0x0007
+				RJMP 0x0006
+4115000			next command clock cycle
+
+4117000			PC:0x0006
+				SBIC 0x10,0x04
+
+4119000			PC:0x0007
+				RJMP 0x0006
+4120000			next command clock cycle
+
+4122000			PC:0x0006
+				SBIC 0x10,0x04
+
+4124000			PC:0x0007
+				RJMP 0x0006
+4125000			next command clock cycle
+
+4127000			PC:0x0006
+				SBIC 0x10,0x04
+
+4129000			PC:0x0007
+				RJMP 0x0006
+4130000			next command clock cycle
+
+4132000			PC:0x0006
+				SBIC 0x10,0x04
+
+4134000			PC:0x0007
+				RJMP 0x0006
+4135000			next command clock cycle
+
+4137000			PC:0x0006
+				SBIC 0x10,0x04
+
+4139000			PC:0x0007
+				RJMP 0x0006
+4140000			next command clock cycle
+
+4142000			PC:0x0006
+				SBIC 0x10,0x04
+
+4144000			PC:0x0007
+				RJMP 0x0006
+4145000			next command clock cycle
+
+4147000			PC:0x0006
+				SBIC 0x10,0x04
+
+4149000			PC:0x0007
+				RJMP 0x0006
+4150000			next command clock cycle
+
+4152000			PC:0x0006
+				SBIC 0x10,0x04
+
+4154000			PC:0x0007
+				RJMP 0x0006
+4155000			next command clock cycle
+
+4157000			PC:0x0006
+				SBIC 0x10,0x04
+
+4159000			PC:0x0007
+				RJMP 0x0006
+4160000			next command clock cycle
+
+4162000			PC:0x0006
+				SBIC 0x10,0x04
+
+4164000			PC:0x0007
+				RJMP 0x0006
+4165000			next command clock cycle
+
+4167000			PC:0x0006
+				SBIC 0x10,0x04
+
+4169000			PC:0x0007
+				RJMP 0x0006
+4170000			next command clock cycle
+
+4172000			PC:0x0006
+				SBIC 0x10,0x04
+
+4174000			PC:0x0007
+				RJMP 0x0006
+4175000			next command clock cycle
+
+4177000			PC:0x0006
+				SBIC 0x10,0x04
+
+4179000			PC:0x0007
+				RJMP 0x0006
+4180000			next command clock cycle
+
+4182000			PC:0x0006
+				SBIC 0x10,0x04
+
+4184000			PC:0x0007
+				RJMP 0x0006
+4185000			next command clock cycle
+
+4187000			PC:0x0006
+				SBIC 0x10,0x04
+
+4189000			PC:0x0007
+				RJMP 0x0006
+4190000			next command clock cycle
+
+4192000			PC:0x0006
+				SBIC 0x10,0x04
+
+4194000			PC:0x0007
+				RJMP 0x0006
+4195000			next command clock cycle
+
+4197000			PC:0x0006
+				SBIC 0x10,0x04
+
+4199000			PC:0x0007
+				RJMP 0x0006
+4200000			next command clock cycle
+
+4202000			PC:0x0006
+				SBIC 0x10,0x04
+
+4204000			PC:0x0007
+				RJMP 0x0006
+4205000			next command clock cycle
+
+4207000			PC:0x0006
+				SBIC 0x10,0x04
+
+4209000			PC:0x0007
+				RJMP 0x0006
+4210000			next command clock cycle
+
+4212000			PC:0x0006
+				SBIC 0x10,0x04
+
+4214000			PC:0x0007
+				RJMP 0x0006
+4215000			next command clock cycle
+
+4217000			PC:0x0006
+				SBIC 0x10,0x04
+
+4219000			PC:0x0007
+				RJMP 0x0006
+4220000			next command clock cycle
+
+4222000			PC:0x0006
+				SBIC 0x10,0x04
+
+4224000			PC:0x0007
+				RJMP 0x0006
+4225000			next command clock cycle
+
+4227000			PC:0x0006
+				SBIC 0x10,0x04
+
+4229000			PC:0x0007
+				RJMP 0x0006
+4230000			next command clock cycle
+
+4232000			PC:0x0006
+				SBIC 0x10,0x04
+
+4234000			PC:0x0007
+				RJMP 0x0006
+4235000			next command clock cycle
+
+4237000			PC:0x0006
+				SBIC 0x10,0x04
+
+4239000			PC:0x0007
+				RJMP 0x0006
+4240000			next command clock cycle
+
+4242000			PC:0x0006
+				SBIC 0x10,0x04
+
+4244000			PC:0x0007
+				RJMP 0x0006
+4245000			next command clock cycle
+
+4247000			PC:0x0006
+				SBIC 0x10,0x04
+
+4249000			PC:0x0007
+				RJMP 0x0006
+4250000			next command clock cycle
+
+4252000			PC:0x0006
+				SBIC 0x10,0x04
+
+4254000			PC:0x0007
+				RJMP 0x0006
+4255000			next command clock cycle
+
+4257000			PC:0x0006
+				SBIC 0x10,0x04
+
+4259000			PC:0x0007
+				RJMP 0x0006
+4260000			next command clock cycle
+
+4262000			PC:0x0006
+				SBIC 0x10,0x04
+
+4264000			PC:0x0007
+				RJMP 0x0006
+4265000			next command clock cycle
+
+4267000			PC:0x0006
+				SBIC 0x10,0x04
+
+4269000			PC:0x0007
+				RJMP 0x0006
+4270000			next command clock cycle
+
+4272000			PC:0x0006
+				SBIC 0x10,0x04
+
+4274000			PC:0x0007
+				RJMP 0x0006
+4275000			next command clock cycle
+
+4277000			PC:0x0006
+				SBIC 0x10,0x04
+
+4279000			PC:0x0007
+				RJMP 0x0006
+4280000			next command clock cycle
+
+4282000			PC:0x0006
+				SBIC 0x10,0x04
+
+4284000			PC:0x0007
+				RJMP 0x0006
+4285000			next command clock cycle
+
+4287000			PC:0x0006
+				SBIC 0x10,0x04
+
+4289000			PC:0x0007
+				RJMP 0x0006
+4290000			next command clock cycle
+
+4292000			PC:0x0006
+				SBIC 0x10,0x04
+
+4294000			PC:0x0007
+				RJMP 0x0006
+4295000			next command clock cycle
+
+4297000			PC:0x0006
+				SBIC 0x10,0x04
+
+4299000			PC:0x0007
+				RJMP 0x0006
+4300000			next command clock cycle
+
+4302000			PC:0x0006
+				SBIC 0x10,0x04
+
+4304000			PC:0x0007
+				RJMP 0x0006
+4305000			next command clock cycle
+
+4307000			PC:0x0006
+				SBIC 0x10,0x04
+
+4309000			PC:0x0007
+				RJMP 0x0006
+4310000			next command clock cycle
+
+4312000			PC:0x0006
+				SBIC 0x10,0x04
+
+4314000			PC:0x0007
+				RJMP 0x0006
+4315000			next command clock cycle
+
+4317000			PC:0x0006
+				SBIC 0x10,0x04
+
+4319000			PC:0x0007
+				RJMP 0x0006
+4320000			next command clock cycle
+
+4322000			PC:0x0006
+				SBIC 0x10,0x04
+
+4324000			PC:0x0007
+				RJMP 0x0006
+4325000			next command clock cycle
+
+4327000			PC:0x0006
+				SBIC 0x10,0x04
+
+4329000			PC:0x0007
+				RJMP 0x0006
+4330000			next command clock cycle
+
+4332000			PC:0x0006
+				SBIC 0x10,0x04
+
+4334000			PC:0x0007
+				RJMP 0x0006
+4335000			next command clock cycle
+
+4337000			PC:0x0006
+				SBIC 0x10,0x04
+
+4339000			PC:0x0007
+				RJMP 0x0006
+4340000			next command clock cycle
+
+4342000			PC:0x0006
+				SBIC 0x10,0x04
+
+4344000			PC:0x0007
+				RJMP 0x0006
+4345000			next command clock cycle
+
+4347000			PC:0x0006
+				SBIC 0x10,0x04
+
+4349000			PC:0x0007
+				RJMP 0x0006
+4350000			next command clock cycle
+
+4352000			PC:0x0006
+				SBIC 0x10,0x04
+
+4354000			PC:0x0007
+				RJMP 0x0006
+4355000			next command clock cycle
+
+4357000			PC:0x0006
+				SBIC 0x10,0x04
+
+4359000			PC:0x0007
+				RJMP 0x0006
+4360000			next command clock cycle
+
+4362000			PC:0x0006
+				SBIC 0x10,0x04
+
+4364000			PC:0x0007
+				RJMP 0x0006
+4365000			next command clock cycle
+
+4367000			PC:0x0006
+				SBIC 0x10,0x04
+
+4369000			PC:0x0007
+				RJMP 0x0006
+
+--------------------------------------------------
+Stop

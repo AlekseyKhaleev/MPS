@@ -1,0 +1,5954 @@
+Start
+--------------------------------------------------
+
+0						PC:0x0000
+				LDI 0x10,0xFF
+				result LDI: R16=0xFF
+
+6664				PC:0x0001
+				OUT 0x17,0x10
+				result OUT: P[0x17]=0xFF
+
+13328				PC:0x0002
+				OUT 0x11,0x10
+				result OUT: P[0x11]=0xFF
+
+19992				PC:0x0003
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+26656				PC:0x0004
+				LDI 0x10,0x01
+				result LDI: R16=0x01
+
+33320				PC:0x0005
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+39984				PC:0x0006
+				LDI 0x11,0x80
+				result LDI: R17=0x80
+
+46648				PC:0x0007
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+53312				PC:0x0008
+				NOP
+
+59976				PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+66640				PC:0x000A
+				BRBC 0x01,0x04
+
+73304				PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+79968				PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+86632				PC:0x000D
+				RJMP 0x0010
+89964				next command clock cycle
+
+96628				PC:0x0010
+				CPSE 0x10,0x12
+
+103292			PC:0x0011
+				RJMP 0x0017
+106624			next command clock cycle
+
+113288			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+119952			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+126616			PC:0x0019
+				RJMP 0x0008
+129948			next command clock cycle
+
+136612			PC:0x0008
+				NOP
+
+143276			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+149940			PC:0x000A
+				BRBC 0x01,0x04
+
+156604			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+163268			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+169932			PC:0x000D
+				RJMP 0x0010
+173264			next command clock cycle
+
+179928			PC:0x0010
+				CPSE 0x10,0x12
+
+186592			PC:0x0011
+				RJMP 0x0017
+189924			next command clock cycle
+
+196588			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+203252			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+209916			PC:0x0019
+				RJMP 0x0008
+213248			next command clock cycle
+
+219912			PC:0x0008
+				NOP
+
+226576			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+233240			PC:0x000A
+				BRBC 0x01,0x04
+
+239904			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+246568			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+253232			PC:0x000D
+				RJMP 0x0010
+256564			next command clock cycle
+
+263228			PC:0x0010
+				CPSE 0x10,0x12
+
+269892			PC:0x0011
+				RJMP 0x0017
+273224			next command clock cycle
+
+279888			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+286552			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+293216			PC:0x0019
+				RJMP 0x0008
+296548			next command clock cycle
+
+303212			PC:0x0008
+				NOP
+
+309876			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+316540			PC:0x000A
+				BRBC 0x01,0x04
+
+323204			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+329868			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+336532			PC:0x000D
+				RJMP 0x0010
+339864			next command clock cycle
+
+346528			PC:0x0010
+				CPSE 0x10,0x12
+
+353192			PC:0x0011
+				RJMP 0x0017
+356524			next command clock cycle
+
+363188			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+369852			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+376516			PC:0x0019
+				RJMP 0x0008
+379848			next command clock cycle
+
+386512			PC:0x0008
+				NOP
+
+393176			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+399840			PC:0x000A
+				BRBC 0x01,0x04
+
+406504			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+413168			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+419832			PC:0x000D
+				RJMP 0x0010
+423164			next command clock cycle
+
+429828			PC:0x0010
+				CPSE 0x10,0x12
+
+436492			PC:0x0011
+				RJMP 0x0017
+439824			next command clock cycle
+
+446488			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+453152			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+459816			PC:0x0019
+				RJMP 0x0008
+463148			next command clock cycle
+
+469812			PC:0x0008
+				NOP
+
+476476			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+483140			PC:0x000A
+				BRBC 0x01,0x04
+
+489804			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+496468			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+503132			PC:0x000D
+				RJMP 0x0010
+506464			next command clock cycle
+
+513128			PC:0x0010
+				CPSE 0x10,0x12
+
+519792			PC:0x0011
+				RJMP 0x0017
+523124			next command clock cycle
+
+529788			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+536452			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+543116			PC:0x0019
+				RJMP 0x0008
+546448			next command clock cycle
+
+553112			PC:0x0008
+				NOP
+
+559776			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+566440			PC:0x000A
+				BRBC 0x01,0x04
+
+573104			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+579768			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+586432			PC:0x000D
+				RJMP 0x0010
+589764			next command clock cycle
+
+596428			PC:0x0010
+				CPSE 0x10,0x12
+599760			next command clock cycle
+
+606424			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+613088			PC:0x0013
+				BRBS 0x01,0x0003
+616420			next command clock cycle
+
+623084			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+629748			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+636412			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+643076			PC:0x0019
+				RJMP 0x0008
+646408			next command clock cycle
+
+653072			PC:0x0008
+				NOP
+
+659736			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+666400			PC:0x000A
+				BRBC 0x01,0x04
+669732			next command clock cycle
+
+676396			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+683060			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+689724			PC:0x0010
+				CPSE 0x10,0x12
+
+696388			PC:0x0011
+				RJMP 0x0017
+699720			next command clock cycle
+
+706384			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+713048			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+719712			PC:0x0019
+				RJMP 0x0008
+723044			next command clock cycle
+
+729708			PC:0x0008
+				NOP
+
+736372			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+743036			PC:0x000A
+				BRBC 0x01,0x04
+746368			next command clock cycle
+
+753032			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+759696			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+766360			PC:0x0010
+				CPSE 0x10,0x12
+
+773024			PC:0x0011
+				RJMP 0x0017
+776356			next command clock cycle
+
+783020			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+789684			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+796348			PC:0x0019
+				RJMP 0x0008
+799680			next command clock cycle
+
+806344			PC:0x0008
+				NOP
+
+813008			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+819672			PC:0x000A
+				BRBC 0x01,0x04
+823004			next command clock cycle
+
+829668			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+836332			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+842996			PC:0x0010
+				CPSE 0x10,0x12
+
+849660			PC:0x0011
+				RJMP 0x0017
+852992			next command clock cycle
+
+859656			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+866320			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+872984			PC:0x0019
+				RJMP 0x0008
+876316			next command clock cycle
+
+882980			PC:0x0008
+				NOP
+
+889644			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+896308			PC:0x000A
+				BRBC 0x01,0x04
+899640			next command clock cycle
+
+906304			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+912968			PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+919632			PC:0x0010
+				CPSE 0x10,0x12
+
+926296			PC:0x0011
+				RJMP 0x0017
+929628			next command clock cycle
+
+936292			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+942956			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+949620			PC:0x0019
+				RJMP 0x0008
+952952			next command clock cycle
+
+959616			PC:0x0008
+				NOP
+
+966280			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+972944			PC:0x000A
+				BRBC 0x01,0x04
+976276			next command clock cycle
+
+982940			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+989604			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+996268			PC:0x0010
+				CPSE 0x10,0x12
+
+1002932			PC:0x0011
+				RJMP 0x0017
+1006264			next command clock cycle
+
+1012928			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+1019592			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+1026256			PC:0x0019
+				RJMP 0x0008
+1029588			next command clock cycle
+
+1036252			PC:0x0008
+				NOP
+
+1042916			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+1049580			PC:0x000A
+				BRBC 0x01,0x04
+1052912			next command clock cycle
+
+1059576			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+1066240			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+1072904			PC:0x0010
+				CPSE 0x10,0x12
+
+1079568			PC:0x0011
+				RJMP 0x0017
+1082900			next command clock cycle
+
+1089564			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+1096228			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+1102892			PC:0x0019
+				RJMP 0x0008
+1106224			next command clock cycle
+
+1112888			PC:0x0008
+				NOP
+
+1119552			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+1126216			PC:0x000A
+				BRBC 0x01,0x04
+1129548			next command clock cycle
+
+1136212			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+1142876			PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+1149540			PC:0x0010
+				CPSE 0x10,0x12
+1152872			next command clock cycle
+
+1159536			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+1166200			PC:0x0013
+				BRBS 0x01,0x0003
+
+1172864			PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+1179528			PC:0x0015
+				RJMP 0x0017
+1182860			next command clock cycle
+
+1189524			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+1196188			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+1202852			PC:0x0019
+				RJMP 0x0008
+1206184			next command clock cycle
+
+1212848			PC:0x0008
+				NOP
+
+1219512			PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+1226176			PC:0x000A
+				BRBC 0x01,0x04
+
+1232840			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+1239504			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+1246168			PC:0x000D
+				RJMP 0x0010
+1249500			next command clock cycle
+
+1256164			PC:0x0010
+				CPSE 0x10,0x12
+
+1262828			PC:0x0011
+				RJMP 0x0017
+1266160			next command clock cycle
+
+1272824			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+1279488			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+1286152			PC:0x0019
+				RJMP 0x0008
+1289484			next command clock cycle
+
+1296148			PC:0x0008
+				NOP
+
+1302812			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+1309476			PC:0x000A
+				BRBC 0x01,0x04
+
+1316140			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+1322804			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+1329468			PC:0x000D
+				RJMP 0x0010
+1332800			next command clock cycle
+
+1339464			PC:0x0010
+				CPSE 0x10,0x12
+
+1346128			PC:0x0011
+				RJMP 0x0017
+1349460			next command clock cycle
+
+1356124			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+1362788			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+1369452			PC:0x0019
+				RJMP 0x0008
+1372784			next command clock cycle
+
+1379448			PC:0x0008
+				NOP
+
+1386112			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+1392776			PC:0x000A
+				BRBC 0x01,0x04
+
+1399440			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+1406104			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+1412768			PC:0x000D
+				RJMP 0x0010
+1416100			next command clock cycle
+
+1422764			PC:0x0010
+				CPSE 0x10,0x12
+
+1429428			PC:0x0011
+				RJMP 0x0017
+1432760			next command clock cycle
+
+1439424			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+1446088			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+1452752			PC:0x0019
+				RJMP 0x0008
+1456084			next command clock cycle
+
+1462748			PC:0x0008
+				NOP
+
+1469412			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+1476076			PC:0x000A
+				BRBC 0x01,0x04
+
+1482740			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+1489404			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+1496068			PC:0x000D
+				RJMP 0x0010
+1499400			next command clock cycle
+
+1506064			PC:0x0010
+				CPSE 0x10,0x12
+
+1512728			PC:0x0011
+				RJMP 0x0017
+1516060			next command clock cycle
+
+1522724			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+1529388			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+1536052			PC:0x0019
+				RJMP 0x0008
+1539384			next command clock cycle
+
+1546048			PC:0x0008
+				NOP
+
+1552712			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+1559376			PC:0x000A
+				BRBC 0x01,0x04
+
+1566040			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+1572704			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+1579368			PC:0x000D
+				RJMP 0x0010
+1582700			next command clock cycle
+
+1589364			PC:0x0010
+				CPSE 0x10,0x12
+
+1596028			PC:0x0011
+				RJMP 0x0017
+1599360			next command clock cycle
+
+1606024			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+1612688			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+1619352			PC:0x0019
+				RJMP 0x0008
+1622684			next command clock cycle
+
+1629348			PC:0x0008
+				NOP
+
+1636012			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+1642676			PC:0x000A
+				BRBC 0x01,0x04
+
+1649340			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+1656004			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+1662668			PC:0x000D
+				RJMP 0x0010
+1666000			next command clock cycle
+
+1672664			PC:0x0010
+				CPSE 0x10,0x12
+
+1679328			PC:0x0011
+				RJMP 0x0017
+1682660			next command clock cycle
+
+1689324			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+1695988			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+1702652			PC:0x0019
+				RJMP 0x0008
+1705984			next command clock cycle
+
+1712648			PC:0x0008
+				NOP
+
+1719312			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+1725976			PC:0x000A
+				BRBC 0x01,0x04
+
+1732640			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+1739304			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+1745968			PC:0x000D
+				RJMP 0x0010
+1749300			next command clock cycle
+
+1755964			PC:0x0010
+				CPSE 0x10,0x12
+1759296			next command clock cycle
+
+1765960			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+1772624			PC:0x0013
+				BRBS 0x01,0x0003
+1775956			next command clock cycle
+
+1782620			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+1789284			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+1795948			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+1802612			PC:0x0019
+				RJMP 0x0008
+1805944			next command clock cycle
+
+1812608			PC:0x0008
+				NOP
+
+1819272			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+1825936			PC:0x000A
+				BRBC 0x01,0x04
+1829268			next command clock cycle
+
+1835932			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+1842596			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+1849260			PC:0x0010
+				CPSE 0x10,0x12
+
+1855924			PC:0x0011
+				RJMP 0x0017
+1859256			next command clock cycle
+
+1865920			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+1872584			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+1879248			PC:0x0019
+				RJMP 0x0008
+1882580			next command clock cycle
+
+1889244			PC:0x0008
+				NOP
+
+1895908			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+1902572			PC:0x000A
+				BRBC 0x01,0x04
+1905904			next command clock cycle
+
+1912568			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+1919232			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+1925896			PC:0x0010
+				CPSE 0x10,0x12
+
+1932560			PC:0x0011
+				RJMP 0x0017
+1935892			next command clock cycle
+
+1942556			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+1949220			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+1955884			PC:0x0019
+				RJMP 0x0008
+1959216			next command clock cycle
+
+1965880			PC:0x0008
+				NOP
+
+1972544			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+1979208			PC:0x000A
+				BRBC 0x01,0x04
+1982540			next command clock cycle
+
+1989204			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+1995868			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+2002532			PC:0x0010
+				CPSE 0x10,0x12
+
+2009196			PC:0x0011
+				RJMP 0x0017
+2012528			next command clock cycle
+
+2019192			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+2025856			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+2032520			PC:0x0019
+				RJMP 0x0008
+2035852			next command clock cycle
+
+2042516			PC:0x0008
+				NOP
+
+2049180			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+2055844			PC:0x000A
+				BRBC 0x01,0x04
+2059176			next command clock cycle
+
+2065840			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+2072504			PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+2079168			PC:0x0010
+				CPSE 0x10,0x12
+
+2085832			PC:0x0011
+				RJMP 0x0017
+2089164			next command clock cycle
+
+2095828			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+2102492			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+2109156			PC:0x0019
+				RJMP 0x0008
+2112488			next command clock cycle
+
+2119152			PC:0x0008
+				NOP
+
+2125816			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+2132480			PC:0x000A
+				BRBC 0x01,0x04
+2135812			next command clock cycle
+
+2142476			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+2149140			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+2155804			PC:0x0010
+				CPSE 0x10,0x12
+
+2162468			PC:0x0011
+				RJMP 0x0017
+2165800			next command clock cycle
+
+2172464			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+2179128			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+2185792			PC:0x0019
+				RJMP 0x0008
+2189124			next command clock cycle
+
+2195788			PC:0x0008
+				NOP
+
+2202452			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+2209116			PC:0x000A
+				BRBC 0x01,0x04
+2212448			next command clock cycle
+
+2219112			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+2225776			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+2232440			PC:0x0010
+				CPSE 0x10,0x12
+
+2239104			PC:0x0011
+				RJMP 0x0017
+2242436			next command clock cycle
+
+2249100			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+2255764			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+2262428			PC:0x0019
+				RJMP 0x0008
+2265760			next command clock cycle
+
+2272424			PC:0x0008
+				NOP
+
+2279088			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+2285752			PC:0x000A
+				BRBC 0x01,0x04
+2289084			next command clock cycle
+
+2295748			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+2302412			PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+2309076			PC:0x0010
+				CPSE 0x10,0x12
+2312408			next command clock cycle
+
+2319072			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+2325736			PC:0x0013
+				BRBS 0x01,0x0003
+
+2332400			PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+2339064			PC:0x0015
+				RJMP 0x0017
+2342396			next command clock cycle
+
+2349060			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+2355724			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+2362388			PC:0x0019
+				RJMP 0x0008
+2365720			next command clock cycle
+
+2372384			PC:0x0008
+				NOP
+
+2379048			PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+2385712			PC:0x000A
+				BRBC 0x01,0x04
+
+2392376			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+2399040			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+2405704			PC:0x000D
+				RJMP 0x0010
+2409036			next command clock cycle
+
+2415700			PC:0x0010
+				CPSE 0x10,0x12
+
+2422364			PC:0x0011
+				RJMP 0x0017
+2425696			next command clock cycle
+
+2432360			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+2439024			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+2445688			PC:0x0019
+				RJMP 0x0008
+2449020			next command clock cycle
+
+2455684			PC:0x0008
+				NOP
+
+2462348			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+2469012			PC:0x000A
+				BRBC 0x01,0x04
+
+2475676			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+2482340			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+2489004			PC:0x000D
+				RJMP 0x0010
+2492336			next command clock cycle
+
+2499000			PC:0x0010
+				CPSE 0x10,0x12
+
+2505664			PC:0x0011
+				RJMP 0x0017
+2508996			next command clock cycle
+
+2515660			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+2522324			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+2528988			PC:0x0019
+				RJMP 0x0008
+2532320			next command clock cycle
+
+2538984			PC:0x0008
+				NOP
+
+2545648			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+2552312			PC:0x000A
+				BRBC 0x01,0x04
+
+2558976			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+2565640			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+2572304			PC:0x000D
+				RJMP 0x0010
+2575636			next command clock cycle
+
+2582300			PC:0x0010
+				CPSE 0x10,0x12
+
+2588964			PC:0x0011
+				RJMP 0x0017
+2592296			next command clock cycle
+
+2598960			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+2605624			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+2612288			PC:0x0019
+				RJMP 0x0008
+2615620			next command clock cycle
+
+2622284			PC:0x0008
+				NOP
+
+2628948			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+2635612			PC:0x000A
+				BRBC 0x01,0x04
+
+2642276			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+2648940			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+2655604			PC:0x000D
+				RJMP 0x0010
+2658936			next command clock cycle
+
+2665600			PC:0x0010
+				CPSE 0x10,0x12
+
+2672264			PC:0x0011
+				RJMP 0x0017
+2675596			next command clock cycle
+
+2682260			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+2688924			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+2695588			PC:0x0019
+				RJMP 0x0008
+2698920			next command clock cycle
+
+2705584			PC:0x0008
+				NOP
+
+2712248			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+2718912			PC:0x000A
+				BRBC 0x01,0x04
+
+2725576			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+2732240			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+2738904			PC:0x000D
+				RJMP 0x0010
+2742236			next command clock cycle
+
+2748900			PC:0x0010
+				CPSE 0x10,0x12
+
+2755564			PC:0x0011
+				RJMP 0x0017
+2758896			next command clock cycle
+
+2765560			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+2772224			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+2778888			PC:0x0019
+				RJMP 0x0008
+2782220			next command clock cycle
+
+2788884			PC:0x0008
+				NOP
+
+2795548			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+2802212			PC:0x000A
+				BRBC 0x01,0x04
+
+2808876			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+2815540			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+2822204			PC:0x000D
+				RJMP 0x0010
+2825536			next command clock cycle
+
+2832200			PC:0x0010
+				CPSE 0x10,0x12
+
+2838864			PC:0x0011
+				RJMP 0x0017
+2842196			next command clock cycle
+
+2848860			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+2855524			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+2862188			PC:0x0019
+				RJMP 0x0008
+2865520			next command clock cycle
+
+2872184			PC:0x0008
+				NOP
+
+2878848			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+2885512			PC:0x000A
+				BRBC 0x01,0x04
+
+2892176			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+2898840			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+2905504			PC:0x000D
+				RJMP 0x0010
+2908836			next command clock cycle
+
+2915500			PC:0x0010
+				CPSE 0x10,0x12
+2918832			next command clock cycle
+
+2925496			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+2932160			PC:0x0013
+				BRBS 0x01,0x0003
+2935492			next command clock cycle
+
+2942156			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+2948820			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+2955484			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+2962148			PC:0x0019
+				RJMP 0x0008
+2965480			next command clock cycle
+
+2972144			PC:0x0008
+				NOP
+
+2978808			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+2985472			PC:0x000A
+				BRBC 0x01,0x04
+2988804			next command clock cycle
+
+2995468			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+3002132			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+3008796			PC:0x0010
+				CPSE 0x10,0x12
+
+3015460			PC:0x0011
+				RJMP 0x0017
+3018792			next command clock cycle
+
+3025456			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+3032120			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+3038784			PC:0x0019
+				RJMP 0x0008
+3042116			next command clock cycle
+
+3048780			PC:0x0008
+				NOP
+
+3055444			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+3062108			PC:0x000A
+				BRBC 0x01,0x04
+3065440			next command clock cycle
+
+3072104			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+3078768			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+3085432			PC:0x0010
+				CPSE 0x10,0x12
+
+3092096			PC:0x0011
+				RJMP 0x0017
+3095428			next command clock cycle
+
+3102092			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+3108756			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+3115420			PC:0x0019
+				RJMP 0x0008
+3118752			next command clock cycle
+
+3125416			PC:0x0008
+				NOP
+
+3132080			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+3138744			PC:0x000A
+				BRBC 0x01,0x04
+3142076			next command clock cycle
+
+3148740			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+3155404			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+3162068			PC:0x0010
+				CPSE 0x10,0x12
+
+3168732			PC:0x0011
+				RJMP 0x0017
+3172064			next command clock cycle
+
+3178728			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+3185392			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+3192056			PC:0x0019
+				RJMP 0x0008
+3195388			next command clock cycle
+
+3202052			PC:0x0008
+				NOP
+
+3208716			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+3215380			PC:0x000A
+				BRBC 0x01,0x04
+3218712			next command clock cycle
+
+3225376			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+3232040			PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+3238704			PC:0x0010
+				CPSE 0x10,0x12
+
+3245368			PC:0x0011
+				RJMP 0x0017
+3248700			next command clock cycle
+
+3255364			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+3262028			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+3268692			PC:0x0019
+				RJMP 0x0008
+3272024			next command clock cycle
+
+3278688			PC:0x0008
+				NOP
+
+3285352			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+3292016			PC:0x000A
+				BRBC 0x01,0x04
+3295348			next command clock cycle
+
+3302012			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+3308676			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+3315340			PC:0x0010
+				CPSE 0x10,0x12
+
+3322004			PC:0x0011
+				RJMP 0x0017
+3325336			next command clock cycle
+
+3332000			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+3338664			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+3345328			PC:0x0019
+				RJMP 0x0008
+3348660			next command clock cycle
+
+3355324			PC:0x0008
+				NOP
+
+3361988			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+3368652			PC:0x000A
+				BRBC 0x01,0x04
+3371984			next command clock cycle
+
+3378648			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+3385312			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+3391976			PC:0x0010
+				CPSE 0x10,0x12
+
+3398640			PC:0x0011
+				RJMP 0x0017
+3401972			next command clock cycle
+
+3408636			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+3415300			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+3421964			PC:0x0019
+				RJMP 0x0008
+3425296			next command clock cycle
+
+3431960			PC:0x0008
+				NOP
+
+3438624			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+3445288			PC:0x000A
+				BRBC 0x01,0x04
+3448620			next command clock cycle
+
+3455284			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+3461948			PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+3468612			PC:0x0010
+				CPSE 0x10,0x12
+3471944			next command clock cycle
+
+3478608			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+3485272			PC:0x0013
+				BRBS 0x01,0x0003
+
+3491936			PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+3498600			PC:0x0015
+				RJMP 0x0017
+3501932			next command clock cycle
+
+3508596			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+3515260			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+3521924			PC:0x0019
+				RJMP 0x0008
+3525256			next command clock cycle
+
+3531920			PC:0x0008
+				NOP
+
+3538584			PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+3545248			PC:0x000A
+				BRBC 0x01,0x04
+
+3551912			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+3558576			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+3565240			PC:0x000D
+				RJMP 0x0010
+3568572			next command clock cycle
+
+3575236			PC:0x0010
+				CPSE 0x10,0x12
+
+3581900			PC:0x0011
+				RJMP 0x0017
+3585232			next command clock cycle
+
+3591896			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+3598560			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+3605224			PC:0x0019
+				RJMP 0x0008
+3608556			next command clock cycle
+
+3615220			PC:0x0008
+				NOP
+
+3621884			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+3628548			PC:0x000A
+				BRBC 0x01,0x04
+
+3635212			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+3641876			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+3648540			PC:0x000D
+				RJMP 0x0010
+3651872			next command clock cycle
+
+3658536			PC:0x0010
+				CPSE 0x10,0x12
+
+3665200			PC:0x0011
+				RJMP 0x0017
+3668532			next command clock cycle
+
+3675196			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+3681860			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+3688524			PC:0x0019
+				RJMP 0x0008
+3691856			next command clock cycle
+
+3698520			PC:0x0008
+				NOP
+
+3705184			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+3711848			PC:0x000A
+				BRBC 0x01,0x04
+
+3718512			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+3725176			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+3731840			PC:0x000D
+				RJMP 0x0010
+3735172			next command clock cycle
+
+3741836			PC:0x0010
+				CPSE 0x10,0x12
+
+3748500			PC:0x0011
+				RJMP 0x0017
+3751832			next command clock cycle
+
+3758496			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+3765160			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+3771824			PC:0x0019
+				RJMP 0x0008
+3775156			next command clock cycle
+
+3781820			PC:0x0008
+				NOP
+
+3788484			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+3795148			PC:0x000A
+				BRBC 0x01,0x04
+
+3801812			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+3808476			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+3815140			PC:0x000D
+				RJMP 0x0010
+3818472			next command clock cycle
+
+3825136			PC:0x0010
+				CPSE 0x10,0x12
+
+3831800			PC:0x0011
+				RJMP 0x0017
+3835132			next command clock cycle
+
+3841796			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+3848460			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+3855124			PC:0x0019
+				RJMP 0x0008
+3858456			next command clock cycle
+
+3865120			PC:0x0008
+				NOP
+
+3871784			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+3878448			PC:0x000A
+				BRBC 0x01,0x04
+
+3885112			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+3891776			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+3898440			PC:0x000D
+				RJMP 0x0010
+3901772			next command clock cycle
+
+3908436			PC:0x0010
+				CPSE 0x10,0x12
+
+3915100			PC:0x0011
+				RJMP 0x0017
+3918432			next command clock cycle
+
+3925096			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+3931760			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+3938424			PC:0x0019
+				RJMP 0x0008
+3941756			next command clock cycle
+
+3948420			PC:0x0008
+				NOP
+
+3955084			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+3961748			PC:0x000A
+				BRBC 0x01,0x04
+
+3968412			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+3975076			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+3981740			PC:0x000D
+				RJMP 0x0010
+3985072			next command clock cycle
+
+3991736			PC:0x0010
+				CPSE 0x10,0x12
+
+3998400			PC:0x0011
+				RJMP 0x0017
+4001732			next command clock cycle
+
+4008396			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+4015060			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+4021724			PC:0x0019
+				RJMP 0x0008
+4025056			next command clock cycle
+
+4031720			PC:0x0008
+				NOP
+
+4038384			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+4045048			PC:0x000A
+				BRBC 0x01,0x04
+
+4051712			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+4058376			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+4065040			PC:0x000D
+				RJMP 0x0010
+4068372			next command clock cycle
+
+4075036			PC:0x0010
+				CPSE 0x10,0x12
+4078368			next command clock cycle
+
+4085032			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+4091696			PC:0x0013
+				BRBS 0x01,0x0003
+4095028			next command clock cycle
+
+4101692			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+4108356			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+4115020			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+4121684			PC:0x0019
+				RJMP 0x0008
+4125016			next command clock cycle
+
+4131680			PC:0x0008
+				NOP
+
+4138344			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+4145008			PC:0x000A
+				BRBC 0x01,0x04
+4148340			next command clock cycle
+
+4155004			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+4161668			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+4168332			PC:0x0010
+				CPSE 0x10,0x12
+
+4174996			PC:0x0011
+				RJMP 0x0017
+4178328			next command clock cycle
+
+4184992			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+4191656			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+4198320			PC:0x0019
+				RJMP 0x0008
+4201652			next command clock cycle
+
+4208316			PC:0x0008
+				NOP
+
+4214980			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+4221644			PC:0x000A
+				BRBC 0x01,0x04
+4224976			next command clock cycle
+
+4231640			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+4238304			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+4244968			PC:0x0010
+				CPSE 0x10,0x12
+
+4251632			PC:0x0011
+				RJMP 0x0017
+4254964			next command clock cycle
+
+4261628			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+4268292			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+4274956			PC:0x0019
+				RJMP 0x0008
+4278288			next command clock cycle
+
+4284952			PC:0x0008
+				NOP
+
+4291616			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+4298280			PC:0x000A
+				BRBC 0x01,0x04
+4301612			next command clock cycle
+
+4308276			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+4314940			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+4321604			PC:0x0010
+				CPSE 0x10,0x12
+
+4328268			PC:0x0011
+				RJMP 0x0017
+4331600			next command clock cycle
+
+4338264			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+4344928			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+4351592			PC:0x0019
+				RJMP 0x0008
+4354924			next command clock cycle
+
+4361588			PC:0x0008
+				NOP
+
+4368252			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+4374916			PC:0x000A
+				BRBC 0x01,0x04
+4378248			next command clock cycle
+
+4384912			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+4391576			PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+4398240			PC:0x0010
+				CPSE 0x10,0x12
+
+4404904			PC:0x0011
+				RJMP 0x0017
+4408236			next command clock cycle
+
+4414900			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+4421564			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+4428228			PC:0x0019
+				RJMP 0x0008
+4431560			next command clock cycle
+
+4438224			PC:0x0008
+				NOP
+
+4444888			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+4451552			PC:0x000A
+				BRBC 0x01,0x04
+4454884			next command clock cycle
+
+4461548			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+4468212			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+4474876			PC:0x0010
+				CPSE 0x10,0x12
+
+4481540			PC:0x0011
+				RJMP 0x0017
+4484872			next command clock cycle
+
+4491536			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+4498200			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+4504864			PC:0x0019
+				RJMP 0x0008
+4508196			next command clock cycle
+
+4514860			PC:0x0008
+				NOP
+
+4521524			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+4528188			PC:0x000A
+				BRBC 0x01,0x04
+4531520			next command clock cycle
+
+4538184			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+4544848			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+4551512			PC:0x0010
+				CPSE 0x10,0x12
+
+4558176			PC:0x0011
+				RJMP 0x0017
+4561508			next command clock cycle
+
+4568172			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+4574836			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+4581500			PC:0x0019
+				RJMP 0x0008
+4584832			next command clock cycle
+
+4591496			PC:0x0008
+				NOP
+
+4598160			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+4604824			PC:0x000A
+				BRBC 0x01,0x04
+4608156			next command clock cycle
+
+4614820			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+4621484			PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+4628148			PC:0x0010
+				CPSE 0x10,0x12
+4631480			next command clock cycle
+
+4638144			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+4644808			PC:0x0013
+				BRBS 0x01,0x0003
+
+4651472			PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+4658136			PC:0x0015
+				RJMP 0x0017
+4661468			next command clock cycle
+
+4668132			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+4674796			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+4681460			PC:0x0019
+				RJMP 0x0008
+4684792			next command clock cycle
+
+4691456			PC:0x0008
+				NOP
+
+4698120			PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+4704784			PC:0x000A
+				BRBC 0x01,0x04
+
+4711448			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+4718112			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+4724776			PC:0x000D
+				RJMP 0x0010
+4728108			next command clock cycle
+
+4734772			PC:0x0010
+				CPSE 0x10,0x12
+
+4741436			PC:0x0011
+				RJMP 0x0017
+4744768			next command clock cycle
+
+4751432			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+4758096			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+4764760			PC:0x0019
+				RJMP 0x0008
+4768092			next command clock cycle
+
+4774756			PC:0x0008
+				NOP
+
+4781420			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+4788084			PC:0x000A
+				BRBC 0x01,0x04
+
+4794748			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+4801412			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+4808076			PC:0x000D
+				RJMP 0x0010
+4811408			next command clock cycle
+
+4818072			PC:0x0010
+				CPSE 0x10,0x12
+
+4824736			PC:0x0011
+				RJMP 0x0017
+4828068			next command clock cycle
+
+4834732			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+4841396			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+4848060			PC:0x0019
+				RJMP 0x0008
+4851392			next command clock cycle
+
+4858056			PC:0x0008
+				NOP
+
+4864720			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+4871384			PC:0x000A
+				BRBC 0x01,0x04
+
+4878048			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+4884712			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+4891376			PC:0x000D
+				RJMP 0x0010
+4894708			next command clock cycle
+
+4901372			PC:0x0010
+				CPSE 0x10,0x12
+
+4908036			PC:0x0011
+				RJMP 0x0017
+4911368			next command clock cycle
+
+4918032			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+4924696			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+4931360			PC:0x0019
+				RJMP 0x0008
+4934692			next command clock cycle
+
+4941356			PC:0x0008
+				NOP
+
+4948020			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+4954684			PC:0x000A
+				BRBC 0x01,0x04
+
+4961348			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+4968012			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+4974676			PC:0x000D
+				RJMP 0x0010
+4978008			next command clock cycle
+
+4984672			PC:0x0010
+				CPSE 0x10,0x12
+
+4991336			PC:0x0011
+				RJMP 0x0017
+4994668			next command clock cycle
+
+5001332			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+5007996			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+5014660			PC:0x0019
+				RJMP 0x0008
+5017992			next command clock cycle
+
+5024656			PC:0x0008
+				NOP
+
+5031320			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+5037984			PC:0x000A
+				BRBC 0x01,0x04
+
+5044648			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+5051312			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+5057976			PC:0x000D
+				RJMP 0x0010
+5061308			next command clock cycle
+
+5067972			PC:0x0010
+				CPSE 0x10,0x12
+
+5074636			PC:0x0011
+				RJMP 0x0017
+5077968			next command clock cycle
+
+5084632			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+5091296			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+5097960			PC:0x0019
+				RJMP 0x0008
+5101292			next command clock cycle
+
+5107956			PC:0x0008
+				NOP
+
+5114620			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+5121284			PC:0x000A
+				BRBC 0x01,0x04
+
+5127948			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+5134612			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+5141276			PC:0x000D
+				RJMP 0x0010
+5144608			next command clock cycle
+
+5151272			PC:0x0010
+				CPSE 0x10,0x12
+
+5157936			PC:0x0011
+				RJMP 0x0017
+5161268			next command clock cycle
+
+5167932			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+5174596			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+5181260			PC:0x0019
+				RJMP 0x0008
+5184592			next command clock cycle
+
+5191256			PC:0x0008
+				NOP
+
+5197920			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+5204584			PC:0x000A
+				BRBC 0x01,0x04
+
+5211248			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+5217912			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+5224576			PC:0x000D
+				RJMP 0x0010
+5227908			next command clock cycle
+
+5234572			PC:0x0010
+				CPSE 0x10,0x12
+5237904			next command clock cycle
+
+5244568			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+5251232			PC:0x0013
+				BRBS 0x01,0x0003
+5254564			next command clock cycle
+
+5261228			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+5267892			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+5274556			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+5281220			PC:0x0019
+				RJMP 0x0008
+5284552			next command clock cycle
+
+5291216			PC:0x0008
+				NOP
+
+5297880			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+5304544			PC:0x000A
+				BRBC 0x01,0x04
+5307876			next command clock cycle
+
+5314540			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+5321204			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+5327868			PC:0x0010
+				CPSE 0x10,0x12
+
+5334532			PC:0x0011
+				RJMP 0x0017
+5337864			next command clock cycle
+
+5344528			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+5351192			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+5357856			PC:0x0019
+				RJMP 0x0008
+5361188			next command clock cycle
+
+5367852			PC:0x0008
+				NOP
+
+5374516			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+5381180			PC:0x000A
+				BRBC 0x01,0x04
+5384512			next command clock cycle
+
+5391176			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+5397840			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+5404504			PC:0x0010
+				CPSE 0x10,0x12
+
+5411168			PC:0x0011
+				RJMP 0x0017
+5414500			next command clock cycle
+
+5421164			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+5427828			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+5434492			PC:0x0019
+				RJMP 0x0008
+5437824			next command clock cycle
+
+5444488			PC:0x0008
+				NOP
+
+5451152			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+5457816			PC:0x000A
+				BRBC 0x01,0x04
+5461148			next command clock cycle
+
+5467812			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+5474476			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+5481140			PC:0x0010
+				CPSE 0x10,0x12
+
+5487804			PC:0x0011
+				RJMP 0x0017
+5491136			next command clock cycle
+
+5497800			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+5504464			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+5511128			PC:0x0019
+				RJMP 0x0008
+5514460			next command clock cycle
+
+5521124			PC:0x0008
+				NOP
+
+5527788			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+5534452			PC:0x000A
+				BRBC 0x01,0x04
+5537784			next command clock cycle
+
+5544448			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+5551112			PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+5557776			PC:0x0010
+				CPSE 0x10,0x12
+
+5564440			PC:0x0011
+				RJMP 0x0017
+5567772			next command clock cycle
+
+5574436			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+5581100			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+5587764			PC:0x0019
+				RJMP 0x0008
+5591096			next command clock cycle
+
+5597760			PC:0x0008
+				NOP
+
+5604424			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+5611088			PC:0x000A
+				BRBC 0x01,0x04
+5614420			next command clock cycle
+
+5621084			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+5627748			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+5634412			PC:0x0010
+				CPSE 0x10,0x12
+
+5641076			PC:0x0011
+				RJMP 0x0017
+5644408			next command clock cycle
+
+5651072			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+5657736			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+5664400			PC:0x0019
+				RJMP 0x0008
+5667732			next command clock cycle
+
+5674396			PC:0x0008
+				NOP
+
+5681060			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+5687724			PC:0x000A
+				BRBC 0x01,0x04
+5691056			next command clock cycle
+
+5697720			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+5704384			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+5711048			PC:0x0010
+				CPSE 0x10,0x12
+
+5717712			PC:0x0011
+				RJMP 0x0017
+5721044			next command clock cycle
+
+5727708			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+5734372			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+5741036			PC:0x0019
+				RJMP 0x0008
+5744368			next command clock cycle
+
+5751032			PC:0x0008
+				NOP
+
+5757696			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+5764360			PC:0x000A
+				BRBC 0x01,0x04
+5767692			next command clock cycle
+
+5774356			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+5781020			PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+5787684			PC:0x0010
+				CPSE 0x10,0x12
+5791016			next command clock cycle
+
+5797680			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+5804344			PC:0x0013
+				BRBS 0x01,0x0003
+
+5811008			PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+5817672			PC:0x0015
+				RJMP 0x0017
+5821004			next command clock cycle
+
+5827668			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+5834332			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+5840996			PC:0x0019
+				RJMP 0x0008
+5844328			next command clock cycle
+
+5850992			PC:0x0008
+				NOP
+
+5857656			PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+5864320			PC:0x000A
+				BRBC 0x01,0x04
+
+5870984			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+5877648			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+5884312			PC:0x000D
+				RJMP 0x0010
+5887644			next command clock cycle
+
+5894308			PC:0x0010
+				CPSE 0x10,0x12
+
+5900972			PC:0x0011
+				RJMP 0x0017
+5904304			next command clock cycle
+
+5910968			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+5917632			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+5924296			PC:0x0019
+				RJMP 0x0008
+5927628			next command clock cycle
+
+5934292			PC:0x0008
+				NOP
+
+5940956			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+5947620			PC:0x000A
+				BRBC 0x01,0x04
+
+5954284			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+5960948			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+5967612			PC:0x000D
+				RJMP 0x0010
+5970944			next command clock cycle
+
+5977608			PC:0x0010
+				CPSE 0x10,0x12
+
+5984272			PC:0x0011
+				RJMP 0x0017
+5987604			next command clock cycle
+
+5994268			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+6000932			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+6007596			PC:0x0019
+				RJMP 0x0008
+6010928			next command clock cycle
+
+6017592			PC:0x0008
+				NOP
+
+6024256			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+6030920			PC:0x000A
+				BRBC 0x01,0x04
+
+6037584			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+6044248			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+6050912			PC:0x000D
+				RJMP 0x0010
+6054244			next command clock cycle
+
+6060908			PC:0x0010
+				CPSE 0x10,0x12
+
+6067572			PC:0x0011
+				RJMP 0x0017
+6070904			next command clock cycle
+
+6077568			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+6084232			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+6090896			PC:0x0019
+				RJMP 0x0008
+6094228			next command clock cycle
+
+6100892			PC:0x0008
+				NOP
+
+6107556			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+6114220			PC:0x000A
+				BRBC 0x01,0x04
+
+6120884			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+6127548			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+6134212			PC:0x000D
+				RJMP 0x0010
+6137544			next command clock cycle
+
+6144208			PC:0x0010
+				CPSE 0x10,0x12
+
+6150872			PC:0x0011
+				RJMP 0x0017
+6154204			next command clock cycle
+
+6160868			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+6167532			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+6174196			PC:0x0019
+				RJMP 0x0008
+6177528			next command clock cycle
+
+6184192			PC:0x0008
+				NOP
+
+6190856			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+6197520			PC:0x000A
+				BRBC 0x01,0x04
+
+6204184			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+6210848			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+6217512			PC:0x000D
+				RJMP 0x0010
+6220844			next command clock cycle
+
+6227508			PC:0x0010
+				CPSE 0x10,0x12
+
+6234172			PC:0x0011
+				RJMP 0x0017
+6237504			next command clock cycle
+
+6244168			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+6250832			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+6257496			PC:0x0019
+				RJMP 0x0008
+6260828			next command clock cycle
+
+6267492			PC:0x0008
+				NOP
+
+6274156			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+6280820			PC:0x000A
+				BRBC 0x01,0x04
+
+6287484			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+6294148			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+6300812			PC:0x000D
+				RJMP 0x0010
+6304144			next command clock cycle
+
+6310808			PC:0x0010
+				CPSE 0x10,0x12
+
+6317472			PC:0x0011
+				RJMP 0x0017
+6320804			next command clock cycle
+
+6327468			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+6334132			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+6340796			PC:0x0019
+				RJMP 0x0008
+6344128			next command clock cycle
+
+6350792			PC:0x0008
+				NOP
+
+6357456			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+6364120			PC:0x000A
+				BRBC 0x01,0x04
+
+6370784			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+6377448			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+6384112			PC:0x000D
+				RJMP 0x0010
+6387444			next command clock cycle
+
+6394108			PC:0x0010
+				CPSE 0x10,0x12
+6397440			next command clock cycle
+
+6404104			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+6410768			PC:0x0013
+				BRBS 0x01,0x0003
+6414100			next command clock cycle
+
+6420764			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+6427428			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+6434092			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+6440756			PC:0x0019
+				RJMP 0x0008
+6444088			next command clock cycle
+
+6450752			PC:0x0008
+				NOP
+
+6457416			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+6464080			PC:0x000A
+				BRBC 0x01,0x04
+6467412			next command clock cycle
+
+6474076			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+6480740			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+6487404			PC:0x0010
+				CPSE 0x10,0x12
+
+6494068			PC:0x0011
+				RJMP 0x0017
+6497400			next command clock cycle
+
+6504064			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+6510728			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+6517392			PC:0x0019
+				RJMP 0x0008
+6520724			next command clock cycle
+
+6527388			PC:0x0008
+				NOP
+
+6534052			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+6540716			PC:0x000A
+				BRBC 0x01,0x04
+6544048			next command clock cycle
+
+6550712			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+6557376			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+6564040			PC:0x0010
+				CPSE 0x10,0x12
+
+6570704			PC:0x0011
+				RJMP 0x0017
+6574036			next command clock cycle
+
+6580700			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+6587364			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+6594028			PC:0x0019
+				RJMP 0x0008
+6597360			next command clock cycle
+
+6604024			PC:0x0008
+				NOP
+
+6610688			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+6617352			PC:0x000A
+				BRBC 0x01,0x04
+6620684			next command clock cycle
+
+6627348			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+6634012			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+6640676			PC:0x0010
+				CPSE 0x10,0x12
+
+6647340			PC:0x0011
+				RJMP 0x0017
+6650672			next command clock cycle
+
+6657336			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+6664000			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+6670664			PC:0x0019
+				RJMP 0x0008
+6673996			next command clock cycle
+
+6680660			PC:0x0008
+				NOP
+
+6687324			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+6693988			PC:0x000A
+				BRBC 0x01,0x04
+6697320			next command clock cycle
+
+6703984			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+6710648			PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+6717312			PC:0x0010
+				CPSE 0x10,0x12
+
+6723976			PC:0x0011
+				RJMP 0x0017
+6727308			next command clock cycle
+
+6733972			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+6740636			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+6747300			PC:0x0019
+				RJMP 0x0008
+6750632			next command clock cycle
+
+6757296			PC:0x0008
+				NOP
+
+6763960			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+6770624			PC:0x000A
+				BRBC 0x01,0x04
+6773956			next command clock cycle
+
+6780620			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+6787284			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+6793948			PC:0x0010
+				CPSE 0x10,0x12
+
+6800612			PC:0x0011
+				RJMP 0x0017
+6803944			next command clock cycle
+
+6810608			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+6817272			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+6823936			PC:0x0019
+				RJMP 0x0008
+6827268			next command clock cycle
+
+6833932			PC:0x0008
+				NOP
+
+6840596			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+6847260			PC:0x000A
+				BRBC 0x01,0x04
+6850592			next command clock cycle
+
+6857256			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+6863920			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+6870584			PC:0x0010
+				CPSE 0x10,0x12
+
+6877248			PC:0x0011
+				RJMP 0x0017
+6880580			next command clock cycle
+
+6887244			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+6893908			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+6900572			PC:0x0019
+				RJMP 0x0008
+6903904			next command clock cycle
+
+6910568			PC:0x0008
+				NOP
+
+6917232			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+6923896			PC:0x000A
+				BRBC 0x01,0x04
+6927228			next command clock cycle
+
+6933892			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+6940556			PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+6947220			PC:0x0010
+				CPSE 0x10,0x12
+6950552			next command clock cycle
+
+6957216			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+6963880			PC:0x0013
+				BRBS 0x01,0x0003
+
+6970544			PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+6977208			PC:0x0015
+				RJMP 0x0017
+6980540			next command clock cycle
+
+6987204			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+6993868			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+7000532			PC:0x0019
+				RJMP 0x0008
+7003864			next command clock cycle
+
+7010528			PC:0x0008
+				NOP
+
+7017192			PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+7023856			PC:0x000A
+				BRBC 0x01,0x04
+
+7030520			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+7037184			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+7043848			PC:0x000D
+				RJMP 0x0010
+7047180			next command clock cycle
+
+7053844			PC:0x0010
+				CPSE 0x10,0x12
+
+7060508			PC:0x0011
+				RJMP 0x0017
+7063840			next command clock cycle
+
+7070504			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+7077168			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+7083832			PC:0x0019
+				RJMP 0x0008
+7087164			next command clock cycle
+
+7093828			PC:0x0008
+				NOP
+
+7100492			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+7107156			PC:0x000A
+				BRBC 0x01,0x04
+
+7113820			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+7120484			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+7127148			PC:0x000D
+				RJMP 0x0010
+7130480			next command clock cycle
+
+7137144			PC:0x0010
+				CPSE 0x10,0x12
+
+7143808			PC:0x0011
+				RJMP 0x0017
+7147140			next command clock cycle
+
+7153804			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+7160468			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+7167132			PC:0x0019
+				RJMP 0x0008
+7170464			next command clock cycle
+
+7177128			PC:0x0008
+				NOP
+
+7183792			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+7190456			PC:0x000A
+				BRBC 0x01,0x04
+
+7197120			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+7203784			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+7210448			PC:0x000D
+				RJMP 0x0010
+7213780			next command clock cycle
+
+7220444			PC:0x0010
+				CPSE 0x10,0x12
+
+7227108			PC:0x0011
+				RJMP 0x0017
+7230440			next command clock cycle
+
+7237104			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+7243768			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+7250432			PC:0x0019
+				RJMP 0x0008
+7253764			next command clock cycle
+
+7260428			PC:0x0008
+				NOP
+
+7267092			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+7273756			PC:0x000A
+				BRBC 0x01,0x04
+
+7280420			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+7287084			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+7293748			PC:0x000D
+				RJMP 0x0010
+7297080			next command clock cycle
+
+7303744			PC:0x0010
+				CPSE 0x10,0x12
+
+7310408			PC:0x0011
+				RJMP 0x0017
+7313740			next command clock cycle
+
+7320404			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+7327068			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+7333732			PC:0x0019
+				RJMP 0x0008
+7337064			next command clock cycle
+
+7343728			PC:0x0008
+				NOP
+
+7350392			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+7357056			PC:0x000A
+				BRBC 0x01,0x04
+
+7363720			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+7370384			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+7377048			PC:0x000D
+				RJMP 0x0010
+7380380			next command clock cycle
+
+7387044			PC:0x0010
+				CPSE 0x10,0x12
+
+7393708			PC:0x0011
+				RJMP 0x0017
+7397040			next command clock cycle
+
+7403704			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+7410368			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+7417032			PC:0x0019
+				RJMP 0x0008
+7420364			next command clock cycle
+
+7427028			PC:0x0008
+				NOP
+
+7433692			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+7440356			PC:0x000A
+				BRBC 0x01,0x04
+
+7447020			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+7453684			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+7460348			PC:0x000D
+				RJMP 0x0010
+7463680			next command clock cycle
+
+7470344			PC:0x0010
+				CPSE 0x10,0x12
+
+7477008			PC:0x0011
+				RJMP 0x0017
+7480340			next command clock cycle
+
+7487004			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+7493668			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+7500332			PC:0x0019
+				RJMP 0x0008
+7503664			next command clock cycle
+
+7510328			PC:0x0008
+				NOP
+
+7516992			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+7523656			PC:0x000A
+				BRBC 0x01,0x04
+
+7530320			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+7536984			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+7543648			PC:0x000D
+				RJMP 0x0010
+7546980			next command clock cycle
+
+7553644			PC:0x0010
+				CPSE 0x10,0x12
+7556976			next command clock cycle
+
+7563640			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+7570304			PC:0x0013
+				BRBS 0x01,0x0003
+7573636			next command clock cycle
+
+7580300			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+7586964			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+7593628			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+7600292			PC:0x0019
+				RJMP 0x0008
+7603624			next command clock cycle
+
+7610288			PC:0x0008
+				NOP
+
+7616952			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+7623616			PC:0x000A
+				BRBC 0x01,0x04
+7626948			next command clock cycle
+
+7633612			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+7640276			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+7646940			PC:0x0010
+				CPSE 0x10,0x12
+
+7653604			PC:0x0011
+				RJMP 0x0017
+7656936			next command clock cycle
+
+7663600			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+7670264			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+7676928			PC:0x0019
+				RJMP 0x0008
+7680260			next command clock cycle
+
+7686924			PC:0x0008
+				NOP
+
+7693588			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+7700252			PC:0x000A
+				BRBC 0x01,0x04
+7703584			next command clock cycle
+
+7710248			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+7716912			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+7723576			PC:0x0010
+				CPSE 0x10,0x12
+
+7730240			PC:0x0011
+				RJMP 0x0017
+7733572			next command clock cycle
+
+7740236			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+7746900			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+7753564			PC:0x0019
+				RJMP 0x0008
+7756896			next command clock cycle
+
+7763560			PC:0x0008
+				NOP
+
+7770224			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+7776888			PC:0x000A
+				BRBC 0x01,0x04
+7780220			next command clock cycle
+
+7786884			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+7793548			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+7800212			PC:0x0010
+				CPSE 0x10,0x12
+
+7806876			PC:0x0011
+				RJMP 0x0017
+7810208			next command clock cycle
+
+7816872			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+7823536			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+7830200			PC:0x0019
+				RJMP 0x0008
+7833532			next command clock cycle
+
+7840196			PC:0x0008
+				NOP
+
+7846860			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+7853524			PC:0x000A
+				BRBC 0x01,0x04
+7856856			next command clock cycle
+
+7863520			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+7870184			PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+7876848			PC:0x0010
+				CPSE 0x10,0x12
+
+7883512			PC:0x0011
+				RJMP 0x0017
+7886844			next command clock cycle
+
+7893508			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+7900172			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+7906836			PC:0x0019
+				RJMP 0x0008
+7910168			next command clock cycle
+
+7916832			PC:0x0008
+				NOP
+
+7923496			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+7930160			PC:0x000A
+				BRBC 0x01,0x04
+7933492			next command clock cycle
+
+7940156			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+7946820			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+7953484			PC:0x0010
+				CPSE 0x10,0x12
+
+7960148			PC:0x0011
+				RJMP 0x0017
+7963480			next command clock cycle
+
+7970144			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+7976808			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+7983472			PC:0x0019
+				RJMP 0x0008
+7986804			next command clock cycle
+
+7993468			PC:0x0008
+				NOP
+
+8000132			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+8006796			PC:0x000A
+				BRBC 0x01,0x04
+8010128			next command clock cycle
+
+8016792			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+8023456			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+8030120			PC:0x0010
+				CPSE 0x10,0x12
+
+8036784			PC:0x0011
+				RJMP 0x0017
+8040116			next command clock cycle
+
+8046780			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+8053444			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+8060108			PC:0x0019
+				RJMP 0x0008
+8063440			next command clock cycle
+
+8070104			PC:0x0008
+				NOP
+
+8076768			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+8083432			PC:0x000A
+				BRBC 0x01,0x04
+8086764			next command clock cycle
+
+8093428			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+8100092			PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+8106756			PC:0x0010
+				CPSE 0x10,0x12
+8110088			next command clock cycle
+
+8116752			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+8123416			PC:0x0013
+				BRBS 0x01,0x0003
+
+8130080			PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+8136744			PC:0x0015
+				RJMP 0x0017
+8140076			next command clock cycle
+
+8146740			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+8153404			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+8160068			PC:0x0019
+				RJMP 0x0008
+8163400			next command clock cycle
+
+8170064			PC:0x0008
+				NOP
+
+8176728			PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+8183392			PC:0x000A
+				BRBC 0x01,0x04
+
+8190056			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+8196720			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+8203384			PC:0x000D
+				RJMP 0x0010
+8206716			next command clock cycle
+
+8213380			PC:0x0010
+				CPSE 0x10,0x12
+
+8220044			PC:0x0011
+				RJMP 0x0017
+8223376			next command clock cycle
+
+8230040			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+8236704			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+8243368			PC:0x0019
+				RJMP 0x0008
+8246700			next command clock cycle
+
+8253364			PC:0x0008
+				NOP
+
+8260028			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+8266692			PC:0x000A
+				BRBC 0x01,0x04
+
+8273356			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+8280020			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+8286684			PC:0x000D
+				RJMP 0x0010
+8290016			next command clock cycle
+
+8296680			PC:0x0010
+				CPSE 0x10,0x12
+
+8303344			PC:0x0011
+				RJMP 0x0017
+8306676			next command clock cycle
+
+8313340			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+8320004			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+8326668			PC:0x0019
+				RJMP 0x0008
+8330000			next command clock cycle
+
+8336664			PC:0x0008
+				NOP
+
+8343328			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+8349992			PC:0x000A
+				BRBC 0x01,0x04
+
+8356656			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+8363320			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+8369984			PC:0x000D
+				RJMP 0x0010
+8373316			next command clock cycle
+
+8379980			PC:0x0010
+				CPSE 0x10,0x12
+
+8386644			PC:0x0011
+				RJMP 0x0017
+8389976			next command clock cycle
+
+8396640			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+8403304			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+8409968			PC:0x0019
+				RJMP 0x0008
+8413300			next command clock cycle
+
+8419964			PC:0x0008
+				NOP
+
+8426628			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+8433292			PC:0x000A
+				BRBC 0x01,0x04
+
+8439956			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+8446620			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+8453284			PC:0x000D
+				RJMP 0x0010
+8456616			next command clock cycle
+
+8463280			PC:0x0010
+				CPSE 0x10,0x12
+
+8469944			PC:0x0011
+				RJMP 0x0017
+8473276			next command clock cycle
+
+8479940			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+8486604			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+8493268			PC:0x0019
+				RJMP 0x0008
+8496600			next command clock cycle
+
+8503264			PC:0x0008
+				NOP
+
+8509928			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+8516592			PC:0x000A
+				BRBC 0x01,0x04
+
+8523256			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+8529920			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+8536584			PC:0x000D
+				RJMP 0x0010
+8539916			next command clock cycle
+
+8546580			PC:0x0010
+				CPSE 0x10,0x12
+
+8553244			PC:0x0011
+				RJMP 0x0017
+8556576			next command clock cycle
+
+8563240			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+8569904			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+8576568			PC:0x0019
+				RJMP 0x0008
+8579900			next command clock cycle
+
+8586564			PC:0x0008
+				NOP
+
+8593228			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+8599892			PC:0x000A
+				BRBC 0x01,0x04
+
+8606556			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+8613220			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+8619884			PC:0x000D
+				RJMP 0x0010
+8623216			next command clock cycle
+
+8629880			PC:0x0010
+				CPSE 0x10,0x12
+
+8636544			PC:0x0011
+				RJMP 0x0017
+8639876			next command clock cycle
+
+8646540			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+8653204			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+8659868			PC:0x0019
+				RJMP 0x0008
+8663200			next command clock cycle
+
+8669864			PC:0x0008
+				NOP
+
+8676528			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+8683192			PC:0x000A
+				BRBC 0x01,0x04
+
+8689856			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+8696520			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+8703184			PC:0x000D
+				RJMP 0x0010
+8706516			next command clock cycle
+
+8713180			PC:0x0010
+				CPSE 0x10,0x12
+8716512			next command clock cycle
+
+8723176			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+8729840			PC:0x0013
+				BRBS 0x01,0x0003
+8733172			next command clock cycle
+
+8739836			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+8746500			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+8753164			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+8759828			PC:0x0019
+				RJMP 0x0008
+8763160			next command clock cycle
+
+8769824			PC:0x0008
+				NOP
+
+8776488			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+8783152			PC:0x000A
+				BRBC 0x01,0x04
+8786484			next command clock cycle
+
+8793148			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+8799812			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+8806476			PC:0x0010
+				CPSE 0x10,0x12
+
+8813140			PC:0x0011
+				RJMP 0x0017
+8816472			next command clock cycle
+
+8823136			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+8829800			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+8836464			PC:0x0019
+				RJMP 0x0008
+8839796			next command clock cycle
+
+8846460			PC:0x0008
+				NOP
+
+8853124			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+8859788			PC:0x000A
+				BRBC 0x01,0x04
+8863120			next command clock cycle
+
+8869784			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+8876448			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+8883112			PC:0x0010
+				CPSE 0x10,0x12
+
+8889776			PC:0x0011
+				RJMP 0x0017
+8893108			next command clock cycle
+
+8899772			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+8906436			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+8913100			PC:0x0019
+				RJMP 0x0008
+8916432			next command clock cycle
+
+8923096			PC:0x0008
+				NOP
+
+8929760			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+8936424			PC:0x000A
+				BRBC 0x01,0x04
+8939756			next command clock cycle
+
+8946420			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+8953084			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+8959748			PC:0x0010
+				CPSE 0x10,0x12
+
+8966412			PC:0x0011
+				RJMP 0x0017
+8969744			next command clock cycle
+
+8976408			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+8983072			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+8989736			PC:0x0019
+				RJMP 0x0008
+8993068			next command clock cycle
+
+8999732			PC:0x0008
+				NOP
+
+9006396			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+9013060			PC:0x000A
+				BRBC 0x01,0x04
+9016392			next command clock cycle
+
+9023056			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+9029720			PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+9036384			PC:0x0010
+				CPSE 0x10,0x12
+
+9043048			PC:0x0011
+				RJMP 0x0017
+9046380			next command clock cycle
+
+9053044			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+9059708			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+9066372			PC:0x0019
+				RJMP 0x0008
+9069704			next command clock cycle
+
+9076368			PC:0x0008
+				NOP
+
+9083032			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+9089696			PC:0x000A
+				BRBC 0x01,0x04
+9093028			next command clock cycle
+
+9099692			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+9106356			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+9113020			PC:0x0010
+				CPSE 0x10,0x12
+
+9119684			PC:0x0011
+				RJMP 0x0017
+9123016			next command clock cycle
+
+9129680			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+9136344			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+9143008			PC:0x0019
+				RJMP 0x0008
+9146340			next command clock cycle
+
+9153004			PC:0x0008
+				NOP
+
+9159668			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+9166332			PC:0x000A
+				BRBC 0x01,0x04
+9169664			next command clock cycle
+
+9176328			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+9182992			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+9189656			PC:0x0010
+				CPSE 0x10,0x12
+
+9196320			PC:0x0011
+				RJMP 0x0017
+9199652			next command clock cycle
+
+9206316			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+9212980			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+9219644			PC:0x0019
+				RJMP 0x0008
+9222976			next command clock cycle
+
+9229640			PC:0x0008
+				NOP
+
+9236304			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+9242968			PC:0x000A
+				BRBC 0x01,0x04
+9246300			next command clock cycle
+
+9252964			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+9259628			PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+9266292			PC:0x0010
+				CPSE 0x10,0x12
+9269624			next command clock cycle
+
+9276288			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+9282952			PC:0x0013
+				BRBS 0x01,0x0003
+
+9289616			PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+9296280			PC:0x0015
+				RJMP 0x0017
+9299612			next command clock cycle
+
+9306276			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+9312940			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+9319604			PC:0x0019
+				RJMP 0x0008
+9322936			next command clock cycle
+
+9329600			PC:0x0008
+				NOP
+
+9336264			PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+9342928			PC:0x000A
+				BRBC 0x01,0x04
+
+9349592			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+9356256			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+9362920			PC:0x000D
+				RJMP 0x0010
+9366252			next command clock cycle
+
+9372916			PC:0x0010
+				CPSE 0x10,0x12
+
+9379580			PC:0x0011
+				RJMP 0x0017
+9382912			next command clock cycle
+
+9389576			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+9396240			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+9402904			PC:0x0019
+				RJMP 0x0008
+9406236			next command clock cycle
+
+9412900			PC:0x0008
+				NOP
+
+9419564			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+9426228			PC:0x000A
+				BRBC 0x01,0x04
+
+9432892			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+9439556			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+9446220			PC:0x000D
+				RJMP 0x0010
+9449552			next command clock cycle
+
+9456216			PC:0x0010
+				CPSE 0x10,0x12
+
+9462880			PC:0x0011
+				RJMP 0x0017
+9466212			next command clock cycle
+
+9472876			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+9479540			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+9486204			PC:0x0019
+				RJMP 0x0008
+9489536			next command clock cycle
+
+9496200			PC:0x0008
+				NOP
+
+9502864			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+9509528			PC:0x000A
+				BRBC 0x01,0x04
+
+9516192			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x00
+
+9522856			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x10
+				after LSR: SREG=0x00
+
+9529520			PC:0x000D
+				RJMP 0x0010
+9532852			next command clock cycle
+
+9539516			PC:0x0010
+				CPSE 0x10,0x12
+
+9546180			PC:0x0011
+				RJMP 0x0017
+9549512			next command clock cycle
+
+9556176			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+9562840			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+9569504			PC:0x0019
+				RJMP 0x0008
+9572836			next command clock cycle
+
+9579500			PC:0x0008
+				NOP
+
+9586164			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+9592828			PC:0x000A
+				BRBC 0x01,0x04
+
+9599492			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0x20
+
+9606156			PC:0x000C
+				before LSR: SREG=0x20
+				LSR 0x11
+				result LSR: R17=0x08
+				after LSR: SREG=0x20
+
+9612820			PC:0x000D
+				RJMP 0x0010
+9616152			next command clock cycle
+
+9622816			PC:0x0010
+				CPSE 0x10,0x12
+
+9629480			PC:0x0011
+				RJMP 0x0017
+9632812			next command clock cycle
+
+9639476			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+9646140			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+9652804			PC:0x0019
+				RJMP 0x0008
+9656136			next command clock cycle
+
+9662800			PC:0x0008
+				NOP
+
+9669464			PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+9676128			PC:0x000A
+				BRBC 0x01,0x04
+
+9682792			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x20
+				after ADD: SREG=0x00
+
+9689456			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x04
+				after LSR: SREG=0x00
+
+9696120			PC:0x000D
+				RJMP 0x0010
+9699452			next command clock cycle
+
+9706116			PC:0x0010
+				CPSE 0x10,0x12
+
+9712780			PC:0x0011
+				RJMP 0x0017
+9716112			next command clock cycle
+
+9722776			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+9729440			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+9736104			PC:0x0019
+				RJMP 0x0008
+9739436			next command clock cycle
+
+9746100			PC:0x0008
+				NOP
+
+9752764			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+9759428			PC:0x000A
+				BRBC 0x01,0x04
+
+9766092			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x40
+				after ADD: SREG=0x00
+
+9772756			PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x02
+				after LSR: SREG=0x00
+
+9779420			PC:0x000D
+				RJMP 0x0010
+9782752			next command clock cycle
+
+9789416			PC:0x0010
+				CPSE 0x10,0x12
+
+9796080			PC:0x0011
+				RJMP 0x0017
+9799412			next command clock cycle
+
+9806076			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+9812740			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+9819404			PC:0x0019
+				RJMP 0x0008
+9822736			next command clock cycle
+
+9829400			PC:0x0008
+				NOP
+
+9836064			PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+9842728			PC:0x000A
+				BRBC 0x01,0x04
+
+9849392			PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x80
+				after ADD: SREG=0x0C
+
+9856056			PC:0x000C
+				before LSR: SREG=0x0C
+				LSR 0x11
+				result LSR: R17=0x01
+				after LSR: SREG=0x00
+
+9862720			PC:0x000D
+				RJMP 0x0010
+9866052			next command clock cycle
+
+9872716			PC:0x0010
+				CPSE 0x10,0x12
+9876048			next command clock cycle
+
+9882712			PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+9889376			PC:0x0013
+				BRBS 0x01,0x0003
+9892708			next command clock cycle
+
+9899372			PC:0x0016
+				LDI 0x12,0x01
+				result LDI: R18=0x01
+
+9906036			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x80
+
+9912700			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x01
+
+9919364			PC:0x0019
+				RJMP 0x0008
+9922696			next command clock cycle
+
+9929360			PC:0x0008
+				NOP
+
+9936024			PC:0x0009
+				before CPI: SREG=0x02
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+9942688			PC:0x000A
+				BRBC 0x01,0x04
+9946020			next command clock cycle
+
+9952684			PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x02
+				after ADD: SREG=0x00
+
+9959348			PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x40
+				after LSR: SREG=0x00
+
+9966012			PC:0x0010
+				CPSE 0x10,0x12
+
+9972676			PC:0x0011
+				RJMP 0x0017
+9976008			next command clock cycle
+
+9982672			PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x40
+
+9989336			PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x02
+
+9996000			PC:0x0019
+				RJMP 0x0008
+9999332			next command clock cycle
+
+10005996		PC:0x0008
+				NOP
+
+10012660		PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+10019324		PC:0x000A
+				BRBC 0x01,0x04
+10022656		next command clock cycle
+
+10029320		PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x04
+				after ADD: SREG=0x00
+
+10035984		PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x20
+				after LSR: SREG=0x00
+
+10042648		PC:0x0010
+				CPSE 0x10,0x12
+
+10049312		PC:0x0011
+				RJMP 0x0017
+10052644		next command clock cycle
+
+10059308		PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x20
+
+10065972		PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x04
+
+10072636		PC:0x0019
+				RJMP 0x0008
+10075968		next command clock cycle
+
+10082632		PC:0x0008
+				NOP
+
+10089296		PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+10095960		PC:0x000A
+				BRBC 0x01,0x04
+10099292		next command clock cycle
+
+10105956		PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x08
+				after ADD: SREG=0x00
+
+10112620		PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x10
+				after LSR: SREG=0x00
+
+10119284		PC:0x0010
+				CPSE 0x10,0x12
+
+10125948		PC:0x0011
+				RJMP 0x0017
+10129280		next command clock cycle
+
+10135944		PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x10
+
+10142608		PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x08
+
+10149272		PC:0x0019
+				RJMP 0x0008
+10152604		next command clock cycle
+
+10159268		PC:0x0008
+				NOP
+
+10165932		PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+10172596		PC:0x000A
+				BRBC 0x01,0x04
+10175928		next command clock cycle
+
+10182592		PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x10
+				after ADD: SREG=0x20
+
+10189256		PC:0x000F
+				before LSR: SREG=0x20
+				LSR 0x10
+				result LSR: R16=0x08
+				after LSR: SREG=0x20
+
+10195920		PC:0x0010
+				CPSE 0x10,0x12
+
+10202584		PC:0x0011
+				RJMP 0x0017
+10205916		next command clock cycle
+
+10212580		PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x08
+
+10219244		PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x10
+
+10225908		PC:0x0019
+				RJMP 0x0008
+10229240		next command clock cycle
+
+10235904		PC:0x0008
+				NOP
+
+10242568		PC:0x0009
+				before CPI: SREG=0x20
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+10249232		PC:0x000A
+				BRBC 0x01,0x04
+10252564		next command clock cycle
+
+10259228		PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x20
+				after ADD: SREG=0x00
+
+10265892		PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x04
+				after LSR: SREG=0x00
+
+10272556		PC:0x0010
+				CPSE 0x10,0x12
+
+10279220		PC:0x0011
+				RJMP 0x0017
+10282552		next command clock cycle
+
+10289216		PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+10295880		PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+10302544		PC:0x0019
+				RJMP 0x0008
+10305876		next command clock cycle
+
+10312540		PC:0x0008
+				NOP
+
+10319204		PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+10325868		PC:0x000A
+				BRBC 0x01,0x04
+10329200		next command clock cycle
+
+10335864		PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x40
+				after ADD: SREG=0x00
+
+10342528		PC:0x000F
+				before LSR: SREG=0x00
+				LSR 0x10
+				result LSR: R16=0x02
+				after LSR: SREG=0x00
+
+10349192		PC:0x0010
+				CPSE 0x10,0x12
+
+10355856		PC:0x0011
+				RJMP 0x0017
+10359188		next command clock cycle
+
+10365852		PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+10372516		PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+10379180		PC:0x0019
+				RJMP 0x0008
+10382512		next command clock cycle
+
+10389176		PC:0x0008
+				NOP
+
+10395840		PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+10402504		PC:0x000A
+				BRBC 0x01,0x04
+10405836		next command clock cycle
+
+10412500		PC:0x000E
+				before ADD: SREG=0x0D
+				ADD 0x11,0x11
+				result ADD: R17=0x80
+				after ADD: SREG=0x0C
+
+10419164		PC:0x000F
+				before LSR: SREG=0x0C
+				LSR 0x10
+				result LSR: R16=0x01
+				after LSR: SREG=0x00
+
+10425828		PC:0x0010
+				CPSE 0x10,0x12
+10429160		next command clock cycle
+
+10435824		PC:0x0012
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x0D
+
+10442488		PC:0x0013
+				BRBS 0x01,0x0003
+
+10449152		PC:0x0014
+				LDI 0x12,0x80
+				result LDI: R18=0x80
+
+10455816		PC:0x0015
+				RJMP 0x0017
+10459148		next command clock cycle
+
+10465812		PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x01
+
+10472476		PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x80
+
+10479140		PC:0x0019
+				RJMP 0x0008
+10482472		next command clock cycle
+
+10489136		PC:0x0008
+				NOP
+
+10495800		PC:0x0009
+				before CPI: SREG=0x0D
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+10502464		PC:0x000A
+				BRBC 0x01,0x04
+
+10509128		PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x00
+
+10515792		PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x40
+				after LSR: SREG=0x00
+
+10522456		PC:0x000D
+				RJMP 0x0010
+10525788		next command clock cycle
+
+10532452		PC:0x0010
+				CPSE 0x10,0x12
+
+10539116		PC:0x0011
+				RJMP 0x0017
+10542448		next command clock cycle
+
+10549112		PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x02
+
+10555776		PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x40
+
+10562440		PC:0x0019
+				RJMP 0x0008
+10565772		next command clock cycle
+
+10572436		PC:0x0008
+				NOP
+
+10579100		PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+10585764		PC:0x000A
+				BRBC 0x01,0x04
+
+10592428		PC:0x000B
+				before ADD: SREG=0x02
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x00
+
+10599092		PC:0x000C
+				before LSR: SREG=0x00
+				LSR 0x11
+				result LSR: R17=0x20
+				after LSR: SREG=0x00
+
+10605756		PC:0x000D
+				RJMP 0x0010
+10609088		next command clock cycle
+
+10615752		PC:0x0010
+				CPSE 0x10,0x12
+
+10622416		PC:0x0011
+				RJMP 0x0017
+10625748		next command clock cycle
+
+10632412		PC:0x0017
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+10639076		PC:0x0018
+				OUT 0x12,0x11
+				result OUT: P[0x12]=0x20
+
+10645740		PC:0x0019
+				RJMP 0x0008
+10649072		next command clock cycle
+
+10655736		PC:0x0008
+				NOP
+
+10662400		PC:0x0009
+				before CPI: SREG=0x00
+				CPI 0x12,0x80
+				after CPI: SREG=0x02
+
+10669064		PC:0x000A
+				BRBC 0x01,0x04
+
+--------------------------------------------------
+Stop

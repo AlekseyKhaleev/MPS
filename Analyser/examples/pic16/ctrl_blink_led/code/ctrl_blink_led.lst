@@ -1,0 +1,235 @@
+MPASM  5.20                CTRL_BLINK_LED.ASM   5-8-2009  20:04:45         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;**********************************************************************
+                      00002 ;                                                                     *
+                      00003 ;   This file is a basic code template for assembly code generation   *
+                      00004 ;   on the PIC16F84A. This file contains the basic code               *
+                      00005 ;   building blocks to build upon.                                    *
+                      00006 ;                                                                     *
+                      00007 ;   Refer to the MPASM User's Guide for additional information on     *
+                      00008 ;   features of the assembler (Document DS33014).                     *
+                      00009 ;                                                                     *
+                      00010 ;   Refer to the respective PIC data sheet for additional             *
+                      00011 ;   information on the instruction set.                               *
+                      00012 ;                                                                     *
+                      00013 ;**********************************************************************
+                      00014 ;                                                                     *
+                      00015 ;    Filename:        xxx.asm                                         *
+                      00016 ;    Date:                                                            *
+                      00017 ;    File Version:                                                    *
+                      00018 ;                                                                     *
+                      00019 ;    Author:                                                          *
+                      00020 ;    Company:                                                         *
+                      00021 ;                                                                     *
+                      00022 ;                                                                     *
+                      00023 ;**********************************************************************
+                      00024 ;                                                                     *
+                      00025 ;    Files required: P16F84A.INC                                      *
+                      00026 ;                                                                     *
+                      00027 ;                                                                     *
+                      00028 ;                                                                     *
+                      00029 ;**********************************************************************
+                      00030 ;                                                                     *
+                      00031 ;    Notes:                                                           *
+                      00032 ;                                                                     *
+                      00033 ;                                                                     *
+                      00034 ;                                                                     *
+                      00035 ;                                                                     *
+                      00036 ;**********************************************************************
+                      00037 
+                      00038 
+                      00039     list      p=16F84A             ; list directive to define processor
+                      00040     #include <p16F84a.inc>         ; processor specific variable definitions
+                      00001         LIST
+                      00002 ; P16F84A.INC  Standard Header File, Version 2.00    Microchip Technology, Inc.
+                      00134         LIST
+                      00041 
+2007   3FF3           00042     __CONFIG   _CP_OFF & _WDT_OFF & _PWRTE_ON & _RC_OSC
+                      00043 
+                      00044 ; '__CONFIG' directive is used to embed configuration data within .asm file.
+                      00045 ; The lables following the directive are located in the respective .inc file.
+                      00046 ; See respective data sheet for additional information on configuration word.
+                      00047 
+                      00048 ;***** VARIABLE DEFINITIONS
+  0000000C            00049 w_temp        EQU     0x0C        ; variable used for context saving 
+  0000000D            00050 status_temp   EQU     0x0D        ; variable used for context saving
+MPASM  5.20                CTRL_BLINK_LED.ASM   5-8-2009  20:04:45         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  0000000E            00051 buffer        EQU     0x0E        ; temporary buffer
+                      00052 
+                      00053 ;**********************************************************************
+                      00054 RESET_VECTOR      CODE    0x0000  ; processor reset vector
+0000   2???           00055         goto    start             ; go to beginning of program
+                      00056 
+                      00057 ISR               CODE    0x0004  ; interrupt vector location
+                      00058 
+0004                  00059 Interrupt:
+                      00060 
+0004   008C           00061         movwf  w_temp             ; save off current W register contents
+0005   0803           00062         movf   STATUS,w           ; move status register into W register
+0006   008D           00063         movwf  status_temp        ; save off contents of STATUS register
+                      00064 
+                      00065 ;  Place ISR Here
+0007   1D0B           00066                 btfss INTCON, T0IF
+0008   2???           00067                 goto  end_isr
+                      00068                 ; If the interrupt is from timer0
+0009   110B           00069                 bcf   INTCON, T0IF ; Clearing the interrupt flag
+                      00070 ; Rotate left or right
+000A   1283           00071                 bcf   STATUS, RP0 ; Select bank 0
+000B   1F06           00072                 btfss PORTB, 6 ; If 1 - rotate left, 0 - right 
+000C   2???           00073                 goto  rright
+                      00074 ;Rotate left
+Message[305]: Using default destination of 1 (file).
+000D   0D8E           00075                 rlf   buffer
+000E   1B0E           00076                 btfsc buffer, 6 ; Is the 6th bit affected?
+000F   140E           00077                 bsf   buffer, 0  ; If yes - set the 0-th bit of buffer
+0010   130E           00078                 bcf   buffer, 6  ; Clear the 6th bit just in case
+0011   2???           00079                 goto out_to_port
+0012                  00080 rright:
+                      00081 ;Rotate right
+Message[305]: Using default destination of 1 (file).
+0012   0C8E           00082                 rrf   buffer
+0013   1803           00083                 btfsc STATUS, C ; Is Carry bit affected?
+0014   168E           00084                 bsf   buffer,5  ; If yes - set the 5th bit of buffer
+0015                  00085 out_to_port:
+0015   080E           00086                 movf  buffer, W  ; Put the buffer content to W
+0016   1B86           00087                 btfsc PORTB, 7   ; Test the 7th bit of PORTB
+0017   090E           00088                 comf  buffer, W  ; If the bit == 1 - inverse the value
+0018   0086           00089                 movwf PORTB      ; Output value to PORTB
+0019                  00090 end_isr:
+0019   080D           00091         movf   status_temp,w      ; retrieve copy of STATUS register
+001A   0083           00092         movwf  STATUS             ; restore pre-isr STATUS register contents
+001B   0E8C           00093         swapf  w_temp,f
+001C   0E0C           00094         swapf  w_temp,w           ; restore pre-isr W register contents
+001D   0009           00095         retfie                    ; return from interrupt
+                      00096 
+                      00097 MAIN_PROGRAM    CODE
+                      00098 
+0000                  00099 start:
+                      00100 
+                      00101 ; remaining code goes here
+MPASM  5.20                CTRL_BLINK_LED.ASM   5-8-2009  20:04:45         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00102 ;Clear the PORTB
+0000   0186           00103                 clrf   PORTB
+                      00104 
+                      00105 ; SELECT the insternal instruction cycle clock for TMR0
+0001   1683           00106                 bsf    STATUS, RP0 ; Select bank 1
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0002   1281           00107                 bcf    OPTION_REG, T0CS ; Select internal clock source for TMR0
+                      00108 
+                      00109 
+                      00110                 ;No prescaler needed. The PSA bit should not be changed (remains 1)
+                      00111 ; Configure PORTB (RB0.. RB5 - outputs, PB6..RB7 - inputs)
+0003   30C0           00112                 movlw  0C0h     ; 1100 0000
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0004   0086           00113                 movwf  TRISB
+                      00114 ; filling in the temporary buffer
+0005   018E           00115                 clrf   buffer
+Message[305]: Using default destination of 1 (file).
+0006   0A8E           00116                 incf   buffer ; buffer = 0000 0001
+                      00117 ; Enable interrupt from timer
+0007   168B           00118                 bsf    INTCON, T0IE ; Enable interrupt from Timer0
+0008   178B           00119                 bsf    INTCON, GIE      ; Switch on interrupts  
+                      00120 
+0009   2???           00121         goto $
+                      00122 
+                      00123         END                       ; directive 'end of program'
+MPASM  5.20                CTRL_BLINK_LED.ASM   5-8-2009  20:04:45         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+DC                                00000001
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+Interrupt                         00000004
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TRISA                             00000085
+TRISB                             00000086
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_HS_OSC                           00003FFE
+_LP_OSC                           00003FFC
+_MAIN_PROGRAM_0009                00000009
+MPASM  5.20                CTRL_BLINK_LED.ASM   5-8-2009  20:04:45         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+__DEBUG                           1
+buffer                            0000000E
+end_isr                           00000019
+out_to_port                       00000015
+rright                            00000012
+start                             00000000
+status_temp                       0000000D
+w_temp                            0000000C
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     5 reported,     0 suppressed
+
+

@@ -1,0 +1,2051 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Выполнение команд в МП КР580ВМ80А</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:ISOCPEUR;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:1.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;
+	font-weight:normal;}
+h2
+	{margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;
+	font-weight:normal;}
+h6
+	{margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;
+	font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:1.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:35.95pt 42.5pt 44.95pt 45.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<p class=MsoNormal><b>Выполнение команд в МП КР580ВМ80А</b></p>
+
+<p class=MsoNormal><b><span style='font-family:ISOCPEUR'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Командный цикл</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Каждая команда в микропроцессоре выполняется в течение командного цикла,
+состоящего из фазы выборки команды и фазы ее исполнения. Команды
+микропроцессора КР580ВМ80А состоят из различного числа байт. Поэтому
+длительность фазы выборки коман­ды различна для различных команд и зависит от
+формата команды. Например, для выборки однобайтовой команды </span><i><span
+lang=EN-US style='layout-grid-mode:line'>ADD</span><span lang=EN-US
+style='layout-grid-mode:line'> </span></i><i><span lang=EN-US style='layout-grid-mode:
+line'>r</span><span lang=EN-US style='layout-grid-mode:line'> </span></i><span
+style='layout-grid-mode:line'>потребуется одно обращение к памяти, а для
+выборки трехбайтовой команды </span><i><span lang=EN-US style='layout-grid-mode:
+line'>CALL</span><span lang=EN-US style='layout-grid-mode:line'> </span></i><i><span
+lang=EN-US style='layout-grid-mode:line'>ADR</span><span style='layout-grid-mode:
+line'> -</span></i><span style='layout-grid-mode:line'> три обращения. С другой
+стороны, длитель­ность фазы выполнения команды также зависит от типа команды и
+способа адресации операндов в команде. Например, для выполнения команды <i>А</i></span><i><span
+lang=EN-US style='layout-grid-mode:line'>DD</span><span lang=EN-US
+style='layout-grid-mode:line'> </span></i><i><span lang=EN-US style='layout-grid-mode:
+line'>r</span></i><span style='layout-grid-mode:line'> с регистровой адресацией
+не требуется обращения к памяти за операндом <i>- </i> он находится в регистре;
+для выполнения команды </span><i><span lang=EN-US style='text-transform:uppercase;
+layout-grid-mode:line'>ADD</span><span lang=EN-US style='text-transform:uppercase;
+layout-grid-mode:line'> </span></i><i><span lang=EN-US style='text-transform:
+uppercase;layout-grid-mode:line'>M</span></i><span style='layout-grid-mode:
+line'> с косвенной адресацией требуется одно обращение к памяти - за операндом,
+адресуемым парой  </span><i><span lang=EN-US style='layout-grid-mode:line'>HL</span><span
+style='layout-grid-mode:line'> ,</span></i><span style='layout-grid-mode:line'>
+а для выполне­ния команды <i>СА</i></span><i><span lang=EN-US style='layout-grid-mode:
+line'>LL</span><span lang=EN-US style='layout-grid-mode:line'> </span></i><i><span
+lang=EN-US style='layout-grid-mode:line'>ADR</span></i><span style='layout-grid-mode:
+line'> требуется два обращения к памяти для сохранения в стеке 16-разрядного
+адреса возврата.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>В связи с этим длительность командного цикла в микропроцес­соре КР580ВМ80А
+различна для различных команд и определяется числом обращений к памяти или к
+внешнему устройству. Интервал времени, в течение которого осуществляется одно
+обращение процессо­ра к памяти или к внешнему устройству, называется машинным
+циклом (М). Командный цикл процессора состоит, таким образом, из то­го или
+иного (в зависимости от типа команды) числа машинных цик­лов.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Число машинных циклов в команде изменяется от 1 для одно­байтовых команд
+с регистровой адресацией до 5 для трехбайтовых сложных команд. Исключение
+составляет команда  </span><i><span lang=EN-US style='layout-grid-mode:line'>DAD</span><span
+style='layout-grid-mode:line'> ,</span></i><span style='layout-grid-mode:line'>
+которая выполняется за три машинных цикла, но обращение к памяти проис­ходит
+только в первом цикле.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Машинный цикл в свою очередь разбивается на некоторое число машинных
+тактов Т, в течение каждого из которых выполняется эле­ментарное действие
+(микрооперация) в процессоре. Число тактов в цикле определяется кодом
+выполняемой команды и изменяется от 3 до 5. Длительность такта задается
+периодом синхроимпульсов и оп­ределяется как интервал времени между фронтами
+двух соседних импульсов последовательности  </span><i><span lang=EN-US
+style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:line'>1,</span></i><span
+style='layout-grid-mode:line'> формируемой внешним генератором. Типовой цикл М1
+состоит из 4-х тактов (для сложных команд типа </span><span lang=EN-US
+style='layout-grid-mode:line'>CALL</span><span lang=EN-US style='layout-grid-mode:
+line'> </span><span lang=EN-US style='layout-grid-mode:line'>ADR</span><span
+style='layout-grid-mode:line'>-из 5-ти тактов).</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Для обеспечения работы процессора </span><span
+lang=EN-US style='layout-grid-mode:line'>c</span><span style='layout-grid-mode:
+line'> памятью или внешними устрой­ствами с меньшим чем у ЦП быстродействием;
+для организации работы в режиме прямого доступа к памяти и останова про­цессора
+предусмотрены три специальных состояния: ОЖИДАНИЕ, ЗАХ­ВАТ и ОСТАНОВ,
+длительность которых может иметь произвольную, но всег­да кратную длительности
+такта Т величину.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Таким образом, командный цикл микропроцессора КР580ВМ80А состоит из
+некоторого числа машинных циклов, а каждый машинный цикл  из определенного
+числа тактов, в течение которых выпол­няются те или иные элементарные действия
+в процессоре.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i><span
+style='font-size:14.0pt;layout-grid-mode:line'> </span></i></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>Типы машинных циклов</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:5.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Последовательность взаимодействия внутренних
+узлов ЦП и формируемых сигналов в каждом машинном цикле опре­деляется типом
+машинного цикла. Первым машинным циклом команды всег­да является цикл М1- ВЫБОРКА,
+в течение которого осуществляется вы­борка байта кода операции команды по
+содержимому программного счетчика </span><span lang=EN-US style='layout-grid-mode:
+line'>PC</span><u><span style='layout-grid-mode:line'>. </span></u><span
+style='layout-grid-mode:line'>Адресация из </span><span lang=EN-US
+style='layout-grid-mode:line'>PC</span><span style='layout-grid-mode:line'>
+выполняется во всех циклах выборки байт команды, причем содержимое программного
+счетчика в каждом цикле увеличивается на единицу. Однобайтовые  команды с
+регистровой адресацией требу­ют для выполнения только одного цикла ВЫБОРКА.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Для выборки двух- или трехбайтовых команд кроме цикла М1 требуется еще
+один или два машинных цикла для чтения второго и третьего байтов команды. Это
+циклы  ЧТЕНИЕ ПАМЯТИ. Цикл ЧТЕНИЕ ПАМЯТИ требуется также для выборки операнда
+при   выполнении команд с косвенной или прямой адресацией. Адреса операндов в
+фазе выполнения команд выдаются из регистров-указателей или из буферной пары  </span><i><span
+lang=EN-US style='layout-grid-mode:line'>WZ</span></i><span style='layout-grid-mode:
+line'>. Для записи операндов или сохранения адресов при выполнении
+соответствующих команд необходимы машинные циклы ЗАПИСЬ В ПАМЯТЬ.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>В командах с обращением к стеку используются циклы ЧТЕНИЕ СТЕКА и ЗАПИСЬ
+В СТЕК. Адреса памяти формируются указателем стека </span><span lang=EN-US
+style='layout-grid-mode:line'>SP</span><span style='layout-grid-mode:line'>.
+Для выполнения команд ввода/вывода используются циклы ВВОД или ВЫВОД. Для
+организации прерываний программы и останова процессора используются циклы
+ПРЕРЫВАНИЙ, ОСТАНОВ, ПРЕРЫВАНИЕ ПРИ ОСТАНОВЕ.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>В каждой команде циклы появляются в той или иной последова­тельности, но
+первым циклом всегда является цикл ВЫБОРКА. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Примеры последовательностей машинных циклов в зависимости от типа ко­манды:</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><i><span
+lang=EN-US style='layout-grid-mode:line'>ADD</span><span style='layout-grid-mode:
+line'>  </span></i><i><span lang=EN-US style='layout-grid-mode:line'>r</span></i><span
+style='layout-grid-mode:line'>                        </span><span lang=EN-US
+style='layout-grid-mode:line'>Ml</span><span style='layout-grid-mode:line'>
+(ВЫБОРКА);</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><i><span
+lang=EN-US style='layout-grid-mode:line'>ADD</span><span style='layout-grid-mode:
+line'> М</span></i><span style='layout-grid-mode:line'>                       </span><span
+lang=EN-US style='layout-grid-mode:line'>Ml</span><span style='layout-grid-mode:
+line'> (ВЫБОРКА) - М2 (ЧТЕНИЕ ПАМЯТИ) ;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='layout-grid-mode:line'>IN</span><span lang=EN-US style='layout-grid-mode:
+line'> </span></i><i><span lang=EN-US style='layout-grid-mode:line'>N</span></i><span
+style='layout-grid-mode:line'>                            </span><span
+lang=EN-US style='layout-grid-mode:line'>Ml</span><span style='layout-grid-mode:
+line'> (ВЫБОРКА)  - М2 (Ч</span><span lang=EN-US style='layout-grid-mode:line'>TE</span><span
+style='layout-grid-mode:line'>НИ</span><span lang=EN-US style='layout-grid-mode:
+line'>E</span><span style='layout-grid-mode:line'> ПАМЯТИ) - МЗ (ВВОД);</span></p>
+
+<p class=MsoNormal style='margin-left:106.2pt;text-align:justify;text-indent:
+-106.2pt'><i><span lang=EN-US style='layout-grid-mode:line'>CALL</span><span
+lang=EN-US style='layout-grid-mode:line'> </span></i><i><span lang=EN-US
+style='layout-grid-mode:line'>ADR</span><span style='layout-grid-mode:line'>                 </span></i><span
+lang=EN-US style='layout-grid-mode:line'>M</span><span style='layout-grid-mode:
+line'>1 (ВЫБОРКА) - М2 (ЧТЕНИЕ ПАМЯТИ) - МЗ  (ЧТЕНИЕ ПАМЯТИ) - М4 (ЗАПИСЬ В
+СТЕК)  - М5 (ЗАПИСЬ В СТЕК).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Команда </span><i><span lang=EN-US style='layout-grid-mode:line'>ADD</span><span
+lang=EN-US style='layout-grid-mode:line'> </span></i><i><span lang=EN-US
+style='layout-grid-mode:line'>R</span></i><span style='layout-grid-mode:line'>
+состоит из одного цикла </span><span lang=EN-US style='layout-grid-mode:line'>M</span><span
+style='layout-grid-mode:line'>1 - ВЫБОРКА, в те­чение которого извлекается байт
+кода операция. Команда </span><i><span lang=EN-US style='layout-grid-mode:line'>ADD</span><span
+lang=EN-US style='layout-grid-mode:line'> </span></i><i><span lang=EN-US
+style='layout-grid-mode:line'>M</span><span style='layout-grid-mode:line'>, </span></i><span
+style='layout-grid-mode:line'>кроме цикла </span><span lang=EN-US
+style='layout-grid-mode:line'>Ml</span><span style='layout-grid-mode:line'> -
+ВЫБОРКА, требует еще один цикл М2 (ЧТЕНИЕ ПА­МЯТИ) для извлечения операнда. В
+команде ввода </span><i><span lang=EN-US style='layout-grid-mode:line'>IN</span><span
+lang=EN-US style='layout-grid-mode:line'> </span></i><i><span lang=EN-US
+style='layout-grid-mode:line'>N</span><span lang=EN-US style='layout-grid-mode:
+line'> </span></i><span style='layout-grid-mode:line'> второй цикл М2 - ЧТЕНИЕ
+ПАМЯТИ используется для выборки второго байта команды (адреса порта) и  третий
+цикл МЗ - ВВОД для обмена данными с регистром внешнего устройства. Команда </span><i><span
+lang=EN-US style='layout-grid-mode:line'>CALL</span><span lang=EN-US
+style='layout-grid-mode:line'> </span></i><i><span lang=EN-US style='layout-grid-mode:
+line'>ADR</span></i><span style='layout-grid-mode:line'> содержит пять циклов: </span><span
+lang=EN-US style='layout-grid-mode:line'>Ml</span><span style='layout-grid-mode:
+line'> - ВЫБОРКА, М2 и МЗ - ЧТЕНИЕ ПАМЯТИ, М4 и М5 - ЗАПИСЬ В СТЕК.  Т.О. фаза
+считывания команды может содержать от 1 до 3 циклов чтения памяти, фаза
+исполнения--от 0 до 2 циклов. КР580ВМ80А имеет 10 машинных циклов, из которых и
+составляется командный цикл.</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Каждый машинный цикл процессора идентифицируется
+так назы­ваемым байтом состояния, который выдается на шину дан­ных в начале
+каждого машинного цикла и сопровождается выдачей сигнала синхронизации на вывод
+</span><i><span lang=EN-US style='text-transform:uppercase;layout-grid-mode:
+line'>SYNC</span><span style='text-transform:uppercase;layout-grid-mode:line'>.</span></i><span
+style='text-transform:uppercase;layout-grid-mode:line'> </span><span
+style='layout-grid-mode:line'>Этот байт несет информацию о типе текущего цикла,
+действиях процессора в нем и может быть использован для расширения функций
+управления в микропроцес­сорной системе. Байт состояния выдается на шину данных
+кратковременно - в течение 1-го периода синхроимпульсов </span><i><span
+lang=EN-US style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:
+line'>2.</span></i><span style='layout-grid-mode:line'>  Для формирования
+управляющих сигналов на его основе, необходимо запомнить байт состояния во
+внешнем регистре состояния. Для записи байта состояния в регистр нельзя
+использовать сигнал </span><span lang=EN-US style='layout-grid-mode:line'>SYNC</span><span
+style='layout-grid-mode:line'> из-за нестабильности данных на ШД в момент
+окончания </span><span lang=EN-US style='layout-grid-mode:line'>SYNC</span><span
+style='layout-grid-mode:line'>, поэтому    необходимо сформировать строб </span><span
+lang=EN-US style='layout-grid-mode:line'>ST</span><span style='layout-grid-mode:
+line'>.</span><span lang=EN-US style='layout-grid-mode:line'>STB</span><span
+style='layout-grid-mode:line'>. логической схемой *<b>И* </b>сигналов<b> </b></span><b><span
+lang=EN-US style='layout-grid-mode:line'>SYNC</span><span style='layout-grid-mode:
+line'> и </span></b><b><span lang=EN-US style='layout-grid-mode:line'>F</span><span
+style='layout-grid-mode:line'>1 </span></b><span style='layout-grid-mode:line'>и<b>
+</b></span><span style='layout-grid-mode:line'>подать </span><span lang=EN-US
+style='layout-grid-mode:line'>ST</span><span style='layout-grid-mode:line'>.</span><span
+lang=EN-US style='layout-grid-mode:line'>STB</span><span style='layout-grid-mode:
+line'> на вход записи регистра.</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt'><span style='font-size:14.0pt;
+layout-grid-mode:line'>&nbsp;</span></p>
+
+<h2 style='margin-top:1.0pt'>Байт состояния микропроцессора КР580ВМ80А:</h2>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:-8.4pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-top:1.0pt;text-align:center'><b><span
+  style='layout-grid-mode:line'>Разряд ШД</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-top:1.0pt;text-align:center'><b><span
+  style='layout-grid-mode:line'>Сигнал состояния</span></b></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-top:1.0pt;text-align:center'><b><span
+  style='layout-grid-mode:line'>Описание</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>0</span></i></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>Подтверждение прерывания (ППР)</span></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>0=1
+  указывает что процессор готов вести обработку запроса прерывания</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>1</span></i></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>Запись-вывод (ЗВ)</span></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>1=0
+  указывает, что выполняется выдача данных из процессора в память или порт. При
+  </span><span lang=EN-US style='layout-grid-mode:line'>D</span><span
+  style='layout-grid-mode:line'>1=1 выполняются циклы ЧТЕНИЕ ПАМЯТИ или ВВОД.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>2</span></i></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>СТЕК</span></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>2=1
+  указывает, что на адресной шине находится содержимое указателя стека, т.е.
+  адрес верхней ячейки стека .</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>3</span></i></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>Подтверждение останова (ПОСТ)</span></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>3=1
+  указывает, что процессор находится в состоянии ОСТАНОВ (выполняется команда </span><i><span
+  lang=EN-US style='layout-grid-mode:line'>HLT</span></i><span
+  style='layout-grid-mode:line'>).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span style='layout-grid-mode:
+  line'>&nbsp;</span></i></p>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>4</span></i></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>Вывод (ВЫВОД)</span></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:1.0pt'><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>4=1
+  указывает, что на адресной шине находится адрес внешнего устройства,в которое
+  осуществляется вывод информации (цикл ВЫВОД). </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>5</span></i></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>М1</span></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>М1=1 указывает, что выполняется первый цикл команды (цикл выборки кода
+  операции).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>6</span></i></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>ВВОД</span></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>6=1
+  указывает, что на адресной шине находится адрес внешнего устройства, с
+  которого осуществляется ввод информации (цикл ВВОД) </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><i><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>7</span></i></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>Чтение памяти (ЧТП)</span></p>
+  </td>
+  <td width=296 valign=top style='width:222.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span lang=EN-US
+  style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>7=1
+  указывает, что процессор будет вводить данные  из памяти.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>Коды байтов состояния по
+типам машинных циклов микропроцессора КР580ВМ80А:</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=574
+ style='width:430.65pt;border-collapse:collapse;border:none'>
+ <tr style='page-break-inside:avoid'>
+  <td width=47 rowspan=2 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+  layout-grid-mode:line'>Разряд шины данных</span></p>
+  </td>
+  <td width=83 rowspan=2 valign=top style='width:62.05pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+  layout-grid-mode:line'>Сигнал состояния</span></p>
+  </td>
+  <td width=444 colspan=10 valign=top style='width:333.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h6 style='margin-top:0cm'>Тип машинного цикла</h6>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid;height:125.45pt'>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ВЫБОРКА</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ЧТЕНИЕ ПАМЯТИ</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ЗАПИСЬ В ПАМЯТЬ</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ЧТЕНИЕ СТЕКА</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ЗАПИСЬ В СТЕК</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ВВОД</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ВЫВОД</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ПРЕРЫВАНИЕ</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ОСТАНОВ</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:125.45pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:5.65pt;margin-bottom:
+  0cm;margin-left:5.65pt;margin-bottom:.0001pt'><span style='layout-grid-mode:
+  line'>ПРЕРЫВАНИЕ ПРИ ОСТАНОВЕ</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=47 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>0</span></i></p>
+  </td>
+  <td width=83 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='layout-grid-mode:line'>ППР</span></p>
+  </td>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=47 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>1</span></i></p>
+  </td>
+  <td width=83 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='layout-grid-mode:line'>ЗВ</span></p>
+  </td>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=47 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>2</span></i></p>
+  </td>
+  <td width=83 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='layout-grid-mode:line'>СТЕК</span></p>
+  </td>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=47 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>3</span></i></p>
+  </td>
+  <td width=83 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='layout-grid-mode:line'>ПОСТ</span></p>
+  </td>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=47 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>4</span></i></p>
+  </td>
+  <td width=83 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='layout-grid-mode:line'>ВЫВОД</span></p>
+  </td>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=47 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>5</span></i></p>
+  </td>
+  <td width=83 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='layout-grid-mode:line'>М1</span></p>
+  </td>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=47 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>6</span></i></p>
+  </td>
+  <td width=83 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='layout-grid-mode:line'>ВВОД</span></p>
+  </td>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=47 valign=top style='width:35.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>7</span></i></p>
+  </td>
+  <td width=83 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='layout-grid-mode:line'>ЧТП</span></p>
+  </td>
+  <td width=35 valign=top style='width:26.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+  <td width=45 valign=top style='width:33.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=51 valign=top style='width:38.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='layout-grid-mode:line'>0</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Последовательность тактов</span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>В каждом машинном цикле в такте Т1  на адресную
+шину выдается 16-ти разрядный код адреса одного из указателей адреса(</span><span
+lang=EN-US style='layout-grid-mode:line'>PC</span><span style='layout-grid-mode:
+line'>-в циклах выборки байт команды; из пар </span><span lang=EN-US
+style='layout-grid-mode:line'>BC</span><span style='layout-grid-mode:line'>,</span><span
+lang=EN-US style='layout-grid-mode:line'>DE</span><span style='layout-grid-mode:
+line'>,</span><span lang=EN-US style='layout-grid-mode:line'>HL</span><span
+style='layout-grid-mode:line'>,</span><span lang=EN-US style='layout-grid-mode:
+line'>WZ</span><span style='layout-grid-mode:line'> или </span><span
+lang=EN-US style='layout-grid-mode:line'>SP</span><span style='layout-grid-mode:
+line'> в циклах исполнения). Одновременно на шину данных выдается байт
+состояния и формируется сигнал (лог. 1) на выводе </span><i><span lang=EN-US
+style='layout-grid-mode:line'>SYNC</span><span style='layout-grid-mode:line'>.</span></i><span
+style='layout-grid-mode:line'> В такте Т2 процессор проверяет значение сигналов
+на входах </span><span lang=EN-US style='layout-grid-mode:line'>READY</span><span
+style='layout-grid-mode:line'> и </span><span lang=EN-US style='layout-grid-mode:
+line'>HOLD</span><span style='layout-grid-mode:line'>. Если память или регистр
+ВУ не готовы к обмену данными с процессором, эти подсистемы должны сформировать
+сигнал </span><span lang=EN-US style='layout-grid-mode:line'>READY</span><span
+style='layout-grid-mode:line'>=0 немного ранее момента его анализа процессором.
+Процессор  при этом вместо такта Т3 будет выполнять такты Т - ожидания
+готовности, проверяя в каждом такте состояние входа </span><span lang=EN-US
+style='layout-grid-mode:line'>READY</span><span style='layout-grid-mode:line'>.
+Получив  сигнал </span><span lang=EN-US style='layout-grid-mode:line'>READY</span><span
+style='layout-grid-mode:line'>=1, процессор продолжит выполнение текущего цикла
+до конца. Запрос ПДП анализируется также в Т2 и при (</span><span lang=EN-US
+style='layout-grid-mode:line'>HOLD</span><span style='layout-grid-mode:line'>=1)
+процессор отдает управление шинами микро-ЭВМ только после завершения обмена 
+данными (чтения или записи) в данном цикле.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Если условие перехода в одно из указанных состояний не вы­полняется или
+под действием внешних сигналов осуществляется вы­ход из состояния ожидания, то
+процессор переходит к такту Т3, в котором в зависимости от типа машинного цикла
+осуществляется обращение к памяти, стеку или устройству ввода/вывода. В резуль­тате
+в процессор вводится или из него выводится по шине дан­ных байт команды, байт
+адреса или данных. При этом на выводах<i> </i></span><span lang=EN-US
+style='layout-grid-mode:line'>DBIN</span><span style='layout-grid-mode:line'>
+или </span><span lang=EN-US style='layout-grid-mode:line'>WR</span><span
+style='layout-grid-mode:line'> формируются соответствующие управляющие сигналы.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>В циклах М1 некоторых команд требуются дополнительные такты для обработки
+операндов и  процессор выполняет  такты Т4 и Т5. Про­цессор завершает все такты
+цикла, как только будут выполнены все необ­ходимые действия.</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>Таким образом, 
+распределение машинных тактов можно представить в виде таблицы:</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:2.0pt;border-collapse:collapse;border:none'>
+ <tr style='height:25.95pt'>
+  <td width=71 valign=top style='width:53.0pt;border:solid windowtext 1.0pt;
+  padding:0cm 2.0pt 0cm 2.0pt;height:25.95pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>Такт</span></p>
+  </td>
+  <td width=499 valign=top style='width:374.25pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 2.0pt 0cm 2.0pt;height:25.95pt'>
+  <p class=MsoNormal style='margin-top:1.0pt'><span style='layout-grid-mode:
+  line'>Действие</span></p>
+  </td>
+ </tr>
+ <tr style='height:66.55pt'>
+  <td width=71 valign=top style='width:53.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 2.0pt 0cm 2.0pt;height:66.55pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span lang=EN-US
+  style='layout-grid-mode:line'>T</span><span style='layout-grid-mode:line'>1</span></p>
+  </td>
+  <td width=499 valign=top style='width:374.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.0pt 0cm 2.0pt;height:66.55pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span style='layout-grid-mode:
+  line'>Адрес памяти или устройства ввода/вывода выдается на адресную шину
+  (А15...0), информация о состоянии выдается на шину данных (</span><span
+  lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+  line'>7...0)</span></p>
+  </td>
+ </tr>
+ <tr style='height:49.25pt'>
+  <td width=71 valign=top style='width:53.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 2.0pt 0cm 2.0pt;height:49.25pt'>
+  <h2>Т2</h2>
+  </td>
+  <td width=499 valign=top style='width:374.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.0pt 0cm 2.0pt;height:49.25pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span style='layout-grid-mode:
+  line'>Осуществляется анализ сигналов на входах </span><i><span lang=EN-US
+  style='layout-grid-mode:line'>READY</span><span style='layout-grid-mode:line'>
+  и </span></i><i><span lang=EN-US style='layout-grid-mode:line'>HOLD</span></i><span
+  style='layout-grid-mode:line'>, </span><span lang=EN-US style='layout-grid-mode:
+  line'>a</span><span lang=EN-US style='layout-grid-mode:line'> </span><span
+  style='layout-grid-mode:line'>также контроль команды останова </span><i><span
+  lang=EN-US style='layout-grid-mode:line'>HLT</span></i></p>
+  </td>
+ </tr>
+ <tr style='height:75.25pt'>
+  <td width=71 valign=top style='width:53.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 2.0pt 0cm 2.0pt;height:75.25pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span style='layout-grid-mode:
+  line'>Т<sub>ож</sub></span></p>
+  </td>
+  <td width=499 valign=top style='width:374.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.0pt 0cm 2.0pt;height:75.25pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span style='layout-grid-mode:
+  line'>Появляется, если сигнал на входе </span><i><span lang=EN-US
+  style='layout-grid-mode:line'>READY</span></i><span style='layout-grid-mode:
+  line'> имеет низкий уровень или на входе </span><i><span lang=EN-US
+  style='layout-grid-mode:line'>HOLD</span></i><span style='layout-grid-mode:
+  line'> высокий уровень или выполняется команда </span><i><span lang=EN-US
+  style='layout-grid-mode:line'>HLT</span></i><span style='layout-grid-mode:
+  line'>.При этом процессор переходит в одно из со­стояний (ОЖИДАНИЕ, ЗАХВАТ
+  или ОСТАНОВ)</span></p>
+  </td>
+ </tr>
+ <tr style='height:98.55pt'>
+  <td width=71 valign=top style='width:53.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 2.0pt 0cm 2.0pt;height:98.55pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span style='text-transform:uppercase;
+  layout-grid-mode:line'>Т3</span></p>
+  </td>
+  <td width=499 valign=top style='width:374.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.0pt 0cm 2.0pt;height:98.55pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span style='layout-grid-mode:
+  line'>С шины в процессор вводится байт команды (в цикле ВЫБОРКА), байт данных
+  (в циклах ЧТЕНИЕ ПАМЯТИ, ЧТЕНИЕ СТЕКА, ВВОД) или команда прерывания </span><i><span
+  lang=EN-US style='layout-grid-mode:line'>RST</span><span style='layout-grid-mode:
+  line'>. </span></i><i><span lang=EN-US style='layout-grid-mode:line'>V</span><span
+  lang=EN-US style='layout-grid-mode:line'> </span></i><span style='layout-grid-mode:
+  line'> (цикл ПРЕРЫВАНИЕ), или из процессора выводится байт данных (цикл
+  ЗАПИСЬ В ПАМЯТЬ, ЗАПИСЬ В СТЕК, ВЫВОД) на шину данных</span></p>
+  </td>
+ </tr>
+ <tr style='height:60.25pt'>
+  <td width=71 valign=top style='width:53.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 2.0pt 0cm 2.0pt;height:60.25pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span style='text-transform:uppercase;
+  layout-grid-mode:line'>Т4, Т5</span></p>
+  </td>
+  <td width=499 valign=top style='width:374.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.0pt 0cm 2.0pt;height:60.25pt'>
+  <p class=MsoNormal style='margin-top:2.0pt'><span style='layout-grid-mode:
+  line'>Подготавливается выполнение операции. Такты Т4, Т5 оба вместе или один
+  из них (Т5) могут не использоваться при выпол­нении команды</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Арифметическая команда  сложения содержимого регист­ра </span><span
+lang=EN-US style='layout-grid-mode:line'>R</span><span style='layout-grid-mode:
+line'> с  содержимым аккумулятора- </span><span lang=EN-US style='layout-grid-mode:
+line'>ADD</span><span lang=EN-US style='layout-grid-mode:line'> </span><span
+lang=EN-US style='layout-grid-mode:line'>R</span><span style='layout-grid-mode:
+line'>  выполняется за один  цикл: вначале осуществляется выборка байта кода
+операции, для чего в такте </span><span lang=EN-US style='layout-grid-mode:
+line'>T</span><span style='layout-grid-mode:line'>1 в регистр адреса буфера ША
+выдается содержимое программного счетчика </span><span lang=EN-US
+style='layout-grid-mode:line'>PC</span><span style='layout-grid-mode:line'> и
+далее на внешнюю ШA (содержимое </span><span lang=EN-US style='layout-grid-mode:
+line'>PC</span><span style='layout-grid-mode:line'> при этом увеличивается на 1
+для адресации следующей команды). Чтение кода операции заканчивается в такте
+ТЗ, декодируется и в соответствии с ним в такте Т4 осуществляется подготовка
+операндов к выпол­нению операции сложения - операнд из регистра </span><span
+lang=EN-US style='layout-grid-mode:line'>R</span><span style='layout-grid-mode:
+line'>  по внутренней шине пересылается в регистр ВР АЛУ, а операнд из
+аккумулятора пере­сылается в регистр ВА. В пятом такте, который выполняется в
+те­чение действия такта Т2 следующей команды, осуществляется сложе­ние
+операндов с сохранением результата в аккумуляторе. Совмеще­ние тактов позволяет
+повысить производительность процессора.</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>В команде сложения содержимого ячейки памяти с
+содержимым аккумулятора </span><span lang=EN-US style='layout-grid-mode:line'>ADD</span><span
+lang=EN-US style='layout-grid-mode:line'> </span><span lang=EN-US
+style='layout-grid-mode:line'>M</span><span style='layout-grid-mode:line'> цикл
+ВЫБОРКА, состоящий<b> </b>из так­тов Т1 - Т4, выполняется почти аналогично, а
+цикл М2 использует­ся для выполнения операции сложения (фаза исполнения). Для
+выборки операнда из памяти в такте Т1(цикла М2) на адресную шину выдается его
+адрес из пары </span><span lang=EN-US style='layout-grid-mode:line'>HL</span><span
+style='layout-grid-mode:line'>, по которому в такте ТЗ операнд выбирается из
+памяти и пересылается в регистр ВР. В чет­вертом такте, которой также
+выполняется в течение такта Т2 сле­дующей команды, осуществляется сложение
+операндов.</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>В командах ввода/вывода (</span><span lang=EN-US
+style='layout-grid-mode:line'>IN</span><span lang=EN-US style='layout-grid-mode:
+line'> </span><span lang=EN-US style='layout-grid-mode:line'>N</span><span
+style='layout-grid-mode:line'> , </span><span lang=EN-US style='layout-grid-mode:
+line'>OUT</span><span lang=EN-US style='text-transform:uppercase;layout-grid-mode:
+line'> </span><span lang=EN-US style='layout-grid-mode:line'>N</span><span
+style='layout-grid-mode:line'>) для выборки команды используются два цикла, в
+каждом из которых на ад­ресную шину выдается содержимое программного счетчика,
+увеличи­ваемого в Т1 на единицу. Первый байт поступает в регистр команд, второй
+- дублировано в регистры  </span><span lang=EN-US style='layout-grid-mode:line'>W</span><span
+style='layout-grid-mode:line'>, </span><span lang=EN-US style='layout-grid-mode:
+line'>Z</span><span style='layout-grid-mode:line'>. В третьих циклах команд -
+циклах ввода/вывода - на адресную шину выдается адрес порта (одинаковый на
+младший и старший байты шины), по которому затем осущест­вляется обмен с
+адресуемым портом.</span></p>
+
+<p class=MsoNormal><br clear=ALL>
+<span style='layout-grid-mode:line'>Схема выполнения команд ввода/вывода:</span></p>
+
+<img width=684 height=336
+src="i8080-command-execution.files/image001.gif">
+
+<p class=MsoNormal><span style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>В команде обращения к подпрограмме </span><span lang=EN-US
+style='layout-grid-mode:line'>CALL</span><span lang=EN-US style='layout-grid-mode:
+line'> </span><span lang=EN-US style='layout-grid-mode:line'>ADR</span><span
+style='layout-grid-mode:line'> команда выбирается в течение трех машинных
+циклов по адресам, формируемым в программном счетчике: в первом цикле в регистр
+РК (регистр команд) выбирается байт кода операции, во втором - младшие разряды
+адре­са (второй байт команды) в регистр  </span><span lang=EN-US
+style='layout-grid-mode:line'>Z</span><span style='layout-grid-mode:line'>, в
+третьем - старшие разряды адреса (третий байт команды) в регистр </span><span
+lang=EN-US style='layout-grid-mode:line'>W</span><span style='layout-grid-mode:
+line'>. Таким образом, адрес подпрограммы хранится в паре </span><span
+lang=EN-US style='layout-grid-mode:line'>WZ</span><span style='layout-grid-mode:
+line'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>В тактах Т4, Т5 цикла </span><span lang=EN-US style='layout-grid-mode:
+line'>M</span><span style='layout-grid-mode:line'>1  осуществляется подготовка
+адреса стека - уменьшение содержимого </span><span lang=EN-US style='layout-grid-mode:
+line'>SP</span><span style='layout-grid-mode:line'> на единицу. По этому адре­су
+в цикле  М4  в ячейку стека, адресуемую содержимым </span><span lang=EN-US
+style='layout-grid-mode:line'>SP</span><span style='layout-grid-mode:line'>-1 ,
+за­писывается старший байт адреса возврата, и адрес стека уменьшается на 1(</span><span
+lang=EN-US style='layout-grid-mode:line'>SP</span><span style='layout-grid-mode:
+line'>-2). Затем в цикле  </span><span lang=EN-US style='layout-grid-mode:line'>M</span><span
+style='layout-grid-mode:line'>5 в ячейку стека с адресом </span><span
+lang=EN-US style='layout-grid-mode:line'>SP</span><span style='layout-grid-mode:
+line'>-2 записывается млад­ший байт</span><span style='font-size:14.0pt;
+layout-grid-mode:line'> </span><span style='layout-grid-mode:line'>адреса
+возврата. Адрес перехода на подпрограмму заносит­ся в </span><span lang=EN-US
+style='layout-grid-mode:line'>PC</span><span style='layout-grid-mode:line'> из </span><span
+lang=EN-US style='layout-grid-mode:line'>WZ</span><span style='layout-grid-mode:
+line'> в такте Т1 цикла</span><span style='font-size:14.0pt;layout-grid-mode:
+line'> </span><span style='layout-grid-mode:line'>М1</span><span
+style='font-size:14.0pt;layout-grid-mode:line'> </span><span style='layout-grid-mode:
+line'>следующей команды .</span></p>
+
+<p class=MsoNormal><br clear=ALL>
+<span style='layout-grid-mode:line'>Схемы выполнения команд:</span></p><br>
+
+<img width=600 height=372 src="i8080-command-execution.files/image002.jpg">
+<img width=676 height=423 src="i8080-command-execution.files/image003.jpg">
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:14.0pt;
+layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Временная диаграмма выполнения команд</span></p>
+
+<p class=MsoNormal style='margin-top:5.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Длительность такта в МП КР580ВМ80А задается
+периодом синхроимпульсов фазы  </span><span lang=EN-US style='layout-grid-mode:
+line'>F</span><span style='layout-grid-mode:line'>1, внутренние микрооперации
+инициируются импульсами из последовательности  </span><span lang=EN-US
+style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:line'>2.
+Начало каждого машинного цикла (такт Т1) отмечается появлением сигнала на
+выходе </span><span lang=EN-US style='layout-grid-mode:line'>SYNC</span><span
+style='layout-grid-mode:line'> (начало связано с фронтом импульса  </span><span
+lang=EN-US style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:
+line'>2 </span><span lang=EN-US style='layout-grid-mode:line'>c</span><span
+style='layout-grid-mode:line'> некоторой задержкой, а конец - с фронтом
+следующего импульса </span><span lang=EN-US style='layout-grid-mode:line'>F</span><span
+style='layout-grid-mode:line'>2). В течение этого ин­тервала на шину данных
+выдается код байта состояния процессора,</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Фронт импульса  </span><span lang=EN-US
+style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:line'>2 в
+такте </span><span lang=EN-US style='layout-grid-mode:line'>T</span><span
+style='layout-grid-mode:line'>1 также вызывает загрузку ад­реса на адресную
+шину. Адрес сохраняется до появления фронта им­пульса </span><span lang=EN-US
+style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:line'>2
+после такта ТЗ. Выдав адрес на адресную шину, про­цессор в такте Т2
+осуществляет проверку сигналов запросов на режимы ОЖИДАНИЕ, ЗАХВАТ, ОСТАНОВ.
+Если, например, память не готова к обмену, на линию </span><span lang=EN-US
+style='layout-grid-mode:line'>READY</span><span style='layout-grid-mode:line'>
+блок памяти должен<span style='text-transform:uppercase'> </span>выдать сигнал
+низкого уров­ня. При этом процессор переходит в состояние Т<sub>ож</sub> и
+выдает сигнал высокого уровня на линию  </span><span lang=EN-US
+style='layout-grid-mode:line'>WAIT</span><span style='layout-grid-mode:line'>,
+подтверждающий режим ожидания (переключение сигнала на линии </span><span
+lang=EN-US style='layout-grid-mode:line'>WAIT</span><span style='layout-grid-mode:
+line'> осуществляется фронтом им­пульса  </span><span lang=EN-US
+style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:line'>1).</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Процессор остается в состоянии ОЖИДАНИЕ до тех
+пор, пока сигнал на линии </span><span lang=EN-US style='text-transform:uppercase;
+layout-grid-mode:line'>READY</span><span lang=EN-US style='text-transform:uppercase;
+layout-grid-mode:line'> </span><span style='layout-grid-mode:line'>не переходит
+в состояние высокого уровня. Если информация о готовности предшествует спаду
+импульса  </span><span lang=EN-US style='layout-grid-mode:line'>F</span><span
+style='layout-grid-mode:line'>2, то следующий импульс  </span><span lang=EN-US
+style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:line'>1
+переводит линию </span><span lang=EN-US style='layout-grid-mode:line'>WAIT</span><span
+style='layout-grid-mode:line'> в состояние низкого потенциала, и процессор
+переходит в состояние Т3. В этом состоянии осуществляется обмен информацией с
+памятью или с внеш­ним устройством по шине  данных. При этом процессор
+формирует сигнал высокого уровня на ли­нии </span><span lang=EN-US
+style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>В1</span><span
+lang=EN-US style='layout-grid-mode:line'>N</span><span style='layout-grid-mode:
+line'> (сигнал формируется в пределах действия фронтов им­пульсов </span><span
+lang=EN-US style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:
+line'>2 в тактах Т2 и Т3). Длительность сигнала </span><span lang=EN-US
+style='layout-grid-mode:line'>DBIN</span><span style='layout-grid-mode:line'> 
+зависит от количества тактов ожидания Т<sub>ож</sub> между тактами Т2, ТЗ.</span><span
+style='font-size:14.0pt;layout-grid-mode:line'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Данные, вводимые в процессор, должны быть стабильными в течение интервала
+времени, начало которого предшествует спаду им­пульса  </span><span lang=EN-US
+style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:line'>1 или
+фронту импульса </span><span lang=EN-US style='layout-grid-mode:line'>F</span><span
+style='layout-grid-mode:line'>2  в такте ТЗ, а конец следует за фронтом
+импульса  </span><span lang=EN-US style='layout-grid-mode:line'>F</span><span
+style='layout-grid-mode:line'>2 в этом же такте.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>При этом процессор формирует сигнал высокого уровня на ли­нии </span><span
+lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+line'>В1</span><span lang=EN-US style='layout-grid-mode:line'>N</span><span
+style='layout-grid-mode:line'> (сигнал формируется в пределах действия фронтов
+им­пульсов </span><span lang=EN-US style='layout-grid-mode:line'>F</span><span
+style='layout-grid-mode:line'>2 в тактах Т2 и Т3). Длительность сигнала зависит
+от количества тактов ожидания Т<sub>ож</sub> между тактами Т2, ТЗ. При выводе данные
+появляются на шине по фронту импульса </span><span lang=EN-US style='layout-grid-mode:
+line'>F</span><span style='layout-grid-mode:line'>2 (одновременно информация о
+состоянии снимается) и выдаются на шину до появления новой информации о
+состоянии. При этом процессор формирует сигнал низкого уровня на линии </span><span
+lang=EN-US style='layout-grid-mode:line'>WR</span><span style='layout-grid-mode:
+line'>.</span><span style='font-size:14.0pt;layout-grid-mode:line'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Временные диаграммы типового машинного цикла КР580ВМ80А представлены на
+рисунке:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'><img width=600 height=511
+src="i8080-command-execution.files/image004.jpg"></span></p>
+
+<br>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>Сигнал появляет­ся по
+фронту импульса  </span><i><span lang=EN-US style='layout-grid-mode:line'>F</span><span
+style='layout-grid-mode:line'>1</span></i><span style='layout-grid-mode:line'>,
+следующего за тактом Т2 (это могут быть такты ТЗ или Т<sub>ож</sub>), а
+оканчивается по фронту<b> </b></span><b><i><span lang=EN-US style='layout-grid-mode:
+line'>F</span><span style='layout-grid-mode:line'>1</span></i></b><span
+style='layout-grid-mode:line'> в такте, следующем за ТЗ. Таким образом, его
+длительность также зависит от длительности тактов ожидания Т<sub>ож</sub>. Все
+машинные циклы содержат такты </span><span lang=EN-US style='layout-grid-mode:
+line'>T</span><span style='layout-grid-mode:line'>1, Т2, ТЗ. Такты Т4 и Т5
+используются для выполнения команды. Завершив цикл </span><span lang=EN-US
+style='layout-grid-mode:line'>M</span><span style='layout-grid-mode:line'>1,
+процессор переходит к циклам М2-М5 текущей команды или к циклу </span><span
+lang=EN-US style='layout-grid-mode:line'>Ml</span><span style='layout-grid-mode:
+line'> следующей команды, если для выполнения текущей команды достаточно одного
+цикла.</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>В последнем такте
+последнего машинного цикла проверяется наличие запроса прерывания и, если он
+имеется, ЦП переходит к вы­полнению цикла </span><span lang=EN-US
+style='layout-grid-mode:line'>M</span><span style='layout-grid-mode:line'>1
+специального типа. В течение этого цикла содер­жимое программного счетчика не
+увеличивается на 1, в байте состояния выдаются значения битов (</span><span
+lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+line'>0=1- подтверждения прерывания и </span><span lang=EN-US style='layout-grid-mode:
+line'>D</span><span style='layout-grid-mode:line'>7=0-запрет обращения к
+памяти). Из устройства, вызвавшего пре­рывание, должен быть послан код вектора
+прерывания в форме команды </span><span lang=EN-US style='layout-grid-mode:
+line'>RST</span><span style='layout-grid-mode:line'>.</span><span lang=EN-US
+style='layout-grid-mode:line'>V</span><span style='layout-grid-mode:line'> (где
+</span><span lang=EN-US style='layout-grid-mode:line'>V</span><span
+style='layout-grid-mode:line'>-код   вектора ), или код операции команды </span><span
+lang=EN-US style='layout-grid-mode:line'>CALL</span><span lang=EN-US
+style='layout-grid-mode:line'> </span><span lang=EN-US style='layout-grid-mode:
+line'>ADR</span><span lang=EN-US style='layout-grid-mode:line'> </span><span
+style='layout-grid-mode:line'>(код  </span><span lang=EN-US style='layout-grid-mode:
+line'>CD</span><span lang=EN-US style='layout-grid-mode:line'> </span><span
+lang=EN-US style='layout-grid-mode:line'>Hex</span><span style='layout-grid-mode:
+line'>), где </span><span lang=EN-US style='layout-grid-mode:line'>ADR</span><span
+style='layout-grid-mode:line'>-адрес обслуживающей пре­рывание подпрограммы.
+Байты адреса на ШД также формируются ВУ и вводятся микропроцессором в двух
+дополнительных циклах </span><span lang=EN-US style='layout-grid-mode:line'>INTA</span><span
+style='layout-grid-mode:line'>.</span><span style='font-size:14.0pt;layout-grid-mode:
+line'> </span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>Примеры временных
+диаграмм выполнения некоторых команд показаны на рисунках:</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>1. Временные диаграммы
+выполнения команды </span><span lang=EN-US style='layout-grid-mode:line'>ADD</span><span
+lang=EN-US style='layout-grid-mode:line'> </span><span lang=EN-US
+style='layout-grid-mode:line'>r</span></p>
+
+<p class=MsoNormal align=center style='margin-right:-21.3pt;text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'><img width=496 height=371
+src="i8080-command-execution.files/image005.jpg"></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:14.0pt;
+layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>2. Временные диаграммы
+выполнения команды </span><span lang=EN-US style='layout-grid-mode:line'>CALL</span></p>
+
+<p class=MsoNormal align=center style='margin-right:-1.0cm;text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'><img width=677 height=338
+src="i8080-command-execution.files/image006.jpg"></span></p>
+
+<p class=MsoNormal style='margin-right:-1.0cm;text-align:justify'><span
+lang=EN-US style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>3. Временные диаграммы
+выполнения команд </span><span lang=EN-US style='layout-grid-mode:line'>IN</span><span
+lang=EN-US style='layout-grid-mode:line'> </span><span lang=EN-US
+style='layout-grid-mode:line'>n</span><span lang=EN-US style='layout-grid-mode:
+line'> </span><span style='layout-grid-mode:line'>и </span><span lang=EN-US
+style='layout-grid-mode:line'>OUT</span><span lang=EN-US style='layout-grid-mode:
+line'> </span><span lang=EN-US style='layout-grid-mode:line'>n</span></p>
+
+<p class=MsoNormal style='margin-right:-1.0cm;text-align:justify'><span
+style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-right:-21.3pt;text-align:center'><b><span
+style='font-size:18.0pt;layout-grid-mode:line'><img width=676 height=439
+src="i8080-command-execution.files/image007.jpg"></span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='font-size:14.0pt;
+layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Обработка   прерываний</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify'><span
+style='position:relative;z-index:5'><span style='left:0px;position:absolute;
+left:67px;top:-413px;width:2px;height:2px'><img width=2 height=2
+src="i8080-command-execution.files/image008.gif"></span></span><span
+style='layout-grid-mode:line'>В микропроцессоре КР580ВМ80А имеются средства
+обработки  запросов прерываний </span><span lang=EN-US style='layout-grid-mode:
+line'>INT</span><span style='layout-grid-mode:line'> с распознаванием источника
+запроса при помощи специального идентификационного кода (вектора прерывания).
+Источник прерыва­ний должен сформировать запрос прерывания, сопровождаемый
+векто­ром в форме кода операции команд  </span><i><span lang=EN-US
+style='layout-grid-mode:line'>RST</span><span style='layout-grid-mode:line'> .V
+</span></i><span style='layout-grid-mode:line'>или </span><span lang=EN-US
+style='layout-grid-mode:line'>CALL</span><span lang=EN-US style='layout-grid-mode:
+line'> </span><span lang=EN-US style='layout-grid-mode:line'>ADR</span><span
+style='layout-grid-mode:line'>.</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Последовательность действий микропроцессора в
+режиме прерываний при использовании </span><span lang=EN-US style='layout-grid-mode:
+line'>RST</span><span style='layout-grid-mode:line'>.</span><span lang=EN-US
+style='layout-grid-mode:line'>V</span><span style='layout-grid-mode:line'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='layout-grid-mode:line'>- прием запроса прерывания и блокировка входа
+запроса пре­рывания;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='position:relative;z-index:8'><span style='left:0px;position:absolute;
+left:60px;top:-830px;width:2px;height:2px'><img width=2 height=2
+src="i8080-command-execution.files/image008.gif"></span></span><span
+style='position:relative;z-index:7'><span style='left:0px;position:absolute;
+left:67px;top:-465px;width:2px;height:2px'><img width=2 height=2
+src="i8080-command-execution.files/image008.gif"></span></span><span
+style='layout-grid-mode:line'>- прием кода операции </span><i><span lang=EN-US
+style='layout-grid-mode:line'>RST</span><span style='layout-grid-mode:line'>. </span></i><i><span
+lang=EN-US style='layout-grid-mode:line'>V</span><span style='layout-grid-mode:
+line'>;                </span></i></p>
+
+<p class=MsoNormal style='margin-left:25.0pt;text-align:justify;text-indent:
+2.0pt'><span style='position:relative;z-index:6'><span style='left:0px;
+position:absolute;left:68px;top:-484px;width:2px;height:2px'><img width=2
+height=2 src="i8080-command-execution.files/image008.gif"></span></span>- <span
+style='layout-grid-mode:line'>сохранение адреса возврата (содержимого
+программного счет­чика) в стеке и формирование адреса подпрограммы обслуживания
+источника запроса.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Запросы прерывания микропроцессора КР580ВМ80А принимают­ся со входа </span><i><span
+lang=EN-US style='layout-grid-mode:line'>INT</span></i><span style='layout-grid-mode:
+line'>  триггером прерываний, доступ к которому управ­ляется триггером
+разрешения прерываний </span><span lang=EN-US style='layout-grid-mode:line'>INTE</span><span
+style='layout-grid-mode:line'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Внешнее устройство, запрашивающее прерывание, устанавли­вает<b> </b>на
+линии<b> </b></span><i><span lang=EN-US style='layout-grid-mode:line'>INT</span></i><span
+style='layout-grid-mode:line'> сигнал высокого уровня (рис.2.9б). Этот сигнал
+может возникнуть в произвольный момент выполнения текущей команды, однако прием
+его синхронизируется внутренними це­пями процессора. При наличии сигнала
+разрешения прерывания (триг­гер </span><span lang=EN-US style='layout-grid-mode:
+line'>INTE</span><span style='layout-grid-mode:line'> установлен в единичное
+состояние) внутренний триггер прерывания </span><span lang=EN-US
+style='layout-grid-mode:line'>INT</span><span style='layout-grid-mode:line'>
+устанавливает­ся в 1 в последнем такте последнего машинного цикла текущей
+команды. Это дает возможность  про­цессору завершить выполнение текущей команды
+перед тем как начнется об­работка прерывания.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>После фиксации сигнала запроса прерывания процессор переходит к
+выполнению последовательности, состоящей из трех машинных циклов, первый из
+которых</span><span style='font-size:14.0pt;layout-grid-mode:line'> </span><span
+style='layout-grid-mode:line'>(цикл М1- ПРЕ­РЫВАНИЕ) предназначен для приема
+вектора<i>,</i> а два других - для сохранения адреса возврата в стеке (циклы
+ЗАПИСЬ в СТЕК)<i>.</i> В цикле ПРЕРЫВАНИЕ, который во многом подобен циклу
+ВЫБОРКА, в первом такте </span><span lang=EN-US style='layout-grid-mode:line'>T</span><span
+style='layout-grid-mode:line'>1 в байте состояния  устанавливается бит
+подтверждения прерывания(</span><span lang=EN-US style='layout-grid-mode:line'>D</span><span
+style='layout-grid-mode:line'>0=1), который используется для формирования
+сигнала </span><span lang=EN-US style='layout-grid-mode:line'>INTA</span><span
+style='layout-grid-mode:line'>- чтение кода вектора прерывания, и сбрасывается
+в ноль </span><span lang=EN-US style='layout-grid-mode:line'>D</span><span
+style='layout-grid-mode:line'>7- разрешение чтения памяти. Одновременно
+сбрасывается триггер </span><span lang=EN-US style='layout-grid-mode:line'>INTE</span><span
+style='layout-grid-mode:line'>, блокируя возможность повторного прерывания от
+того же сигнала </span><span lang=EN-US style='layout-grid-mode:line'>INT</span><span
+style='layout-grid-mode:line'>.  Содержимое программного счетчика, хотя и
+выдается на адресную шину, но не используется для адресации и не увеличивается
+на 1 с тем, чтобы сохранить адрес невыполнившейся  команды  в стеке. В такте ТЗ
+процессор принимает по шине дан­ных байт вектора, формируемый внешним
+устройством, которое послало сигнал прерывания. В тактах Т4, Т5 цикла
+М1-ПРЕРЫВАНИЕ осуществляет­ся формирование адреса первой ячейки стека(</span><span
+lang=EN-US style='layout-grid-mode:line'>SP</span><span style='layout-grid-mode:
+line'>-1), отведенной для сох­ранения адреса возврата. В циклах М2 и М3
+происходит загрузка адреса возврата (т.е. со­держимого программного счетчика) в
+стек, как и при выполнении команды вызова подпрограммы </span><i><span
+lang=EN-US style='layout-grid-mode:line'>CALL</span><span lang=EN-US
+style='layout-grid-mode:line'> </span></i><i><span lang=EN-US style='layout-grid-mode:
+line'>ADR</span></i><span style='layout-grid-mode:line'>. В следующем цикле
+извле­кается первая команда подпрограммы обслуживания прерывания по адресу
+сформированному в устройстве управления в соответствии с кодом вектора
+прерывания (в команде </span><i><span lang=EN-US style='layout-grid-mode:line'>RST</span><span
+style='layout-grid-mode:line'> V)</span></i><span style='layout-grid-mode:line'>
+и загруженному в </span><span lang=EN-US style='layout-grid-mode:line'>PC</span><span
+style='layout-grid-mode:line'>.</span><i><span style='font-size:14.0pt;
+layout-grid-mode:line'>    </span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Последующее управление микропроцессором возлагается<b> </b>на<b> </b>подпрограмму.
+В частности, с помощью подпрограммы осуществляют­ся сохранение содержимого
+основных рабочих регистров процессора и регистра флагов, выполнение
+обслуживания ВУ, управление триггером разрешения прерывания (маскирование преры­ваний
+или разрешение вложенных прерываний), восстановление содержимого основных
+рабочих регистров и возврат к основной программе (восстановление содержимого про­граммного
+счетчика).</span> </p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'><br clear=ALL>
+Схема выполнения последовательности прерывания в МП КР580ВМ80А:</p><br>
+
+<img width=648 height=420 src="i8080-command-execution.files/image009.gif">
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal>Временные диаграммы последовательности прерываний:</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'><img width=676 height=430
+src="i8080-command-execution.files/image010.jpg"></span><span style='position:
+absolute;z-index:9;left:0px;margin-left:109px;margin-top:11px;width:2px;
+height:2px'><img width=2 height=2
+src="i8080-command-execution.files/image008.gif"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Захват шин</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Режим захвата используется для организация выполнения опе­раций обмена с
+высокоскоростными ВУ, когда процессор не может поддержать управление обменом
+Для этой цели процессор имеет вход запроса захвата шин </span><span lang=EN-US
+style='layout-grid-mode:line'>HOLD</span><span style='layout-grid-mode:line'> и
+внутренние цепи уп­равления захватом. Внешнее устройство запрашивает ПДП (прямой
+доступ к памяти) подачей сигнала высокого уровня на линию </span><span
+lang=EN-US style='layout-grid-mode:line'>HOLD</span><span style='layout-grid-mode:
+line'>. При этом процессор приостанавливает выполнение операций и отключается
+от  шин данных и адреса микро-ЭВМ (шины переходят в третье состояние -
+состояние высокого сопротивления). Процессор подтверждает режим ПДП установкой
+высокого потенциала на выходе подтверждения зах­вата </span><span lang=EN-US
+style='layout-grid-mode:line'>HLDA</span><span style='layout-grid-mode:line'>.
+Пока действует сигнал на входе </span><span lang=EN-US style='layout-grid-mode:
+line'>HOLD</span><span style='layout-grid-mode:line'>, шины микроЭВМ находятся
+в распоряжений внешнего устройства, запросивше­го ПДП так, что обмен
+информацией между внешним устройством и памятью осуществляется без
+вмешательства процессора(внепроцессорный обмен).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Прием сигнала </span><span lang=EN-US style='layout-grid-mode:line'>HOLD</span><span
+style='layout-grid-mode:line'> синхронизируется как и при прерывании
+внутренними цепями процессора и фиксируется во внутреннем триггере с
+одноименным названием </span><span lang=EN-US style='layout-grid-mode:line'>HOLD</span><span
+style='layout-grid-mode:line'> по сигналу <b>ф1</b> . Сигнал с этого триггера
+воспринимается процес­сором в тот же момент что и сигнал </span><span
+lang=EN-US style='layout-grid-mode:line'>READY</span><span style='layout-grid-mode:
+line'>  (рис.2.10). Под действием сигнала захват при наличии  сигнала на входе 
+</span><span lang=EN-US style='text-transform:uppercase;layout-grid-mode:line'>READY</span><span
+style='layout-grid-mode:line'>, указывающего готовность внешнего устройства, по
+импульсу<b>  ф2</b> устанавливается внутренний триггер захвата, благодаря чему
+фронт следующего импульса <b>ф1 </b>переключает в единицу выход </span><span
+lang=EN-US style='layout-grid-mode:line'>HLDA</span><span style='layout-grid-mode:
+line'>. При выполнении циклов ЧТЕНИЯ или ВВОДА процессор подтверждает захват в
+начале такта ТЗ (по окончании чтения). В других случаях (в циклах за­писи и
+вывода) это происходит в такте, следующем за ТЗ (по окон­чании записи). В обоих
+случаях шины процессора отключаются во фронту импульса  </span><span
+lang=EN-US style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:
+line'>2 , следующего за импульсом </span><span lang=EN-US style='layout-grid-mode:
+line'>F</span><span style='layout-grid-mode:line'>1 , по которому выполнялось
+переключение выхода </span><span lang=EN-US style='layout-grid-mode:line'>HLD</span><span
+style='layout-grid-mode:line'>А.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:5.0pt'><span style='layout-grid-mode:line'>Последовательность
+захвата в цикле чтения:</span></p>
+
+<p class=MsoNormal align=center style='margin-top:5.0pt;text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'><img width=639 height=359
+src="i8080-command-execution.files/image011.jpg"></span></p>
+
+<p class=MsoNormal style='margin-top:5.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:5.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Последовательность захвата в цикле записи:</span></p>
+
+<p class=MsoNormal style='margin-top:5.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'><img width=677 height=416
+src="i8080-command-execution.files/image012.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Если процессор подтвердил запрос ПДП в такте ТЗ, а этот такт не последний
+он продолжает выполнение цикла до конца.</span></p>
+
+<p class=MsoBodyText style='margin-top:0cm;text-align:justify'>Это позволяет
+осуществить частичное перекрытие процессов обработки информации в процессоре с
+передачей по кана­лу ПДП, что улучшает производительность системы.</p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Процессор выходит из состояния ЗАХВАТ примерно в той же
+последовательности, что и входит. После окончания асинхронного сигнала запроса
+захват на входе </span><span lang=EN-US style='layout-grid-mode:line'>HOLD</span><span
+style='layout-grid-mode:line'> импульсом </span><span lang=EN-US
+style='layout-grid-mode:line'>F</span><span style='layout-grid-mode:line'>2 
+сбрасывает­ся внутренний триггер захвата, благодаря чему сигнал подтверждения
+захвата на выходе </span><span lang=EN-US style='layout-grid-mode:line'>HLDA</span><span
+style='layout-grid-mode:line'> переключается в состояние низкого потенциала по
+переднему фронту ближайшего импульса </span><span lang=EN-US style='layout-grid-mode:
+line'>F</span><span style='layout-grid-mode:line'>1. Процессор переходит к
+выполнению следующего машинного цикла.</span></p>
+
+<p class=MsoNormal style='margin-top:15.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Останов микропроцессора</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='layout-grid-mode:
+line'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Процессор входит в состояние ОСТАНОВ при выполнении команды останова (</span><span
+lang=EN-US style='layout-grid-mode:line'>HALT</span><span style='layout-grid-mode:
+line'>)  после завершения такта Т2 второго машинного цикла (в первом цикле
+осуществляется выборка команды). Состояние останова подтверждается битом ПОСТ в
+байте состояния, выдаваемом также в такте Т2.</span><span style='font-size:
+14.0pt;layout-grid-mode:line'>  </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>Временные диаграммы
+выполнения команды останова:   </span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>  </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;layout-grid-mode:line'><img
+width=696 height=391 src="i8080-command-execution.files/image013.jpg"></span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Выход<b> </b>из состояния ОСТАНОВ может быть осуществлен тремя способами:</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>- подачей сигнала на линию </span><span
+lang=EN-US style='layout-grid-mode:line'>RESET</span><span style='layout-grid-mode:
+line'> (при этом обнуляется программный счетчик), а после снятия </span><span
+lang=EN-US style='layout-grid-mode:line'>RESET</span><span style='layout-grid-mode:
+line'> процессор переходит в состояние Т1 машин­ного цикла М1- выборки команды
+по нулевому  адресу;</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>- подачей сигнала на вход  </span><span
+lang=EN-US style='layout-grid-mode:line'>HOLD</span><span style='layout-grid-mode:
+line'>, благодаря чему процессор переходит к выполнению последовательности
+захвата. После оконча­ния этого сигнала процессор снова входит в состояние
+ОСТАНОВ по переднему фронту импульса<b>  ф1;</b></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>- подачей сигнала прерывания (при наличии
+разрешающего сигнала на выходе </span><span lang=EN-US style='layout-grid-mode:
+line'>INTE</span><span style='layout-grid-mode:line'>)<b>,</b> благодаря чему
+процессор по фронту импульса ф1 переходит в состояние </span><span lang=EN-US
+style='layout-grid-mode:line'>T</span><span style='layout-grid-mode:line'>1
+машинного цикла ПРЕРЫВАНИЕ. Для реализации этой возможности необходимо перед
+входом в состоя­ние ОСТАНОВ осуществлять установку в 1-у триггера разрешения
+прерыва­ния (путем выполнения команды<b> </b></span><b><span lang=EN-US
+style='layout-grid-mode:line'>EI</span><span style='layout-grid-mode:line'>).</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='layout-grid-mode:
+line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>Структурная схема выхода
+из состояния останов:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><img
+width=624 height=408 src="i8080-command-execution.files/image014.gif"><br
+clear=ALL>
+</p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Если выполняется последовательность захвата, то запросы прерывания не
+воспринимаются процессором до окончания обмена. При обработке прерываний запрос
+захвата не воспринимается процессором до окончания чтения вектора прерывания в
+первом цикле - цикле чтения команды </span><i><span lang=EN-US
+style='layout-grid-mode:line'>RST</span></i><span style='layout-grid-mode:line'>.
+Последовательность прерывания завершается по окончании запрошенного режима ПДП.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='layout-grid-mode:line'>Временные диаграммы
+обработки запросов захвата и прерывания при останове:</span></p>
+
+<p class=MsoNormal align=center style='margin-left:21.3pt;text-align:center;
+text-indent:-21.3pt'><span style='font-size:14.0pt;layout-grid-mode:line'><img
+width=652 height=473 src="i8080-command-execution.files/image015.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;layout-grid-mode:line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Включение микропроцессора</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>При подаче питания процессор сразу начинает
+функциониро­вать. Так как содержимое программного счетчика, указателя сте­ка и
+других рабочих регистров устанавливается случайным образом, необходимо осуществлять
+включение вместе с подачей сигнала на линию </span><span lang=EN-US
+style='layout-grid-mode:line'>RESET</span><span style='layout-grid-mode:line'>.
+Длительность этого сигнала должна быть не менее трех периодов синхроимпульсов.
+Программный счетчик и триггер </span><span lang=EN-US style='layout-grid-mode:
+line'>INTE</span><span lang=EN-US style='layout-grid-mode:line'> </span><span
+style='layout-grid-mode:line'>(разрешение/запрет прерываний) при этом
+устанавливаются в нулевое состояние и процессор начинает выполнять программу</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'> с нулевой ячейки памяти. Если прог­рамма размещена в ячейках памяти,
+начиная с нулевой, процессор начинает ее выполнение. Если </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>программа размещена иначе, 1-й командой программы должна быть команда
+безусловного перехода </span><span lang=EN-US style='text-transform:uppercase;
+layout-grid-mode:line'>JMP</span><span lang=EN-US style='text-transform:uppercase;
+layout-grid-mode:line'> </span><span lang=EN-US style='text-transform:uppercase;
+layout-grid-mode:line'>ADR</span><span style='text-transform:uppercase;
+layout-grid-mode:line'>,</span><span style='layout-grid-mode:line'>
+осуществляющая переход к программе расположенной в произвольном месте памяти.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Если запуск программы в системе должен быть осуществлен по опреде­ленному
+стартовому сигналу, в первых двух ячейках необходимо размещать команды </span><span
+lang=EN-US style='layout-grid-mode:line'>EI</span><span style='layout-grid-mode:
+line'>(разрешение прерывания) и </span><span lang=EN-US style='layout-grid-mode:
+line'>HALT</span><span style='layout-grid-mode:line'>- перевода процессора в
+состояние останова, а для запуска использовать сигнал прерывания </span><span
+lang=EN-US style='layout-grid-mode:line'>INT</span><span style='layout-grid-mode:
+line'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Содержимое рабочих регистров (в частности регистра флагов) при этом
+остается неопределенным до тех, пока программа не задаст конкретные их
+значения.</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,548 @@
+Start
+--------------------------------------------------
+
+0						PC:0x0000
+				RJMP 0x0003
+124					next command clock cycle
+
+372					PC:0x0003
+				LDI 0x10,0xFF
+				result LDI: R16=0xFF
+
+620					PC:0x0004
+				OUT 0x17,0x10
+				result OUT: P[0x17]=0xFF
+
+868					PC:0x0005
+				OUT 0x11,0x10
+				result OUT: P[0x11]=0xFF
+
+1116				PC:0x0006
+				LDI 0x10,0x21
+				result LDI: R16=0x21
+
+1364				PC:0x0007
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x21
+
+1860				PC:0x0009
+				OUT 0x12,0x10
+				result OUT: P[0x12]=0x00
+
+2604				PC:0x000C
+				LDI 0x10,0x70
+				result LDI: R16=0x70
+
+2852				PC:0x000D
+				OUT 0x32,0x10
+				result OUT: P[0x32]=0x70
+
+3100				PC:0x000E
+				LDI 0x10,0x03
+				result LDI: R16=0x03
+
+3348				PC:0x000F
+				OUT 0x33,0x10
+				result OUT: P[0x33]=0x03
+
+3596				PC:0x0010
+				LDI 0x10,0x02
+				result LDI: R16=0x02
+
+3844				PC:0x0011
+				OUT 0x39,0x10
+				result OUT: P[0x39]=0x02
+
+4092				PC:0x0012
+				before BSET: SREG=0x02
+				BSET 0x07
+				after BSET: SREG=0x82
+
+4340				PC:0x0013
+				IN 0x11,0x18
+				result IN: R17=0x21
+
+4836				PC:0x0015
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x00
+
+5084				PC:0x0016
+				before OR: SREG=0x82
+				OR 0x10,0x11
+				result OR: R16=0x21
+				after OR: SREG=0x80
+
+5332				PC:0x0017
+				before ANDI: SREG=0x80
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x01
+				after ANDI: SREG=0x80
+
+5580				PC:0x0018
+				before ADD: SREG=0x80
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x80
+
+5828				PC:0x0019
+				SBRC 0x10,0x04
+5952				next command clock cycle
+
+6200				PC:0x001B
+				RCALL 0x0020
+6324				next command clock cycle
+6448				next command clock cycle
+
+6696				PC:0x0020
+				before CPI: SREG=0x80
+				CPI 0x10,0x01
+				after CPI: SREG=0x80
+
+6944				PC:0x0021
+				BRBC 0x01,0x04
+7068				next command clock cycle
+
+7316				PC:0x0025
+				before CPI: SREG=0x80
+				CPI 0x10,0x02
+				after CPI: SREG=0x82
+
+7564				PC:0x0026
+				BRBC 0x01,0x03
+
+8060				PC:0x0028
+				RJMP 0x002F
+8184				next command clock cycle
+
+8432				PC:0x002F
+				before ANDI: SREG=0x82
+				ANDI 0x15,0x0F
+				result ANDI: R21=0x00
+				after ANDI: SREG=0x82
+
+8680				PC:0x0030
+				before CPI: SREG=0x82
+				CPI 0x15,0x00
+				after CPI: SREG=0x82
+
+8928				PC:0x0031
+				BRBC 0x01,0x03
+
+9176				PC:0x0032
+				LDI 0x15,0x3F
+				result LDI: R21=0x3F
+
+9424				PC:0x0033
+				RJMP 0x0054
+9548				next command clock cycle
+
+9796				PC:0x0054
+				OUT 0x12,0x15
+				result OUT: P[0x12]=0x3F
+
+10044				PC:0x0055
+				RET
+				result RET: return to address 0x001C
+10168				next command clock cycle
+10292				next command clock cycle
+10416				next command clock cycle
+
+10664				PC:0x001C
+				before ANDI: SREG=0x82
+				ANDI 0x11,0xF0
+				result ANDI: R17=0x20
+				after ANDI: SREG=0x80
+
+10912				PC:0x001D
+				before OR: SREG=0x80
+				OR 0x11,0x10
+				result OR: R17=0x22
+				after OR: SREG=0x80
+
+11160				PC:0x001E
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x22
+
+11408				PC:0x001F
+				RJMP 0x0013
+11532				next command clock cycle
+
+11780				PC:0x0013
+				IN 0x11,0x18
+				result IN: R17=0x22
+
+12276				PC:0x0015
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x00
+
+12524				PC:0x0016
+				before OR: SREG=0x82
+				OR 0x10,0x11
+				result OR: R16=0x22
+				after OR: SREG=0x80
+
+12772				PC:0x0017
+				before ANDI: SREG=0x80
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x02
+				after ANDI: SREG=0x80
+
+13020				PC:0x0018
+				before ADD: SREG=0x80
+				ADD 0x10,0x10
+				result ADD: R16=0x04
+				after ADD: SREG=0x80
+
+13268				PC:0x0019
+				SBRC 0x10,0x04
+13392				next command clock cycle
+
+13640				PC:0x001B
+				RCALL 0x0020
+13764				next command clock cycle
+13888				next command clock cycle
+
+14136				PC:0x0020
+				before CPI: SREG=0x80
+				CPI 0x10,0x01
+				after CPI: SREG=0x80
+
+14384				PC:0x0021
+				BRBC 0x01,0x04
+14508				next command clock cycle
+
+14756				PC:0x0025
+				before CPI: SREG=0x80
+				CPI 0x10,0x02
+				after CPI: SREG=0x80
+
+15004				PC:0x0026
+				BRBC 0x01,0x03
+15128				next command clock cycle
+
+15376				PC:0x0029
+				before CPI: SREG=0x80
+				CPI 0x10,0x04
+				after CPI: SREG=0x82
+
+15624				PC:0x002A
+				BRBC 0x01,0x04
+
+16120				PC:0x002C
+				SWAP 0x15
+				result SWAP: R21=0x00
+
+16368				PC:0x002D
+				RJMP 0x002F
+16492				next command clock cycle
+
+16740				PC:0x002F
+				before ANDI: SREG=0x82
+				ANDI 0x15,0x0F
+				result ANDI: R21=0x00
+				after ANDI: SREG=0x82
+
+16988				PC:0x0030
+				before CPI: SREG=0x82
+				CPI 0x15,0x00
+				after CPI: SREG=0x82
+
+17236				PC:0x0031
+				BRBC 0x01,0x03
+
+17484				PC:0x0032
+				LDI 0x15,0x3F
+				result LDI: R21=0x3F
+
+17732				PC:0x0033
+				RJMP 0x0054
+17856				next command clock cycle
+
+18104				PC:0x0054
+				OUT 0x12,0x15
+				result OUT: P[0x12]=0x3F
+
+18352				PC:0x0055
+				RET
+				result RET: return to address 0x001C
+18476				next command clock cycle
+18600				next command clock cycle
+18724				next command clock cycle
+
+18972				PC:0x001C
+				before ANDI: SREG=0x82
+				ANDI 0x11,0xF0
+				result ANDI: R17=0x20
+				after ANDI: SREG=0x80
+
+19220				PC:0x001D
+				before OR: SREG=0x80
+				OR 0x11,0x10
+				result OR: R17=0x24
+				after OR: SREG=0x80
+
+19468				PC:0x001E
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x24
+
+19716				PC:0x001F
+				RJMP 0x0013
+19840				next command clock cycle
+
+20088				PC:0x0013
+				IN 0x11,0x18
+				result IN: R17=0x24
+
+20584				PC:0x0015
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x00
+
+20832				PC:0x0016
+				before OR: SREG=0x82
+				OR 0x10,0x11
+				result OR: R16=0x24
+				after OR: SREG=0x80
+
+21080				PC:0x0017
+				before ANDI: SREG=0x80
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x04
+				after ANDI: SREG=0x80
+
+21328				PC:0x0018
+				before ADD: SREG=0x80
+				ADD 0x10,0x10
+				result ADD: R16=0x08
+				after ADD: SREG=0x80
+
+21576				PC:0x0019
+				SBRC 0x10,0x04
+21700				next command clock cycle
+
+21948				PC:0x001B
+				RCALL 0x0020
+22072				next command clock cycle
+22196				next command clock cycle
+
+22444				PC:0x0020
+				before CPI: SREG=0x80
+				CPI 0x10,0x01
+				after CPI: SREG=0x80
+
+22692				PC:0x0021
+				BRBC 0x01,0x04
+22816				next command clock cycle
+
+23064				PC:0x0025
+				before CPI: SREG=0x80
+				CPI 0x10,0x02
+				after CPI: SREG=0x80
+
+23312				PC:0x0026
+				BRBC 0x01,0x03
+23436				next command clock cycle
+
+23684				PC:0x0029
+				before CPI: SREG=0x80
+				CPI 0x10,0x04
+				after CPI: SREG=0x80
+
+23932				PC:0x002A
+				BRBC 0x01,0x04
+24056				next command clock cycle
+
+24552				PC:0x002F
+				before ANDI: SREG=0x80
+				ANDI 0x15,0x0F
+				result ANDI: R21=0x00
+				after ANDI: SREG=0x82
+
+24800				PC:0x0030
+				before CPI: SREG=0x82
+				CPI 0x15,0x00
+				after CPI: SREG=0x82
+
+25048				PC:0x0031
+				BRBC 0x01,0x03
+
+25296				PC:0x0032
+				LDI 0x15,0x3F
+				result LDI: R21=0x3F
+
+25544				PC:0x0033
+				RJMP 0x0054
+25668				next command clock cycle
+
+25916				PC:0x0054
+				OUT 0x12,0x15
+				result OUT: P[0x12]=0x3F
+
+26164				PC:0x0055
+				RET
+				result RET: return to address 0x001C
+26288				next command clock cycle
+26412				next command clock cycle
+26536				next command clock cycle
+
+26784				PC:0x001C
+				before ANDI: SREG=0x82
+				ANDI 0x11,0xF0
+				result ANDI: R17=0x20
+				after ANDI: SREG=0x80
+
+27032				PC:0x001D
+				before OR: SREG=0x80
+				OR 0x11,0x10
+				result OR: R17=0x28
+				after OR: SREG=0x80
+
+27280				PC:0x001E
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x28
+
+27528				PC:0x001F
+				RJMP 0x0013
+27652				next command clock cycle
+
+27900				PC:0x0013
+				IN 0x11,0x18
+				result IN: R17=0x28
+
+28396				PC:0x0015
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x00
+
+28644				PC:0x0016
+				before OR: SREG=0x82
+				OR 0x10,0x11
+				result OR: R16=0x28
+				after OR: SREG=0x80
+
+28892				PC:0x0017
+				before ANDI: SREG=0x80
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x08
+				after ANDI: SREG=0x80
+
+29140				PC:0x0018
+				before ADD: SREG=0x80
+				ADD 0x10,0x10
+				result ADD: R16=0x10
+				after ADD: SREG=0xA0
+
+29388				PC:0x0019
+				SBRC 0x10,0x04
+
+29636				PC:0x001A
+				LDI 0x10,0x01
+				result LDI: R16=0x01
+
+29884				PC:0x001B
+				RCALL 0x0020
+30008				next command clock cycle
+30132				next command clock cycle
+
+30380				PC:0x0020
+				before CPI: SREG=0xA0
+				CPI 0x10,0x01
+				after CPI: SREG=0x82
+
+30628				PC:0x0021
+				BRBC 0x01,0x04
+
+31124				PC:0x0023
+				SWAP 0x15
+				result SWAP: R21=0x00
+
+31372				PC:0x0024
+				RJMP 0x002F
+31496				next command clock cycle
+
+31744				PC:0x002F
+				before ANDI: SREG=0x82
+				ANDI 0x15,0x0F
+				result ANDI: R21=0x00
+				after ANDI: SREG=0x82
+
+31992				PC:0x0030
+				before CPI: SREG=0x82
+				CPI 0x15,0x00
+				after CPI: SREG=0x82
+
+32240				PC:0x0031
+				BRBC 0x01,0x03
+
+32488				PC:0x0032
+				LDI 0x15,0x3F
+				result LDI: R21=0x3F
+
+32736				PC:0x0033
+				RJMP 0x0054
+32860				next command clock cycle
+
+33108				PC:0x0054
+				OUT 0x12,0x15
+				result OUT: P[0x12]=0x3F
+
+33356				PC:0x0055
+				RET
+				result RET: return to address 0x001C
+33480				next command clock cycle
+33604				next command clock cycle
+33728				next command clock cycle
+
+33976				PC:0x001C
+				before ANDI: SREG=0x82
+				ANDI 0x11,0xF0
+				result ANDI: R17=0x20
+				after ANDI: SREG=0x80
+
+34224				PC:0x001D
+				before OR: SREG=0x80
+				OR 0x11,0x10
+				result OR: R17=0x21
+				after OR: SREG=0x80
+
+34472				PC:0x001E
+				OUT 0x18,0x11
+				result OUT: P[0x18]=0x21
+
+34720				PC:0x001F
+				RJMP 0x0013
+34844				next command clock cycle
+
+35092				PC:0x0013
+				IN 0x11,0x18
+				result IN: R17=0x21
+
+35588				PC:0x0015
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x00
+
+35836				PC:0x0016
+				before OR: SREG=0x82
+				OR 0x10,0x11
+				result OR: R16=0x21
+				after OR: SREG=0x80
+
+36084				PC:0x0017
+				before ANDI: SREG=0x80
+				ANDI 0x10,0x0F
+				result ANDI: R16=0x01
+				after ANDI: SREG=0x80
+
+36332				PC:0x0018
+				before ADD: SREG=0x80
+				ADD 0x10,0x10
+				result ADD: R16=0x02
+				after ADD: SREG=0x80
+
+36580				PC:0x0019
+				SBRC 0x10,0x04
+36704				next command clock cycle
+
+36952				PC:0x001B
+				RCALL 0x0020
+
+--------------------------------------------------
+Stop

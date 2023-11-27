@@ -1,0 +1,44 @@
+43
+0 Incorrectly formed string constant at line [%u]
+1 Incorrect number: %s at line [%u]
+2 Incorrect identifier: %s at line [%u]
+3 Incorrectly formed operand at line [%u]
+4 Reserved word %s was used as identifier at line [%u]
+5 Syntax error at line [%u]
+6 Origin should be a number (at line [%u])
+7 Const must have ordinal value (at line [%u])
+8 Label may not have ordinal name (at line [%u])
+9 "dr" directive must have one or two operands (at line [%u])
+10 Incorrect operand 1 of "dr" directive (at line [%u])
+11 Incorrect operand 2 of "dr" directive (at line [%u])
+12 Unknown command: %s at line [%u]
+13 Number doesn't fit in byte at line [%u]
+14 Strings only may be used in db directives (at line [%u])
+15 Number doesn't fit in word at line [%u]
+16 Unresolved reference "%s"
+17 Address (or value for const) of "%s" is too big to fit in one byte
+18 Size exceeded!
+19 Instruction requires %u operands at line [%u]
+20 Incorrect operand %u at line [%u]
+21 Immediate operand %u expected at line [%u]
+22 Register name expected at [%u]
+23 Register pair BC or DE expected at [%u]
+24 Operand must be immediate at line [%u]
+25 Operand of RST must be explicit immediate (at line [%u])
+26 Too big value of RST operand at line [%u]
+27 Register pair name expected at line [%u]
+28 Unable to open file
+29 Unable to create file
+30 Incorrect size!
+31 Incorrect format!
+32 Assembling...
+33 Linking...
+34 Generating listing file...
+35 Unable to create listing!
+36 Complete!
+37 ASM80 Listing file
+38 Line
+39 Address
+40 Code
+41 Mnemonics
+42 Symbol %s already defined (line [%u])

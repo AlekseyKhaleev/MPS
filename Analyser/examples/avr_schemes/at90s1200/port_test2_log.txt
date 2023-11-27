@@ -1,0 +1,3809 @@
+Start
+--------------------------------------------------
+
+0						PC:0x0000
+				LDI 0x10,0x01
+				result LDI: R16=0x01
+
+2000				PC:0x0001
+				OUT 0x11,0x10
+				result OUT: P[0x11]=0x01
+
+4000				PC:0x0002
+				LDI 0x10,0x00
+				result LDI: R16=0x00
+
+6000				PC:0x0003
+				OUT 0x12,0x10
+				result OUT: P[0x12]=0x00
+
+8000				PC:0x0004
+				RJMP 0x0004
+9000				next command clock cycle
+
+11000				PC:0x0004
+				RJMP 0x0004
+12000				next command clock cycle
+
+14000				PC:0x0004
+				RJMP 0x0004
+15000				next command clock cycle
+
+17000				PC:0x0004
+				RJMP 0x0004
+18000				next command clock cycle
+
+20000				PC:0x0004
+				RJMP 0x0004
+21000				next command clock cycle
+
+23000				PC:0x0004
+				RJMP 0x0004
+24000				next command clock cycle
+
+26000				PC:0x0004
+				RJMP 0x0004
+27000				next command clock cycle
+
+29000				PC:0x0004
+				RJMP 0x0004
+30000				next command clock cycle
+
+32000				PC:0x0004
+				RJMP 0x0004
+33000				next command clock cycle
+
+35000				PC:0x0004
+				RJMP 0x0004
+36000				next command clock cycle
+
+38000				PC:0x0004
+				RJMP 0x0004
+39000				next command clock cycle
+
+41000				PC:0x0004
+				RJMP 0x0004
+42000				next command clock cycle
+
+44000				PC:0x0004
+				RJMP 0x0004
+45000				next command clock cycle
+
+47000				PC:0x0004
+				RJMP 0x0004
+48000				next command clock cycle
+
+50000				PC:0x0004
+				RJMP 0x0004
+51000				next command clock cycle
+
+53000				PC:0x0004
+				RJMP 0x0004
+54000				next command clock cycle
+
+56000				PC:0x0004
+				RJMP 0x0004
+57000				next command clock cycle
+
+59000				PC:0x0004
+				RJMP 0x0004
+60000				next command clock cycle
+
+62000				PC:0x0004
+				RJMP 0x0004
+63000				next command clock cycle
+
+65000				PC:0x0004
+				RJMP 0x0004
+66000				next command clock cycle
+
+68000				PC:0x0004
+				RJMP 0x0004
+69000				next command clock cycle
+
+71000				PC:0x0004
+				RJMP 0x0004
+72000				next command clock cycle
+
+74000				PC:0x0004
+				RJMP 0x0004
+75000				next command clock cycle
+
+77000				PC:0x0004
+				RJMP 0x0004
+78000				next command clock cycle
+
+80000				PC:0x0004
+				RJMP 0x0004
+81000				next command clock cycle
+
+83000				PC:0x0004
+				RJMP 0x0004
+84000				next command clock cycle
+
+86000				PC:0x0004
+				RJMP 0x0004
+87000				next command clock cycle
+
+89000				PC:0x0004
+				RJMP 0x0004
+90000				next command clock cycle
+
+92000				PC:0x0004
+				RJMP 0x0004
+93000				next command clock cycle
+
+95000				PC:0x0004
+				RJMP 0x0004
+96000				next command clock cycle
+
+98000				PC:0x0004
+				RJMP 0x0004
+99000				next command clock cycle
+
+101000			PC:0x0004
+				RJMP 0x0004
+102000			next command clock cycle
+
+104000			PC:0x0004
+				RJMP 0x0004
+105000			next command clock cycle
+
+107000			PC:0x0004
+				RJMP 0x0004
+108000			next command clock cycle
+
+110000			PC:0x0004
+				RJMP 0x0004
+111000			next command clock cycle
+
+113000			PC:0x0004
+				RJMP 0x0004
+114000			next command clock cycle
+
+116000			PC:0x0004
+				RJMP 0x0004
+117000			next command clock cycle
+
+119000			PC:0x0004
+				RJMP 0x0004
+120000			next command clock cycle
+
+122000			PC:0x0004
+				RJMP 0x0004
+123000			next command clock cycle
+
+125000			PC:0x0004
+				RJMP 0x0004
+126000			next command clock cycle
+
+128000			PC:0x0004
+				RJMP 0x0004
+129000			next command clock cycle
+
+131000			PC:0x0004
+				RJMP 0x0004
+132000			next command clock cycle
+
+134000			PC:0x0004
+				RJMP 0x0004
+135000			next command clock cycle
+
+137000			PC:0x0004
+				RJMP 0x0004
+138000			next command clock cycle
+
+140000			PC:0x0004
+				RJMP 0x0004
+141000			next command clock cycle
+
+143000			PC:0x0004
+				RJMP 0x0004
+144000			next command clock cycle
+
+146000			PC:0x0004
+				RJMP 0x0004
+147000			next command clock cycle
+
+149000			PC:0x0004
+				RJMP 0x0004
+150000			next command clock cycle
+
+152000			PC:0x0004
+				RJMP 0x0004
+153000			next command clock cycle
+
+155000			PC:0x0004
+				RJMP 0x0004
+156000			next command clock cycle
+
+158000			PC:0x0004
+				RJMP 0x0004
+159000			next command clock cycle
+
+161000			PC:0x0004
+				RJMP 0x0004
+162000			next command clock cycle
+
+164000			PC:0x0004
+				RJMP 0x0004
+165000			next command clock cycle
+
+167000			PC:0x0004
+				RJMP 0x0004
+168000			next command clock cycle
+
+170000			PC:0x0004
+				RJMP 0x0004
+171000			next command clock cycle
+
+173000			PC:0x0004
+				RJMP 0x0004
+174000			next command clock cycle
+
+176000			PC:0x0004
+				RJMP 0x0004
+177000			next command clock cycle
+
+179000			PC:0x0004
+				RJMP 0x0004
+180000			next command clock cycle
+
+182000			PC:0x0004
+				RJMP 0x0004
+183000			next command clock cycle
+
+185000			PC:0x0004
+				RJMP 0x0004
+186000			next command clock cycle
+
+188000			PC:0x0004
+				RJMP 0x0004
+189000			next command clock cycle
+
+191000			PC:0x0004
+				RJMP 0x0004
+192000			next command clock cycle
+
+194000			PC:0x0004
+				RJMP 0x0004
+195000			next command clock cycle
+
+197000			PC:0x0004
+				RJMP 0x0004
+198000			next command clock cycle
+
+200000			PC:0x0004
+				RJMP 0x0004
+201000			next command clock cycle
+
+203000			PC:0x0004
+				RJMP 0x0004
+204000			next command clock cycle
+
+206000			PC:0x0004
+				RJMP 0x0004
+207000			next command clock cycle
+
+209000			PC:0x0004
+				RJMP 0x0004
+210000			next command clock cycle
+
+212000			PC:0x0004
+				RJMP 0x0004
+213000			next command clock cycle
+
+215000			PC:0x0004
+				RJMP 0x0004
+216000			next command clock cycle
+
+218000			PC:0x0004
+				RJMP 0x0004
+219000			next command clock cycle
+
+221000			PC:0x0004
+				RJMP 0x0004
+222000			next command clock cycle
+
+224000			PC:0x0004
+				RJMP 0x0004
+225000			next command clock cycle
+
+227000			PC:0x0004
+				RJMP 0x0004
+228000			next command clock cycle
+
+230000			PC:0x0004
+				RJMP 0x0004
+231000			next command clock cycle
+
+233000			PC:0x0004
+				RJMP 0x0004
+234000			next command clock cycle
+
+236000			PC:0x0004
+				RJMP 0x0004
+237000			next command clock cycle
+
+239000			PC:0x0004
+				RJMP 0x0004
+240000			next command clock cycle
+
+242000			PC:0x0004
+				RJMP 0x0004
+243000			next command clock cycle
+
+245000			PC:0x0004
+				RJMP 0x0004
+246000			next command clock cycle
+
+248000			PC:0x0004
+				RJMP 0x0004
+249000			next command clock cycle
+
+251000			PC:0x0004
+				RJMP 0x0004
+252000			next command clock cycle
+
+254000			PC:0x0004
+				RJMP 0x0004
+255000			next command clock cycle
+
+257000			PC:0x0004
+				RJMP 0x0004
+258000			next command clock cycle
+
+260000			PC:0x0004
+				RJMP 0x0004
+261000			next command clock cycle
+
+263000			PC:0x0004
+				RJMP 0x0004
+264000			next command clock cycle
+
+266000			PC:0x0004
+				RJMP 0x0004
+267000			next command clock cycle
+
+269000			PC:0x0004
+				RJMP 0x0004
+270000			next command clock cycle
+
+272000			PC:0x0004
+				RJMP 0x0004
+273000			next command clock cycle
+
+275000			PC:0x0004
+				RJMP 0x0004
+276000			next command clock cycle
+
+278000			PC:0x0004
+				RJMP 0x0004
+279000			next command clock cycle
+
+281000			PC:0x0004
+				RJMP 0x0004
+282000			next command clock cycle
+
+284000			PC:0x0004
+				RJMP 0x0004
+285000			next command clock cycle
+
+287000			PC:0x0004
+				RJMP 0x0004
+288000			next command clock cycle
+
+290000			PC:0x0004
+				RJMP 0x0004
+291000			next command clock cycle
+
+293000			PC:0x0004
+				RJMP 0x0004
+294000			next command clock cycle
+
+296000			PC:0x0004
+				RJMP 0x0004
+297000			next command clock cycle
+
+299000			PC:0x0004
+				RJMP 0x0004
+300000			next command clock cycle
+
+302000			PC:0x0004
+				RJMP 0x0004
+303000			next command clock cycle
+
+305000			PC:0x0004
+				RJMP 0x0004
+306000			next command clock cycle
+
+308000			PC:0x0004
+				RJMP 0x0004
+309000			next command clock cycle
+
+311000			PC:0x0004
+				RJMP 0x0004
+312000			next command clock cycle
+
+314000			PC:0x0004
+				RJMP 0x0004
+315000			next command clock cycle
+
+317000			PC:0x0004
+				RJMP 0x0004
+318000			next command clock cycle
+
+320000			PC:0x0004
+				RJMP 0x0004
+321000			next command clock cycle
+
+323000			PC:0x0004
+				RJMP 0x0004
+324000			next command clock cycle
+
+326000			PC:0x0004
+				RJMP 0x0004
+327000			next command clock cycle
+
+329000			PC:0x0004
+				RJMP 0x0004
+330000			next command clock cycle
+
+332000			PC:0x0004
+				RJMP 0x0004
+333000			next command clock cycle
+
+335000			PC:0x0004
+				RJMP 0x0004
+336000			next command clock cycle
+
+338000			PC:0x0004
+				RJMP 0x0004
+339000			next command clock cycle
+
+341000			PC:0x0004
+				RJMP 0x0004
+342000			next command clock cycle
+
+344000			PC:0x0004
+				RJMP 0x0004
+345000			next command clock cycle
+
+347000			PC:0x0004
+				RJMP 0x0004
+348000			next command clock cycle
+
+350000			PC:0x0004
+				RJMP 0x0004
+351000			next command clock cycle
+
+353000			PC:0x0004
+				RJMP 0x0004
+354000			next command clock cycle
+
+356000			PC:0x0004
+				RJMP 0x0004
+357000			next command clock cycle
+
+359000			PC:0x0004
+				RJMP 0x0004
+360000			next command clock cycle
+
+362000			PC:0x0004
+				RJMP 0x0004
+363000			next command clock cycle
+
+365000			PC:0x0004
+				RJMP 0x0004
+366000			next command clock cycle
+
+368000			PC:0x0004
+				RJMP 0x0004
+369000			next command clock cycle
+
+371000			PC:0x0004
+				RJMP 0x0004
+372000			next command clock cycle
+
+374000			PC:0x0004
+				RJMP 0x0004
+375000			next command clock cycle
+
+377000			PC:0x0004
+				RJMP 0x0004
+378000			next command clock cycle
+
+380000			PC:0x0004
+				RJMP 0x0004
+381000			next command clock cycle
+
+383000			PC:0x0004
+				RJMP 0x0004
+384000			next command clock cycle
+
+386000			PC:0x0004
+				RJMP 0x0004
+387000			next command clock cycle
+
+389000			PC:0x0004
+				RJMP 0x0004
+390000			next command clock cycle
+
+392000			PC:0x0004
+				RJMP 0x0004
+393000			next command clock cycle
+
+395000			PC:0x0004
+				RJMP 0x0004
+396000			next command clock cycle
+
+398000			PC:0x0004
+				RJMP 0x0004
+399000			next command clock cycle
+
+401000			PC:0x0004
+				RJMP 0x0004
+402000			next command clock cycle
+
+404000			PC:0x0004
+				RJMP 0x0004
+405000			next command clock cycle
+
+407000			PC:0x0004
+				RJMP 0x0004
+408000			next command clock cycle
+
+410000			PC:0x0004
+				RJMP 0x0004
+411000			next command clock cycle
+
+413000			PC:0x0004
+				RJMP 0x0004
+414000			next command clock cycle
+
+416000			PC:0x0004
+				RJMP 0x0004
+417000			next command clock cycle
+
+419000			PC:0x0004
+				RJMP 0x0004
+420000			next command clock cycle
+
+422000			PC:0x0004
+				RJMP 0x0004
+423000			next command clock cycle
+
+425000			PC:0x0004
+				RJMP 0x0004
+426000			next command clock cycle
+
+428000			PC:0x0004
+				RJMP 0x0004
+429000			next command clock cycle
+
+431000			PC:0x0004
+				RJMP 0x0004
+432000			next command clock cycle
+
+434000			PC:0x0004
+				RJMP 0x0004
+435000			next command clock cycle
+
+437000			PC:0x0004
+				RJMP 0x0004
+438000			next command clock cycle
+
+440000			PC:0x0004
+				RJMP 0x0004
+441000			next command clock cycle
+
+443000			PC:0x0004
+				RJMP 0x0004
+444000			next command clock cycle
+
+446000			PC:0x0004
+				RJMP 0x0004
+447000			next command clock cycle
+
+449000			PC:0x0004
+				RJMP 0x0004
+450000			next command clock cycle
+
+452000			PC:0x0004
+				RJMP 0x0004
+453000			next command clock cycle
+
+455000			PC:0x0004
+				RJMP 0x0004
+456000			next command clock cycle
+
+458000			PC:0x0004
+				RJMP 0x0004
+459000			next command clock cycle
+
+461000			PC:0x0004
+				RJMP 0x0004
+462000			next command clock cycle
+
+464000			PC:0x0004
+				RJMP 0x0004
+465000			next command clock cycle
+
+467000			PC:0x0004
+				RJMP 0x0004
+468000			next command clock cycle
+
+470000			PC:0x0004
+				RJMP 0x0004
+471000			next command clock cycle
+
+473000			PC:0x0004
+				RJMP 0x0004
+474000			next command clock cycle
+
+476000			PC:0x0004
+				RJMP 0x0004
+477000			next command clock cycle
+
+479000			PC:0x0004
+				RJMP 0x0004
+480000			next command clock cycle
+
+482000			PC:0x0004
+				RJMP 0x0004
+483000			next command clock cycle
+
+485000			PC:0x0004
+				RJMP 0x0004
+486000			next command clock cycle
+
+488000			PC:0x0004
+				RJMP 0x0004
+489000			next command clock cycle
+
+491000			PC:0x0004
+				RJMP 0x0004
+492000			next command clock cycle
+
+494000			PC:0x0004
+				RJMP 0x0004
+495000			next command clock cycle
+
+497000			PC:0x0004
+				RJMP 0x0004
+498000			next command clock cycle
+
+500000			PC:0x0004
+				RJMP 0x0004
+501000			next command clock cycle
+
+503000			PC:0x0004
+				RJMP 0x0004
+504000			next command clock cycle
+
+506000			PC:0x0004
+				RJMP 0x0004
+507000			next command clock cycle
+
+509000			PC:0x0004
+				RJMP 0x0004
+510000			next command clock cycle
+
+512000			PC:0x0004
+				RJMP 0x0004
+513000			next command clock cycle
+
+515000			PC:0x0004
+				RJMP 0x0004
+516000			next command clock cycle
+
+518000			PC:0x0004
+				RJMP 0x0004
+519000			next command clock cycle
+
+521000			PC:0x0004
+				RJMP 0x0004
+522000			next command clock cycle
+
+524000			PC:0x0004
+				RJMP 0x0004
+525000			next command clock cycle
+
+527000			PC:0x0004
+				RJMP 0x0004
+528000			next command clock cycle
+
+530000			PC:0x0004
+				RJMP 0x0004
+531000			next command clock cycle
+
+533000			PC:0x0004
+				RJMP 0x0004
+534000			next command clock cycle
+
+536000			PC:0x0004
+				RJMP 0x0004
+537000			next command clock cycle
+
+539000			PC:0x0004
+				RJMP 0x0004
+540000			next command clock cycle
+
+542000			PC:0x0004
+				RJMP 0x0004
+543000			next command clock cycle
+
+545000			PC:0x0004
+				RJMP 0x0004
+546000			next command clock cycle
+
+548000			PC:0x0004
+				RJMP 0x0004
+549000			next command clock cycle
+
+551000			PC:0x0004
+				RJMP 0x0004
+552000			next command clock cycle
+
+554000			PC:0x0004
+				RJMP 0x0004
+555000			next command clock cycle
+
+557000			PC:0x0004
+				RJMP 0x0004
+558000			next command clock cycle
+
+560000			PC:0x0004
+				RJMP 0x0004
+561000			next command clock cycle
+
+563000			PC:0x0004
+				RJMP 0x0004
+564000			next command clock cycle
+
+566000			PC:0x0004
+				RJMP 0x0004
+567000			next command clock cycle
+
+569000			PC:0x0004
+				RJMP 0x0004
+570000			next command clock cycle
+
+572000			PC:0x0004
+				RJMP 0x0004
+573000			next command clock cycle
+
+575000			PC:0x0004
+				RJMP 0x0004
+576000			next command clock cycle
+
+578000			PC:0x0004
+				RJMP 0x0004
+579000			next command clock cycle
+
+581000			PC:0x0004
+				RJMP 0x0004
+582000			next command clock cycle
+
+584000			PC:0x0004
+				RJMP 0x0004
+585000			next command clock cycle
+
+587000			PC:0x0004
+				RJMP 0x0004
+588000			next command clock cycle
+
+590000			PC:0x0004
+				RJMP 0x0004
+591000			next command clock cycle
+
+593000			PC:0x0004
+				RJMP 0x0004
+594000			next command clock cycle
+
+596000			PC:0x0004
+				RJMP 0x0004
+597000			next command clock cycle
+
+599000			PC:0x0004
+				RJMP 0x0004
+600000			next command clock cycle
+
+602000			PC:0x0004
+				RJMP 0x0004
+603000			next command clock cycle
+
+605000			PC:0x0004
+				RJMP 0x0004
+606000			next command clock cycle
+
+608000			PC:0x0004
+				RJMP 0x0004
+609000			next command clock cycle
+
+611000			PC:0x0004
+				RJMP 0x0004
+612000			next command clock cycle
+
+614000			PC:0x0004
+				RJMP 0x0004
+615000			next command clock cycle
+
+617000			PC:0x0004
+				RJMP 0x0004
+618000			next command clock cycle
+
+620000			PC:0x0004
+				RJMP 0x0004
+621000			next command clock cycle
+
+623000			PC:0x0004
+				RJMP 0x0004
+624000			next command clock cycle
+
+626000			PC:0x0004
+				RJMP 0x0004
+627000			next command clock cycle
+
+629000			PC:0x0004
+				RJMP 0x0004
+630000			next command clock cycle
+
+632000			PC:0x0004
+				RJMP 0x0004
+633000			next command clock cycle
+
+635000			PC:0x0004
+				RJMP 0x0004
+636000			next command clock cycle
+
+638000			PC:0x0004
+				RJMP 0x0004
+639000			next command clock cycle
+
+641000			PC:0x0004
+				RJMP 0x0004
+642000			next command clock cycle
+
+644000			PC:0x0004
+				RJMP 0x0004
+645000			next command clock cycle
+
+647000			PC:0x0004
+				RJMP 0x0004
+648000			next command clock cycle
+
+650000			PC:0x0004
+				RJMP 0x0004
+651000			next command clock cycle
+
+653000			PC:0x0004
+				RJMP 0x0004
+654000			next command clock cycle
+
+656000			PC:0x0004
+				RJMP 0x0004
+657000			next command clock cycle
+
+659000			PC:0x0004
+				RJMP 0x0004
+660000			next command clock cycle
+
+662000			PC:0x0004
+				RJMP 0x0004
+663000			next command clock cycle
+
+665000			PC:0x0004
+				RJMP 0x0004
+666000			next command clock cycle
+
+668000			PC:0x0004
+				RJMP 0x0004
+669000			next command clock cycle
+
+671000			PC:0x0004
+				RJMP 0x0004
+672000			next command clock cycle
+
+674000			PC:0x0004
+				RJMP 0x0004
+675000			next command clock cycle
+
+677000			PC:0x0004
+				RJMP 0x0004
+678000			next command clock cycle
+
+680000			PC:0x0004
+				RJMP 0x0004
+681000			next command clock cycle
+
+683000			PC:0x0004
+				RJMP 0x0004
+684000			next command clock cycle
+
+686000			PC:0x0004
+				RJMP 0x0004
+687000			next command clock cycle
+
+689000			PC:0x0004
+				RJMP 0x0004
+690000			next command clock cycle
+
+692000			PC:0x0004
+				RJMP 0x0004
+693000			next command clock cycle
+
+695000			PC:0x0004
+				RJMP 0x0004
+696000			next command clock cycle
+
+698000			PC:0x0004
+				RJMP 0x0004
+699000			next command clock cycle
+
+701000			PC:0x0004
+				RJMP 0x0004
+702000			next command clock cycle
+
+704000			PC:0x0004
+				RJMP 0x0004
+705000			next command clock cycle
+
+707000			PC:0x0004
+				RJMP 0x0004
+708000			next command clock cycle
+
+710000			PC:0x0004
+				RJMP 0x0004
+711000			next command clock cycle
+
+713000			PC:0x0004
+				RJMP 0x0004
+714000			next command clock cycle
+
+716000			PC:0x0004
+				RJMP 0x0004
+717000			next command clock cycle
+
+719000			PC:0x0004
+				RJMP 0x0004
+720000			next command clock cycle
+
+722000			PC:0x0004
+				RJMP 0x0004
+723000			next command clock cycle
+
+725000			PC:0x0004
+				RJMP 0x0004
+726000			next command clock cycle
+
+728000			PC:0x0004
+				RJMP 0x0004
+729000			next command clock cycle
+
+731000			PC:0x0004
+				RJMP 0x0004
+732000			next command clock cycle
+
+734000			PC:0x0004
+				RJMP 0x0004
+735000			next command clock cycle
+
+737000			PC:0x0004
+				RJMP 0x0004
+738000			next command clock cycle
+
+740000			PC:0x0004
+				RJMP 0x0004
+741000			next command clock cycle
+
+743000			PC:0x0004
+				RJMP 0x0004
+744000			next command clock cycle
+
+746000			PC:0x0004
+				RJMP 0x0004
+747000			next command clock cycle
+
+749000			PC:0x0004
+				RJMP 0x0004
+750000			next command clock cycle
+
+752000			PC:0x0004
+				RJMP 0x0004
+753000			next command clock cycle
+
+755000			PC:0x0004
+				RJMP 0x0004
+756000			next command clock cycle
+
+758000			PC:0x0004
+				RJMP 0x0004
+759000			next command clock cycle
+
+761000			PC:0x0004
+				RJMP 0x0004
+762000			next command clock cycle
+
+764000			PC:0x0004
+				RJMP 0x0004
+765000			next command clock cycle
+
+767000			PC:0x0004
+				RJMP 0x0004
+768000			next command clock cycle
+
+770000			PC:0x0004
+				RJMP 0x0004
+771000			next command clock cycle
+
+773000			PC:0x0004
+				RJMP 0x0004
+774000			next command clock cycle
+
+776000			PC:0x0004
+				RJMP 0x0004
+777000			next command clock cycle
+
+779000			PC:0x0004
+				RJMP 0x0004
+780000			next command clock cycle
+
+782000			PC:0x0004
+				RJMP 0x0004
+783000			next command clock cycle
+
+785000			PC:0x0004
+				RJMP 0x0004
+786000			next command clock cycle
+
+788000			PC:0x0004
+				RJMP 0x0004
+789000			next command clock cycle
+
+791000			PC:0x0004
+				RJMP 0x0004
+792000			next command clock cycle
+
+794000			PC:0x0004
+				RJMP 0x0004
+795000			next command clock cycle
+
+797000			PC:0x0004
+				RJMP 0x0004
+798000			next command clock cycle
+
+800000			PC:0x0004
+				RJMP 0x0004
+801000			next command clock cycle
+
+803000			PC:0x0004
+				RJMP 0x0004
+804000			next command clock cycle
+
+806000			PC:0x0004
+				RJMP 0x0004
+807000			next command clock cycle
+
+809000			PC:0x0004
+				RJMP 0x0004
+810000			next command clock cycle
+
+812000			PC:0x0004
+				RJMP 0x0004
+813000			next command clock cycle
+
+815000			PC:0x0004
+				RJMP 0x0004
+816000			next command clock cycle
+
+818000			PC:0x0004
+				RJMP 0x0004
+819000			next command clock cycle
+
+821000			PC:0x0004
+				RJMP 0x0004
+822000			next command clock cycle
+
+824000			PC:0x0004
+				RJMP 0x0004
+825000			next command clock cycle
+
+827000			PC:0x0004
+				RJMP 0x0004
+828000			next command clock cycle
+
+830000			PC:0x0004
+				RJMP 0x0004
+831000			next command clock cycle
+
+833000			PC:0x0004
+				RJMP 0x0004
+834000			next command clock cycle
+
+836000			PC:0x0004
+				RJMP 0x0004
+837000			next command clock cycle
+
+839000			PC:0x0004
+				RJMP 0x0004
+840000			next command clock cycle
+
+842000			PC:0x0004
+				RJMP 0x0004
+843000			next command clock cycle
+
+845000			PC:0x0004
+				RJMP 0x0004
+846000			next command clock cycle
+
+848000			PC:0x0004
+				RJMP 0x0004
+849000			next command clock cycle
+
+851000			PC:0x0004
+				RJMP 0x0004
+852000			next command clock cycle
+
+854000			PC:0x0004
+				RJMP 0x0004
+855000			next command clock cycle
+
+857000			PC:0x0004
+				RJMP 0x0004
+858000			next command clock cycle
+
+860000			PC:0x0004
+				RJMP 0x0004
+861000			next command clock cycle
+
+863000			PC:0x0004
+				RJMP 0x0004
+864000			next command clock cycle
+
+866000			PC:0x0004
+				RJMP 0x0004
+867000			next command clock cycle
+
+869000			PC:0x0004
+				RJMP 0x0004
+870000			next command clock cycle
+
+872000			PC:0x0004
+				RJMP 0x0004
+873000			next command clock cycle
+
+875000			PC:0x0004
+				RJMP 0x0004
+876000			next command clock cycle
+
+878000			PC:0x0004
+				RJMP 0x0004
+879000			next command clock cycle
+
+881000			PC:0x0004
+				RJMP 0x0004
+882000			next command clock cycle
+
+884000			PC:0x0004
+				RJMP 0x0004
+885000			next command clock cycle
+
+887000			PC:0x0004
+				RJMP 0x0004
+888000			next command clock cycle
+
+890000			PC:0x0004
+				RJMP 0x0004
+891000			next command clock cycle
+
+893000			PC:0x0004
+				RJMP 0x0004
+894000			next command clock cycle
+
+896000			PC:0x0004
+				RJMP 0x0004
+897000			next command clock cycle
+
+899000			PC:0x0004
+				RJMP 0x0004
+900000			next command clock cycle
+
+902000			PC:0x0004
+				RJMP 0x0004
+903000			next command clock cycle
+
+905000			PC:0x0004
+				RJMP 0x0004
+906000			next command clock cycle
+
+908000			PC:0x0004
+				RJMP 0x0004
+909000			next command clock cycle
+
+911000			PC:0x0004
+				RJMP 0x0004
+912000			next command clock cycle
+
+914000			PC:0x0004
+				RJMP 0x0004
+915000			next command clock cycle
+
+917000			PC:0x0004
+				RJMP 0x0004
+918000			next command clock cycle
+
+920000			PC:0x0004
+				RJMP 0x0004
+921000			next command clock cycle
+
+923000			PC:0x0004
+				RJMP 0x0004
+924000			next command clock cycle
+
+926000			PC:0x0004
+				RJMP 0x0004
+927000			next command clock cycle
+
+929000			PC:0x0004
+				RJMP 0x0004
+930000			next command clock cycle
+
+932000			PC:0x0004
+				RJMP 0x0004
+933000			next command clock cycle
+
+935000			PC:0x0004
+				RJMP 0x0004
+936000			next command clock cycle
+
+938000			PC:0x0004
+				RJMP 0x0004
+939000			next command clock cycle
+
+941000			PC:0x0004
+				RJMP 0x0004
+942000			next command clock cycle
+
+944000			PC:0x0004
+				RJMP 0x0004
+945000			next command clock cycle
+
+947000			PC:0x0004
+				RJMP 0x0004
+948000			next command clock cycle
+
+950000			PC:0x0004
+				RJMP 0x0004
+951000			next command clock cycle
+
+953000			PC:0x0004
+				RJMP 0x0004
+954000			next command clock cycle
+
+956000			PC:0x0004
+				RJMP 0x0004
+957000			next command clock cycle
+
+959000			PC:0x0004
+				RJMP 0x0004
+960000			next command clock cycle
+
+962000			PC:0x0004
+				RJMP 0x0004
+963000			next command clock cycle
+
+965000			PC:0x0004
+				RJMP 0x0004
+966000			next command clock cycle
+
+968000			PC:0x0004
+				RJMP 0x0004
+969000			next command clock cycle
+
+971000			PC:0x0004
+				RJMP 0x0004
+972000			next command clock cycle
+
+974000			PC:0x0004
+				RJMP 0x0004
+975000			next command clock cycle
+
+977000			PC:0x0004
+				RJMP 0x0004
+978000			next command clock cycle
+
+980000			PC:0x0004
+				RJMP 0x0004
+981000			next command clock cycle
+
+983000			PC:0x0004
+				RJMP 0x0004
+984000			next command clock cycle
+
+986000			PC:0x0004
+				RJMP 0x0004
+987000			next command clock cycle
+
+989000			PC:0x0004
+				RJMP 0x0004
+990000			next command clock cycle
+
+992000			PC:0x0004
+				RJMP 0x0004
+993000			next command clock cycle
+
+995000			PC:0x0004
+				RJMP 0x0004
+996000			next command clock cycle
+
+998000			PC:0x0004
+				RJMP 0x0004
+999000			next command clock cycle
+
+1001000			PC:0x0004
+				RJMP 0x0004
+1002000			next command clock cycle
+
+1004000			PC:0x0004
+				RJMP 0x0004
+1005000			next command clock cycle
+
+1007000			PC:0x0004
+				RJMP 0x0004
+1008000			next command clock cycle
+
+1010000			PC:0x0004
+				RJMP 0x0004
+1011000			next command clock cycle
+
+1013000			PC:0x0004
+				RJMP 0x0004
+1014000			next command clock cycle
+
+1016000			PC:0x0004
+				RJMP 0x0004
+1017000			next command clock cycle
+
+1019000			PC:0x0004
+				RJMP 0x0004
+1020000			next command clock cycle
+
+1022000			PC:0x0004
+				RJMP 0x0004
+1023000			next command clock cycle
+
+1025000			PC:0x0004
+				RJMP 0x0004
+1026000			next command clock cycle
+
+1028000			PC:0x0004
+				RJMP 0x0004
+1029000			next command clock cycle
+
+1031000			PC:0x0004
+				RJMP 0x0004
+1032000			next command clock cycle
+
+1034000			PC:0x0004
+				RJMP 0x0004
+1035000			next command clock cycle
+
+1037000			PC:0x0004
+				RJMP 0x0004
+1038000			next command clock cycle
+
+1040000			PC:0x0004
+				RJMP 0x0004
+1041000			next command clock cycle
+
+1043000			PC:0x0004
+				RJMP 0x0004
+1044000			next command clock cycle
+
+1046000			PC:0x0004
+				RJMP 0x0004
+1047000			next command clock cycle
+
+1049000			PC:0x0004
+				RJMP 0x0004
+1050000			next command clock cycle
+
+1052000			PC:0x0004
+				RJMP 0x0004
+1053000			next command clock cycle
+
+1055000			PC:0x0004
+				RJMP 0x0004
+1056000			next command clock cycle
+
+1058000			PC:0x0004
+				RJMP 0x0004
+1059000			next command clock cycle
+
+1061000			PC:0x0004
+				RJMP 0x0004
+1062000			next command clock cycle
+
+1064000			PC:0x0004
+				RJMP 0x0004
+1065000			next command clock cycle
+
+1067000			PC:0x0004
+				RJMP 0x0004
+1068000			next command clock cycle
+
+1070000			PC:0x0004
+				RJMP 0x0004
+1071000			next command clock cycle
+
+1073000			PC:0x0004
+				RJMP 0x0004
+1074000			next command clock cycle
+
+1076000			PC:0x0004
+				RJMP 0x0004
+1077000			next command clock cycle
+
+1079000			PC:0x0004
+				RJMP 0x0004
+1080000			next command clock cycle
+
+1082000			PC:0x0004
+				RJMP 0x0004
+1083000			next command clock cycle
+
+1085000			PC:0x0004
+				RJMP 0x0004
+1086000			next command clock cycle
+
+1088000			PC:0x0004
+				RJMP 0x0004
+1089000			next command clock cycle
+
+1091000			PC:0x0004
+				RJMP 0x0004
+1092000			next command clock cycle
+
+1094000			PC:0x0004
+				RJMP 0x0004
+1095000			next command clock cycle
+
+1097000			PC:0x0004
+				RJMP 0x0004
+1098000			next command clock cycle
+
+1100000			PC:0x0004
+				RJMP 0x0004
+1101000			next command clock cycle
+
+1103000			PC:0x0004
+				RJMP 0x0004
+1104000			next command clock cycle
+
+1106000			PC:0x0004
+				RJMP 0x0004
+1107000			next command clock cycle
+
+1109000			PC:0x0004
+				RJMP 0x0004
+1110000			next command clock cycle
+
+1112000			PC:0x0004
+				RJMP 0x0004
+1113000			next command clock cycle
+
+1115000			PC:0x0004
+				RJMP 0x0004
+1116000			next command clock cycle
+
+1118000			PC:0x0004
+				RJMP 0x0004
+1119000			next command clock cycle
+
+1121000			PC:0x0004
+				RJMP 0x0004
+1122000			next command clock cycle
+
+1124000			PC:0x0004
+				RJMP 0x0004
+1125000			next command clock cycle
+
+1127000			PC:0x0004
+				RJMP 0x0004
+1128000			next command clock cycle
+
+1130000			PC:0x0004
+				RJMP 0x0004
+1131000			next command clock cycle
+
+1133000			PC:0x0004
+				RJMP 0x0004
+1134000			next command clock cycle
+
+1136000			PC:0x0004
+				RJMP 0x0004
+1137000			next command clock cycle
+
+1139000			PC:0x0004
+				RJMP 0x0004
+1140000			next command clock cycle
+
+1142000			PC:0x0004
+				RJMP 0x0004
+1143000			next command clock cycle
+
+1145000			PC:0x0004
+				RJMP 0x0004
+1146000			next command clock cycle
+
+1148000			PC:0x0004
+				RJMP 0x0004
+1149000			next command clock cycle
+
+1151000			PC:0x0004
+				RJMP 0x0004
+1152000			next command clock cycle
+
+1154000			PC:0x0004
+				RJMP 0x0004
+1155000			next command clock cycle
+
+1157000			PC:0x0004
+				RJMP 0x0004
+1158000			next command clock cycle
+
+1160000			PC:0x0004
+				RJMP 0x0004
+1161000			next command clock cycle
+
+1163000			PC:0x0004
+				RJMP 0x0004
+1164000			next command clock cycle
+
+1166000			PC:0x0004
+				RJMP 0x0004
+1167000			next command clock cycle
+
+1169000			PC:0x0004
+				RJMP 0x0004
+1170000			next command clock cycle
+
+1172000			PC:0x0004
+				RJMP 0x0004
+1173000			next command clock cycle
+
+1175000			PC:0x0004
+				RJMP 0x0004
+1176000			next command clock cycle
+
+1178000			PC:0x0004
+				RJMP 0x0004
+1179000			next command clock cycle
+
+1181000			PC:0x0004
+				RJMP 0x0004
+1182000			next command clock cycle
+
+1184000			PC:0x0004
+				RJMP 0x0004
+1185000			next command clock cycle
+
+1187000			PC:0x0004
+				RJMP 0x0004
+1188000			next command clock cycle
+
+1190000			PC:0x0004
+				RJMP 0x0004
+1191000			next command clock cycle
+
+1193000			PC:0x0004
+				RJMP 0x0004
+1194000			next command clock cycle
+
+1196000			PC:0x0004
+				RJMP 0x0004
+1197000			next command clock cycle
+
+1199000			PC:0x0004
+				RJMP 0x0004
+1200000			next command clock cycle
+
+1202000			PC:0x0004
+				RJMP 0x0004
+1203000			next command clock cycle
+
+1205000			PC:0x0004
+				RJMP 0x0004
+1206000			next command clock cycle
+
+1208000			PC:0x0004
+				RJMP 0x0004
+1209000			next command clock cycle
+
+1211000			PC:0x0004
+				RJMP 0x0004
+1212000			next command clock cycle
+
+1214000			PC:0x0004
+				RJMP 0x0004
+1215000			next command clock cycle
+
+1217000			PC:0x0004
+				RJMP 0x0004
+1218000			next command clock cycle
+
+1220000			PC:0x0004
+				RJMP 0x0004
+1221000			next command clock cycle
+
+1223000			PC:0x0004
+				RJMP 0x0004
+1224000			next command clock cycle
+
+1226000			PC:0x0004
+				RJMP 0x0004
+1227000			next command clock cycle
+
+1229000			PC:0x0004
+				RJMP 0x0004
+1230000			next command clock cycle
+
+1232000			PC:0x0004
+				RJMP 0x0004
+1233000			next command clock cycle
+
+1235000			PC:0x0004
+				RJMP 0x0004
+1236000			next command clock cycle
+
+1238000			PC:0x0004
+				RJMP 0x0004
+1239000			next command clock cycle
+
+1241000			PC:0x0004
+				RJMP 0x0004
+1242000			next command clock cycle
+
+1244000			PC:0x0004
+				RJMP 0x0004
+1245000			next command clock cycle
+
+1247000			PC:0x0004
+				RJMP 0x0004
+1248000			next command clock cycle
+
+1250000			PC:0x0004
+				RJMP 0x0004
+1251000			next command clock cycle
+
+1253000			PC:0x0004
+				RJMP 0x0004
+1254000			next command clock cycle
+
+1256000			PC:0x0004
+				RJMP 0x0004
+1257000			next command clock cycle
+
+1259000			PC:0x0004
+				RJMP 0x0004
+1260000			next command clock cycle
+
+1262000			PC:0x0004
+				RJMP 0x0004
+1263000			next command clock cycle
+
+1265000			PC:0x0004
+				RJMP 0x0004
+1266000			next command clock cycle
+
+1268000			PC:0x0004
+				RJMP 0x0004
+1269000			next command clock cycle
+
+1271000			PC:0x0004
+				RJMP 0x0004
+1272000			next command clock cycle
+
+1274000			PC:0x0004
+				RJMP 0x0004
+1275000			next command clock cycle
+
+1277000			PC:0x0004
+				RJMP 0x0004
+1278000			next command clock cycle
+
+1280000			PC:0x0004
+				RJMP 0x0004
+1281000			next command clock cycle
+
+1283000			PC:0x0004
+				RJMP 0x0004
+1284000			next command clock cycle
+
+1286000			PC:0x0004
+				RJMP 0x0004
+1287000			next command clock cycle
+
+1289000			PC:0x0004
+				RJMP 0x0004
+1290000			next command clock cycle
+
+1292000			PC:0x0004
+				RJMP 0x0004
+1293000			next command clock cycle
+
+1295000			PC:0x0004
+				RJMP 0x0004
+1296000			next command clock cycle
+
+1298000			PC:0x0004
+				RJMP 0x0004
+1299000			next command clock cycle
+
+1301000			PC:0x0004
+				RJMP 0x0004
+1302000			next command clock cycle
+
+1304000			PC:0x0004
+				RJMP 0x0004
+1305000			next command clock cycle
+
+1307000			PC:0x0004
+				RJMP 0x0004
+1308000			next command clock cycle
+
+1310000			PC:0x0004
+				RJMP 0x0004
+1311000			next command clock cycle
+
+1313000			PC:0x0004
+				RJMP 0x0004
+1314000			next command clock cycle
+
+1316000			PC:0x0004
+				RJMP 0x0004
+1317000			next command clock cycle
+
+1319000			PC:0x0004
+				RJMP 0x0004
+1320000			next command clock cycle
+
+1322000			PC:0x0004
+				RJMP 0x0004
+1323000			next command clock cycle
+
+1325000			PC:0x0004
+				RJMP 0x0004
+1326000			next command clock cycle
+
+1328000			PC:0x0004
+				RJMP 0x0004
+1329000			next command clock cycle
+
+1331000			PC:0x0004
+				RJMP 0x0004
+1332000			next command clock cycle
+
+1334000			PC:0x0004
+				RJMP 0x0004
+1335000			next command clock cycle
+
+1337000			PC:0x0004
+				RJMP 0x0004
+1338000			next command clock cycle
+
+1340000			PC:0x0004
+				RJMP 0x0004
+1341000			next command clock cycle
+
+1343000			PC:0x0004
+				RJMP 0x0004
+1344000			next command clock cycle
+
+1346000			PC:0x0004
+				RJMP 0x0004
+1347000			next command clock cycle
+
+1349000			PC:0x0004
+				RJMP 0x0004
+1350000			next command clock cycle
+
+1352000			PC:0x0004
+				RJMP 0x0004
+1353000			next command clock cycle
+
+1355000			PC:0x0004
+				RJMP 0x0004
+1356000			next command clock cycle
+
+1358000			PC:0x0004
+				RJMP 0x0004
+1359000			next command clock cycle
+
+1361000			PC:0x0004
+				RJMP 0x0004
+1362000			next command clock cycle
+
+1364000			PC:0x0004
+				RJMP 0x0004
+1365000			next command clock cycle
+
+1367000			PC:0x0004
+				RJMP 0x0004
+1368000			next command clock cycle
+
+1370000			PC:0x0004
+				RJMP 0x0004
+1371000			next command clock cycle
+
+1373000			PC:0x0004
+				RJMP 0x0004
+1374000			next command clock cycle
+
+1376000			PC:0x0004
+				RJMP 0x0004
+1377000			next command clock cycle
+
+1379000			PC:0x0004
+				RJMP 0x0004
+1380000			next command clock cycle
+
+1382000			PC:0x0004
+				RJMP 0x0004
+1383000			next command clock cycle
+
+1385000			PC:0x0004
+				RJMP 0x0004
+1386000			next command clock cycle
+
+1388000			PC:0x0004
+				RJMP 0x0004
+1389000			next command clock cycle
+
+1391000			PC:0x0004
+				RJMP 0x0004
+1392000			next command clock cycle
+
+1394000			PC:0x0004
+				RJMP 0x0004
+1395000			next command clock cycle
+
+1397000			PC:0x0004
+				RJMP 0x0004
+1398000			next command clock cycle
+
+1400000			PC:0x0004
+				RJMP 0x0004
+1401000			next command clock cycle
+
+1403000			PC:0x0004
+				RJMP 0x0004
+1404000			next command clock cycle
+
+1406000			PC:0x0004
+				RJMP 0x0004
+1407000			next command clock cycle
+
+1409000			PC:0x0004
+				RJMP 0x0004
+1410000			next command clock cycle
+
+1412000			PC:0x0004
+				RJMP 0x0004
+1413000			next command clock cycle
+
+1415000			PC:0x0004
+				RJMP 0x0004
+1416000			next command clock cycle
+
+1418000			PC:0x0004
+				RJMP 0x0004
+1419000			next command clock cycle
+
+1421000			PC:0x0004
+				RJMP 0x0004
+1422000			next command clock cycle
+
+1424000			PC:0x0004
+				RJMP 0x0004
+1425000			next command clock cycle
+
+1427000			PC:0x0004
+				RJMP 0x0004
+1428000			next command clock cycle
+
+1430000			PC:0x0004
+				RJMP 0x0004
+1431000			next command clock cycle
+
+1433000			PC:0x0004
+				RJMP 0x0004
+1434000			next command clock cycle
+
+1436000			PC:0x0004
+				RJMP 0x0004
+1437000			next command clock cycle
+
+1439000			PC:0x0004
+				RJMP 0x0004
+1440000			next command clock cycle
+
+1442000			PC:0x0004
+				RJMP 0x0004
+1443000			next command clock cycle
+
+1445000			PC:0x0004
+				RJMP 0x0004
+1446000			next command clock cycle
+
+1448000			PC:0x0004
+				RJMP 0x0004
+1449000			next command clock cycle
+
+1451000			PC:0x0004
+				RJMP 0x0004
+1452000			next command clock cycle
+
+1454000			PC:0x0004
+				RJMP 0x0004
+1455000			next command clock cycle
+
+1457000			PC:0x0004
+				RJMP 0x0004
+1458000			next command clock cycle
+
+1460000			PC:0x0004
+				RJMP 0x0004
+1461000			next command clock cycle
+
+1463000			PC:0x0004
+				RJMP 0x0004
+1464000			next command clock cycle
+
+1466000			PC:0x0004
+				RJMP 0x0004
+1467000			next command clock cycle
+
+1469000			PC:0x0004
+				RJMP 0x0004
+1470000			next command clock cycle
+
+1472000			PC:0x0004
+				RJMP 0x0004
+1473000			next command clock cycle
+
+1475000			PC:0x0004
+				RJMP 0x0004
+1476000			next command clock cycle
+
+1478000			PC:0x0004
+				RJMP 0x0004
+1479000			next command clock cycle
+
+1481000			PC:0x0004
+				RJMP 0x0004
+1482000			next command clock cycle
+
+1484000			PC:0x0004
+				RJMP 0x0004
+1485000			next command clock cycle
+
+1487000			PC:0x0004
+				RJMP 0x0004
+1488000			next command clock cycle
+
+1490000			PC:0x0004
+				RJMP 0x0004
+1491000			next command clock cycle
+
+1493000			PC:0x0004
+				RJMP 0x0004
+1494000			next command clock cycle
+
+1496000			PC:0x0004
+				RJMP 0x0004
+1497000			next command clock cycle
+
+1499000			PC:0x0004
+				RJMP 0x0004
+1500000			next command clock cycle
+
+1502000			PC:0x0004
+				RJMP 0x0004
+1503000			next command clock cycle
+
+1505000			PC:0x0004
+				RJMP 0x0004
+1506000			next command clock cycle
+
+1508000			PC:0x0004
+				RJMP 0x0004
+1509000			next command clock cycle
+
+1511000			PC:0x0004
+				RJMP 0x0004
+1512000			next command clock cycle
+
+1514000			PC:0x0004
+				RJMP 0x0004
+1515000			next command clock cycle
+
+1517000			PC:0x0004
+				RJMP 0x0004
+1518000			next command clock cycle
+
+1520000			PC:0x0004
+				RJMP 0x0004
+1521000			next command clock cycle
+
+1523000			PC:0x0004
+				RJMP 0x0004
+1524000			next command clock cycle
+
+1526000			PC:0x0004
+				RJMP 0x0004
+1527000			next command clock cycle
+
+1529000			PC:0x0004
+				RJMP 0x0004
+1530000			next command clock cycle
+
+1532000			PC:0x0004
+				RJMP 0x0004
+1533000			next command clock cycle
+
+1535000			PC:0x0004
+				RJMP 0x0004
+1536000			next command clock cycle
+
+1538000			PC:0x0004
+				RJMP 0x0004
+1539000			next command clock cycle
+
+1541000			PC:0x0004
+				RJMP 0x0004
+1542000			next command clock cycle
+
+1544000			PC:0x0004
+				RJMP 0x0004
+1545000			next command clock cycle
+
+1547000			PC:0x0004
+				RJMP 0x0004
+1548000			next command clock cycle
+
+1550000			PC:0x0004
+				RJMP 0x0004
+1551000			next command clock cycle
+
+1553000			PC:0x0004
+				RJMP 0x0004
+1554000			next command clock cycle
+
+1556000			PC:0x0004
+				RJMP 0x0004
+1557000			next command clock cycle
+
+1559000			PC:0x0004
+				RJMP 0x0004
+1560000			next command clock cycle
+
+1562000			PC:0x0004
+				RJMP 0x0004
+1563000			next command clock cycle
+
+1565000			PC:0x0004
+				RJMP 0x0004
+1566000			next command clock cycle
+
+1568000			PC:0x0004
+				RJMP 0x0004
+1569000			next command clock cycle
+
+1571000			PC:0x0004
+				RJMP 0x0004
+1572000			next command clock cycle
+
+1574000			PC:0x0004
+				RJMP 0x0004
+1575000			next command clock cycle
+
+1577000			PC:0x0004
+				RJMP 0x0004
+1578000			next command clock cycle
+
+1580000			PC:0x0004
+				RJMP 0x0004
+1581000			next command clock cycle
+
+1583000			PC:0x0004
+				RJMP 0x0004
+1584000			next command clock cycle
+
+1586000			PC:0x0004
+				RJMP 0x0004
+1587000			next command clock cycle
+
+1589000			PC:0x0004
+				RJMP 0x0004
+1590000			next command clock cycle
+
+1592000			PC:0x0004
+				RJMP 0x0004
+1593000			next command clock cycle
+
+1595000			PC:0x0004
+				RJMP 0x0004
+1596000			next command clock cycle
+
+1598000			PC:0x0004
+				RJMP 0x0004
+1599000			next command clock cycle
+
+1601000			PC:0x0004
+				RJMP 0x0004
+1602000			next command clock cycle
+
+1604000			PC:0x0004
+				RJMP 0x0004
+1605000			next command clock cycle
+
+1607000			PC:0x0004
+				RJMP 0x0004
+1608000			next command clock cycle
+
+1610000			PC:0x0004
+				RJMP 0x0004
+1611000			next command clock cycle
+
+1613000			PC:0x0004
+				RJMP 0x0004
+1614000			next command clock cycle
+
+1616000			PC:0x0004
+				RJMP 0x0004
+1617000			next command clock cycle
+
+1619000			PC:0x0004
+				RJMP 0x0004
+1620000			next command clock cycle
+
+1622000			PC:0x0004
+				RJMP 0x0004
+1623000			next command clock cycle
+
+1625000			PC:0x0004
+				RJMP 0x0004
+1626000			next command clock cycle
+
+1628000			PC:0x0004
+				RJMP 0x0004
+1629000			next command clock cycle
+
+1631000			PC:0x0004
+				RJMP 0x0004
+1632000			next command clock cycle
+
+1634000			PC:0x0004
+				RJMP 0x0004
+1635000			next command clock cycle
+
+1637000			PC:0x0004
+				RJMP 0x0004
+1638000			next command clock cycle
+
+1640000			PC:0x0004
+				RJMP 0x0004
+1641000			next command clock cycle
+
+1643000			PC:0x0004
+				RJMP 0x0004
+1644000			next command clock cycle
+
+1646000			PC:0x0004
+				RJMP 0x0004
+1647000			next command clock cycle
+
+1649000			PC:0x0004
+				RJMP 0x0004
+1650000			next command clock cycle
+
+1652000			PC:0x0004
+				RJMP 0x0004
+1653000			next command clock cycle
+
+1655000			PC:0x0004
+				RJMP 0x0004
+1656000			next command clock cycle
+
+1658000			PC:0x0004
+				RJMP 0x0004
+1659000			next command clock cycle
+
+1661000			PC:0x0004
+				RJMP 0x0004
+1662000			next command clock cycle
+
+1664000			PC:0x0004
+				RJMP 0x0004
+1665000			next command clock cycle
+
+1667000			PC:0x0004
+				RJMP 0x0004
+1668000			next command clock cycle
+
+1670000			PC:0x0004
+				RJMP 0x0004
+1671000			next command clock cycle
+
+1673000			PC:0x0004
+				RJMP 0x0004
+1674000			next command clock cycle
+
+1676000			PC:0x0004
+				RJMP 0x0004
+1677000			next command clock cycle
+
+1679000			PC:0x0004
+				RJMP 0x0004
+1680000			next command clock cycle
+
+1682000			PC:0x0004
+				RJMP 0x0004
+1683000			next command clock cycle
+
+1685000			PC:0x0004
+				RJMP 0x0004
+1686000			next command clock cycle
+
+1688000			PC:0x0004
+				RJMP 0x0004
+1689000			next command clock cycle
+
+1691000			PC:0x0004
+				RJMP 0x0004
+1692000			next command clock cycle
+
+1694000			PC:0x0004
+				RJMP 0x0004
+1695000			next command clock cycle
+
+1697000			PC:0x0004
+				RJMP 0x0004
+1698000			next command clock cycle
+
+1700000			PC:0x0004
+				RJMP 0x0004
+1701000			next command clock cycle
+
+1703000			PC:0x0004
+				RJMP 0x0004
+1704000			next command clock cycle
+
+1706000			PC:0x0004
+				RJMP 0x0004
+1707000			next command clock cycle
+
+1709000			PC:0x0004
+				RJMP 0x0004
+1710000			next command clock cycle
+
+1712000			PC:0x0004
+				RJMP 0x0004
+1713000			next command clock cycle
+
+1715000			PC:0x0004
+				RJMP 0x0004
+1716000			next command clock cycle
+
+1718000			PC:0x0004
+				RJMP 0x0004
+1719000			next command clock cycle
+
+1721000			PC:0x0004
+				RJMP 0x0004
+1722000			next command clock cycle
+
+1724000			PC:0x0004
+				RJMP 0x0004
+1725000			next command clock cycle
+
+1727000			PC:0x0004
+				RJMP 0x0004
+1728000			next command clock cycle
+
+1730000			PC:0x0004
+				RJMP 0x0004
+1731000			next command clock cycle
+
+1733000			PC:0x0004
+				RJMP 0x0004
+1734000			next command clock cycle
+
+1736000			PC:0x0004
+				RJMP 0x0004
+1737000			next command clock cycle
+
+1739000			PC:0x0004
+				RJMP 0x0004
+1740000			next command clock cycle
+
+1742000			PC:0x0004
+				RJMP 0x0004
+1743000			next command clock cycle
+
+1745000			PC:0x0004
+				RJMP 0x0004
+1746000			next command clock cycle
+
+1748000			PC:0x0004
+				RJMP 0x0004
+1749000			next command clock cycle
+
+1751000			PC:0x0004
+				RJMP 0x0004
+1752000			next command clock cycle
+
+1754000			PC:0x0004
+				RJMP 0x0004
+1755000			next command clock cycle
+
+1757000			PC:0x0004
+				RJMP 0x0004
+1758000			next command clock cycle
+
+1760000			PC:0x0004
+				RJMP 0x0004
+1761000			next command clock cycle
+
+1763000			PC:0x0004
+				RJMP 0x0004
+1764000			next command clock cycle
+
+1766000			PC:0x0004
+				RJMP 0x0004
+1767000			next command clock cycle
+
+1769000			PC:0x0004
+				RJMP 0x0004
+1770000			next command clock cycle
+
+1772000			PC:0x0004
+				RJMP 0x0004
+1773000			next command clock cycle
+
+1775000			PC:0x0004
+				RJMP 0x0004
+1776000			next command clock cycle
+
+1778000			PC:0x0004
+				RJMP 0x0004
+1779000			next command clock cycle
+
+1781000			PC:0x0004
+				RJMP 0x0004
+1782000			next command clock cycle
+
+1784000			PC:0x0004
+				RJMP 0x0004
+1785000			next command clock cycle
+
+1787000			PC:0x0004
+				RJMP 0x0004
+1788000			next command clock cycle
+
+1790000			PC:0x0004
+				RJMP 0x0004
+1791000			next command clock cycle
+
+1793000			PC:0x0004
+				RJMP 0x0004
+1794000			next command clock cycle
+
+1796000			PC:0x0004
+				RJMP 0x0004
+1797000			next command clock cycle
+
+1799000			PC:0x0004
+				RJMP 0x0004
+1800000			next command clock cycle
+
+1802000			PC:0x0004
+				RJMP 0x0004
+1803000			next command clock cycle
+
+1805000			PC:0x0004
+				RJMP 0x0004
+1806000			next command clock cycle
+
+1808000			PC:0x0004
+				RJMP 0x0004
+1809000			next command clock cycle
+
+1811000			PC:0x0004
+				RJMP 0x0004
+1812000			next command clock cycle
+
+1814000			PC:0x0004
+				RJMP 0x0004
+1815000			next command clock cycle
+
+1817000			PC:0x0004
+				RJMP 0x0004
+1818000			next command clock cycle
+
+1820000			PC:0x0004
+				RJMP 0x0004
+1821000			next command clock cycle
+
+1823000			PC:0x0004
+				RJMP 0x0004
+1824000			next command clock cycle
+
+1826000			PC:0x0004
+				RJMP 0x0004
+1827000			next command clock cycle
+
+1829000			PC:0x0004
+				RJMP 0x0004
+1830000			next command clock cycle
+
+1832000			PC:0x0004
+				RJMP 0x0004
+1833000			next command clock cycle
+
+1835000			PC:0x0004
+				RJMP 0x0004
+1836000			next command clock cycle
+
+1838000			PC:0x0004
+				RJMP 0x0004
+1839000			next command clock cycle
+
+1841000			PC:0x0004
+				RJMP 0x0004
+1842000			next command clock cycle
+
+1844000			PC:0x0004
+				RJMP 0x0004
+1845000			next command clock cycle
+
+1847000			PC:0x0004
+				RJMP 0x0004
+1848000			next command clock cycle
+
+1850000			PC:0x0004
+				RJMP 0x0004
+1851000			next command clock cycle
+
+1853000			PC:0x0004
+				RJMP 0x0004
+1854000			next command clock cycle
+
+1856000			PC:0x0004
+				RJMP 0x0004
+1857000			next command clock cycle
+
+1859000			PC:0x0004
+				RJMP 0x0004
+1860000			next command clock cycle
+
+1862000			PC:0x0004
+				RJMP 0x0004
+1863000			next command clock cycle
+
+1865000			PC:0x0004
+				RJMP 0x0004
+1866000			next command clock cycle
+
+1868000			PC:0x0004
+				RJMP 0x0004
+1869000			next command clock cycle
+
+1871000			PC:0x0004
+				RJMP 0x0004
+1872000			next command clock cycle
+
+1874000			PC:0x0004
+				RJMP 0x0004
+1875000			next command clock cycle
+
+1877000			PC:0x0004
+				RJMP 0x0004
+1878000			next command clock cycle
+
+1880000			PC:0x0004
+				RJMP 0x0004
+1881000			next command clock cycle
+
+1883000			PC:0x0004
+				RJMP 0x0004
+1884000			next command clock cycle
+
+1886000			PC:0x0004
+				RJMP 0x0004
+1887000			next command clock cycle
+
+1889000			PC:0x0004
+				RJMP 0x0004
+1890000			next command clock cycle
+
+1892000			PC:0x0004
+				RJMP 0x0004
+1893000			next command clock cycle
+
+1895000			PC:0x0004
+				RJMP 0x0004
+1896000			next command clock cycle
+
+1898000			PC:0x0004
+				RJMP 0x0004
+1899000			next command clock cycle
+
+1901000			PC:0x0004
+				RJMP 0x0004
+1902000			next command clock cycle
+
+1904000			PC:0x0004
+				RJMP 0x0004
+1905000			next command clock cycle
+
+1907000			PC:0x0004
+				RJMP 0x0004
+1908000			next command clock cycle
+
+1910000			PC:0x0004
+				RJMP 0x0004
+1911000			next command clock cycle
+
+1913000			PC:0x0004
+				RJMP 0x0004
+1914000			next command clock cycle
+
+1916000			PC:0x0004
+				RJMP 0x0004
+1917000			next command clock cycle
+
+1919000			PC:0x0004
+				RJMP 0x0004
+1920000			next command clock cycle
+
+1922000			PC:0x0004
+				RJMP 0x0004
+1923000			next command clock cycle
+
+1925000			PC:0x0004
+				RJMP 0x0004
+1926000			next command clock cycle
+
+1928000			PC:0x0004
+				RJMP 0x0004
+1929000			next command clock cycle
+
+1931000			PC:0x0004
+				RJMP 0x0004
+1932000			next command clock cycle
+
+1934000			PC:0x0004
+				RJMP 0x0004
+1935000			next command clock cycle
+
+1937000			PC:0x0004
+				RJMP 0x0004
+1938000			next command clock cycle
+
+1940000			PC:0x0004
+				RJMP 0x0004
+1941000			next command clock cycle
+
+1943000			PC:0x0004
+				RJMP 0x0004
+1944000			next command clock cycle
+
+1946000			PC:0x0004
+				RJMP 0x0004
+1947000			next command clock cycle
+
+1949000			PC:0x0004
+				RJMP 0x0004
+1950000			next command clock cycle
+
+1952000			PC:0x0004
+				RJMP 0x0004
+1953000			next command clock cycle
+
+1955000			PC:0x0004
+				RJMP 0x0004
+1956000			next command clock cycle
+
+1958000			PC:0x0004
+				RJMP 0x0004
+1959000			next command clock cycle
+
+1961000			PC:0x0004
+				RJMP 0x0004
+1962000			next command clock cycle
+
+1964000			PC:0x0004
+				RJMP 0x0004
+1965000			next command clock cycle
+
+1967000			PC:0x0004
+				RJMP 0x0004
+1968000			next command clock cycle
+
+1970000			PC:0x0004
+				RJMP 0x0004
+1971000			next command clock cycle
+
+1973000			PC:0x0004
+				RJMP 0x0004
+1974000			next command clock cycle
+
+1976000			PC:0x0004
+				RJMP 0x0004
+1977000			next command clock cycle
+
+1979000			PC:0x0004
+				RJMP 0x0004
+1980000			next command clock cycle
+
+1982000			PC:0x0004
+				RJMP 0x0004
+1983000			next command clock cycle
+
+1985000			PC:0x0004
+				RJMP 0x0004
+1986000			next command clock cycle
+
+1988000			PC:0x0004
+				RJMP 0x0004
+1989000			next command clock cycle
+
+1991000			PC:0x0004
+				RJMP 0x0004
+1992000			next command clock cycle
+
+1994000			PC:0x0004
+				RJMP 0x0004
+1995000			next command clock cycle
+
+1997000			PC:0x0004
+				RJMP 0x0004
+1998000			next command clock cycle
+
+2000000			PC:0x0004
+				RJMP 0x0004
+2001000			next command clock cycle
+
+2003000			PC:0x0004
+				RJMP 0x0004
+2004000			next command clock cycle
+
+2006000			PC:0x0004
+				RJMP 0x0004
+2007000			next command clock cycle
+
+2009000			PC:0x0004
+				RJMP 0x0004
+2010000			next command clock cycle
+
+2012000			PC:0x0004
+				RJMP 0x0004
+2013000			next command clock cycle
+
+2015000			PC:0x0004
+				RJMP 0x0004
+2016000			next command clock cycle
+
+2018000			PC:0x0004
+				RJMP 0x0004
+2019000			next command clock cycle
+
+2021000			PC:0x0004
+				RJMP 0x0004
+2022000			next command clock cycle
+
+2024000			PC:0x0004
+				RJMP 0x0004
+2025000			next command clock cycle
+
+2027000			PC:0x0004
+				RJMP 0x0004
+2028000			next command clock cycle
+
+2030000			PC:0x0004
+				RJMP 0x0004
+2031000			next command clock cycle
+
+2033000			PC:0x0004
+				RJMP 0x0004
+2034000			next command clock cycle
+
+2036000			PC:0x0004
+				RJMP 0x0004
+2037000			next command clock cycle
+
+2039000			PC:0x0004
+				RJMP 0x0004
+2040000			next command clock cycle
+
+2042000			PC:0x0004
+				RJMP 0x0004
+2043000			next command clock cycle
+
+2045000			PC:0x0004
+				RJMP 0x0004
+2046000			next command clock cycle
+
+2048000			PC:0x0004
+				RJMP 0x0004
+2049000			next command clock cycle
+
+2051000			PC:0x0004
+				RJMP 0x0004
+2052000			next command clock cycle
+
+2054000			PC:0x0004
+				RJMP 0x0004
+2055000			next command clock cycle
+
+2057000			PC:0x0004
+				RJMP 0x0004
+2058000			next command clock cycle
+
+2060000			PC:0x0004
+				RJMP 0x0004
+2061000			next command clock cycle
+
+2063000			PC:0x0004
+				RJMP 0x0004
+2064000			next command clock cycle
+
+2066000			PC:0x0004
+				RJMP 0x0004
+2067000			next command clock cycle
+
+2069000			PC:0x0004
+				RJMP 0x0004
+2070000			next command clock cycle
+
+2072000			PC:0x0004
+				RJMP 0x0004
+2073000			next command clock cycle
+
+2075000			PC:0x0004
+				RJMP 0x0004
+2076000			next command clock cycle
+
+2078000			PC:0x0004
+				RJMP 0x0004
+2079000			next command clock cycle
+
+2081000			PC:0x0004
+				RJMP 0x0004
+2082000			next command clock cycle
+
+2084000			PC:0x0004
+				RJMP 0x0004
+2085000			next command clock cycle
+
+2087000			PC:0x0004
+				RJMP 0x0004
+2088000			next command clock cycle
+
+2090000			PC:0x0004
+				RJMP 0x0004
+2091000			next command clock cycle
+
+2093000			PC:0x0004
+				RJMP 0x0004
+2094000			next command clock cycle
+
+2096000			PC:0x0004
+				RJMP 0x0004
+2097000			next command clock cycle
+
+2099000			PC:0x0004
+				RJMP 0x0004
+2100000			next command clock cycle
+
+2102000			PC:0x0004
+				RJMP 0x0004
+2103000			next command clock cycle
+
+2105000			PC:0x0004
+				RJMP 0x0004
+2106000			next command clock cycle
+
+2108000			PC:0x0004
+				RJMP 0x0004
+2109000			next command clock cycle
+
+2111000			PC:0x0004
+				RJMP 0x0004
+2112000			next command clock cycle
+
+2114000			PC:0x0004
+				RJMP 0x0004
+2115000			next command clock cycle
+
+2117000			PC:0x0004
+				RJMP 0x0004
+2118000			next command clock cycle
+
+2120000			PC:0x0004
+				RJMP 0x0004
+2121000			next command clock cycle
+
+2123000			PC:0x0004
+				RJMP 0x0004
+2124000			next command clock cycle
+
+2126000			PC:0x0004
+				RJMP 0x0004
+2127000			next command clock cycle
+
+2129000			PC:0x0004
+				RJMP 0x0004
+2130000			next command clock cycle
+
+2132000			PC:0x0004
+				RJMP 0x0004
+2133000			next command clock cycle
+
+2135000			PC:0x0004
+				RJMP 0x0004
+2136000			next command clock cycle
+
+2138000			PC:0x0004
+				RJMP 0x0004
+2139000			next command clock cycle
+
+2141000			PC:0x0004
+				RJMP 0x0004
+2142000			next command clock cycle
+
+2144000			PC:0x0004
+				RJMP 0x0004
+2145000			next command clock cycle
+
+2147000			PC:0x0004
+				RJMP 0x0004
+2148000			next command clock cycle
+
+2150000			PC:0x0004
+				RJMP 0x0004
+2151000			next command clock cycle
+
+2153000			PC:0x0004
+				RJMP 0x0004
+2154000			next command clock cycle
+
+2156000			PC:0x0004
+				RJMP 0x0004
+2157000			next command clock cycle
+
+2159000			PC:0x0004
+				RJMP 0x0004
+2160000			next command clock cycle
+
+2162000			PC:0x0004
+				RJMP 0x0004
+2163000			next command clock cycle
+
+2165000			PC:0x0004
+				RJMP 0x0004
+2166000			next command clock cycle
+
+2168000			PC:0x0004
+				RJMP 0x0004
+2169000			next command clock cycle
+
+2171000			PC:0x0004
+				RJMP 0x0004
+2172000			next command clock cycle
+
+2174000			PC:0x0004
+				RJMP 0x0004
+2175000			next command clock cycle
+
+2177000			PC:0x0004
+				RJMP 0x0004
+2178000			next command clock cycle
+
+2180000			PC:0x0004
+				RJMP 0x0004
+2181000			next command clock cycle
+
+2183000			PC:0x0004
+				RJMP 0x0004
+2184000			next command clock cycle
+
+2186000			PC:0x0004
+				RJMP 0x0004
+2187000			next command clock cycle
+
+2189000			PC:0x0004
+				RJMP 0x0004
+2190000			next command clock cycle
+
+2192000			PC:0x0004
+				RJMP 0x0004
+2193000			next command clock cycle
+
+2195000			PC:0x0004
+				RJMP 0x0004
+2196000			next command clock cycle
+
+2198000			PC:0x0004
+				RJMP 0x0004
+2199000			next command clock cycle
+
+2201000			PC:0x0004
+				RJMP 0x0004
+2202000			next command clock cycle
+
+2204000			PC:0x0004
+				RJMP 0x0004
+2205000			next command clock cycle
+
+2207000			PC:0x0004
+				RJMP 0x0004
+2208000			next command clock cycle
+
+2210000			PC:0x0004
+				RJMP 0x0004
+2211000			next command clock cycle
+
+2213000			PC:0x0004
+				RJMP 0x0004
+2214000			next command clock cycle
+
+2216000			PC:0x0004
+				RJMP 0x0004
+2217000			next command clock cycle
+
+2219000			PC:0x0004
+				RJMP 0x0004
+2220000			next command clock cycle
+
+2222000			PC:0x0004
+				RJMP 0x0004
+2223000			next command clock cycle
+
+2225000			PC:0x0004
+				RJMP 0x0004
+2226000			next command clock cycle
+
+2228000			PC:0x0004
+				RJMP 0x0004
+2229000			next command clock cycle
+
+2231000			PC:0x0004
+				RJMP 0x0004
+2232000			next command clock cycle
+
+2234000			PC:0x0004
+				RJMP 0x0004
+2235000			next command clock cycle
+
+2237000			PC:0x0004
+				RJMP 0x0004
+2238000			next command clock cycle
+
+2240000			PC:0x0004
+				RJMP 0x0004
+2241000			next command clock cycle
+
+2243000			PC:0x0004
+				RJMP 0x0004
+2244000			next command clock cycle
+
+2246000			PC:0x0004
+				RJMP 0x0004
+2247000			next command clock cycle
+
+2249000			PC:0x0004
+				RJMP 0x0004
+2250000			next command clock cycle
+
+2252000			PC:0x0004
+				RJMP 0x0004
+2253000			next command clock cycle
+
+2255000			PC:0x0004
+				RJMP 0x0004
+2256000			next command clock cycle
+
+2258000			PC:0x0004
+				RJMP 0x0004
+2259000			next command clock cycle
+
+2261000			PC:0x0004
+				RJMP 0x0004
+2262000			next command clock cycle
+
+2264000			PC:0x0004
+				RJMP 0x0004
+2265000			next command clock cycle
+
+2267000			PC:0x0004
+				RJMP 0x0004
+2268000			next command clock cycle
+
+2270000			PC:0x0004
+				RJMP 0x0004
+2271000			next command clock cycle
+
+2273000			PC:0x0004
+				RJMP 0x0004
+2274000			next command clock cycle
+
+2276000			PC:0x0004
+				RJMP 0x0004
+2277000			next command clock cycle
+
+2279000			PC:0x0004
+				RJMP 0x0004
+2280000			next command clock cycle
+
+2282000			PC:0x0004
+				RJMP 0x0004
+2283000			next command clock cycle
+
+2285000			PC:0x0004
+				RJMP 0x0004
+2286000			next command clock cycle
+
+2288000			PC:0x0004
+				RJMP 0x0004
+2289000			next command clock cycle
+
+2291000			PC:0x0004
+				RJMP 0x0004
+2292000			next command clock cycle
+
+2294000			PC:0x0004
+				RJMP 0x0004
+2295000			next command clock cycle
+
+2297000			PC:0x0004
+				RJMP 0x0004
+2298000			next command clock cycle
+
+2300000			PC:0x0004
+				RJMP 0x0004
+2301000			next command clock cycle
+
+2303000			PC:0x0004
+				RJMP 0x0004
+2304000			next command clock cycle
+
+2306000			PC:0x0004
+				RJMP 0x0004
+2307000			next command clock cycle
+
+2309000			PC:0x0004
+				RJMP 0x0004
+2310000			next command clock cycle
+
+2312000			PC:0x0004
+				RJMP 0x0004
+2313000			next command clock cycle
+
+2315000			PC:0x0004
+				RJMP 0x0004
+2316000			next command clock cycle
+
+2318000			PC:0x0004
+				RJMP 0x0004
+2319000			next command clock cycle
+
+2321000			PC:0x0004
+				RJMP 0x0004
+2322000			next command clock cycle
+
+2324000			PC:0x0004
+				RJMP 0x0004
+2325000			next command clock cycle
+
+2327000			PC:0x0004
+				RJMP 0x0004
+2328000			next command clock cycle
+
+2330000			PC:0x0004
+				RJMP 0x0004
+2331000			next command clock cycle
+
+2333000			PC:0x0004
+				RJMP 0x0004
+2334000			next command clock cycle
+
+2336000			PC:0x0004
+				RJMP 0x0004
+2337000			next command clock cycle
+
+2339000			PC:0x0004
+				RJMP 0x0004
+2340000			next command clock cycle
+
+2342000			PC:0x0004
+				RJMP 0x0004
+2343000			next command clock cycle
+
+2345000			PC:0x0004
+				RJMP 0x0004
+2346000			next command clock cycle
+
+2348000			PC:0x0004
+				RJMP 0x0004
+2349000			next command clock cycle
+
+2351000			PC:0x0004
+				RJMP 0x0004
+2352000			next command clock cycle
+
+2354000			PC:0x0004
+				RJMP 0x0004
+2355000			next command clock cycle
+
+2357000			PC:0x0004
+				RJMP 0x0004
+2358000			next command clock cycle
+
+2360000			PC:0x0004
+				RJMP 0x0004
+2361000			next command clock cycle
+
+2363000			PC:0x0004
+				RJMP 0x0004
+2364000			next command clock cycle
+
+2366000			PC:0x0004
+				RJMP 0x0004
+2367000			next command clock cycle
+
+2369000			PC:0x0004
+				RJMP 0x0004
+2370000			next command clock cycle
+
+2372000			PC:0x0004
+				RJMP 0x0004
+2373000			next command clock cycle
+
+2375000			PC:0x0004
+				RJMP 0x0004
+2376000			next command clock cycle
+
+2378000			PC:0x0004
+				RJMP 0x0004
+2379000			next command clock cycle
+
+2381000			PC:0x0004
+				RJMP 0x0004
+2382000			next command clock cycle
+
+2384000			PC:0x0004
+				RJMP 0x0004
+2385000			next command clock cycle
+
+2387000			PC:0x0004
+				RJMP 0x0004
+2388000			next command clock cycle
+
+2390000			PC:0x0004
+				RJMP 0x0004
+2391000			next command clock cycle
+
+2393000			PC:0x0004
+				RJMP 0x0004
+2394000			next command clock cycle
+
+2396000			PC:0x0004
+				RJMP 0x0004
+2397000			next command clock cycle
+
+2399000			PC:0x0004
+				RJMP 0x0004
+2400000			next command clock cycle
+
+2402000			PC:0x0004
+				RJMP 0x0004
+2403000			next command clock cycle
+
+2405000			PC:0x0004
+				RJMP 0x0004
+2406000			next command clock cycle
+
+2408000			PC:0x0004
+				RJMP 0x0004
+2409000			next command clock cycle
+
+2411000			PC:0x0004
+				RJMP 0x0004
+2412000			next command clock cycle
+
+2414000			PC:0x0004
+				RJMP 0x0004
+2415000			next command clock cycle
+
+2417000			PC:0x0004
+				RJMP 0x0004
+2418000			next command clock cycle
+
+2420000			PC:0x0004
+				RJMP 0x0004
+2421000			next command clock cycle
+
+2423000			PC:0x0004
+				RJMP 0x0004
+2424000			next command clock cycle
+
+2426000			PC:0x0004
+				RJMP 0x0004
+2427000			next command clock cycle
+
+2429000			PC:0x0004
+				RJMP 0x0004
+2430000			next command clock cycle
+
+2432000			PC:0x0004
+				RJMP 0x0004
+2433000			next command clock cycle
+
+2435000			PC:0x0004
+				RJMP 0x0004
+2436000			next command clock cycle
+
+2438000			PC:0x0004
+				RJMP 0x0004
+2439000			next command clock cycle
+
+2441000			PC:0x0004
+				RJMP 0x0004
+2442000			next command clock cycle
+
+2444000			PC:0x0004
+				RJMP 0x0004
+2445000			next command clock cycle
+
+2447000			PC:0x0004
+				RJMP 0x0004
+2448000			next command clock cycle
+
+2450000			PC:0x0004
+				RJMP 0x0004
+2451000			next command clock cycle
+
+2453000			PC:0x0004
+				RJMP 0x0004
+2454000			next command clock cycle
+
+2456000			PC:0x0004
+				RJMP 0x0004
+2457000			next command clock cycle
+
+2459000			PC:0x0004
+				RJMP 0x0004
+2460000			next command clock cycle
+
+2462000			PC:0x0004
+				RJMP 0x0004
+2463000			next command clock cycle
+
+2465000			PC:0x0004
+				RJMP 0x0004
+2466000			next command clock cycle
+
+2468000			PC:0x0004
+				RJMP 0x0004
+2469000			next command clock cycle
+
+2471000			PC:0x0004
+				RJMP 0x0004
+2472000			next command clock cycle
+
+2474000			PC:0x0004
+				RJMP 0x0004
+2475000			next command clock cycle
+
+2477000			PC:0x0004
+				RJMP 0x0004
+2478000			next command clock cycle
+
+2480000			PC:0x0004
+				RJMP 0x0004
+2481000			next command clock cycle
+
+2483000			PC:0x0004
+				RJMP 0x0004
+2484000			next command clock cycle
+
+2486000			PC:0x0004
+				RJMP 0x0004
+2487000			next command clock cycle
+
+2489000			PC:0x0004
+				RJMP 0x0004
+2490000			next command clock cycle
+
+2492000			PC:0x0004
+				RJMP 0x0004
+2493000			next command clock cycle
+
+2495000			PC:0x0004
+				RJMP 0x0004
+2496000			next command clock cycle
+
+2498000			PC:0x0004
+				RJMP 0x0004
+2499000			next command clock cycle
+
+2501000			PC:0x0004
+				RJMP 0x0004
+2502000			next command clock cycle
+
+2504000			PC:0x0004
+				RJMP 0x0004
+2505000			next command clock cycle
+
+2507000			PC:0x0004
+				RJMP 0x0004
+2508000			next command clock cycle
+
+2510000			PC:0x0004
+				RJMP 0x0004
+2511000			next command clock cycle
+
+2513000			PC:0x0004
+				RJMP 0x0004
+2514000			next command clock cycle
+
+2516000			PC:0x0004
+				RJMP 0x0004
+2517000			next command clock cycle
+
+2519000			PC:0x0004
+				RJMP 0x0004
+2520000			next command clock cycle
+
+2522000			PC:0x0004
+				RJMP 0x0004
+2523000			next command clock cycle
+
+2525000			PC:0x0004
+				RJMP 0x0004
+2526000			next command clock cycle
+
+2528000			PC:0x0004
+				RJMP 0x0004
+2529000			next command clock cycle
+
+2531000			PC:0x0004
+				RJMP 0x0004
+2532000			next command clock cycle
+
+2534000			PC:0x0004
+				RJMP 0x0004
+2535000			next command clock cycle
+
+2537000			PC:0x0004
+				RJMP 0x0004
+2538000			next command clock cycle
+
+2540000			PC:0x0004
+				RJMP 0x0004
+2541000			next command clock cycle
+
+2543000			PC:0x0004
+				RJMP 0x0004
+2544000			next command clock cycle
+
+2546000			PC:0x0004
+				RJMP 0x0004
+2547000			next command clock cycle
+
+2549000			PC:0x0004
+				RJMP 0x0004
+2550000			next command clock cycle
+
+2552000			PC:0x0004
+				RJMP 0x0004
+2553000			next command clock cycle
+
+2555000			PC:0x0004
+				RJMP 0x0004
+2556000			next command clock cycle
+
+2558000			PC:0x0004
+				RJMP 0x0004
+2559000			next command clock cycle
+
+2561000			PC:0x0004
+				RJMP 0x0004
+2562000			next command clock cycle
+
+2564000			PC:0x0004
+				RJMP 0x0004
+2565000			next command clock cycle
+
+2567000			PC:0x0004
+				RJMP 0x0004
+2568000			next command clock cycle
+
+2570000			PC:0x0004
+				RJMP 0x0004
+2571000			next command clock cycle
+
+2573000			PC:0x0004
+				RJMP 0x0004
+2574000			next command clock cycle
+
+2576000			PC:0x0004
+				RJMP 0x0004
+2577000			next command clock cycle
+
+2579000			PC:0x0004
+				RJMP 0x0004
+2580000			next command clock cycle
+
+2582000			PC:0x0004
+				RJMP 0x0004
+2583000			next command clock cycle
+
+2585000			PC:0x0004
+				RJMP 0x0004
+2586000			next command clock cycle
+
+2588000			PC:0x0004
+				RJMP 0x0004
+2589000			next command clock cycle
+
+2591000			PC:0x0004
+				RJMP 0x0004
+2592000			next command clock cycle
+
+2594000			PC:0x0004
+				RJMP 0x0004
+2595000			next command clock cycle
+
+2597000			PC:0x0004
+				RJMP 0x0004
+2598000			next command clock cycle
+
+2600000			PC:0x0004
+				RJMP 0x0004
+2601000			next command clock cycle
+
+2603000			PC:0x0004
+				RJMP 0x0004
+2604000			next command clock cycle
+
+2606000			PC:0x0004
+				RJMP 0x0004
+2607000			next command clock cycle
+
+2609000			PC:0x0004
+				RJMP 0x0004
+2610000			next command clock cycle
+
+2612000			PC:0x0004
+				RJMP 0x0004
+2613000			next command clock cycle
+
+2615000			PC:0x0004
+				RJMP 0x0004
+2616000			next command clock cycle
+
+2618000			PC:0x0004
+				RJMP 0x0004
+2619000			next command clock cycle
+
+2621000			PC:0x0004
+				RJMP 0x0004
+2622000			next command clock cycle
+
+2624000			PC:0x0004
+				RJMP 0x0004
+2625000			next command clock cycle
+
+2627000			PC:0x0004
+				RJMP 0x0004
+2628000			next command clock cycle
+
+2630000			PC:0x0004
+				RJMP 0x0004
+2631000			next command clock cycle
+
+2633000			PC:0x0004
+				RJMP 0x0004
+2634000			next command clock cycle
+
+2636000			PC:0x0004
+				RJMP 0x0004
+2637000			next command clock cycle
+
+2639000			PC:0x0004
+				RJMP 0x0004
+2640000			next command clock cycle
+
+2642000			PC:0x0004
+				RJMP 0x0004
+2643000			next command clock cycle
+
+2645000			PC:0x0004
+				RJMP 0x0004
+2646000			next command clock cycle
+
+2648000			PC:0x0004
+				RJMP 0x0004
+2649000			next command clock cycle
+
+2651000			PC:0x0004
+				RJMP 0x0004
+2652000			next command clock cycle
+
+2654000			PC:0x0004
+				RJMP 0x0004
+2655000			next command clock cycle
+
+2657000			PC:0x0004
+				RJMP 0x0004
+2658000			next command clock cycle
+
+2660000			PC:0x0004
+				RJMP 0x0004
+2661000			next command clock cycle
+
+2663000			PC:0x0004
+				RJMP 0x0004
+2664000			next command clock cycle
+
+2666000			PC:0x0004
+				RJMP 0x0004
+2667000			next command clock cycle
+
+2669000			PC:0x0004
+				RJMP 0x0004
+2670000			next command clock cycle
+
+2672000			PC:0x0004
+				RJMP 0x0004
+2673000			next command clock cycle
+
+2675000			PC:0x0004
+				RJMP 0x0004
+2676000			next command clock cycle
+
+2678000			PC:0x0004
+				RJMP 0x0004
+2679000			next command clock cycle
+
+2681000			PC:0x0004
+				RJMP 0x0004
+2682000			next command clock cycle
+
+2684000			PC:0x0004
+				RJMP 0x0004
+2685000			next command clock cycle
+
+2687000			PC:0x0004
+				RJMP 0x0004
+2688000			next command clock cycle
+
+2690000			PC:0x0004
+				RJMP 0x0004
+2691000			next command clock cycle
+
+2693000			PC:0x0004
+				RJMP 0x0004
+2694000			next command clock cycle
+
+2696000			PC:0x0004
+				RJMP 0x0004
+2697000			next command clock cycle
+
+2699000			PC:0x0004
+				RJMP 0x0004
+2700000			next command clock cycle
+
+2702000			PC:0x0004
+				RJMP 0x0004
+2703000			next command clock cycle
+
+2705000			PC:0x0004
+				RJMP 0x0004
+2706000			next command clock cycle
+
+2708000			PC:0x0004
+				RJMP 0x0004
+2709000			next command clock cycle
+
+2711000			PC:0x0004
+				RJMP 0x0004
+2712000			next command clock cycle
+
+2714000			PC:0x0004
+				RJMP 0x0004
+2715000			next command clock cycle
+
+2717000			PC:0x0004
+				RJMP 0x0004
+2718000			next command clock cycle
+
+2720000			PC:0x0004
+				RJMP 0x0004
+2721000			next command clock cycle
+
+2723000			PC:0x0004
+				RJMP 0x0004
+2724000			next command clock cycle
+
+2726000			PC:0x0004
+				RJMP 0x0004
+2727000			next command clock cycle
+
+2729000			PC:0x0004
+				RJMP 0x0004
+2730000			next command clock cycle
+
+2732000			PC:0x0004
+				RJMP 0x0004
+2733000			next command clock cycle
+
+2735000			PC:0x0004
+				RJMP 0x0004
+2736000			next command clock cycle
+
+2738000			PC:0x0004
+				RJMP 0x0004
+2739000			next command clock cycle
+
+2741000			PC:0x0004
+				RJMP 0x0004
+2742000			next command clock cycle
+
+2744000			PC:0x0004
+				RJMP 0x0004
+2745000			next command clock cycle
+
+2747000			PC:0x0004
+				RJMP 0x0004
+2748000			next command clock cycle
+
+2750000			PC:0x0004
+				RJMP 0x0004
+2751000			next command clock cycle
+
+2753000			PC:0x0004
+				RJMP 0x0004
+2754000			next command clock cycle
+
+2756000			PC:0x0004
+				RJMP 0x0004
+2757000			next command clock cycle
+
+2759000			PC:0x0004
+				RJMP 0x0004
+2760000			next command clock cycle
+
+2762000			PC:0x0004
+				RJMP 0x0004
+2763000			next command clock cycle
+
+2765000			PC:0x0004
+				RJMP 0x0004
+2766000			next command clock cycle
+
+2768000			PC:0x0004
+				RJMP 0x0004
+2769000			next command clock cycle
+
+2771000			PC:0x0004
+				RJMP 0x0004
+2772000			next command clock cycle
+
+2774000			PC:0x0004
+				RJMP 0x0004
+2775000			next command clock cycle
+
+2777000			PC:0x0004
+				RJMP 0x0004
+2778000			next command clock cycle
+
+2780000			PC:0x0004
+				RJMP 0x0004
+2781000			next command clock cycle
+
+2783000			PC:0x0004
+				RJMP 0x0004
+2784000			next command clock cycle
+
+2786000			PC:0x0004
+				RJMP 0x0004
+2787000			next command clock cycle
+
+2789000			PC:0x0004
+				RJMP 0x0004
+2790000			next command clock cycle
+
+2792000			PC:0x0004
+				RJMP 0x0004
+2793000			next command clock cycle
+
+2795000			PC:0x0004
+				RJMP 0x0004
+2796000			next command clock cycle
+
+2798000			PC:0x0004
+				RJMP 0x0004
+2799000			next command clock cycle
+
+2801000			PC:0x0004
+				RJMP 0x0004
+2802000			next command clock cycle
+
+2804000			PC:0x0004
+				RJMP 0x0004
+2805000			next command clock cycle
+
+2807000			PC:0x0004
+				RJMP 0x0004
+2808000			next command clock cycle
+
+2810000			PC:0x0004
+				RJMP 0x0004
+2811000			next command clock cycle
+
+2813000			PC:0x0004
+				RJMP 0x0004
+2814000			next command clock cycle
+
+2816000			PC:0x0004
+				RJMP 0x0004
+2817000			next command clock cycle
+
+2819000			PC:0x0004
+				RJMP 0x0004
+2820000			next command clock cycle
+
+2822000			PC:0x0004
+				RJMP 0x0004
+2823000			next command clock cycle
+
+2825000			PC:0x0004
+				RJMP 0x0004
+2826000			next command clock cycle
+
+2828000			PC:0x0004
+				RJMP 0x0004
+2829000			next command clock cycle
+
+2831000			PC:0x0004
+				RJMP 0x0004
+2832000			next command clock cycle
+
+2834000			PC:0x0004
+				RJMP 0x0004
+2835000			next command clock cycle
+
+2837000			PC:0x0004
+				RJMP 0x0004
+2838000			next command clock cycle
+
+2840000			PC:0x0004
+				RJMP 0x0004
+2841000			next command clock cycle
+
+2843000			PC:0x0004
+				RJMP 0x0004
+2844000			next command clock cycle
+
+2846000			PC:0x0004
+				RJMP 0x0004
+2847000			next command clock cycle
+
+--------------------------------------------------
+Stop

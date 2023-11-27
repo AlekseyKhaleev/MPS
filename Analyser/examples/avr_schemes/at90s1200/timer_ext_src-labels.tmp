@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.30</VERSION>
+ <DEVICE>AT90S1200</DEVICE>
+ <WORKING_DIR>C:\mps-2.1.12-r219\release\avrprg\avrasm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\mps-2.1.12-r219\release\avrprg\avrasm\appnotes</DIR>
+  <DIR>C:\Program Files\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_ext_src.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\mps-2.1.12-r219\release\avrprg\avrasm\appnotes\1200def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_ext_src.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_ext_src.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_ext_src.map</FILE>
+  <FILE>C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_ext_src.lst</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_ext_src.asm</FILE><LINE>14</LINE></reset>
+  <tim0_ovf><FILE>C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_ext_src.asm</FILE><LINE>33</LINE></tim0_ovf>
+  <main><FILE>C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_ext_src.asm</FILE><LINE>30</LINE></main>
+ </LABELS>
+</ASSEMBLER_INFO>

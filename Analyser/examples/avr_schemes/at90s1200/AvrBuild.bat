@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\mps-2.1.12-r219\schemes\avr\at90s1200\labels.tmp" -fI -W+ie -o "C:\mps-2.1.12-r219\schemes\avr\at90s1200\command_test.hex" -d "C:\mps-2.1.12-r219\schemes\avr\at90s1200\command_test.obj" -e "C:\mps-2.1.12-r219\schemes\avr\at90s1200\command_test.eep" -m "C:\mps-2.1.12-r219\schemes\avr\at90s1200\command_test.map" "C:\mps-2.1.12-r219\schemes\avr\at90s1200\command_test.asm"

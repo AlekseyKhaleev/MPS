@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\mps-2.1.12-r219\schemes\avr\atmega8\labels.tmp" -fI -W+ie -o "C:\mps-2.1.12-r219\schemes\avr\atmega8\spi_test.hex" -d "C:\mps-2.1.12-r219\schemes\avr\atmega8\spi_test.obj" -e "C:\mps-2.1.12-r219\schemes\avr\atmega8\spi_test.eep" -m "C:\mps-2.1.12-r219\schemes\avr\atmega8\spi_test.map" "C:\mps-2.1.12-r219\schemes\avr\atmega8\spi_test.asm"

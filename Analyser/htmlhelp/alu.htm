@@ -1,0 +1,717 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Алу (описание)</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Lucida Sans Unicode";
+	panose-1:2 11 6 2 3 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoList, li.MsoList, div.MsoList
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Arial;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.a0, li.a0, div.a0
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+p.10, li.10, div.10
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-style:italic;}
+p.11, li.11, div.11
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Arial;}
+p.a1, li.a1, div.a1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.a2, li.a2, div.a2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+@page Section1
+	{size:595.25pt 841.85pt;
+	margin:2.0cm 42.5pt 2.0cm 54.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white lang=RU>
+
+<div class=Section1>
+
+<h1><div align="center">3.12. АЛУ с полным управлением вычислениями</div></h1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>Данное АЛУ
+состоит из двух регистров (<span lang=EN-US>RGA</span> и <span lang=EN-US>RGB</span>)
+и накапливающего сумматора (<span lang=EN-US>SM</span>). </p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>Регистры
+имеют разрядность 8 (7 разрядов данных + 1 разряд знака). Над данными в
+регистрах могут выполняться операции инверсии и сдвига. Обмен данными с другими
+устройствами осуществляется только через регистры. </p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'><span
+style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>Накапливающий
+сумматор имеет разрядность 16 (14 разрядов данных + 1 разряд знака + 1 разряд
+переполнения). Сумматор поделён на две части: старшую (<span lang=EN-US>D</span>13-<span
+lang=EN-US>D</span>7) и младшую (<span lang=EN-US>D</span>6-<span lang=EN-US>D</span>0).
+Все разряды сумматора используются при умножении/делении 7-ми разрядных чисел
+со знаком. При сложении/вычитании чисел указанного вида необходимо использовать
+старшую часть сумматора. Входы сумматора являются счётными (при каждой записи в
+сумматор его содержимое складывается с записываемыми в него данными). Кроме
+того, в сумматоре реализуются операции инверсии и сдвига через знаковый разряд.
+Циклический сдвиг может быть реализован установкой перемычек между разрядами <span
+lang=EN-US>SM</span> из групп <span lang=EN-US>D</span>15-<span lang=EN-US>D</span>13(выходы)
+и <span lang=EN-US>D</span>7, <span lang=EN-US>D</span>0 (входы).</p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'><b>Регистры
+и сумматор подключены к</b> <b>общей внутренней шине</b>, которая, кроме
+передачи данных, играет роль <b>монтажного</b> <b>ИЛИ</b>.</p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>На УГО
+данного АЛУ отображена схема передачи данных между регистрами и сумматором.
+Сигнальные лампочки на ШФ схемы соответствуют их <span lang=EN-US>CS</span> и
+показывают путь прохождения данных через схему. Разряды регистров и сумматора
+снабжены индикацией.</p>
+
+<p class=MsoNormal style='text-align:justify;page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='margin-bottom:18.0pt;text-align:center;
+page-break-after:avoid'><u><span style='font-size:14.0pt'>Возможности АЛУ</span></u></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;page-break-after:
+avoid'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Обеспечивается базис ИЛИ-НЕ для выполнения логических операций над 8-ми разрядными 
+операндами.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;page-break-after:
+avoid'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Сдвиг поля данных, сдвиг данных через знаковый разряд, циклический и
+нециклический сдвиги.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;page-break-after:
+avoid'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Выполнение умножения 8-ми разрядных чисел со знаком по четырём
+схемам умножения.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;page-break-after:
+avoid'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Сложение/вычитание.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;page-break-after:
+avoid'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Образование прямого и дополнительного кода.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;page-break-after:
+avoid'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Деление 8-ми разрядных чисел со знаком</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-before:
+always;page-break-after:avoid'><u><span style='font-size:14.0pt'>УГО АЛУ.</span></u></p>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+style='font-size:14.0pt'><img width=261 height=712 src="alu.files/image001.jpg"></span></p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-before:
+always;page-break-after:avoid'>Управляющие линии регистра <span lang=EN-US>RG</span>(<span
+lang=EN-US>RGA</span> или <span lang=EN-US>RGB</span>)</p>
+
+<div align="center"><table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:-1.25pt;border-collapse:collapse'>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Inv I/O</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>При вводе/выводе на внутреннюю шину данных используются инверсные
+  входы/выходы триггеров данных регистра  <span lang=EN-US>RG</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>D6 ONLY</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>При вводе/выводе на внутреннюю шину данных на каждый разряд этой шины
+  выдается значение триггера <span lang=EN-US>D</span>6 регистра <span
+  lang=EN-US>RG</span> </p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>D0 ONLY</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>При вводе/выводе на внутреннюю шину данных на каждый разряд этой шины
+  выдается значение триггера <span lang=EN-US>D</span>0 регистра <span
+  lang=EN-US>RG</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.2pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Mov In</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Приём разрядов данных в <span lang=EN-US>RG</span> с внутренней шины</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Mov Out</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Выдача разрядов данных <span lang=EN-US>RG</span> на внутреннюю шину</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>RD</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Выдача всех разрядов <span lang=EN-US>RG</span> на внешнюю шину</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>WR</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Приём всех разрядов <span lang=EN-US>RG</span> с внешней шины</p>
+  </td>
+ </tr>
+ <tr style='height:12.2pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>MovS Out</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Выдача разряда знака (<span lang=EN-US>D</span>7) <span lang=EN-US>RG</span>
+  на внутреннюю шину</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>MovS In</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Приём разряда знака в <span lang=EN-US>RG</span> с внутренней шины</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Set S 0</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Установить разряд знака <span lang=EN-US>RG</span> в 0</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Inv S</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Инверсия знакового разряда <span lang=EN-US>RG</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Inv DT</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Инверсия разрядов данных <span lang=EN-US>RG</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>DT&gt;&gt;1</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Сдвиг данных <span lang=EN-US>RG</span> на 1 разряд вправо</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>DT&lt;&lt;1</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Сдвиг данных <span lang=EN-US>RG</span> на 1 разряд влево</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>CLR DT</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Очистка разрядов данных <span lang=EN-US>RG</span></p>
+  </td>
+ </tr>
+</table></div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Данные поступают в регистр по раздельным входам (содержимое
+регистра перезаписывается).</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align="center"><p class=MsoNormal>Управляющие линии накапливающего сумматора <span lang=EN-US>SM</span></p></div>
+
+<div align="center"><table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:-1.25pt;border-collapse:collapse'>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Inv I/O</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>При вводе/выводе на внутреннюю шину данных используются инверсные
+  входы/выходы триггеров данных сумматора <span lang=EN-US>SM</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Mov OutL</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Выдача младших разрядов данных (<span lang=EN-US>D</span>6-<span
+  lang=EN-US>D</span>0)<span lang=EN-US>SM</span> на внутреннюю шину</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Mov OutH</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Выдача старших разрядов данных (<span lang=EN-US>D</span>13-<span
+  lang=EN-US>D</span>6)<span lang=EN-US>SM</span> на внутреннюю шину</p>
+  </td>
+ </tr>
+ <tr style='height:12.2pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>MovS Out</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Выдача разряда знака (<span lang=EN-US>D</span>14) <span lang=EN-US>SM</span>
+  на внутреннюю шину</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>RD</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Выдача разрядов <span lang=EN-US>D</span>15-<span lang=EN-US>D</span>13
+  <span lang=EN-US>SM</span> на внешнюю шину</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>WR</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Приём разрядов <span lang=EN-US>D</span>7 и <span lang=EN-US>D</span>0 <span
+  lang=EN-US>SM</span> с внешней шины</p>
+  </td>
+ </tr>
+ <tr style='height:12.2pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Mov InL</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.2pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Приём  младших разрядов данных (<span lang=EN-US>D</span>6-<span
+  lang=EN-US>D</span>0) <span lang=EN-US>SM</span> с внутренней шины</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Mov InH</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Приём  старших разрядов данных (<span lang=EN-US>D</span>13-<span
+  lang=EN-US>D</span>6) <span lang=EN-US>SM</span> с внутренней шины</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>MovS In</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Приём разряда знака (<span lang=EN-US>D</span>14) <span lang=EN-US>SM</span>
+  с внутренней шины</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Set S 0</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Установить разряд знака <span lang=EN-US>SM</span> в 0</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Inv S</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Инверсия знакового разряда <span lang=EN-US>SM</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>Inv DT</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Инверсия разрядов данных <span lang=EN-US>SM</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>DT&gt;&gt;1</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Сдвиг<b> всего</b> содержимого <span lang=EN-US>SM</span> на 1 разряд
+  вправо</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>DT&lt;&lt;1</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Сдвиг<b> всего</b> содержимого <span lang=EN-US>SM</span> на 1 разряд
+  влево</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>S+DT</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Прибавить к данным <span lang=EN-US>SM</span> знаковый разряд</p>
+  </td>
+ </tr>
+ <tr style='height:12.6pt'>
+  <td width=91 style='width:68.4pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid black 1.0pt;border-right:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'><span lang=EN-US>CLR DT</span></p>
+  </td>
+  <td width=579 style='width:434.5pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;layout-grid-mode:
+  char'>Очистка разрядов данных <span lang=EN-US>SM</span></p>
+  </td>
+ </tr>
+</table></div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span lang=EN-US>D</span>0-<span lang=EN-US>D</span>6 –
+младшие разряды сумматора</p>
+
+<p class=MsoNormal><span lang=EN-US>D</span>7-<span lang=EN-US>D</span>13 –
+старшие разряды сумматора</p>
+
+<p class=MsoNormal><span lang=EN-US>D</span>14 – знаковый разряд сумматора</p>
+
+<p class=MsoNormal><span lang=EN-US>D</span>15 – флаг переполнения сумматора</p>
+
+<p class=MsoNormal>Выходы <span lang=EN-US>D</span>15-<span lang=EN-US>D</span>13
+и входы <span lang=EN-US>D</span>7 и <span lang=EN-US>D</span>0 используются
+для создания перемычек в Алу (например при реализации циклического сдвига).</p>
+
+<p class=MsoNormal>Данные поступают в сумматор по счётным входам (новые данные
+складываются с содержимым сумматора).</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<div align="center"><p class=MsoNormal style='page-break-before:always'>Схема подключения регистра
+к внешней и внутренней шинам данных</p></div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=326
+height=450 src="alu.files/image002.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>ШФ – шинный формирователь </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align="center"><p class=MsoNormal style='page-break-before:always'>Схема управления
+взаимодействием регистра с внутренней и внешней шинами данных</p></div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align="center"><p class=MsoNormal><img width=656 height=455 src="alu.files/image003.jpg"></p></div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><i>Примечания:</i></b> на данной схеме показано только управление
+включением/выключением ШФ, но не направлением передачи данных через них.</p>
+
+<p class=MsoNormal>Рядом с названием управляющего сигнала могут стоять группы
+цифр. Желтые соответствую номеру ШФ, которые включаются при высоком уровне
+данного сигнала, белые - номеру ШФ, которые выключаются при высоком уровне
+данного сигнала (при низком уровне данного сигнала будем наблюдать обратную
+картину).</p>
+
+<p class=MsoNormal>Сигнал<span lang=EN-US> RD </span>или<span lang=EN-US> WR </span>блокируют
+сигналы<span lang=EN-US> Inv I/O, Mov In, Mov Out, MovS In </span>и<span
+lang=EN-US> MovS Out.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<div align="center"><p class=MsoNormal style='page-break-before:always'>Схема подключения
+накапливающего сумматора к внутренней шине данных</p></div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=307
+height=528 src="alu.files/image004.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-before:
+always'>Схема управления взаимодействием накапливающего сумматора с внутренней
+шиной данных</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=456
+height=509 src="alu.files/image005.jpg"></p>
+
+<p class=MsoNormal><b><i>Примечания:</i></b> на данной схеме показано только
+управление включением/выключением ШФ, но не направлением передачи данных через них.</p>
+
+<p class=MsoNormal>Рядом с названием управляющего сигнала могут стоять группы
+цифр. Желтые соответствую номеру ШФ, которые включаются при высоком уровне
+данного сигнала, белые - номеру ШФ, которые выключаются при высоком уровне
+данного сигнала (при низком уровне данного сигнала будем наблюдать обратную
+картину).</p>
+
+<p class=MsoNormal>Сигнал <span lang=EN-US>RD</span> или <span lang=EN-US>WR</span><span
+lang=EN-US> </span><b>не блокируют</b> сигналы <span lang=EN-US>Inv</span><span
+lang=EN-US> </span><span lang=EN-US>I</span>/<span lang=EN-US>O</span>, <span
+lang=EN-US>MovInL</span>, <span lang=EN-US>MovOutL</span>, <span lang=EN-US>MovS</span><span
+lang=EN-US> </span><span lang=EN-US>In</span> и <span lang=EN-US>MovS</span><span
+lang=EN-US> </span><span lang=EN-US>Out</span>.</p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<p class=MsoNormal>
+Для ознакомления с примером использования АЛУ необходимо перейти по этой <a href="example-alu.htm">ссылке</a>.
+</p>
+
+</body>
+
+</html>

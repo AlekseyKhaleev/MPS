@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="VAN">
+  <meta name="generator" content="Quanta Plus">
+</head>
+<body>	
+
+<a name="top"></a>
+
+<a name="codec"><div style="text-align: center"><h1>3.8. Шифраторы и дешифраторы</h1></div></a>
+
+<a name="decoders"></a>
+<h4>3.8.1. Дешифраторы</h4>
+
+<img src="images/elements/image147.png" width="398" height="365" alt="" border="0">
+
+<p style="text-align: justify">В этом модуле реализовано много различных дешифраторов – 
+на разное число выходов, с прямыми и инверсными выходами. 
+Есть двоично-десятичный дешифратор (здесь DD7). 
+</p>
+
+<a name="encoder_ext"></a>
+<h4>3.8.2. Приоритетный шифратор</h4>
+
+<img src="images/elements/image149.png" width="90" height="138" alt="" border="0">
+
+<p style="text-align: justify">Входы <b>I0-I7</b> и выходы <b>A0-A2</b> – прямые. Больший приоритет имеют входы с большим номером. </p>
+
+<p style="text-align: justify">Вход <b>EI</b> служит для разрешения вывода кода на 
+выходы <b>A0-A2</b>. Если <b>EI</b> активен, то код выводится. 
+Если нет, на <b>A0-A2</b> будут уровни нуля. 
+</p>
+
+<p style="text-align: justify">Выход <b>GS</b> активен только в том случае, когда 
+хотя бы на одной линии <b>A0-A2</b> установился уровень единицы. 
+Выход <b>EO</b> активен только в том случае, когда на одном из входов 
+<b>I0-I7</b> есть уровень единицы. Эти дополнительные выходы позволяют 
+строить многоразрядные приоритетные шифраторы.</p>
+
+<a href="#top">К началу</a>
+
+</body>
+</html>

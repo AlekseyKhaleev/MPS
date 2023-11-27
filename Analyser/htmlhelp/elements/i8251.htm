@@ -1,0 +1,1516 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Микросхема КР580ВВ51</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:35.95pt 42.5pt 35.95pt 45.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<p class=MsoNormal><b>Микросхема КР580ВВ51</b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><img width=155 height=348 src="i8251.files/image001.jpg"
+align=left hspace=12></p>
+
+<p class=MsoNormal style='text-align:justify'>Микросхема КР580ВВ51 –
+универсальный синхронно-асинхронный приемопередатчик (УСАПП), предназначен для
+аппаратной реализации последовательного обмена между микропроцессором
+КР580ВМ80А или другим устройством, способным запрограммировать данную
+микросхему на требуемый режим работы, и каналами последовательной передачи
+дискретной информации.</p>
+
+<p class=MsoNormal style='text-align:justify'>Микросхема УСАПП преобразует
+параллельный код, получаемый от центрального процессора, в последовательный
+поток символов со служебными битами и выдает этот поток в последовательный
+канал связи с различной скоростью, а также выполняет обратное преобразование.
+Передаваемая и принимаемая информация при необходимости может контролироваться
+на четность (нечетность).</p>
+
+<p class=MsoNormal style='text-align:justify'>Микросхема УСАПП программируется
+на выполнение почти всех применяющихся в настоящее время протоколов
+последовательной передачи данных и работает в двух режимах: синхронном и
+асинхронном. Программирование микросхемы на тот или другой режим работы
+выполняется записью в соответствующие регистры слов инструкции режима,
+служебных синхросимволов и команды.</p>
+
+<p class=MsoNormal style='text-align:justify'>Максимальная скорость
+приема/передачи информации по последовательному каналу 64К бод, минимальная не
+ограничена и определяется внешними устройствами.</p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'>На рисунке представлено условное
+графическое обозначение микросхемы. Назначение выводов представлено в таблице:</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Вывод</b></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Обозначение</b></p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Функциональное
+  назначение</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB0-DB7</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Входы/выходы</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Канал данных – обмен
+  информацией между микропроцессором и микросхемой</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>RxD</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Приемник микросхемы</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=32
+  height=23 src="i8251.files/image002.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Синхронизация передачи</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=27
+  height=23 src="i8251.files/image003.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Запись (вывод) информации в БИС</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=25
+  height=23 src="i8251.files/image004.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Выбор микросхемы</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>CO/D</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Управление/данные</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=27
+  height=21 src="i8251.files/image005.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Чтение (ввод) информации из БИС</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>RxRDY</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Выход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Готовность приемника</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>TxRDY</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Выход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Готовность передатчика</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>SYNDET</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход/выход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Двунаправленный трехстабильный
+  программируемый вход/выход</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=33
+  height=23 src="i8251.files/image006.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Готовность внешнего устройства
+  принять данные</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>TxEND</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Выход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Конец передачи</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>TxD</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Выход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Передатчик микросхемы</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>C</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Синхронизация работы микросхемы</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>RESET</span></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Установка БИС в исходное
+  состояние</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=35
+  height=23 src="i8251.files/image007.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Готовность внешнего устройства
+  передавать данные</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=33
+  height=23 src="i8251.files/image008.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Выход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Запрос приемника внешнего
+  устройства на прием данных</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=36
+  height=21 src="i8251.files/image009.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Выход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Запрос передатчика внешнего
+  устройства на передачу данных</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=78 valign=top style='width:58.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=33
+  height=23 src="i8251.files/image010.gif"></sub></p>
+  </td>
+  <td width=114 valign=top style='width:85.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Вход</p>
+  </td>
+  <td width=499 valign=top style='width:373.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Синхронизация приема</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Структурная схема:</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=394
+height=383 src="i8251.files/image011.gif"></p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Основными управляющими сигналами
+являются <sub><img width=27 height=23 src="i8251.files/image003.gif"></sub>, <sub><img
+width=27 height=21 src="i8251.files/image005.gif"></sub>, <span lang=EN-US>CO</span>/<span
+lang=EN-US>D</span>, <sub><img width=25 height=23 src="i8251.files/image004.gif"></sub>.
+Возможные варианты сочетания управляющих сигналов и направления передачи
+информации в системе приведены в таблице:</p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=205 colspan=4 valign=top style='width:153.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Сигналы на
+  входах</b></p>
+  </td>
+  <td width=397 rowspan=2 valign=top style='width:297.75pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Направление
+  передачи и вид информации</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=55 valign=top style='width:41.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>CO</span>/<span
+  lang=EN-US>D</span></p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=27
+  height=21 src="i8251.files/image005.gif"></sub></p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=27
+  height=23 src="i8251.files/image003.gif"></sub></p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=25
+  height=23 src="i8251.files/image004.gif"></sub></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=55 valign=top style='width:41.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=397 valign=top style='width:297.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Канал данных системы – УСАПП
+  (управление)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=55 valign=top style='width:41.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=397 valign=top style='width:297.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Канал данных системы – УСАПП
+  (данные)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=55 valign=top style='width:41.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=397 valign=top style='width:297.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>УСАПП – канал данных системы
+  (информация состояния)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=55 valign=top style='width:41.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=397 valign=top style='width:297.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>УСАПП – канал данных системы
+  (данные)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=55 valign=top style='width:41.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=397 valign=top style='width:297.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Высокоомное состояние канала
+  данных УСАПП</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Синхронный режим характеризуется
+непрерывным потоком передаваемой (принимаемой) информации. Для установления
+синхронизации между передатчиком/приемником микросхемы КР580ВВ51 и
+приемником/передатчиком внешнего устройства и выделения из последовательного
+потока символов полезной информации в поток информации вводятся синхросимволы.
+Информационная (5-8 бит) и временная длины синхросимволов и слова данных равны.</p>
+
+<p class=MsoNormal style='text-align:justify'>Если между словами данных имеются
+временные промежутки, то они заполняются синхросимволами. Синхросимволов может
+быть один или два (устанавливается программно). Если запрограммирован контроль
+данных на четность (нечетность), то после каждого слова данных вставляется бит
+контроля. Сигналы на внешних входах микросхемы асинхронны по отношению ко входу
+С. Однако соотношение частот общей синхронизации микросхемы <sub><img width=25
+height=24 src="i8251.files/image012.gif"></sub> и частот синхронизации
+передачи/приема <sub><img width=29 height=24 src="i8251.files/image013.gif"></sub>,
+<sub><img width=31 height=24 src="i8251.files/image014.gif"></sub> должно быть:</p>
+
+<p class=MsoNormal align=center style='text-align:center'><sub><img width=85
+height=24 src="i8251.files/image015.gif"></sub>, <sub><img width=87 height=24
+src="i8251.files/image016.gif"></sub></p>
+
+<p class=MsoNormal style='text-align:justify'>При этом обеспечивается скорость
+передачи/приема информации 0-64 Кбод. Скорость численно равна частоте
+синхронизации передачи/приема и определяется в указанном выше диапазоне
+возможностями внешнего устройства.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Асинхронный режим характеризуется
+одиночными посылками информации, инициализация которых определяется либо
+микропроцессором системы, либо внешним устройством.</p>
+
+<p class=MsoNormal style='text-align:justify'>В начале каждой посылки устанавливается
+отрицательный импульс старт-бит, длительность которого равна биту данных.
+Старт-бит служит для ввода в синхронизацию передачи/приема микросхемы КР580ВВ51
+и приемника/передатчика внешнего устройства.</p>
+
+<p class=MsoNormal style='text-align:justify'>В конце каждой посылки
+устанавливается положительный импульс стоп-бит, длительность которого может
+равняться 1, 1.5 и 2 длительностям бита информации (устанавливается
+программно). Стоп-бит служит для определения конца посылки.</p>
+
+<p class=MsoNormal style='text-align:justify'>Асинхронный режим имеет три
+подрежима, отличающихся друг от друга различным соотношением численных значений
+частот синхронизации передачи/приема к скорости передачи:</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'>- подрежим 1:1
+сотношения частот общей синхронизации микросхемы и синхронизации
+передачи/приема, а также скорость передачи аналогичны синхронному режиму;</p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'>-  подрежим
+1:16 </p>
+
+<p class=MsoNormal align=center style='margin-left:35.4pt;text-align:center'><sub><img
+width=136 height=44 src="i8251.files/image017.gif"></sub>, <sub><img width=137
+height=44 src="i8251.files/image018.gif"></sub></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'>-  подрежим
+1:64</p>
+
+<p class=MsoNormal align=center style='margin-left:35.4pt;text-align:center'><sub><img
+width=129 height=44 src="i8251.files/image019.gif"></sub>, <sub><img width=131
+height=44 src="i8251.files/image020.gif"></sub></p>
+
+<p class=MsoNormal style='text-align:justify'>В подрежимах 1:16 и 1:64 должны
+выполняться условия:</p>
+
+<p class=MsoNormal align=center style='text-align:center'><sub><img width=75
+height=43 src="i8251.files/image021.gif"></sub>, <sub><img width=75 height=43
+src="i8251.files/image022.gif"></sub></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Программирование микросхемы на
+требуемый режим работы производится путем занесения в соответствующие регистры
+слов (инструкций) режима, кода синхросимволов (для синхронного режима) и команд
+(приказов). Форматы и содержание слова режима приведены на рисунке (а – для
+синхронного режима, б – для асинхронного):</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=444
+height=281 src="i8251.files/image023.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=468
+height=229 src="i8251.files/image024.jpg"></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Слова приказа представлены в
+таблице:</p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Разряд</b></p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Значение</b></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Команда (приказ)</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB0</span></p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Передача информации
+  невозможна</p>
+  <p class=MsoNormal align=center style='text-align:center'>Передача информации
+  возможна</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB</span>1</p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>-----</p>
+  <p class=MsoNormal align=center style='text-align:center'>Запрос о готовности
+  передатчика ВУ передать данные</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB</span>2</p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Прием информации
+  невозможен</p>
+  <p class=MsoNormal align=center style='text-align:center'>Прием информации
+  возможен</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB</span>3</p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>-----</p>
+  <p class=MsoNormal align=center style='text-align:center'>Пауза</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB</span>4</p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>-----</p>
+  <p class=MsoNormal align=center style='text-align:center'>Сброс триггеров
+  ошибок в исходное состояние</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB</span>5</p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>-----</p>
+  <p class=MsoNormal align=center style='text-align:center'>Запрос о готовности
+  приемника ВУ принять данные</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB</span>6</p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>-----</p>
+  <p class=MsoNormal align=center style='text-align:center'>Программный сброс
+  УСАПП в исходное состояние</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB7</span></p>
+  </td>
+  <td width=83 valign=top style='width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=393 valign=top style='width:295.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>-----</p>
+  <p class=MsoNormal align=center style='text-align:center'>Поиск
+  синхросимволов</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Последовательность
+программирования для подготовки микросхемы к работе приведена в таблице:</p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=387 rowspan=2 valign=top style='width:290.05pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Последовательность
+  программирования БИС КР580ВВ51</b></p>
+  </td>
+  <td width=217 colspan=4 valign=top style='width:162.8pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Сигналы на
+  входах</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>CO/D</span></p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=27
+  height=23 src="i8251.files/image003.gif"></sub></p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=25
+  height=23 src="i8251.files/image004.gif"></sub></p>
+  </td>
+  <td width=63 valign=top style='width:47.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>RESET</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=387 valign=top style='width:290.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>1. Установка исходного
+  состояния</p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>x</span></p>
+  </td>
+  <td width=63 valign=top style='width:47.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=387 valign=top style='width:290.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>2. Загрузка слова режима</p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=63 valign=top style='width:47.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=387 valign=top style='width:290.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>3. Загрузка синхросимвола</p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=63 valign=top style='width:47.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=387 valign=top style='width:290.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>4. Загрузка синхросимвола</p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=63 valign=top style='width:47.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=387 valign=top style='width:290.05pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>5. Загрузка команды</p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>1</p>
+  </td>
+  <td width=50 valign=top style='width:37.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=49 valign=top style='width:36.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=63 valign=top style='width:47.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Процесс программирования в целом
+асинхронен относительно сигналов <sub><img width=32 height=23
+src="i8251.files/image002.gif"></sub> и <sub><img width=33 height=23
+src="i8251.files/image010.gif"></sub>, однако запись слова режима для
+асинхронного режима 1:1 должна производиться только в положительном полупериоде
+сигналов <sub><img width=32 height=23 src="i8251.files/image002.gif"></sub> и <sub><img
+width=33 height=23 src="i8251.files/image010.gif"></sub>.</p>
+
+<p class=MsoNormal style='text-align:justify'>При занесении в микросхему
+управляющих слов или данных, а также при чтении состояния на вход С должны
+поступать импульсы синхронизации.</p>
+
+<p class=MsoNormal style='text-align:justify'>Время восстановления между
+операциями записи <span lang=EN-US>WR</span> в асинхронном режиме <sub><img
+width=27 height=24 src="i8251.files/image025.gif"></sub>, в синхронном режиме <sub><img
+width=35 height=24 src="i8251.files/image026.gif"></sub>.</p>
+
+<p class=MsoNormal style='text-align:justify'>Данные <span lang=EN-US>DB</span>7-<span
+lang=EN-US>DB</span>0 записываются в буферные схемы ввода/вывода после перехода
+сигнала <sub><img width=27 height=23 src="i8251.files/image003.gif"></sub> из
+состояния низкого уровня в состояние высокого уровня через <sub><img width=28
+height=24 src="i8251.files/image027.gif"></sub>. При чтении состояния входные
+сигналы <sub><img width=33 height=23 src="i8251.files/image006.gif"></sub> и <sub><img
+width=28 height=24 src="i8251.files/image027.gif"></sub> устанавливаются на <sub><img
+width=27 height=24 src="i8251.files/image025.gif"></sub> до перехода сигнала <sub><img
+width=27 height=21 src="i8251.files/image005.gif"></sub> из состояния высокого
+уровня в состояние низкого уровня. </p>
+
+<p class=MsoNormal style='text-align:justify'>При передаче/приеме информации
+микросхема устанавливается в исходное положение сигналом <span lang=EN-US>RESET</span>.</p>
+
+<p class=MsoNormal style='text-align:justify'>После записи слова режима,
+синхросимвола (синхросимволов) и команд микросхема переходит в один из пяти
+основных режимов работы.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>1) Режим асинхронной передачи</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>После записи в микросхему данных
+в параллельном формате происходит автоматическое присоединение к каждой посылке
+старт-бита и стоп-бита. Бит контроля четности (если он запрограммирован)
+вводится перед битами останова и может иметь нулевое или единичное значение.</p>
+
+<p class=MsoNormal style='text-align:justify'>Если в слове команды в разряд <span
+lang=EN-US>DB</span>0 записана 1 и на входе устанавливается напряжение низкого
+уровня, то информация в виде последовательного потока данных подается на вывод <span
+lang=EN-US>TxD</span> частотой, кратной 1:1, 1:16 или 1:64 части частоты
+синхронизации передатчика (как определено инструкцией режима). Если микросхема
+не содержит информации для передачи, то на выходе <span lang=EN-US>TxD</span>
+устанавливается напряжение высокого уровня. Если в слове команды
+запрограммирован режим «Пауза», то на выходе <span lang=EN-US>TxD</span>
+устанавливается напряжение высокого уровня.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Временные диаграммы для данного
+режима:</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=508
+height=387 src="i8251.files/image028.gif"></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>2) Режим асинхронного приема</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Напряжение высокого уровня на
+входе <span lang=EN-US>RxD</span> свидетельствует о том, что в данный момент
+нет приема информации. Если УСАПП запрограммирован на асинхронный прием, то
+появление на входе <span lang=EN-US>RxD</span> напряжения низкого уровня
+свидетельствует о приходе старт-бита. Истинность этого бита проверяется
+вторично стробированием в его середине. Если наличие напряжения низкого уровня
+на входе подтверждается, то запускается счетчик битов, который позволяет
+определить конец битов данных, бит контроля (если контроль запрограммирован) и
+стоп-бит. С другой стороны, если при вторичной пробе обнаруживается напряжение
+высокого уровня, то приемник переходит в исходное состояние. Схема управления и
+синхронизации приемника предохраняет от ошибочного запуска счетчика битов. Если
+на выходе <span lang=EN-US>RxD</span> присутствует напряжение низкого уровня,
+вызванное командой <span lang=EN-US>DB</span>3=1 «Пауза». Регистр приемника
+обнаруживает паузу, и на выходе <span lang=EN-US>SYNDET</span> устанавливается
+напряжение высокого уровня.</p>
+
+<p class=MsoNormal style='text-align:justify'>Если есть ошибка в принятых
+данных, то триггер ошибки четности устанавливается в единичное состояние. Если
+при анализе окажется, что стоп-бит в состоянии низкого уровня, то триггер
+ошибки стоп-бита устанавливается в единичное состояние. Стоп-бит сигнализирует
+о том, что данные находятся в приемнике. Принятые данные передаются через
+внутренние шины данных в выходной регистр данных, и тогда на выходе <span
+lang=EN-US>RxRDY</span> появляется напряжение высокого уровня, сигнализируя о
+готовности к считыванию. Если предыдущий символ (данные) не был передан в
+микропроцессор, то принятый символ заменяет его в буферных схемах ввода/вывода
+и триггер ошибки переполнения устанавливается в единичное состояние (т.е.
+предыдущий байт теряется). Триггер ошибки переполнения также установится в
+единичное состояние, если чтение данных произойдет в момент записи данных из
+регистра приемника в выходной регистр данных буферных схем ввода/вывода (в этом
+случае предыдущие данные тоже теряются).</p>
+
+<p class=MsoNormal style='text-align:justify'>Наличие ошибок в триггерах не
+останавливает работу микросхемы. Триггеры ошибок сбрасываются словом команды в
+исходное состояние.</p>
+
+<p class=MsoNormal style='text-align:justify'>Если в асинхронном режиме во
+время приема/передачи информации программируется пауза, регистр приемника
+автоматически обнаруживает ее, инициирует и запоминает с помощью внутреннего
+регистра «Пауза». Проконтролировать это состояние можно на выводе <span
+lang=EN-US>SYNDET</span> или во время чтения состояния УСАПП (разряд <span
+lang=EN-US>DB</span>6).</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Временные диаграммы для данного
+режима:</p>
+
+<p class=MsoNormal style='text-align:justify'><img width=676 height=393
+src="i8251.files/image029.jpg"></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>3) Режим синхронной передачи</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>После записи в микросхему слова
+режима, команды и данных передатчик не начнет передачу до тех пор, пока на
+входе <sub><img width=33 height=23 src="i8251.files/image006.gif"></sub> не
+установится напряжение низкого уровня. Если на входе <sub><img width=33
+height=23 src="i8251.files/image006.gif"></sub> установилось напряжение низкого
+уровня и в разряд <span lang=EN-US>DB</span>0 команды записана 1, то передатчик
+начинает трансляцию по выходу <span lang=EN-US>TxD</span> со скоростью
+синхроимпульсов, поступающих на вход <sub><img width=32 height=23
+src="i8251.files/image002.gif"></sub>.</p>
+
+<p class=MsoNormal style='text-align:justify'>После сигнала <span lang=EN-US>RESET</span>
+вновь выполняется программирование БИС. Для начала передачи информации по
+выводу <span lang=EN-US>TxD</span> в передатчик необходимо записать любые
+данные, которые будут потеряны, так как в это время приемник внешнего
+устройства будет работать в режиме поиска синхросимволов.</p>
+
+<p class=MsoNormal style='text-align:justify'>Может получиться, что
+микропроцессор не запишет очередной байт в УСАПП до того, как тот передаст
+предыдущий байт. В этом случае для предотвращения потери синхронизации между
+УСАПП и внешним устройством в поток данных автоматически вставляются
+синхросимволы. При этом на выход <span lang=EN-US>TxEND</span> подается
+напряжение высокого уровня, показывающее, что УСАПП не имеет информации для
+передачи и синхросимвол (синхросимволы) послан внешнему устройству. Когда
+микропроцессор начинает записывать информацию в УСАПП, на выходе <span
+lang=EN-US>TxEND</span> устанавливается напряжение низкого уровня.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Временные диаграммы для данного
+режима:</p>
+
+<p class=MsoNormal style='text-align:justify'><img width=676 height=390
+src="i8251.files/image030.jpg"></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>4) Режим синхронного приема с
+внутренней синхронизацией</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Временные диаграммы для данного
+режима:</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'><img width=676 height=427
+src="i8251.files/image031.jpg"></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>В этом режиме работа микросхемы
+начинается с поиска синхросимволов. Информация принимается по входу <span
+lang=EN-US>RxD</span> на первый регистр приемника и непрерывно сравнивается с
+содержимым регистра первого синхросимвола. Если содержимое двух регистров не
+одинаково, то регистр приемника принимает следующий байт информации и сравнение
+повторяется. Когда содержимое сравниваемых регистров становится одинаковым,
+УСАПП заканчивает поиск и переходит в режим синхронизации. При этом, если не
+запрограммирован контроль четности (нечетности), на выводе <span lang=EN-US>SYNDET</span>,
+работающем как выход, во время приема последнего бита синхросимвола с задержкой
+на <sub><img width=36 height=24 src="i8251.files/image032.gif"></sub> относительно
+фронта сигнала <sub><img width=33 height=23 src="i8251.files/image010.gif"></sub> устанавливается
+напряжение высокого уровня, сигнализируя внешнему устройству о том, что
+произошел захват синхронизации.</p>
+
+<p class=MsoNormal style='text-align:justify'>Если УСАПП запрограммирован на
+работу с двумя синхросимволами или с контролем четности (нечетности), то
+указанная выше ситуация произойдет во время приема последнего бита второго
+синхросимвола или бита контроля соответственно. На выходе <span lang=EN-US>SYNDET</span>
+при чтении состояния УСАПП устанавливается напряжение низкого уровня.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>5) Режим синхронного приема с
+внешней синхронизацией</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Временные диаграммы для данного
+режима:</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=415
+height=450 src="i8251.files/image033.gif"></p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>В этом режиме на вывод <span
+lang=EN-US>SYNDET</span>, работающий как вход, подается напряжение
+синхронизации, которое разрешает прием информации по входу <span lang=EN-US>RxD</span>
+со скоростью синхросигналов, поступающих на вход <sub><img width=33 height=23
+src="i8251.files/image010.gif"></sub>. Длительность входных сигналов,
+поступавших на вход <span lang=EN-US>SYNDET</span>, должна быть больше или
+равна периоду частоты синхросигналов.</p>
+
+<p class=MsoNormal style='text-align:justify'>Сигнал, поступающий на вход <span
+lang=EN-US>SYNDET</span>, может задержать начало приема информации на один
+период частоты синхронизации приемника из-за отсутствия правильного соотношения
+по времени синхросигнала <sub><img width=33 height=23
+src="i8251.files/image010.gif"></sub> и сигналов, поступающих на вход <span
+lang=EN-US>SYNDET</span>.</p>
+
+<p class=MsoNormal style='text-align:justify'>Для исключения задержки (сдвига)
+бита данных, например, начала приема информации по входу <span lang=EN-US>RxD</span>
+с <span lang=EN-US>n</span>-го периода частоты синхронизации сигнала <sub><img
+width=33 height=23 src="i8251.files/image010.gif"></sub>, необходимо на выводе <span
+lang=EN-US>SYNDET</span> установить в период <span lang=EN-US>N</span>-1
+частоты синхронизации напряжение высокого уровня не более чем на <sub><img
+width=35 height=24 src="i8251.files/image034.gif"></sub> с начала перехода
+положительного полупериода сигнала <sub><img width=33 height=23
+src="i8251.files/image010.gif"></sub> из состояния высокого уровня в состояние
+низкого уровня.</p>
+
+<p class=MsoNormal style='text-align:justify'>Для исключения ошибок, вызванных
+ложным появлением сигнала <span lang=EN-US>RxRDY</span> необходимо через 2-3
+периода сигнала <sub><img width=33 height=23 src="i8251.files/image010.gif"></sub> после
+начала передачи данных произвести чтение денных без учета результата.</p>
+
+<p class=MsoNormal style='text-align:justify'>Если в слове режима
+запрограммирован синхронный прием с внешней синхронизацией, то цепи внутренней
+синхронизации блокируются внутренним триггером внешней синхронизации, который
+маскируется разрядом <span lang=EN-US>DB</span>6 слова режима и положительным
+фронтом сигнала <sub><img width=33 height=23 src="i8251.files/image010.gif"></sub> и
+устанавливается в исходное состояние при поступлении сигнала <span lang=EN-US>RESET</span>
+или при чтении состояния микросхемы.</p>
+
+<p class=MsoNormal style='text-align:justify'>В режиме синхронного приема с
+внешней синхронизацией запрограммированные синхросимволы не используются, а
+начало и конец приема данных определяются сигналом <span lang=EN-US>SYNDET</span>.</p>
+
+<p class=MsoNormal style='text-align:justify'>Ошибки четности и переполнения
+контролируются тем же способом, что и в асинхронном режиме.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>В системах передачи данных часто
+необходимо контролировать то состояние микросхемы, которое устанавливается в
+процессе работы, сбоев, ошибок или других ситуаций. Микросхема УСАПП содержит
+регистр состояний, позволяющий программисту читать ее состояние в любой момент
+времени в процессе выполнения операции. Содержимое регистра состояния не
+изменяется во время чтения состояния. Регистр состояния находится в буферных
+схемах ввода/вывода.</p>
+
+<p class=MsoNormal style='text-align:justify'>Формат слова состояния приведен в
+таблице:</p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Разряд</b></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Обозначение</b></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Содержание</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB7</span></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DSR</span></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Готовность передатчика</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB6</span></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>SYNDET</span></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Готовность приемника</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB5</span></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-----</span></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Ошибка стоп-бита (в конце
+  посылки не обнаружен стоп-бит)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB4</span></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-----</span></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Ошибка переполнения (символ не
+  прочитан из приемника)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB3</span></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>-----</span></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Ошибка четностей</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB2</span></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>TxEND</span></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Передатчик пуст</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB1</span></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>RxRDY</span></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Приемник принял символ и готов
+  к обмену с МП</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=69 valign=top style='width:51.45pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>DB0</span></p>
+  </td>
+  <td width=105 valign=top style='width:78.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>TxRDY</span></p>
+  </td>
+  <td width=430 valign=top style='width:322.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>Передатчик передал символ и
+  готов принять очередной от МП</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Вывод <span lang=EN-US>TxRDY</span>
+маскируется сигналами <sub><img width=33 height=23
+src="i8251.files/image006.gif"></sub> и «Передача информации возможна» разряда <span
+lang=EN-US>DB</span>0 слова приказа. Сигнал регистра состояния БИС не
+маскируется этими сигналами, а только определяет, свободен или занят входной
+регистр данных буферной схемы ввода/вывода. Триггер ошибки стоп-бита <span
+lang=EN-US>DB</span>5 устанавливается в единичное состояние, сели в конце
+посылки не обнаруживается стоп-бит. Триггер ошибки переполнения <span
+lang=EN-US>DB</span>4 устанавливается в единичное состояние, если
+микропроцессор не прочитал символ перед приемом в буферные схемы ввода/вывода
+новой информации. Триггер ошибки четности <span lang=EN-US>DB</span>3
+устанавливается в единичное состояние, если в принятых данных обнаруживается
+ошибка. Каждая из ошибок не прерывает работу микросхемы. Триггеры ошибок
+устанавливаются в исходное состояние командой «Сброс ошибок».</p>
+
+</div>
+
+</body>
+
+</html>

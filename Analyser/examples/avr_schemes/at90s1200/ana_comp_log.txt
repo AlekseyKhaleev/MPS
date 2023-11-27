@@ -1,0 +1,339 @@
+Start
+--------------------------------------------------
+
+0						PC:0x0000
+				RJMP 0x0004
+1000				next command clock cycle
+
+3000				PC:0x0004
+				NOP
+
+5000				PC:0x0005
+				LDI 0x10,0x04
+				result LDI: R16=0x04
+
+7000				PC:0x0006
+				OUT 0x17,0x10
+				result OUT: P[0x17]=0x04
+
+9000				PC:0x0007
+				LDI 0x10,0x08
+				result LDI: R16=0x08
+
+11000				PC:0x0008
+				OUT 0x08,0x10
+				result OUT: P[0x08]=0x08
+
+13000				PC:0x0009
+				before BSET: SREG=0x00
+				BSET 0x07
+				after BSET: SREG=0x80
+
+				The ANA_COMP interrupt took place
+14000				next command clock cycle
+15000				next command clock cycle
+16000				next command clock cycle
+17000				next command clock cycle
+
+19000				PC:0x0003
+				RJMP 0x000C
+20000				next command clock cycle
+
+24000				PC:0x000D
+				SBIC 0x08,0x05
+
+26000				PC:0x000E
+				before ORI: SREG=0x02
+				ORI 0x10,0x04
+				result ORI: R16=0x04
+				after ORI: SREG=0x00
+
+28000				PC:0x000F
+				OUT 0x18,0x10
+				result OUT: P[0x18]=0x04
+
+30000				PC:0x0010
+				RETI
+				result RETI: return to address 0x000A
+31000				next command clock cycle
+32000				next command clock cycle
+33000				next command clock cycle
+
+35000				PC:0x000A
+				NOP
+
+37000				PC:0x000B
+				RJMP 0x000A
+38000				next command clock cycle
+
+40000				PC:0x000A
+				NOP
+
+42000				PC:0x000B
+				RJMP 0x000A
+43000				next command clock cycle
+
+45000				PC:0x000A
+				NOP
+
+47000				PC:0x000B
+				RJMP 0x000A
+48000				next command clock cycle
+
+50000				PC:0x000A
+				NOP
+
+52000				PC:0x000B
+				RJMP 0x000A
+53000				next command clock cycle
+
+55000				PC:0x000A
+				NOP
+
+57000				PC:0x000B
+				RJMP 0x000A
+58000				next command clock cycle
+
+60000				PC:0x000A
+				NOP
+
+62000				PC:0x000B
+				RJMP 0x000A
+63000				next command clock cycle
+
+65000				PC:0x000A
+				NOP
+
+67000				PC:0x000B
+				RJMP 0x000A
+68000				next command clock cycle
+
+70000				PC:0x000A
+				NOP
+
+72000				PC:0x000B
+				RJMP 0x000A
+73000				next command clock cycle
+
+75000				PC:0x000A
+				NOP
+
+77000				PC:0x000B
+				RJMP 0x000A
+78000				next command clock cycle
+
+80000				PC:0x000A
+				NOP
+
+82000				PC:0x000B
+				RJMP 0x000A
+83000				next command clock cycle
+
+85000				PC:0x000A
+				NOP
+
+87000				PC:0x000B
+				RJMP 0x000A
+88000				next command clock cycle
+
+90000				PC:0x000A
+				NOP
+
+92000				PC:0x000B
+				RJMP 0x000A
+93000				next command clock cycle
+
+95000				PC:0x000A
+				NOP
+
+97000				PC:0x000B
+				RJMP 0x000A
+98000				next command clock cycle
+
+100000			PC:0x000A
+				NOP
+
+102000			PC:0x000B
+				RJMP 0x000A
+103000			next command clock cycle
+
+105000			PC:0x000A
+				NOP
+
+107000			PC:0x000B
+				RJMP 0x000A
+108000			next command clock cycle
+
+110000			PC:0x000A
+				NOP
+
+112000			PC:0x000B
+				RJMP 0x000A
+113000			next command clock cycle
+
+115000			PC:0x000A
+				NOP
+
+117000			PC:0x000B
+				RJMP 0x000A
+118000			next command clock cycle
+
+120000			PC:0x000A
+				NOP
+
+122000			PC:0x000B
+				RJMP 0x000A
+123000			next command clock cycle
+
+125000			PC:0x000A
+				NOP
+
+127000			PC:0x000B
+				RJMP 0x000A
+128000			next command clock cycle
+
+130000			PC:0x000A
+				NOP
+
+132000			PC:0x000B
+				RJMP 0x000A
+133000			next command clock cycle
+
+135000			PC:0x000A
+				NOP
+
+137000			PC:0x000B
+				RJMP 0x000A
+138000			next command clock cycle
+
+140000			PC:0x000A
+				NOP
+
+142000			PC:0x000B
+				RJMP 0x000A
+143000			next command clock cycle
+
+145000			PC:0x000A
+				NOP
+
+147000			PC:0x000B
+				RJMP 0x000A
+148000			next command clock cycle
+
+150000			PC:0x000A
+				NOP
+
+152000			PC:0x000B
+				RJMP 0x000A
+153000			next command clock cycle
+
+155000			PC:0x000A
+				NOP
+
+157000			PC:0x000B
+				RJMP 0x000A
+158000			next command clock cycle
+
+160000			PC:0x000A
+				NOP
+
+162000			PC:0x000B
+				RJMP 0x000A
+163000			next command clock cycle
+
+165000			PC:0x000A
+				NOP
+
+167000			PC:0x000B
+				RJMP 0x000A
+168000			next command clock cycle
+
+170000			PC:0x000A
+				NOP
+
+172000			PC:0x000B
+				RJMP 0x000A
+173000			next command clock cycle
+
+175000			PC:0x000A
+				NOP
+
+177000			PC:0x000B
+				RJMP 0x000A
+178000			next command clock cycle
+
+180000			PC:0x000A
+				NOP
+
+182000			PC:0x000B
+				RJMP 0x000A
+183000			next command clock cycle
+
+185000			PC:0x000A
+				NOP
+
+187000			PC:0x000B
+				RJMP 0x000A
+188000			next command clock cycle
+
+190000			PC:0x000A
+				NOP
+
+192000			PC:0x000B
+				RJMP 0x000A
+193000			next command clock cycle
+
+195000			PC:0x000A
+				NOP
+
+197000			PC:0x000B
+				RJMP 0x000A
+198000			next command clock cycle
+
+200000			PC:0x000A
+				NOP
+
+202000			PC:0x000B
+				RJMP 0x000A
+203000			next command clock cycle
+
+205000			PC:0x000A
+				NOP
+
+207000			PC:0x000B
+				RJMP 0x000A
+208000			next command clock cycle
+
+210000			PC:0x000A
+				NOP
+
+212000			PC:0x000B
+				RJMP 0x000A
+213000			next command clock cycle
+
+215000			PC:0x000A
+				NOP
+
+217000			PC:0x000B
+				RJMP 0x000A
+218000			next command clock cycle
+
+220000			PC:0x000A
+				NOP
+
+222000			PC:0x000B
+				RJMP 0x000A
+223000			next command clock cycle
+
+225000			PC:0x000A
+				NOP
+
+227000			PC:0x000B
+				RJMP 0x000A
+228000			next command clock cycle
+
+230000			PC:0x000A
+				NOP
+
+--------------------------------------------------
+Stop

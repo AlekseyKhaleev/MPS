@@ -1,0 +1,58 @@
+/*
+ * Subject:	clock
+ * Device:	at90s1200
+ */
+.include "1200def.inc"
+
+.cseg
+.org 0
+	rjmp	reset
+.org OVF0addr
+	rjmp	tim0_ovf
+
+reset:	
+	ldi		r16,0x80
+	out		DDRB,r16
+	ldi		r16,0x01
+	out		DDRD,r16
+
+; Port B
+; ------
+; PB7 - motor2
+
+; Port D
+; ------ 
+; PD0 - motor
+; PD2 - int
+
+	ldi		r16,0x00
+	out		PORTB,r16	; Initial value
+	
+	ldi		r16,0x04
+	out		PORTD,r16	; Initial value
+	
+	ldi		r18,0x34	; seconds
+	ldi		r19,0x12	; minutes
+	
+    ldi		r16,0x05
+	out		TCCR0,r16
+	ldi		r16,0x02
+    out		TIMSK,r16
+    
+    sei
+
+; 7-segment display driving
+main:
+	in		r17,PORTB
+    clr		r16
+    out		PORTB,r16
+	or		r16,r17   
+    andi	r16,0x0f
+    lsl		r16
+	sbrc	r16,4
+	ldi		r16,0x01
+	rcall	display
+	andi	r17,0xf0
+	or		r17,r16
+	out		PORTB,r17
+	rjmp	main

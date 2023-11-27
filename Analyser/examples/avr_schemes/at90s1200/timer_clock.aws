@@ -1,0 +1,1 @@
+<AVRWorkspace><IOSettings><CurrentRegisters><WATCHDOG><register register="WDTCR" group="WATCHDOG" display="1" locked="0"/></WATCHDOG></CurrentRegisters></IOSettings><part name="AT90S1200"/><Files><File00000 Name="D:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_clock.asm" Position="262 113 1248 696" LineCol="12 0" State="Maximized"/></Files></AVRWorkspace>

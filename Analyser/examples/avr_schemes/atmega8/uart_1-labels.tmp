@@ -1,0 +1,27 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.30</VERSION>
+ <DEVICE>ATmega8</DEVICE>
+ <WORKING_DIR>c:\temp\repository\release\avrprg\avrasm</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>c:\temp\repository\release\avrprg\avrasm\appnotes</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\temp\repository\schemes\avr_schemes\atmega8\uart_1.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>c:\temp\repository\release\avrprg\avrasm\appnotes\m8def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\temp\repository\schemes\avr_schemes\atmega8\uart_1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\temp\repository\schemes\avr_schemes\atmega8\uart_1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\temp\repository\schemes\avr_schemes\atmega8\uart_1.map</FILE>
+  <FILE>C:\temp\repository\schemes\avr_schemes\atmega8\uart_1.lst</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <_reset><FILE>C:\temp\repository\schemes\avr_schemes\atmega8\uart_1.asm</FILE><LINE>14</LINE></_reset>
+  <main><FILE>C:\temp\repository\schemes\avr_schemes\atmega8\uart_1.asm</FILE><LINE>34</LINE></main>
+ </LABELS>
+</ASSEMBLER_INFO>

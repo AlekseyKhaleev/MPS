@@ -1,0 +1,36 @@
+MPLINK 4.20, Linker
+Linker Map File - Created Fri May 08 16:34:36 2009
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+             RESET_VECTOR       code   0x000000    program   0x000012
+                   .cinit    romdata   0x000009    program   0x000004
+                  .config       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00000a      
+                            0x002007    0x002007      
+            12 out of 1093 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     loop   0x000005    program     static E:\MPS 2.2.0 (PIC16F84A)\AnaliserPlugIns\PIC16F84\examples\blink_led\code\blink_led.asm
+                     wait   0x000004    program     static E:\MPS 2.2.0 (PIC16F84A)\AnaliserPlugIns\PIC16F84\examples\blink_led\code\blink_led.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     wait   0x000004    program     static E:\MPS 2.2.0 (PIC16F84A)\AnaliserPlugIns\PIC16F84\examples\blink_led\code\blink_led.asm
+                     loop   0x000005    program     static E:\MPS 2.2.0 (PIC16F84A)\AnaliserPlugIns\PIC16F84\examples\blink_led\code\blink_led.asm
+
+

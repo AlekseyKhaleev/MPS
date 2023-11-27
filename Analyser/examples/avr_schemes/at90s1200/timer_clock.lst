@@ -1,0 +1,558 @@
+
+AVRASM ver. 2.1.30  C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_clock.asm Thu Jan 07 12:06:07 2010
+
+C:\mps-2.1.12-r219\schemes\avr\at90s1200\timer_clock.asm(4): Including file 'C:\mps-2.1.12-r219\release\avrprg\avrasm\appnotes\1200def.inc'
+                 
+                 
+                 ; Здесь реализованы простейшие часики с использованием таймера
+                 ; Это файл описания внутренностей выбранного микроконтроллера
+                 .include "1200def.inc"
+                 
+                 ;***** Created: 2009-02-04 13:23 ******* Source: AT90S1200.xml ***********
+                 ;*************************************************************************
+                 ;* A P P L I C A T I O N   N O T E   F O R   T H E   A V R   F A M I L Y
+                 ;* 
+                 ;* Number            : AVR000
+                 ;* File Name         : "1200def.inc"
+                 ;* Title             : Register/Bit Definitions for the AT90S1200
+                 ;* Date              : 2009-02-04
+                 ;* Version           : 2.31
+                 ;* Support E-mail    : avr@atmel.com
+                 ;* Target MCU        : AT90S1200
+                 ;* 
+                 ;* DESCRIPTION
+                 ;* When including this file in the assembly program file, all I/O register 
+                 ;* names and I/O register bit names appearing in the data book can be used.
+                 ;* In addition, the six registers forming the three data pointers X, Y and 
+                 ;* Z have been assigned names XL - ZH. Highest RAM address for Internal 
+                 ;* SRAM is also defined 
+                 ;* 
+                 ;* The Register names are represented by their hexadecimal address.
+                 ;* 
+                 ;* The Register Bit names are represented by their bit number (0-7).
+                 ;* 
+                 ;* Please observe the difference in using the bit names with instructions
+                 ;* such as "sbr"/"cbr" (set/clear bit in register) and "sbrs"/"sbrc"
+                 ;* (skip if bit in register set/cleared). The following example illustrates
+                 ;* this:
+                 ;* 
+                 ;* in    r16,PORTB             ;read PORTB latch
+                 ;* sbr   r16,(1<<PB6)+(1<<PB5) ;set PB6 and PB5 (use masks, not bit#)
+                 ;* out   PORTB,r16             ;output to PORTB
+                 ;* 
+                 ;* in    r16,TIFR              ;read the Timer Interrupt Flag Register
+                 ;* sbrc  r16,TOV0              ;test the overflow flag (use bit#)
+                 ;* rjmp  TOV0_is_set           ;jump if set
+                 ;* ...                         ;otherwise do something else
+                 ;*************************************************************************
+                 
+                 #ifndef _1200DEF_INC_
+                 #define _1200DEF_INC_
+                 
+                 
+                 #pragma partinc 0
+                 
+                 ; ***** SPECIFY DEVICE ***************************************************
+                 .device AT90S1200
+                 #pragma AVRPART ADMIN PART_NAME AT90S1200
+                 .equ	SIGNATURE_000	= 0x1e
+                 .equ	SIGNATURE_001	= 0x90
+                 .equ	SIGNATURE_002	= 0x01
+                 
+                 #pragma AVRPART CORE CORE_VERSION V0
+                 
+                 
+                 ; ***** I/O REGISTER DEFINITIONS *****************************************
+                 ; NOTE:
+                 ; Definitions marked "MEMORY MAPPED"are extended I/O ports
+                 ; and cannot be used with IN/OUT instructions
+                 .equ	SREG	= 0x3f
+                 .equ	GIMSK	= 0x3b
+                 .equ	TIMSK	= 0x39
+                 .equ	TIFR	= 0x38
+                 .equ	MCUCR	= 0x35
+                 .equ	TCCR0	= 0x33
+                 .equ	TCNT0	= 0x32
+                 .equ	WDTCR	= 0x21
+                 .equ	EEAR	= 0x1e
+                 .equ	EEDR	= 0x1d
+                 .equ	EECR	= 0x1c
+                 .equ	PORTB	= 0x18
+                 .equ	DDRB	= 0x17
+                 .equ	PINB	= 0x16
+                 .equ	PORTD	= 0x12
+                 .equ	DDRD	= 0x11
+                 .equ	PIND	= 0x10
+                 .equ	ACSR	= 0x08
+                 
+                 
+                 ; ***** BIT DEFINITIONS **************************************************
+                 
+                 ; ***** TIMER_COUNTER_0 **************
+                 ; TIMSK - Timer/Counter Interrupt Mask Register
+                 .equ	TOIE0	= 1	; Timer/Counter0 Overflow Interrupt Enable
+                 
+                 ; TIFR - Timer/Counter Interrupt Flag register
+                 .equ	TOV0	= 1	; Timer/Counter0 Overflow Flag
+                 
+                 ; TCCR0 - Timer/Counter0 Control Register
+                 .equ	CS00	= 0	; Clock Select0 bit 0
+                 .equ	CS01	= 1	; Clock Select0 bit 1
+                 .equ	CS02	= 2	; Clock Select0 bit 2
+                 
+                 ; TCNT0 - Timer Counter 0
+                 .equ	TCNT00	= 0	; Timer Counter 0 bit 0
+                 .equ	TCNT01	= 1	; Timer Counter 0 bit 1
+                 .equ	TCNT02	= 2	; Timer Counter 0 bit 2
+                 .equ	TCNT03	= 3	; Timer Counter 0 bit 3
+                 .equ	TCNT04	= 4	; Timer Counter 0 bit 4
+                 .equ	TCNT05	= 5	; Timer Counter 0 bit 5
+                 .equ	TCNT06	= 6	; Timer Counter 0 bit 6
+                 .equ	TCNT07	= 7	; Timer Counter 0 bit 7
+                 
+                 
+                 ; ***** WATCHDOG *********************
+                 ; WDTCR - Watchdog Timer Control Register
+                 .equ	WDP0	= 0	; Watch Dog Timer Prescaler bit 0
+                 .equ	WDP1	= 1	; Watch Dog Timer Prescaler bit 1
+                 .equ	WDP2	= 2	; Watch Dog Timer Prescaler bit 2
+                 .equ	WDE	= 3	; Watch Dog Enable
+                 
+                 
+                 ; ***** PORTB ************************
+                 ; PORTB - Port B Data Register
+                 .equ	PORTB0	= 0	; Port B Data Register bit 0
+                 .equ	PB0	= 0	; For compatibility
+                 .equ	PORTB1	= 1	; Port B Data Register bit 1
+                 .equ	PB1	= 1	; For compatibility
+                 .equ	PORTB2	= 2	; Port B Data Register bit 2
+                 .equ	PB2	= 2	; For compatibility
+                 .equ	PORTB3	= 3	; Port B Data Register bit 3
+                 .equ	PB3	= 3	; For compatibility
+                 .equ	PORTB4	= 4	; Port B Data Register bit 4
+                 .equ	PB4	= 4	; For compatibility
+                 .equ	PORTB5	= 5	; Port B Data Register bit 5
+                 .equ	PB5	= 5	; For compatibility
+                 .equ	PORTB6	= 6	; Port B Data Register bit 6
+                 .equ	PB6	= 6	; For compatibility
+                 .equ	PORTB7	= 7	; Port B Data Register bit 7
+                 .equ	PB7	= 7	; For compatibility
+                 
+                 ; DDRB - Port B Data Direction Register
+                 .equ	DDB0	= 0	; Port B Data Direction Register bit 0
+                 .equ	DDB1	= 1	; Port B Data Direction Register bit 1
+                 .equ	DDB2	= 2	; Port B Data Direction Register bit 2
+                 .equ	DDB3	= 3	; Port B Data Direction Register bit 3
+                 .equ	DDB4	= 4	; Port B Data Direction Register bit 4
+                 .equ	DDB5	= 5	; Port B Data Direction Register bit 5
+                 .equ	DDB6	= 6	; Port B Data Direction Register bit 6
+                 .equ	DDB7	= 7	; Port B Data Direction Register bit 7
+                 
+                 ; PINB - Port B Input Pins
+                 .equ	PINB0	= 0	; Port B Input Pins bit 0
+                 .equ	PINB1	= 1	; Port B Input Pins bit 1
+                 .equ	PINB2	= 2	; Port B Input Pins bit 2
+                 .equ	PINB3	= 3	; Port B Input Pins bit 3
+                 .equ	PINB4	= 4	; Port B Input Pins bit 4
+                 .equ	PINB5	= 5	; Port B Input Pins bit 5
+                 .equ	PINB6	= 6	; Port B Input Pins bit 6
+                 .equ	PINB7	= 7	; Port B Input Pins bit 7
+                 
+                 
+                 ; ***** PORTD ************************
+                 ; PORTD - Data Register, Port D
+                 .equ	PORTD0	= 0	; 
+                 .equ	PD0	= 0	; For compatibility
+                 .equ	PORTD1	= 1	; 
+                 .equ	PD1	= 1	; For compatibility
+                 .equ	PORTD2	= 2	; 
+                 .equ	PD2	= 2	; For compatibility
+                 .equ	PORTD3	= 3	; 
+                 .equ	PD3	= 3	; For compatibility
+                 .equ	PORTD4	= 4	; 
+                 .equ	PD4	= 4	; For compatibility
+                 .equ	PORTD5	= 5	; 
+                 .equ	PD5	= 5	; For compatibility
+                 .equ	PORTD6	= 6	; 
+                 .equ	PD6	= 6	; For compatibility
+                 
+                 ; DDRD - Data Direction Register, Port D
+                 .equ	DDD0	= 0	; 
+                 .equ	DDD1	= 1	; 
+                 .equ	DDD2	= 2	; 
+                 .equ	DDD3	= 3	; 
+                 .equ	DDD4	= 4	; 
+                 .equ	DDD5	= 5	; 
+                 .equ	DDD6	= 6	; 
+                 
+                 ; PIND - Input Pins, Port D
+                 .equ	PIND0	= 0	; 
+                 .equ	PIND1	= 1	; 
+                 .equ	PIND2	= 2	; 
+                 .equ	PIND3	= 3	; 
+                 .equ	PIND4	= 4	; 
+                 .equ	PIND5	= 5	; 
+                 .equ	PIND6	= 6	; 
+                 
+                 
+                 ; ***** ANALOG_COMPARATOR ************
+                 ; ACSR - Analog Comparator Control And Status Register
+                 .equ	ACIS0	= 0	; Analog Comparator Interrupt Mode Select bit 0
+                 .equ	ACIS1	= 1	; Analog Comparator Interrupt Mode Select bit 1
+                 .equ	ACIE	= 3	; Analog Comparator Interrupt Enable
+                 .equ	ACI	= 4	; Analog Comparator Interrupt Flag
+                 .equ	ACO	= 5	; Analog Comparator Output
+                 .equ	ACD	= 7	; Analog Comparator Disable
+                 
+                 
+                 ; ***** CPU **************************
+                 ; SREG - Status Register
+                 .equ	SREG_C	= 0	; Carry Flag
+                 .equ	SREG_Z	= 1	; Zero Flag
+                 .equ	SREG_N	= 2	; Negative Flag
+                 .equ	SREG_V	= 3	; Two's Complement Overflow Flag
+                 .equ	SREG_S	= 4	; Sign Bit
+                 .equ	SREG_H	= 5	; Half Carry Flag
+                 .equ	SREG_T	= 6	; Bit Copy Storage
+                 .equ	SREG_I	= 7	; Global Interrupt Enable
+                 
+                 ; MCUCR - MCU Control Register
+                 .equ	ISC00	= 0	; Interrupt Sense Control 0 bit 0
+                 .equ	ISC01	= 1	; Interrupt Sense Control 0 bit 1
+                 .equ	SM	= 4	; Sleep Mode
+                 .equ	SE	= 5	; Sleep Enable
+                 
+                 
+                 ; ***** EXTERNAL_INTERRUPT ***********
+                 ; GIMSK - General Interrupt Mask Register
+                 .equ	INT0	= 6	; External Interrupt Request 0 Enable
+                 
+                 
+                 ; ***** EEPROM ***********************
+                 ; EEAR - EEPROM Read/Write Access
+                 .equ	EEAR0	= 0	; EEPROM Read/Write Access bit 0
+                 .equ	EEAR1	= 1	; EEPROM Read/Write Access bit 1
+                 .equ	EEAR2	= 2	; EEPROM Read/Write Access bit 2
+                 .equ	EEAR3	= 3	; EEPROM Read/Write Access bit 3
+                 .equ	EEAR4	= 4	; EEPROM Read/Write Access bit 4
+                 .equ	EEAR5	= 5	; EEPROM Read/Write Access bit 5
+                 .equ	EEAR6	= 6	; EEPROM Read/Write Access bit 6
+                 
+                 ; EEDR - EEPROM Data Register
+                 .equ	EEDR0	= 0	; EEPROM Data Register bit 0
+                 .equ	EEDR1	= 1	; EEPROM Data Register bit 1
+                 .equ	EEDR2	= 2	; EEPROM Data Register bit 2
+                 .equ	EEDR3	= 3	; EEPROM Data Register bit 3
+                 .equ	EEDR4	= 4	; EEPROM Data Register bit 4
+                 .equ	EEDR5	= 5	; EEPROM Data Register bit 5
+                 .equ	EEDR6	= 6	; EEPROM Data Register bit 6
+                 .equ	EEDR7	= 7	; EEPROM Data Register bit 7
+                 
+                 ; EECR - EEPROM Control Register
+                 .equ	EERE	= 0	; EEPROM Read Enable
+                 .equ	EEWE	= 1	; EEPROM Write Enable
+                 
+                 
+                 
+                 ; ***** LOCKSBITS ********************************************************
+                 .equ	LB1	= 0	; Lockbit
+                 .equ	LB2	= 1	; Lockbit
+                 
+                 
+                 ; ***** FUSES ************************************************************
+                 ; LOW fuse bits
+                 
+                 
+                 
+                 ; ***** CPU REGISTER DEFINITIONS *****************************************
+                 .def	XH	= r27
+                 .def	XL	= r26
+                 .def	YH	= r29
+                 .def	YL	= r28
+                 .def	ZH	= r31
+                 .def	ZL	= r30
+                 
+                 
+                 
+                 ; ***** DATA MEMORY DECLARATIONS *****************************************
+                 .equ	FLASHEND	= 0x01ff	; Note: Word address
+                 .equ	IOEND	= 0x003f
+                 .equ	SRAM_SIZE	= 0
+                 .equ	RAMEND	= 0x0000
+                 .equ	XRAMEND	= 0x0000
+                 .equ	E2END	= 0x003f
+                 .equ	EEPROMEND	= 0x003f
+                 .equ	EEADRBITS	= 6
+                 #pragma AVRPART MEMORY PROG_FLASH 1024
+                 #pragma AVRPART MEMORY EEPROM 64
+                 #pragma AVRPART MEMORY INT_SRAM SIZE 0
+                 #pragma AVRPART MEMORY INT_SRAM START_ADDR 0x0
+                 
+                 
+                 
+                 
+                 
+                 ; ***** INTERRUPT VECTORS ************************************************
+                 .equ	INT0addr	= 0x0001	; External Interrupt 0
+                 .equ	OVF0addr	= 0x0002	; Timer/Counter0 Overflow
+                 .equ	ACIaddr	= 0x0003	; Analog Comparator
+                 
+                 .equ	INT_VECTORS_SIZE	= 4	; size in words
+                 
+                 #pragma AVRPART CORE INSTRUCTIONS_NOT_SUPPORTED break
+                 
+                 #endif  /* _1200DEF_INC_ */
+                 
+                 ; ***** END OF FILE ******************************************************
+                 
+                 ; Сегмент кода
+                 .cseg
+                 
+                 ; В самом начале программы всегда лежат вектора прерываний, за исключением случая, когда прерывания не используются
+                 ; Вектор прерывания - это адрес, указывающий на начало соответствующего обработчика прерывания
+                 ; Обработчик прерывания - это функция, вызываемая при возникновении прерывания
+                 .org 0					; Переходим в начало памяти программ
+000000 c002      	rjmp	reset		; Переходим к обработчику прерывания "RESET"
+                 .org OVF0addr			; Переходим к адресу вектора прерывания по переполнению таймера 0
+000002 c053      	rjmp	tim0_ovf	; Переходим к обработчику прерывания "TIMER0_OVF"
+                 
+                 ; Обработчик прерывания "RESET"
+                 ; Как правило, здесь выполняется инициализация программы, подготовка к работе, так сказать
+                 reset:	
+000003 ef0f      	ldi	r16,0xff
+000004 bb07      	out	DDRB,r16	; Potr B turn out
+000005 bb01      	out	DDRD,r16	; Port D turn out
+                 
+                 ; Использование портов - что к чему подключено
+                 ; Port B
+                 ; ------
+                 ; PB0 - i1 - выбор индикатора 1
+                 ; PB1 - i2 - выбор индикатора 2
+                 ; PB2 - i3 - выбор индикатора 3
+                 ; PB3 - i4 - выбор индикатора 4
+                 ; PB4 - h - управление точкой на дисплее
+                 ; PB5 - enable - включение дисплея
+                 
+                 ; Port D
+                 ; ------ 
+                 ; На порт D повешены сегменты индикаторов - отдельные светодиоды
+                 ; PD0 - a
+                 ; PD1 - b
+                 ; PD2 - c
+                 ; PD3 - d
+                 ; PD4 - e
+                 ; PD5 - f
+                 ; PD6 - g
+                 
+000006 e201      	ldi	r16,0x21	; Включаем дисплей и зажигаем первый индикатор
+000007 bb08      	out	PORTB,r16
+                 	
+000008 2700      	clr	r16		; Данных для отображения сначала нет
+000009 bb02      	out	PORTD,r16
+                 	
+00000a 2722      	clr	r18		; Десятки и единицы секунд
+00000b 2733      	clr	r19		; Десятки и единицы минут
+                 	
+00000c e700      	ldi	r16,0x70	; Настраиваем таймер
+00000d bf02      	out	TCNT0,r16	; Указываем корректировочное значение
+00000e e003      	ldi	r16,0x03
+00000f bf03      	out	TCCR0,r16	; Указываем коэффициент деления частоты ядра
+000010 e002      	ldi	r16,0x02
+000011 bf09      	out	TIMSK,r16	; Разрешаем прерывание по переполению таймера (т.е. по переполнению TCNT0)
+                     
+000012 9478      	sei			; Разрешение прерываний
+                 
+                 ; В этом цикле происходит просесс управления 4-мя 7-сегментными индикаторами 
+                 ; Этот цикл периодически прерывается прерыванием от таймера
+                 main:
+000013 b318      	in	r17,PORTB	; Узнаём какой индикатор горит в данный момент
+000014 2700      	clr	r16
+000015 bb08      	out	PORTB,r16	; Тушим текущий горящий индикатор, иначе будут неприятные глазу наложения
+000016 2b01      	or	r16,r17   
+000017 700f      	andi	r16,0x0f
+000018 0f00      	lsl	r16		; Смена активного индикатора
+000019 fd04      	sbrc	r16,4
+00001a e001      	ldi	r16,0x01
+00001b d004      	rcall	display		; Кидаем в порт D данные для отображения
+00001c 7f10      	andi	r17,0xf0
+00001d 2b10      	or	r17,r16		
+00001e bb18      	out	PORTB,r17	; Зажигаем следующий выбранный индикатор
+00001f cff3      	rjmp	main		; И по новой
+                 
+                 ; Функция отображения чисел на дисплее
+                 ; Здесь творится полный беспредел, в результате которого каким-то образом
+                 ;  числа все-таки находят на дисплее свои места
+                 display:
+000020 3001      	cpi	r16,0x01
+000021 f419      	brne	dis_next1
+                 	; Десятки минут
+000022 2f53      	mov	r21,r19
+000023 9552      	swap	r21
+000024 c00a      	rjmp	display_end
+                 dis_next1:
+000025 3002      	cpi	r16,0x02
+000026 f411      	brne	dis_next2
+                 	; Единицы минут
+000027 2f53      	mov	r21,r19
+000028 c006      	rjmp	display_end
+                 dis_next2:
+000029 3004      	cpi	r16,0x04
+00002a f419      	brne	dis_next3
+                 	; Десятки секунд
+00002b 2f52      	mov	r21,r18
+00002c 9552      	swap	r21
+00002d c001      	rjmp	display_end
+                 dis_next3:
+                 	; Единицы секунд	
+00002e 2f52      	mov	r21,r18
+                 display_end:
+00002f 705f      	andi	r21,0x0f
+                 ; Декодирование числа в значение дисплея
+                 ; Если бы это было на языке Си, то код,
+                 ;  написанный ниже, был бы в виде "switch() {case ...}"
+000030 3050      	cpi	r21,0
+000031 f411      	brne	dec_next1
+000032 e35f      	ldi	r21,0x3f
+000033 c020      	rjmp	decoder_end
+                 dec_next1:
+000034 3051      	cpi	r21,1
+000035 f411      	brne	dec_next2
+000036 e056      	ldi	r21,0x06
+000037 c01c      	rjmp	decoder_end
+                 dec_next2:
+000038 3052      	cpi	r21,2
+000039 f411      	brne	dec_next3
+00003a e55b      	ldi	r21,0x5b
+00003b c018      	rjmp	decoder_end
+                 dec_next3:
+00003c 3053      	cpi	r21,3
+00003d f411      	brne	dec_next4
+00003e e45f      	ldi	r21,0x4f
+00003f c014      	rjmp	decoder_end
+                 dec_next4:
+000040 3054      	cpi	r21,4
+000041 f411      	brne	dec_next5
+000042 e656      	ldi	r21,0x66
+000043 c010      	rjmp	decoder_end
+                 dec_next5:
+000044 3055      	cpi	r21,5
+000045 f411      	brne	dec_next6
+000046 e65d      	ldi	r21,0x6d
+000047 c00c      	rjmp	decoder_end
+                 dec_next6:
+000048 3056      	cpi	r21,6
+000049 f411      	brne	dec_next7
+00004a e75d      	ldi	r21,0x7d
+00004b c008      	rjmp	decoder_end
+                 dec_next7:
+00004c 3057      	cpi	r21,7
+00004d f409      	brne	dec_next8
+00004e c005      	rjmp	decoder_end
+                 dec_next8:
+00004f 3058      	cpi	r21,8
+000050 f411      	brne	dec_next9
+000051 e75f      	ldi	r21,0x7f
+000052 c001      	rjmp	decoder_end
+                 dec_next9:
+000053 e65f      	ldi	r21,0x6f
+                 decoder_end:
+000054 bb52      	out	PORTD,r21	; Кидаем полученный код в порт D
+000055 9508      	ret			; Возвращаемся восвояси, прихватив с собой из стека пару байтов
+                 
+                 ; Обработчик прерывания по переполнению таймера 0
+                 ; Здесь по данным разведки КГБ происходят тайные махинации, связанные со счётом времени ;)
+                 tim0_ovf:
+                 	; Здесь используется BCD-формат представления десятичных чисел
+                 	; А сделано так для того, чтобы не париться потом, в функции "display"
+000056 9523      	inc	r18		; Инкремент единиц секунд
+                     
+000057 2ff2      	mov	r31,r18		; Эт так, для порядка, а может и для беспорядка
+000058 70ff      	andi	r31,0x0f
+000059 30fa      	cpi	r31,0x0a	; Проверка не накопилось ли 10 секунд в единицах секунд
+00005a f489      	brne	tim_end		; Если нет, выходим покедова из обработчика
+                     
+                 	; Если в единицах секунд накопилось больше 9 секунд - выполняем следующий код
+00005b 7f20      	andi	r18,0xf0	; Зачищаем единички секунд
+00005c e140      	ldi	r20,0x10
+00005d 0f24      	add     r18,r20		; Инкрементируем десятки секунд
+                     
+00005e 3620      	cpi	r18,0x60	; Проверка не накопилось ли 60 секунд
+00005f f060      	brlo	tim_end		; Если нет, выходим покедова из обработчика
+                     
+                 	; Если накопилось больше 59 секунд - выполняем следующий код
+000060 2722      	clr	r18
+000061 9533      	inc	r19
+                     
+000062 2ff3          mov		r31,r19		; Эт так, для порядка, а может и для беспорядка
+000063 70ff      	andi	r31,0x0f
+000064 303a      	cpi		r19,0x0a	; Проверка не накопилось ли 10 минут в единицах минут
+000065 f431          brne	tim_end		; Если нет, выходим покедова из обработчика
+                     
+                     ; Если в единицах минут накопилось больше 9 минут - выполняем следующий код
+000066 7f30          andi	r19,0xf0	; Зачищаем единички минут
+000067 e140          ldi		r20,0x10
+000068 0f34          add     r19,r20		; Инкрементируем десятки минут
+                     
+000069 333c          cpi		r19,60		; Проверка не накопилось ли 60 минут
+00006a f008          brlo	tim_end		; Если нет, выходим покедова из обработчика
+                     
+                     ; Если накопилось больше 59 минут - выполняем следующий код
+00006b 2733          clr		r19
+                     
+                     ; Часов нет, но не вопрос с доработкой для неособо ленивого студента! ;)
+                       
+                 tim_end:
+00006c e7f0      	ldi		r31,0x70	; Восстанавливаем корректировочное значение
+00006d bff2      	out		TCNT0,r31	
+00006e 9518          reti				; Выходим из обработчика
+                  
+
+
+RESOURCE USE INFORMATION
+------------------------
+
+Notice:
+The register and instruction counts are symbol table hit counts,
+and hence implicitly used resources are not counted, eg, the
+'lpm' instruction without operands implicitly uses r0 and z,
+none of which are counted.
+
+x,y,z are separate entities in the symbol table and are
+counted separately from r26..r31 here.
+
+.dseg memory usage only counts static data declared with .byte
+
+AT90S1200 register use summary:
+r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 r5 :   0 r6 :   0 r7 :   0 
+r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 r13:   0 r14:   0 r15:   0 
+r16:  24 r17:   5 r18:   9 r19:  10 r20:   4 r21:  26 r22:   0 r23:   0 
+r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 r29:   0 r30:   0 r31:   7 
+x  :   0 y  :   0 z  :   0 
+Registers used: 7 out of 35 (20.0%)
+
+AT90S1200 instruction use summary:
+adc   :   0 add   :   2 and   :   0 andi  :   7 asr   :   0 bclr  :   0 
+bld   :   0 brbc  :   0 brbs  :   0 brcc  :   0 brcs  :   0 breq  :   0 
+brge  :   0 brhc  :   0 brhs  :   0 brid  :   0 brie  :   0 brlo  :   2 
+brlt  :   0 brmi  :   0 brne  :  14 brpl  :   0 brsh  :   0 brtc  :   0 
+brts  :   0 brvc  :   0 brvs  :   0 bset  :   0 bst   :   0 cbi   :   0 
+cbr   :   0 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   6 
+cls   :   0 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 
+cpc   :   0 cpi   :  16 cpse  :   0 dec   :   0 eor   :   0 in    :   1 
+inc   :   2 ld    :   0 ldi   :  18 lsl   :   1 lsr   :   0 mov   :   6 
+neg   :   0 nop   :   0 or    :   2 ori   :   0 out   :  11 rcall :   1 
+ret   :   1 reti  :   1 rjmp  :  15 rol   :   0 ror   :   0 sbc   :   0 
+sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 sbr   :   0 sbrc  :   1 
+sbrs  :   0 sec   :   0 seh   :   0 sei   :   1 sen   :   0 ser   :   0 
+ses   :   0 set   :   0 sev   :   0 sez   :   0 sleep :   0 st    :   0 
+sub   :   0 subi  :   0 swap  :   2 tst   :   0 wdr   :   0 
+Instructions used: 20 out of 89 (22.5%)
+
+AT90S1200 memory use summary [bytes]:
+Segment   Begin    End      Code   Data   Used    Size   Use%
+---------------------------------------------------------------
+[.cseg] 0x000000 0x0000de    220      0    220    1024  21.5%
+[.dseg] 0x000000 0x000060      0      0      0       0      -
+[.eseg] 0x000000 0x000000      0      0      0      64   0.0%
+
+Assembly complete, 0 errors, 0 warnings

@@ -1,0 +1,282 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Структура микропроцессора КР580ВМ80А</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:ISOCPEUR;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:35.95pt 42.5pt 35.95pt 45.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='layout-grid-mode:line'>Структура
+микропроцессора КР580ВМ80А</span></b></p>
+
+<p class=MsoNormal><b><span style='layout-grid-mode:line'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Микропроцессор КР580ВМ80А реализован на основе
+общей внут­ренней шины данных и включает в себя следующие функциональные узлы:
+блок регистров общего назначения (РОН) с адресной логикой; блок
+арифметико-логического устройства (АЛУ); двунаправленную буферированную шину
+дан­ных; блок управления и синхронизации.</span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Блок регистров (РОН) предназначен для
+оперативного хранения ин­формации, участвующей в процессе выполнения программы.
+Он обра­зует статическую память с произвольным доступом, организованную в виде
+шести 16-битовых регистров. Из них три регистра могут ис­пользоваться как шесть
+отдельных 8-битовых программно-доступных регистров </span><i><span lang=EN-US
+style='layout-grid-mode:line'>B</span><span style='layout-grid-mode:line'>,</span></i><i><span
+lang=EN-US style='layout-grid-mode:line'>C</span><span style='layout-grid-mode:
+line'>,</span></i><i><span lang=EN-US style='layout-grid-mode:line'>D</span><span
+style='layout-grid-mode:line'>,</span></i><i><span lang=EN-US style='layout-grid-mode:
+line'>E</span><span style='layout-grid-mode:line'>,</span></i><i><span
+lang=EN-US style='layout-grid-mode:line'>H</span><span style='layout-grid-mode:
+line'>,</span></i><i><span lang=EN-US style='layout-grid-mode:line'>L</span></i><span
+style='layout-grid-mode:line'> общего назначения для хранения операндов или как
+три 16-битовые программно-доступные пары <i>ВС , </i></span><i><span
+lang=EN-US style='layout-grid-mode:line'>DE</span><span style='layout-grid-mode:
+line'>, </span></i><i><span lang=EN-US style='layout-grid-mode:line'>HL</span></i><span
+style='layout-grid-mode:line'> -для хранения адресов или двухбайтовых опе­рандов.
+При выполнении арифметических и логических бинарных опе­раций с регистровой
+адресацией в регистрах </span><i><span lang=EN-US style='layout-grid-mode:line'>B</span><span
+style='layout-grid-mode:line'>,</span></i><i><span lang=EN-US style='layout-grid-mode:
+line'>C</span><span style='layout-grid-mode:line'>,</span></i><i><span
+lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+line'>,</span></i><i><span lang=EN-US style='layout-grid-mode:line'>E</span><span
+style='layout-grid-mode:line'>,</span></i><i><span lang=EN-US style='layout-grid-mode:
+line'>H</span><span style='layout-grid-mode:line'>,</span></i><i><span
+lang=EN-US style='layout-grid-mode:line'>L</span><span lang=EN-US
+style='layout-grid-mode:line'> </span></i><span style='layout-grid-mode:line'>хранятся
+8-разрядные операнды, которые передаются в блок АЛУ для участия в операции.
+Второй операнд должен находиться в аккумуляторе АЛУ; результат операции
+сохраняется в блоке АЛУ. При выполнении операций приращения/уменьшения регистры
+используются в качестве источников данных и приемников результата операции.</span>                
+            </p>
+
+<p class=MsoNormal style='margin-top:4.0pt;text-indent:27.0pt'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;text-align:center;
+text-indent:27.0pt'>Функциональная схема процессора</p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;text-align:center'><img
+width=677 height=453 src="i8080-structure.files/image001.jpg"></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;text-indent:27.0pt'>  </p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Пары регистров </span><span lang=EN-US style='layout-grid-mode:line'>BC</span><span
+style='layout-grid-mode:line'>, </span><span lang=EN-US style='layout-grid-mode:
+line'>DE</span><span style='layout-grid-mode:line'>, </span><span lang=EN-US
+style='layout-grid-mode:line'>HL</span><span style='layout-grid-mode:line'>
+обычно используются в ка­честве регистров-указателей косвенной адресации при
+выполнении арифметических, логических и пересылочных операций. При этом ос­новным
+регистром-указателем является пара </span><span lang=EN-US style='layout-grid-mode:
+line'>HL</span><span style='layout-grid-mode:line'>.Исключение составляет
+операция сложения двухбайтовых слов, при выполнении которых пары </span><span
+lang=EN-US style='layout-grid-mode:line'>BC</span><span style='layout-grid-mode:
+line'>, </span><span lang=EN-US style='layout-grid-mode:line'>DE</span><span
+style='layout-grid-mode:line'>, </span><span lang=EN-US style='layout-grid-mode:
+line'>HL</span><span style='layout-grid-mode:line'> используются для хранения
+16-разрядных операндов. При этом содержимое любой пары побайтово сумми­руется в
+блоке АЛУ с содержимым пары </span><span lang=EN-US style='layout-grid-mode:
+line'>HL</span><span style='layout-grid-mode:line'>, и результат записы­вается
+в </span><span lang=EN-US style='layout-grid-mode:line'>HL</span><span
+style='layout-grid-mode:line'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Содержимое каждого из байтовых регистров может быть передано в блок АЛУ
+или  память через мультиплексоры блока РОН  и внутреннюю шину данных. Выбор
+регистра, участвующего в операции, осущест­вляется схемой выбора регистра. Аналогично
+осуществляется загрузка регистров.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Содержимое каждой пары регистров может быть увеличено или уменьшено на
+единицу под воздействием программы. Изменение осуществляется с помощью узла
+адресной логики.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>16-битовый регистр (</span><span lang=EN-US style='layout-grid-mode:line'>IP</span><span
+style='layout-grid-mode:line'>) используется в качестве программного счетчика (</span><span
+lang=EN-US style='layout-grid-mode:line'>PC</span><span style='layout-grid-mode:
+line'>) и формирует адрес очередного байта при считывании команды  из памяти.
+Его содержи­мое автоматически увеличивается после выборки каждого байта ко­манды
+схемой адресной логики. Загрузка и выдача содержимого </span><span lang=EN-US
+style='layout-grid-mode:line'>PC</span><span style='layout-grid-mode:line'>
+осуществляется байтами через мультиплексоры блока РОН  и внутреннюю шину
+данных.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>16-битовый указатель стека (</span><span lang=EN-US style='layout-grid-mode:
+line'>SP</span><span style='layout-grid-mode:line'>) хранит адрес ячейки об­ласти
+памяти, отведенной под стек, к которой было последнее об­ращение. Содержимое
+указателя стека уменьшается на 1 перед каж­дым занесением байта в стек или
+увеличивается на 1 после каж­дого извлечения байта из стека с помощью адресной
+логики. Ука­затель </span><span lang=EN-US style='layout-grid-mode:line'>SP</span><span
+style='layout-grid-mode:line'> загружается по внутренней шине данных через
+мультиплексор блока РОН. Содержимое </span><span lang=EN-US style='layout-grid-mode:
+line'>SP</span><span style='layout-grid-mode:line'> может быть прибавлено к
+содержимому </span><span lang=EN-US style='layout-grid-mode:line'>HL</span><span
+style='layout-grid-mode:line'>, для чего имеется возможность побайтовой
+пересылки содержимого SP через мультиплексоры РОН на внутреннюю шину данных и
+далее в АЛУ.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Пара регистров </span><span lang=EN-US style='layout-grid-mode:line'>WZ</span><span
+style='layout-grid-mode:line'> является расширением регистра команд и
+используется для временного хранения адресной части (третьего и  второго 
+байт)  команд перехода, передаваемых по внут­ренней шине данных в программный
+счетчик при выполнении команды.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Она же используется для временного хранения адреса порта (второй байт
+команд </span><span lang=EN-US style='layout-grid-mode:line'>IN</span><span
+lang=EN-US style='layout-grid-mode:line'> </span><span lang=EN-US
+style='layout-grid-mode:line'>n</span><span style='layout-grid-mode:line'>,</span><span
+lang=EN-US style='layout-grid-mode:line'>OUT</span><span lang=EN-US
+style='layout-grid-mode:line'> </span><span lang=EN-US style='layout-grid-mode:
+line'>n</span><span style='layout-grid-mode:line'>), который при считывании из
+памяти записывается как в регистр </span><span lang=EN-US style='layout-grid-mode:
+line'>W</span><span style='layout-grid-mode:line'> так и в регистр </span><span
+lang=EN-US style='layout-grid-mode:line'>Z</span><span style='layout-grid-mode:
+line'> и выдается на шину адреса дублировано, что позволяет подключать
+селекторы адреса портов к линиям </span><span lang=EN-US style='layout-grid-mode:
+line'>A</span><span style='layout-grid-mode:line'>15-</span><span lang=EN-US
+style='layout-grid-mode:line'>A</span><span style='layout-grid-mode:line'>8
+либо к </span><span lang=EN-US style='layout-grid-mode:line'>A</span><span
+style='layout-grid-mode:line'>7-</span><span lang=EN-US style='layout-grid-mode:
+line'>A</span><span style='layout-grid-mode:line'>0.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Адресная логика предназначена для хранения, программного из­менения и
+выдачи на адресную шину адресов данных и команд. Она содержит буферный регистр
+адреса (БРА), логическую схему прира­щения/уменьшения (СПУ) и адресный буфер.
+Буферный регистр адреса принимает и хранит адрес с любого 16-битового регистра.
+Его вы­ход связан с входами схемы  СПУ и входами адресного буфера.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Схема приращения/уменьшения представляет собой схему бы­строго
+переноса/заема. </span><span lang=EN-US style='layout-grid-mode:line'>C</span><span
+style='layout-grid-mode:line'> ее помощью содержимое буферного регистра адреса
+может быть передано с изменением на (+1, -1) или без изме­нения через
+16-разрядный мультиплексор на вход любого 16-битового регистра </span><span
+lang=EN-US style='layout-grid-mode:line'>BC</span><span style='layout-grid-mode:
+line'>, </span><span lang=EN-US style='layout-grid-mode:line'>DE</span><span
+style='layout-grid-mode:line'>, </span><span lang=EN-US style='layout-grid-mode:
+line'>HL</span><span style='layout-grid-mode:line'>, </span><span lang=EN-US
+style='layout-grid-mode:line'>SP</span><span style='layout-grid-mode:line'> или
+</span><span lang=EN-US style='layout-grid-mode:line'>PC</span><span
+style='layout-grid-mode:line'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Адресный буфер представляет собой 16 выходных формировате­лей с тремя
+состояниями и предназначен для выдачи адреса на вы­воды адресной шины </span><span
+lang=EN-US style='layout-grid-mode:line'>A</span><span style='layout-grid-mode:
+line'>15 ... А0. Наличие третьего (отключающего) состояния позволяет
+непосредственно подключить микропроцессор к общей системной адресной шине
+микроЭВМ.</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Блок арифметико-логического устройства
+предназначен для вы­полнения арифметических и логических операций над числами в
+па­раллельном 8-разрядном дополнительном коде. Информация обрабатывается в АЛУ
+с использованием регистров: ВР (временного хранения), ВА (вре­менного
+аккумулятора), А (аккумулятора) и </span><span lang=EN-US style='layout-grid-mode:
+line'>F</span><span style='layout-grid-mode:line'> (регистра признаков). При
+выполнении бинарных операций один из операндов пересылается из аккумулятора в
+регистр ВА; второй операнд поступает из памяти или из блока регистров по
+внутренней шине данных в регистр ВР. Затем он передается в АЛУ через
+кодопреобразователь в прямом или в обратном кодах в зависимости от выполняемой
+операции. Ре­зультат операции передается в аккумулятор или по внутренней  шине
+данных в регистр общего назначения, а признаки результата записывают­ся в
+регистр признаков </span><span lang=EN-US style='layout-grid-mode:line'>F</span><span
+style='layout-grid-mode:line'>. Обмен содержимого аккумулятора и регистра
+признаков </span><span lang=EN-US style='layout-grid-mode:line'>c</span><span
+style='layout-grid-mode:line'> памятью или блоком регистров осуществляется
+также через внутреннюю шину данных.</span></p>
+
+<p class=MsoNormal style='margin-top:1.0pt;text-align:justify'><span
+style='layout-grid-mode:line'>Схема десятичной коррекции (СДК) предназначена
+для преобра­зования результата двоичного сложения   двоично-десятичных чисел  в
+двоично-десятичный код.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Двунаправленная шина данных служит, для организации взаимо­связи между
+отдельными блоками микропроцессора, а также связи микропроцессора с другими
+подсистемами  микроЭВМ. Она включает в себя внутреннюю шину данных, буфер
+данных (БД) и соединена с выводами шины данных </span><span lang=EN-US
+style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:line'>7...</span><span
+lang=EN-US style='layout-grid-mode:line'>D</span><span style='layout-grid-mode:
+line'>0  процессора. Буфер данных - 8-раз­рядный двунаправленный с тремя
+состояниями предназначен для изо­ляции внутренней шины данных от внешней шины
+данных (</span><span lang=EN-US style='layout-grid-mode:line'>D</span><span
+style='layout-grid-mode:line'>7...</span><span lang=EN-US style='layout-grid-mode:
+line'>D</span><span style='layout-grid-mode:line'>0).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Он состоит из буферного регистра данных и формирователей. В режиме вывода
+информация с внутренней шины загружается в буферный регистр, а затем передается
+на внешнюю шину данных через форми­рователи. При вводе данные из внешней шины
+через формирователи непосредственно передаются на внутреннюю шину. Буферный
+регистр данных при этом отключается. Он также отключается при выполнении
+операций, не связанных с передачей информации от процессора.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='layout-grid-mode:
+line'>Блок управления и синхронизации предназначен для приема и  хранения кодов
+операций команд, их дешифрации и формирования внутренних и внешних
+синхронизирующих и управляющих сигналов. Устройство управления также
+воспринимает и обеспечивает необходимую реакцию на внешние сигналы запросов от
+подсистем микро-ЭВМ. Оно содержит регистр команд (РК), дешифратор команд (ДШК),
+схему формирования машин­ных циклов и другие узлы. Регистр команд принимает и
+хранит байт кода операции, по­ступивший с внутренней шины данных, в течении
+всего времени работы процессора с данной командой. При декодировании кода
+операции определяется формат команды, характер преобразования операндов, способ
+их адресации. Эта информация  используется для формирования внутренних сигналов
+управления блоком РОН, АЛУ с регистрами, буферами шины данных и адреса и
+прочими узлами. Это необходимо  для обеспечения их правильного взаимодействия с
+целью реализации микропрограммы вы­полнения команд. Кроме сигналов управления
+внутренними узлами, УУ формирует внешние синхронизирующие  сигналы управления
+и  специальные коды (байты состояния). Это, в первую очередь, сигналы </span><span
+lang=EN-US style='layout-grid-mode:line'>DBIN</span><span style='layout-grid-mode:
+line'> и </span><span lang=EN-US style='layout-grid-mode:line'>WR</span><span
+style='layout-grid-mode:line'>, которые совместно с кодом байта состояния
+позволяют сформировать сигналы управления подсистемами микро-ЭВМ (</span><span
+lang=EN-US style='layout-grid-mode:line'>MR</span><span style='layout-grid-mode:
+line'>, </span><span lang=EN-US style='layout-grid-mode:line'>MW</span><span
+style='layout-grid-mode:line'>, </span><span lang=EN-US style='layout-grid-mode:
+line'>I</span><span style='layout-grid-mode:line'>/</span><span lang=EN-US
+style='layout-grid-mode:line'>OR</span><span style='layout-grid-mode:line'>, </span><span
+lang=EN-US style='layout-grid-mode:line'>I</span><span style='layout-grid-mode:
+line'>/</span><span lang=EN-US style='layout-grid-mode:line'>OWR</span><span
+style='layout-grid-mode:line'>, </span><span lang=EN-US style='layout-grid-mode:
+line'>INTA</span><span style='layout-grid-mode:line'>). Прием и выдача внешних
+синхронизирующих и управляющих сигналов осуществляется через выводы
+микропроцессора.</span></p>
+
+</div>
+
+</body>
+
+</html>
